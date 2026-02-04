@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта изображение</title>
+    <style>
+        img {
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Выбери фигуру и перейди по ссылке</h1>
+
+    <!-- место для карты -->
+    <img src="sample.jpg" alt="Карта с фигурами" usemap="#figuremap">
+    <map name="figuremap">
+        <area shape="rect" coords="0,0,66,200" href="first.html" alt="Первая фигура" target="_blank">
+        <area shape="rect" coords="67,0,133,200" href="second.html" alt="Вторая фигура" target="_blank">
+        <area shape="rect" coords="134,0,200,200" href="third.html" alt="Третья фигура" target="_blank">
+    </map>
+
+</body>
+
+</html>

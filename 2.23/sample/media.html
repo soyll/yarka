@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Аудио и видео</title>
+    <style>
+      body {
+        font-size: 2em;
+        color: #fff;
+      }
+      main {
+        width: 80%;
+        margin: 0 auto;
+      }
+      section {
+        background: linear-gradient(90deg, #ff5cf1, #b38ade, #66ebff);
+        border: 3px solid #fff;
+        border-radius: 10px;
+        margin: 2rem;
+        padding: 2rem;
+      }
+      
+      h1 {
+      text-align: center;
+      color: #333;
+      }
+      video { max-width: 100%; }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Добавление мультимедиа</h1>
+      <section>
+        <h2>Audio</h2>
+        <p>Добавляем аудиозапись с одним источником.</p>
+        <audio src="media/sample.mp3" controls>
+          <p>
+            К сожалению, ваш браузер не поддерживает HTML5. Аудио доступно
+            <a href="media/sample.mp3">по ссылке</a>.
+          </p>
+        </audio>
+        <p>
+          Вторая аудиозапись имеет несколько источников. Запускается
+          автоматически (эту возможность проверяем на сервере). Повторяется
+          автоматически.
+        </p>
+        <audio controls autoplay loop>
+          <source src="media/sample.mp3" type="audio/mpeg" />
+          <source src="media/sample.ogg" type="audio/ogg" />
+          <p>
+            К сожалению, ваш браузер не поддерживает HTML5. Аудио доступно
+            <a href="media/sample.mp3">по ссылке</a>.
+          </p>
+        </audio>
+      </section>
+      <section>
+        <h2>Video</h2>
+        <p>Загружаем видео</p>
+        <video src="media/sample-video-1.mov" controls poster="media/cover.png">
+          <p>
+            Ваш браузер не поддерживает HTML5 видео. Используйте
+            <a href="media/sample-video-1.mov">ссылку на видео</a> для доступа.
+          </p>
+        </video>
+      </section>
+      <section>
+        <h2>Video</h2>
+        <p>
+          Загружаем видео с автозапуском и повтором, установленной шириной и
+          высотой
+        </p>
+        <video controls width="400" height="400" autoplay loop muted>
+          <source src="media/sample-video-1.mov" type="video/quicktime" />
+          <source src="media/sample-video-1.mp4" type="video/mp4" />
+          <p>
+            Ваш браузер не поддерживает HTML5 видео. Используйте
+            <a href="media/sample-video-1.mp4">ссылку на видео</a> для доступа.
+          </p>
+        </video>
+      </section>
+
+      <section>
+        <h2>Video</h2>
+        <p>Загружаем видео с субтитрами</p>
+        <p>
+          Правда проверить как они работают получится только на сервере.
+          Заливайте файлики на домен в OpenServer и смотрите.
+        </p>
+        <video controls>
+          <source src="media/sample-video-2.mp4" type="video/mp4" />
+          <source src="media/sample-video-2.mov" type="video/quicktime" />
+          <track
+            label="Rus subtitles"
+            kind="subtitles"
+            srclang="ru"
+            src="media/subtitles_ru.vtt"
+            default=""
+          />
+        </video>
+      </section>
+    </main>
+  </body>
+</html>

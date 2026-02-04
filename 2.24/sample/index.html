@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление аудиозаписей</title>
+    <style>
+        section {
+            border: 3px solid #333;
+            font-size: larger;
+            border-radius: 10px;
+            padding: 2%;
+            margin-top: 2%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Добавление мультимедиа</h1>
+    <section>
+        <h2>Audio</h2>
+        <ul>
+            <li>Добавьте аудиозапись с возможностью скачать её по ссылке, если браузер не поддерживает элемент audio.
+            </li>
+            <li>Отключите для дорожки звук и добавьте панель управления.</li>
+            <li>Используя атрибут title, добавьте к аудиозаписи Имя исполнителя и название песни.</li>
+        </ul>
+
+        <audio src="media/sample-1.mp3" controls muted title="Исполнитель - Название песни">
+            <p>
+                К сожалению, ваш браузер не поддерживает HTML5. Аудио доступно
+                <a href="media/sample-1.mp3">по ссылке</a>.
+            </p>
+        </audio>
+
+    </section>
+
+    <section>
+        <h2>Альтернативное audio</h2>
+        <ul>
+            <li>Добавьте аудиозапись sample-2.wav с альтернативным источниками - sample-2.mp3.</li>
+            <li>Запускать и повторяться запись должна автоматически (эту возможность проверяем на сервере).</li>
+        </ul>
+
+        <audio controls autoplay loop>
+            <source src="media/sample-2.wav" type="audio/wav">
+            <source src="media/sample-2.mp3" type="audio/mpeg">
+            <p>
+                К сожалению, ваш браузер не поддерживает HTML5. Аудио доступно
+                <a href="media/sample-2.mp3">по ссылке</a>.
+            </p>
+        </audio>
+
+    </section>
+
+</body>
+
+</html>

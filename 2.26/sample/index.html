@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление субтитров</title>
+    <style>
+        section {
+            border: 3px solid #333;
+            font-size: larger;
+            border-radius: 10px;
+            padding: 2%;
+            margin-top: 2%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>Правая или левая? </h1>
+
+        <p>Добавь свое описание для видео</p>
+
+        <!-- место для видео -->
+        <video src="media/sample.mp4" controls>
+            <track
+                label="Русские субтитры"
+                kind="subtitles"
+                srclang="ru"
+                src="media/subtitles.vtt"
+                default
+            />
+            <p>
+                Ваш браузер не поддерживает HTML5 видео. Используйте
+                <a href="media/sample.mp4">ссылку на видео</a> для доступа.
+            </p>
+        </video>
+                
+    </section>
+
+
+</body>
+
+</html>

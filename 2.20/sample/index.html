@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление изображений</title>
+    <style>
+        section {
+            border: 3px solid #333;
+            font-size: larger;
+            border-radius: 10px;
+            padding: 2%;
+            margin-top: 2%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>Изображения в таблице</h1>
+
+        <p>Найдите в папке media три изображения, одинаковые по содержанию, но разные по имени и расширению.</p>
+        <p>Поместите изображения в папку example_1.</p>
+        <p>Создайте таблицу, соответствующую структуре: table>tbody>tr>td*3 </p>
+        <p>Добавьте выбранные изображения в ячейки таблицы.</p>
+        <p>Добавьте к изображениям альтернативное описание.</p>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="example_1/FILE.JPG" alt="Логотип кота - файл FILE.JPG">
+                    </td>
+                    <td>
+                        <img src="example_1/file.jpeg" alt="Логотип кота - файл file.jpeg">
+                    </td>
+                    <td>
+                        <img src="example_1/FiLe.Jpe" alt="Логотип кота - файл FiLe.Jpe">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+
+    <section>
+        <h1>Изображения указанного размера</h1>
+        <p>Найдите в папке media изображение с самым большим разрешением.</p>
+        <p>Поместите изображение в папку example_2.</p>
+        <p>Добавьте изображение на страницу трижды, изменяя параметры размера: </p>
+        <ul>
+            <li>ширина - 500px</li>
+            <li>ширина - 500px, высота - 200px</li>
+            <li>высота - 300px</li>
+        </ul>
+
+        <img src="example_2/course-html.jpg" alt="Курс HTML" width="500">
+        <img src="example_2/course-html.jpg" alt="Курс HTML" width="500" height="200">
+        <img src="example_2/course-html.jpg" alt="Курс HTML" height="300">
+
+    </section>
+
+
+    <section>
+        <h1>Изображения с одинаковыми/разными именами</h1>
+        <p>Не меняя файловой структуры папки media, добавьте на страницу файлы с именами: FILE.JPG, file.jpeg, FiLe.jpe
+        </p>
+        <p>Убедитесь, что с точки зрения браузера это разные имена и разные файлы.</p>
+        <p>Добавьте к изображениям всплывающую подсказку с именем файла.</p>
+
+        <img src="media/logo/FILE.JPG" alt="FILE.JPG" title="FILE.JPG">
+        <img src="media/logo/file.jpeg" alt="file.jpeg" title="file.jpeg">
+        <img src="media/logo/cat/FiLe.Jpe" alt="FiLe.Jpe" title="FiLe.Jpe">
+
+    </section>
+
+
+    <section>
+        <h1>Варианты изображения</h1>
+        <p>Найдите в папке media изображение с расширением tiff.</p>
+        <p>С помощью элемента picture организуйте его добавление на страницу, а также альтернативную загрузку файла
+            такого же внешне, но с другим расширением.</p>
+
+        <!-- место для изображений -->
+        <picture>
+            <source srcset="media/picture/js.tif" type="image/tiff">
+            <img src="media/picture/js.jpg" alt="JavaScript изображение">
+        </picture>
+
+    </section>
+
+</body>
+
+</html>
