@@ -18,35 +18,37 @@
 
 			<fieldset>
 				<legend>Варианты авторизации</legend>
-				<input id="auth-email"><label>Email</label>
-				<input id="auth-login"><label>Логин</label>
-				<input id="auth-tel" checked><label>Телефон</label>
+				<input type="radio" name="auth-method" id="auth-email" value="email">
+				<label for="auth-email">Email</label>
+				<input type="radio" name="auth-method" id="auth-login" value="login">
+				<label for="auth-login">Логин</label>
+				<input type="radio" name="auth-method" id="auth-tel" value="tel" checked>
+				<label for="auth-tel">Телефон</label>
 			</fieldset>
 		</div>
 
 		<div>
 			<h2>Заполните данные для связи с Вами</h2>
 
-			<label>Email</label>
-			<input id="email" placeholder="Введите email...">
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" placeholder="Введите email...">
 
-			<label>Телефон</label>
-			<input id="tel" placeholder="Введите телефон...">
+			<label for="tel">Телефон</label>
+			<input type="tel" id="tel" name="tel" placeholder="Введите телефон...">
 			<br>
-			<label>Страница в соцсетях или личный сайт</label>
-			<input id="url" placeholder="Введите адрес страницы...">
+			<label for="url">Страница в соцсетях или личный сайт</label>
+			<input type="url" id="url" name="url" placeholder="Введите адрес страницы...">
 		</div>
 
 		<div>
 			<h2>Измените пароль</h2>
-			<label>Пароль</label>
-			<input id="password" placeholder="Введите пароль..."> <br>
-			<label>Подтверждение пароля</label>
-			<input id="password-confirm" placeholder="Повторите пароль...">
-
+			<label for="password">Пароль</label>
+			<input type="password" id="password" name="password" placeholder="Введите пароль..."> <br>
+			<label for="password-confirm">Подтверждение пароля</label>
+			<input type="password" id="password-confirm" name="password-confirm" placeholder="Повторите пароль...">
 		</div>
 
-		<input value="Сохранить">
+		<input type="submit" value="Сохранить">
 	</form>
 
 
@@ -55,12 +57,16 @@
 		<div>
 			<h2>Расскажите нам о себе</h2>
 
-			<label>Имя: <input name="name" id="name"></label>
-			<label>Фамилия: <input name="surname" id="surname"></label><br>
-			<label>Дата рождения: <input name="birthday" id="birthday"></label> <br>
-			<label>Фото профиля: <input name="photo" id="photo" accept="image/png,image/jpeg"></label>
+			<label for="name">Имя:</label>
+			<input type="text" name="name" id="name">
+			<label for="surname">Фамилия:</label>
+			<input type="text" name="surname" id="surname"><br>
+			<label for="birthday">Дата рождения:</label>
+			<input type="date" name="birthday" id="birthday"> <br>
+			<label for="photo">Фото профиля:</label>
+			<input type="file" name="photo" id="photo" accept="image/png,image/jpeg">
 
-			<input value="Сохранить">
+			<input type="submit" value="Сохранить">
 		</div>
 	</form>
 
@@ -69,23 +75,26 @@
 		<h2>Кому желаете отправить сообщение:</h2>
 
 		<div>
-			<label> <input id="destination-dis" checked> Главный дизайнер</label>
-			<label> <input id="destination-mod"> Модератор</label>
-			<label> <input id="destination-adm"> Администратор</label>
+			<input type="radio" name="destination" id="destination-dis" value="designer" checked>
+			<label for="destination-dis">Главный дизайнер</label>
+			<input type="radio" name="destination" id="destination-mod" value="moderator">
+			<label for="destination-mod">Модератор</label>
+			<input type="radio" name="destination" id="destination-adm" value="admin">
+			<label for="destination-adm">Администратор</label>
 		</div>
 
 		<div>
-			<label>Тема сообщения:</label>
-			<input id="theme" placeholder="Введите тему сообщения...">
+			<label for="theme">Тема сообщения:</label>
+			<input type="text" id="theme" name="theme" placeholder="Введите тему сообщения...">
 			<br>
-			<label>Сообщение:</label> <br>
+			<label for="message">Сообщение:</label> <br>
 			<textarea name="message" id="message" cols="50" rows="10" placeholder="Введите сообщение..."></textarea>
 		</div>
 
-		<input id="personal">
-		<label>Согласие на обработку персональных данных</label>
+		<input type="checkbox" id="personal" name="personal" required>
+		<label for="personal">Согласие на обработку персональных данных</label>
 
-		<input value="Отправить">
+		<input type="submit" value="Отправить">
 	</form>
 
 </body>

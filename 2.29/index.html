@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Заявка на обучение</title>
+</head>
+
+<body>
+	<h1>Добро пожаловать на курс HTML&CSS</h1>
+	<h2>Перед переходом на следующий уровень, хотим получить обратную связь.</h2>
+
+	<form name="feedback" action="#" method="get">
+		<div>
+			<label for="html-level">Оцените свой уровень владения языком HTML</label>
+			<select name="html-level" id="html-level">
+				<option value="beginner">начальный</option>
+				<option value="intermediate">средний</option>
+				<option value="advanced">продвинутый</option>
+			</select>
+		</div>
+
+		<div>
+			<label for="favorite-lesson">Выберите из перечисленных уроков тот, который вам понравился больше всего</label>
+			<select name="favorite-lesson" id="favorite-lesson">
+				<optgroup label="Прошедшие уроки">
+					<option value="emmet">Занятие 1-7. Emmet.</option>
+					<option value="layout">Занятие 2-7. Виды верстки</option>
+					<option value="tables">Занятие 2-16. Таблицы</option>
+				</optgroup>
+				<optgroup label="Будущие уроки" disabled>
+					<option value="validation">Валидация форм</option>
+					<option value="embed">Внедрение элементов</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<div>
+			<label for="progress">Укажите, какой процент заданий курса вы выполнили?</label>
+			<input type="range" id="progress" name="progress" min="0" max="100" value="55">
+			<output for="progress" id="progress-value">55</output>%
+		</div>
+
+		<h2>Поделитесь своим мнением о нашем курсе.</h2>
+
+		<div>
+			<label for="rating">Выберите из предложенного или внесите свой вариант</label>
+			<input type="text" id="rating" name="rating" list="rating-list" placeholder="Например: 5 звезд">
+			<datalist id="rating-list">
+				<option value="5 звезд">Хороший курс</option>
+				<option value="6 звезд">Замечательный курс</option>
+				<option value="7 звезд">Просто потрясающий курс</option>
+			</datalist>
+		</div>
+
+		<div>
+			<label for="about">Расскажите нам о себе ...</label>
+			<textarea name="about" id="about" cols="50" rows="8" placeholder="Расскажите нам о себе ..."></textarea>
+		</div>
+
+		<div class="buttons">
+			<button type="submit">Отправить</button>
+			<button type="reset">Очистить</button>
+		</div>
+	</form>
+
+	<script>
+		var range = document.getElementById('progress');
+		var output = document.getElementById('progress-value');
+		if (range && output) {
+			output.value = range.value;
+			range.addEventListener('input', function () { output.value = this.value; });
+		}
+	</script>
+</body>
+
+</html>

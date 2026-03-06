@@ -14,30 +14,29 @@
             <div>
                 <label for="tel">Телефон</label>
                 <br>
-                <input type="tel" id="tel" placeholder="Введите номер телефона">
+                <input type="tel" id="tel" name="tel" placeholder="Введите номер телефона"
+                    required minlength="11" maxlength="12"
+                    pattern="^[+]?[0-9]{11,12}$"
+                    title="Только цифры и символ +, от 11 до 12 символов">
             </div>
 
             <div>
                 <label for="password">Пароль</label>
                 <br>
-                <input type="password" id="password" placeholder="Введите пароль">
+                <input type="password" id="password" name="password" placeholder="Введите пароль"
+                    required minlength="8" maxlength="15"
+                    pattern="[a-zA-Z0-9]{8,15}"
+                    title="Латиница или цифры, от 8 до 15 символов">
             </div>
 
             <div>
-                <input type="checkbox" id="checkbox">
-                <br>
-                <label for="checkbox">Запомнить пароль</label>
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Запомнить пароль</label>
             </div>
-
-
-            <!-- С точки зрения валидности, не совсем правильно помещать в качестве содержимого ссылки input.
-                Но пока мы с вами использовать скрипты и прочие блага цивилизации
-                для настройки взаимодействия с кнопками не умеем, поэтому глаза на эту ошибку закроем.
-            -->
 
             <div>
                 <input type="submit" value="Войти">
-                <a href="registration.html"><input type="button" value="Зарегистрироваться"></a>
+                <a href="registration.html">Зарегистрироваться</a>
             </div>
             
         </form>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Личный кабинет 1.0</title>
+</head>
+
+<body>
+	<h1>Добро пожаловать в личный кабинет. Версия 1.0</h1>
+
+	<form name="profile">
+
+		<div>
+			<label for="progress">Загрузка личных данных...</label>
+			<progress id="progress" max="100" value="42" tabindex="1">42%</progress>
+		</div>
+
+		<div>
+			<label for="select">Найдены профили...</label>
+			<select name="select" id="select" tabindex="2">
+				<option value="opt1">Кондратюк В.А.</option>
+				<option value="opt2" selected>Лапин Ю.В.</option>
+				<option value="opt3">Шмелев П.Р.</option>
+				<option value="optn">Анонимный покупатель</option>
+			</select>
+		</div>
+	</form>
+
+	<form name="review" action="https://vk.com/pechora_proger" method="get" target="_blank">
+		<div>
+			<label for="select-group">Выберите товар для отзыва</label>
+			<select name="select-group" id="select-group" tabindex="4">
+				<optgroup label="Заказанные товары">
+					<option value="opt1">Новогодняя лесочка</option>
+					<option value="opt2">Гирлянда</option>
+					<option value="opt3">Елочные игрушки</option>
+					<option value="opt4">Мишура</option>
+				</optgroup>
+				<optgroup label="Товары в списке желаемого" disabled>
+					<option value="opt1">Сладкий набор для детей</option>
+					<option value="opt2">Костюм Деда Мороза</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<div>
+			<label for="rating">Оцените выбранный товар</label>
+			<input type="text" id="rating" list="datalist" name="rating" placeholder="Введите оценку от 1 до 5 звезд" size="35" tabindex="5">
+
+			<datalist id="datalist">
+				<option value="1 звезда">Товар очень плохого качества</option>
+				<option value="2 звезды">Товар плохого качества</option>
+				<option value="3 звезды">Товар среднего качества</option>
+				<option value="4 звезды">Товар хорошего качества</option>
+				<option value="5 звезд">Товар отличного качества</option>
+			</datalist>
+		</div>
+
+		<div>
+			<label for="textarea">Текст отзыва</label>
+			<textarea name="textarea" id="textarea" cols="40" rows="6" placeholder="Напишите ваш отзыв о товаре..." tabindex="6"></textarea>
+		</div>
+
+		<fieldset class="buttons-group">
+			<legend>Действия</legend>
+			<button type="submit" tabindex="7">Отправить</button>
+			<button type="reset" tabindex="9">Очистить</button>
+			<button type="button" tabindex="8" disabled>Проверить</button>
+			<button type="button" hidden>Отложить</button>
+		</fieldset>
+	</form>
+</body> 
+
+</html>

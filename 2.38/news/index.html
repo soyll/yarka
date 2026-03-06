@@ -43,17 +43,19 @@
       <h2>Новости недели</h2>
       <div>
         <ul>
-          <li><a href="news-1.html">Название новости</a></li>
-          <li><a href="news-2.html">Название новости</a></li>
-          <li><a href="news-3.html">Название новости</a></li>
-          <li><a href="news-4.html">Название новости</a></li>
+          <li><a href="news-1.html" target="news-container">Основы CSS</a></li>
+          <li><a href="news-2.html" target="news-container">Фотоальбомы</a></li>
+          <li><a href="news-3.html" target="news-container">JavaScript фреймворк Vue.JS 3.0.</a></li>
+          <li><a href="news-4.html" target="news-container">Краткий курс GIMP2</a></li>
         </ul>
       </div>
     </section>
 
     <section>
       <h2>Текущая новость</h2>
-      <!-- место для фрейма -->
+      <iframe src="info.html" name="news-container" width="800" height="300" title="Окно просмотра новости">
+        К сожалению, ваш браузер не поддерживает iframe. Откройте новость в новой вкладке.
+      </iframe>
     </section>
 
   </main>
