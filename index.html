@@ -121,9 +121,25 @@
                 <h3>+7 (222) 333-22-55</h3>
             </a>
             <h4>ИЛИ ОСТАВЬ НАМ СВОЙ НОМЕР И МЫ ПЕРЕЗВОНИМ САМИ</h4>
-            <div class="form__contact"></div>
-            <div class="form__download"></div>
-            <div class="form__submit"></div>
+            <form action="answer.html">
+                <div class="form__contact">
+                    <input type="text" placeholder="НАПИШИТЕ СВОЕ ИМЯ" required pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                    <input type="tel" name="tel-number" id="tel-number" title="например, 89000000000" placeholder="НОМЕР ТЕЛЕФОНА" required pattern="[9-0]{11}">
+                </div>
+                
+                <div class="form__download">
+                    ЕСТЬ ФОТО ПРИМЕРА?
+                    <label for="download">ЗАГРУЖАЙ ЗДЕСЬ</label>
+                    <input type="file" id="download" name="download" accept=".png, .jpg, .jpeg">
+                </div>
+
+                <div class="form__submit">
+                    <input type="checkbox" name="personal" id="personal">
+                    <label for="personal">Я СОГЛАСЕН НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ</label>
+                </div>
+
+                <input type="submit" value=" ПООБЩАТЬСЯ">
+            </form>
         </div>
     </section>
 

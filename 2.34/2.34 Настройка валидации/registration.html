@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+
+<body>
+    <header>
+        <h1>Регистрация</h1>
+    </header>
+    <div>
+        <form action="account.html">
+
+            <div>
+                <label for="name">Имя (кириллица, от 2 до 15 символов)</label>
+                <input type="text" id="name" placeholder="Введите имя" pattern="[А-Яа-яЁё]{2,15}" required>
+            </div>
+
+            <div>
+                <label for="email">Электронная почта</label>
+                <input type="email" id="email" placeholder="Введите email" required>
+            </div>
+
+            <div>
+                <label for="password">Пароль (латиница, цифры; от 8 до 15 символов)</label>
+                <input type="password" id="password" placeholder="Введите пароль" pattern="[A-Za-z0-9]{8,15}" required>
+            </div>
+
+            <div>
+                <label for="password-rep">Подтверждение пароля (латиница, цифры; от 8 до 15 символов)</label>
+                <input type="password" id="password-rep" placeholder="Повторно введите пароль"
+                    pattern="[A-Za-z0-9]{8,15}" required>
+            </div>
+
+            <div>
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">Запомнить пароль</label>
+            </div>
+
+            <div>
+                <input type="submit" value="Зарегистрироваться">
+                <a href="authentication.html"><input type="button" value="Войти"></a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

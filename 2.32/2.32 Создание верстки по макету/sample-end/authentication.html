@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+</head>
+<body>
+    <header>
+        <h1>Вход</h1>
+    </header>
+    <div>
+        <form action="account.html">
+
+            <div>
+                <label for="tel">Телефон</label>
+                <br>
+                <input type="tel" id="tel" placeholder="Введите номер телефона">
+            </div>
+
+            <div>
+                <label for="password">Пароль</label>
+                <br>
+                <input type="password" id="password" placeholder="Введите пароль">
+            </div>
+
+            <div>
+                <input type="checkbox" id="checkbox">
+                <br>
+                <label for="checkbox">Запомнить пароль</label>
+            </div>
+
+
+            <!-- С точки зрения валидности, не совсем правильно помещать в качестве содержимого ссылки input.
+                Но пока мы с вами использовать скрипты и прочие блага цивилизации
+                для настройки взаимодействия с кнопками не умеем, поэтому глаза на эту ошибку закроем.
+            -->
+
+            <div>
+                <input type="submit" value="Войти">
+                <a href="registration.html"><input type="button" value="Зарегистрироваться"></a>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>

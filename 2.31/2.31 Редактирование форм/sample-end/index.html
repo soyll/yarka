@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Личный кабинет 1.1</title>
+</head>
+
+<body>
+	<h1>Добро пожаловать в личный кабинет. Версия 1.1</h1>
+
+	<form name="auth" action="index.html">
+		<div>
+			<h2>Выберите удобный для вас способ авторизации</h2>
+
+			<fieldset>
+				<legend>Варианты авторизации</legend>
+				<input type="checkbox" id="auth-email"><label for="auth-email">Email</label>
+				<input type="checkbox" id="auth-login"><label for="auth-login">Логин</label>
+				<input type="checkbox" id="auth-tel" checked><label for="auth-tel">Телефон</label>
+			</fieldset>
+		</div>
+
+		<div>
+			<h2>Заполните данные для связи с Вами</h2>
+
+			<label for="email">Email</label>
+			<input type="email" id="email" placeholder="Введите email...">
+
+			<label for="tel">Телефон</label>
+			<input type="tel" id="tel" placeholder="Введите телефон...">
+			<br>
+			<label for="url">Страница в соцсетях или личный сайт</label>
+			<input type="url" id="url" placeholder="Введите адрес страницы...">
+		</div>
+
+		<div>
+			<h2>Измените пароль</h2>
+			<label for="password">Пароль</label>
+			<input type="password" id="password" placeholder="Введите пароль..."> <br>
+			<label for="password-confirm">Подтверждение пароля</label>
+			<input type="password" id="password-confirm" placeholder="Повторите пароль...">
+
+		</div>
+
+		<input type="button" value="Сохранить">
+	</form>
+
+
+
+	<form name="profile" action="index.html">
+		<div>
+			<h2>Расскажите нам о себе</h2>
+
+			<label>Имя: <input type="text" name="name" id="name"></label>
+			<label>Фамилия: <input type="text" name="surname" id="surname"></label><br>
+			<label>Дата рождения: <input type="date" name="birthday" id="birthday"></label> <br>
+			<label>Фото профиля: <input type="file" name="photo" id="photo" accept="image/png,image/jpeg"></label>
+
+			<input type="button" value="Сохранить">
+		</div>
+	</form>
+
+
+	<form name="message" action="index.html">
+		<h2>Кому желаете отправить сообщение:</h2>
+
+		<div>
+			<label> <input id="destination-dis" type="checkbox" checked> Главный дизайнер</label>
+			<label> <input id="destination-mod" type="checkbox"> Модератор</label>
+			<label> <input id="destination-adm" type="checkbox"> Администратор</label>
+		</div>
+
+		<div>
+			<label for="theme">Тема сообщения:</label>
+			<input type="text" id="theme" placeholder="Введите тему сообщения...">
+			<br>
+			<label for="message">Сообщение:</label> <br>
+			<textarea name="message" id="message" cols="50" rows="10" placeholder="Введите сообщение..."></textarea>
+		</div>
+
+		<input type="checkbox" id="personal">
+		<label for="personal">Согласие на обработку персональных данных</label>
+
+		<input type="submit" value="Отправить">
+	</form>
+
+</body>
+
+</html>

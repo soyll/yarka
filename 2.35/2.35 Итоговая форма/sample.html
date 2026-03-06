@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        body {
+            color: white;
+            background-color: gray;
+            text-align: center;
+        }
+        form {
+            background-color: white;
+            color: black;
+            width: 75%;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 15px;
+            font-size: 20px;
+        }
+    </style>
+    <body>
+        <h1>форма сбора персональных данных</h1>
+        <form>
+            <h2>персональные данные</h2>
+            
+            <div>
+                <p><label for="surname">фамилия (кириллица, тире, пробел; от 3 до 15 символов):</label>
+                <p><input type="text" id="surname" value="Панкратов" minlength="3" maxlength="15" />
+                <p><label for="name"></label>имя (кириллица, пробел; от 3 до 10 символов):</label>
+                <p><input type="text" id="name" value="Инокентий" minlength="3" maxlength="10" />
+                <p><label for="patronymic">отчество (кириллица; от 3 до 15 символов):</label>>
+                <p><input type="text" id="patronymic" value="Караулович" minlength="3" maxlength="10" />
+                <p><label for="sex">укажите ваш пол</label>
+                <p>
+                    <input type="radio" id="sex" value="мужской" checked />мужской
+                    <input type="radio" id="sex" value="женский" />женский
+                    <input type="radio" id="sex" value="другой" />другой
+                </p>
+            </div>
+            <div>
+                <h2>разное</h2>
+					<label for="document">вид документа:</label>
+					<select size="1" id="document"> 
+						<option value="Паспорт">паспорт</option>
+						<option value="Удостоверение личности">удостоверение личности</option>
+						<option value="Водительские права">водительские права</option>
+						<option value="Купюра 100$">купюра 100$</option>
+					</select>
+
+					<p class="lbl">e-mail (стандартный):</p>
+					<input type="email" id="email" value="1@gmail.com" minlength="5" maxlength="50">
+
+                    <p class="lbl">номер телефона:</p>
+                    <input type="tel" pattern="\+[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required placeholder="+7-912-345-67-89" maxlength="16">
+                    <p><small>пример: +7-912-345-67-89</small>
+					<p class="lbl">полных лет на момент согласия (диапазон: 18-65):</p>
+					<input type="number" id="age" value="18" min="18" max="65">
+								
+					<p class="lbl">дата заполнения согласия (дд.мм.гггг):</p>					
+					<input type="date" id="date" value="2019-12-12">
+				</div>
+            </div>
+            <p><label for="progressbar">расскажите о себе:</label>
+            <p><label for="about"></label>
+            <p><textarea name="about" id="about" cols="50" rows="10" maxlength="100" placeholder="Я очень люблю гулять и рисовать."></textarea>
+            <p><input type="reset" value="Очистить">
+            <input type="submit" value="Отправить">
+        </form>
+        <h1>спасибо за заполнение</h1>
+    </body>
+</html>

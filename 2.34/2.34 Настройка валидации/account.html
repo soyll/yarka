@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+</head>
+<body>
+    <header>
+        <h3>Личный кабинет</h3>
+    </header>
+    <div>
+        <form action="сongratulation.html">
+
+            <div>
+                <label for="name">Имя (кириллица, от 2 до 15 символов)</label>
+            <input type="text" id="name" placeholder="Введите имя" pattern="[А-Яа-яЁё]{2,15}" required>
+            </div>
+
+            <div>
+                <label for="surname">Фамилия (кириллица, от 2 до 15 символов)</label>
+            <input type="text" id="surname" placeholder="Введите фамилию" pattern="[А-Яа-яЁё]{5,25}">
+
+            </div>
+
+            <fieldset>
+                <legend>Выберите свой пол</legend>
+                
+                    <input type="radio" id="pol-m" name="pol">
+                    <label for="pol-m">Мужской</label>
+                
+                    <input type="radio" id="pol-f" name="pol">
+                    <label for="pol-f">Женский</label>
+                
+                    <input type="radio" id="pol-n" name="pol">
+                    <label for="pol-n">Другой</label>
+                
+            </fieldset>
+
+            <label for="date">Год рождения</label>
+            <input type="date" id="date" max="2004-12-15">
+            
+            <fieldset>
+                <legend>Выберите технологии (можно несколько)</legend>
+                <div>
+                    <input type="checkbox" id="html">
+                    <label for="html">HTML</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="css">
+                    <label for="css">CSS</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="js">
+                    <label for="js">JavaScript</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="php">
+                    <label for="php">PHP</label>
+                </div>
+            </fieldset>
+
+            <label for="level">Выберите  уровень сложности </label>
+            <select name="level" id="level">
+                <option value="elementary">Начальный</option>
+                <option value="advanced">Продвинутый</option>
+            </select>
+            
+            <div>
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">Согласен с правилами записи на курсы</label>
+            </div>
+
+            <input type="submit" value="Записаться">
+            <a href="authentication.html"><input type="button" value="Выйти"></a>
+        </form>
+    </div>
+</body>
+</html>
