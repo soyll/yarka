@@ -1,0 +1,18 @@
+body {
+	font-size: 24px;
+}
+
+div {
+	width: 70%;
+	margin:0 auto;
+	margin-bottom: 2%;
+	padding: 1%;
+}
+
+span {
+	font-weight: 700;
+}
+
+.first {
+	font-weight: bold;
+}

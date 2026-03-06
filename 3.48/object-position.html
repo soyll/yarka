@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-position и котики</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 3%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        p {
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+
+        img {
+            width: 150px;
+            height: 220px;
+            border: 1px solid #333333;
+        }
+
+        img.normal {
+            width: 600px;
+            height: auto;
+        }
+
+        .contain {
+            object-fit: contain;
+        }
+
+        .none {
+            object-fit: none;
+        }
+
+
+        .top {
+            object-position: top;
+        }
+
+        .left {
+            object-position: left;
+        }
+
+        .center {
+            object-position: center;
+        }
+
+        .right {
+            object-position: right;
+        }
+
+        .bottom {
+            object-position: bottom;
+        }
+
+
+
+        .per-1 {
+            object-position: 25% 75%;
+        }
+
+        .per-2 {
+            object-position: 10% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Заполнение контейнера изображением</h1>
+    <h2>Исходный размер наших изображений 600 на 600 точек. Искусственно задаем им размер 150 на 200.</h2>
+    <h2>Установим значения object-fit на contain или none.</h2>
+    <h2>А расположение будем редактировать с помощью object-position</h2>
+    <div class="container">
+        <img src="images/cool.jpg" class="normal" alt="Крутой котик">
+        <div>
+            <p>contain + top</p>
+            <img src="images/cool.jpg" class="contain top" alt="Крутой котик">
+        </div>
+        <div>
+            <p>contain + bottom</p>
+            <img src="images/cool.jpg" class="contain bottom" alt="Крутой котик">
+        </div>
+        <div>
+            <p>none + left</p>
+            <img src="images/cool.jpg" class="none left" alt="Крутой котик">
+        </div>
+        <div>
+            <p>none + right</p>
+            <img src="images/cool.jpg" class="none right" alt="Крутой котик">
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="images/love.webp" class="normal" alt="Влюбленные котики">
+        <div>
+            <p>contain + object-position: 25% 75%</p>
+            <img src="images/love.webp" class="contain per-1" alt="Влюбленные котики">
+        </div>
+        <div>
+            <p>contain + object-position: 10% 100%</p>
+            <img src="images/love.webp" class="contain per-2" alt="Влюбленные котики">
+        </div>
+        <div>
+            <p>none center</p>
+            <img src="images/love.webp" class="none center" alt="Влюбленные котики">
+        </div>
+        <div>
+            <p>none + object-position: 25% 75%</p>
+            <img src="images/love.webp" class="none per-1" alt="Влюбленные котики">
+        </div>
+    </div>
+</body>
+
+</html>

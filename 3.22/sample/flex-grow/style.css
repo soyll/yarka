@@ -1,0 +1,35 @@
+.container{
+    margin: 0 auto;
+    background-color: #bbbbbb;
+    width: 90%;
+    height: 80%;
+    color: white;
+    display: flex;
+    text-align: center;
+}
+.cube{
+    display: block;
+    margin: 25px;
+    height: 120px;
+}
+.cube h1{
+    padding-top: 20px;
+}
+.cube#one{
+    background-color: lightgreen;
+}
+.cube#two{
+    background-color: gold;
+}
+.cube#three{
+    background-color: red;
+}
+.cube#four{
+    background-color: lightblue;
+}
+.cube#five{
+    background-color: green;
+}
+.cube#six{
+    background-color: orange;
+}

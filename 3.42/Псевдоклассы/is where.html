@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>is | where</title>
+    <style>
+        /*простой список селекторов*/
+        header>p, main>p, footer>p {font-size: 2em; color: #c70000;}
+        /*перечисление с :is*/
+        :is(header, main, footer)>p  {font-size: 2em; color: #c70000;}
+        /*перечисление с :where*/
+        :where(header, main, footer)>p  {font-size: 2em; color: #c70000;}
+
+        /* Псевдокласс :is может быть вложенным*/
+        :is(:is(header, main, footer) div) > p  {font-size: 2em; color: #5d00c7;}
+    </style>
+</head>
+
+<body>
+    <h1>Например, мы хотим применить стиль к параграфам, которые находятся в первом уровне вложенности в элементах header, main, footer:</h1>
+    <header>
+        <p>Текст внутри блока header</p>
+        <div><p>Текст внутри блока header и блока div</p></div>
+    </header>
+    <main>
+        <p>Текст внутри блока main</p>
+        <div><p>Текст внутри блока main и блока div</p></div>
+    </main>
+    <footer>
+        <p>Текст внутри блока footer</p>
+        <div><p>Текст внутри блока footer и блока div</p></div>
+    </footer>
+</body>
+
+</html>

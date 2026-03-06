@@ -1,0 +1,44 @@
+* { margin:0; padding:0;}
+
+body {
+	font-size: 0.75em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container, footer {
+	width: 90%;
+	margin: 0 auto;
+}
+.container {background: #e2e2e2;}
+
+.container {
+	display: table;
+	width: 90%;
+}
+
+header {
+	display: table-caption;
+	background-color: #fff0e6;
+}
+
+section {
+	display: table-cell;
+	background-color: #d8edf5;
+}
+
+aside {
+	display: table-cell;
+	background-color: #efe5cc;
+}
+
+aside img {
+	max-width: 100%;
+	height: auto;
+}
+
+footer {
+	background-color: #afd0a6;
+	clear: both;
+}
+
+

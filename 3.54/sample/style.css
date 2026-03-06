@@ -1,0 +1,84 @@
+* { box-sizing: border-box; }
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+form {
+	width: 100%;
+	font-size: 1.2em;
+}
+
+form * {
+	display: block;
+	margin: 1%;
+	padding: 1%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="reset"],
+input[type="submit"],
+textarea,
+button {
+	font: inherit;
+	width: 90%;
+}
+
+input {
+	border: 0;
+	border-bottom: 1px solid #333;
+}
+input:focus {
+	border: 0;
+	border-bottom: 3px solid #333;
+	outline: none;
+}
+input:focus:invalid {
+	border-bottom-color: red;
+}
+
+textarea {
+	resize: vertical;
+	border: 0;
+	border-bottom: 1px solid #333;
+}
+textarea:focus {
+	outline: none;
+	border-bottom: 3px solid #333;
+}
+textarea:invalid:not(:placeholder-shown) {
+	border-bottom-color: red;
+}
+
+.error {
+	display: none;
+	font-size: 0.8em;
+	color: red;
+}
+input[type="email"]:invalid:not(:placeholder-shown) + .error,
+textarea:invalid:not(:placeholder-shown) + .error {
+	display: block;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+	cursor: pointer;
+	border-radius: 6px;
+	background-color: #333;
+	color: #fff;
+	border: 2px solid #333;
+}
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+	background-color: #fff;
+	color: #333;
+}

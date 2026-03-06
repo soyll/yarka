@@ -1,0 +1,11 @@
+@import "sample-4-2.css";
+
+div.new_font{
+	font-family: Courier;
+	font-size: 18pt;
+}
+div#bg{
+	background-color: #c0c0c0;
+}
+
+/* здесь была настройка цвета текста, вынесли ее в файл sample-4-2.css и подулючили через @import вверху страницы*/

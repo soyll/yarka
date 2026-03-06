@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ориентация и котики</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 3%;
+        }
+
+        img {
+            width: 40%;
+            margin-right: 5%;
+        }
+
+        .rotate {
+            image-orientation: from-image;
+        }
+
+        .normal {
+            image-orientation: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ориентация изображения</h1>
+    <h2>Исходное изображение при просмотре выглядит обычным, но в EXIF информации указано, что оно повернуто на 180
+        градусов.</h2>
+    <h2>Меняя настройки image-orientation, сможем увидеть изображение с поворотом и без него.</h2>
+    <div class="container">
+        <img src="kus-rotate.jpg" class="rotate" alt="Кусь">
+        <img src="kus-rotate.jpg" class="normal" alt="Кусь">
+    </div>
+
+
+</body>
+
+</html>

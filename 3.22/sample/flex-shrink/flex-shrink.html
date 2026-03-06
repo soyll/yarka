@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flex-shrink</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* по умолчанию все блоки будут сжиматься при изменении размера родителя */
+		/* проверьте, используя Режим разработчика */
+
+		.cube {
+			flex-shrink: 1;
+			/* Измените значение на 0, запретив блокам уменьшаться */
+		}
+
+		/* ---------------------------------------------------------------------- */
+
+		/* для наглядности увеличим ширину третьего блока и запретим ему изменяться.
+		все остальные блоки будут вести себя по умолчанию */
+
+		/* .cube#three {
+				width: 200px;
+				flex-shrink: 0;
+			} */
+
+		/* ---------------------------------------------------------------------- */
+
+		/* увеличили значение для блока, значит пропорционально увеличили скорость его сжимания */
+
+		/* .cube#three {
+			flex-shrink: 3;
+		} */
+	</style>
+</head>
+
+<body>
+	<h1>flex-shrink</h1>
+	<div class="container">
+		<div class="cube" id="one">
+			<h1>1</h1>
+		</div>
+		<div class="cube" id="two">
+			<h1>2</h1>
+		</div>
+		<div class="cube" id="three">
+			<h1>3</h1>
+		</div>
+		<div class="cube" id="four">
+			<h1>4</h1>
+		</div>
+		<div class="cube" id="five">
+			<h1>5</h1>
+		</div>
+		<div class="cube" id="six">
+			<h1>6</h1>
+		</div>
+		<div class="cube" id="seven">
+			<h1>7</h1>
+		</div>
+	</div>
+</body>
+
+</html>

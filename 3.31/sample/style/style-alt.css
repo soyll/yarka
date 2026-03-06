@@ -1,0 +1,40 @@
+/* Альтернативное оформление — тёмная тема, другие акценты */
+header .wrapper {
+	background-color: #1a1a2e;
+}
+header .content nav a {
+	color: #eee;
+}
+section.banner div.wrapper h1 {
+	color: #eaeaea;
+	text-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.alg {
+	background-color: #16213e;
+}
+section.alg div.step {
+	background-color: #0f3460;
+	color: #eaeaea;
+}
+section.promos {
+	background-color: #1a1a2e;
+}
+div.promo {
+	background-color: #16213e;
+	color: #eee;
+	border-radius: 8px;
+}
+.promo button {
+	background-color: #e94560;
+	color: #fff;
+}
+section.sub {
+	background-color: #16213e;
+}
+footer {
+	background-color: #1a1a2e;
+}
+footer h2,
+footer nav a {
+	color: #eaeaea;
+}

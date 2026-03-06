@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Hover Visited Active</title>
+    <style>
+        div {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 3%;
+            padding-bottom: 3%;
+            border-bottom: 1px solid #333333;
+        }
+
+        nav ul {
+            display: flex;
+            font-size: 1.3em;
+        }
+
+        nav li {
+            list-style-type: none;
+            padding-right: 2%;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: #b8220e;
+        }
+
+        .hover a:hover {
+            text-decoration: underline;
+        }
+
+        .active a:active {
+            color: #00a0da;
+        }
+
+        .visited a:visited {
+            color: #dfa700;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Рассмотрим несколько вариантов настройки ссылок на примере небольшого меню.</h1>
+    <h1>Изменяйте настройки цвета, порядок свойств и следите за результатами.</h1>
+
+    <div class="default">
+        <h2>Меню со стандартными настройками</h2>
+        <h3>По умолчанию все ссылки синего цвета и подчеркнуты, посещенные ссылки меняют цвет на фиолетовый, а во время
+            активации на красный. При наведении на ссылку меняется стиль курсора.</h3>
+        <nav>
+            <ul>
+                <li><a href="https://vk.com/pechora_pro">Pechora-PRO</a></li>
+                <li><a href="https://vk.com/@pechora_pro-my-i-pechora-proger">Мы</a></li>
+                <li><a href="https://vk.com/@pechora_pro-html-css">Самый лучший курс</a></li>
+                <li><a href="https://vk.com/@pechora_pro-bystryi-start-v-tehnologii-free">Быстрый старт</a></li>
+                <li><a href="https://vk.com/@pechora_pro">Статьи</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="link">
+        <h2>Изменили внешний вид ссылок по умолчанию. Убрали подчеркивание и изменили цвет. Но обратите внимание, что
+            стандартные настройки активного состояния и посещенности ссылок обнулились. Сейчас о том, что перед нами
+            ссылка говорит только меняющийся курсор. Если вам необходимо вернуть
+            значения по умолчанию для этих состояний, придется прописать их вручную.</h2>
+        <nav>
+            <ul>
+                <li><a href="https://vk.com/pechora_pro">Pechora-PRO</a></li>
+                <li><a href="https://vk.com/@pechora_pro-my-i-pechora-proger">Мы</a></li>
+                <li><a href="https://vk.com/@pechora_pro-programmirovanie-na-yazyke-php">Самый лучший курс</a></li>
+                <li><a href="https://vk.com/@pechora_pro-bystryi-start-v-tehnologii-free">Быстрый старт</a></li>
+                <li><a href="https://vk.com/@pechora_pro">Статьи</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="link hover">
+        <h2>Возвращаем подчеркивание при наведении. Стандартные настройки активного состояния и посещенности ссылок все
+            еще не вернулись.</h2>
+        <nav>
+            <ul>
+                <li><a href="https://vk.com/pechora_pro">Pechora-PRO</a></li>
+                <li><a href="https://vk.com/@pechora_pro-my-i-pechora-proger">Мы</a></li>
+                <li><a href="https://vk.com/@pechora_pro-programmirovanie-v-javascript">Самый лучший курс</a></li>
+                <li><a href="https://vk.com/@pechora_pro-bystryi-start-v-tehnologii-free">Быстрый старт</a></li>
+                <li><a href="https://vk.com/@pechora_pro">Статьи</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="link hover active">
+        <h2>В дополнение к предыдущим настройкам добавили цвет активным ссылкам.</h2>
+        <nav>
+            <ul>
+                <li><a href="https://vk.com/pechora_pro">Pechora-PRO</a></li>
+                <li><a href="https://vk.com/@pechora_pro-my-i-pechora-proger">Мы</a></li>
+                <li><a href="https://vk.com/@pechora_pro-javascript-frejmvork-vue-js-3-0">Самый лучший курс</a></li>
+                <li><a href="https://vk.com/@pechora_pro-bystryi-start-v-tehnologii-free">Быстрый старт</a></li>
+                <li><a href="https://vk.com/@pechora_pro">Статьи</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="link hover active visited">
+        <h2>И еще один класс и посещенные ссылки обновились. Теперь они оранжевые.</h2>
+        <nav>
+            <ul>
+                <li><a href="https://vk.com/pechora_pro">Pechora-PRO</a></li>
+                <li><a href="https://vk.com/@pechora_pro-my-i-pechora-proger">Мы</a></li>
+                <li><a href="https://vk.com/@pechora_pro-javascript-frejmvork-vue-js-3-0">Самый лучший курс</a></li>
+                <li><a href="https://vk.com/@pechora_pro-bystryi-start-v-tehnologii-free">Быстрый старт</a></li>
+                <li><a href="https://vk.com/@pechora_pro">Статьи</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+
+</html>

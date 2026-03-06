@@ -1,0 +1,57 @@
+/* Настройка основного меню */
+
+ul {
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul:after {
+	display: block;
+	content: " ";
+	clear: both;
+	float: none;
+}
+ul.menu > li {
+	float: left;
+	position: relative;
+	width: 20%;
+}
+ul.menu > li > a {
+	display: block;
+	padding: 10px;
+	color: white;
+	background-color: #708090;
+	text-decoration: none;
+}
+ul.menu > li > a:hover {
+	background-color: #708090;
+}
+
+/* Настройка подменю */
+
+ul.submenu {
+	display: none;
+	position: absolute;
+	width: 100%;
+	top: 48px;
+	left: 0;
+}
+ul.submenu > li {
+	display: block;
+}
+ul.submenu > li > a {
+	display: block;
+	padding: 10px;
+	color: white;
+	background-color: #666;
+	text-decoration: none;
+}
+ul.submenu > li > a:hover {
+	text-decoration: underline;
+	background-color: #708090;
+}
+
+ul.menu > li:hover > ul.submenu {
+	display: block;
+}

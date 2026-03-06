@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list-style-type</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            font-size: 1.2em;
+        }
+
+        ul {
+            list-style-type: disc;
+            /* list-style-type: circle; */
+            /* list-style-type: square; */
+            /* list-style-type: decimal; */
+            /* list-style-type: upper-roman; */
+            /* list-style-type: lower-roman; */
+            /* list-style-type: '\2717'; */
+
+        }
+
+        ul li::marker {
+            color: blue;
+            font-size: 2em;
+        }
+
+        ol {
+            /* list-style-type: disc; */
+            /* list-style-type: circle; */
+            /* list-style-type: square; */
+            /* list-style-type: decimal; */
+            /* list-style-type: upper-roman; */
+            list-style-type: lower-roman;
+            /* list-style-type: '\2717'; */
+        }
+
+        ol li::marker {
+            font-size: 1.5em;
+            font-weight: 900;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Два варианта списка: нумерованный и маркированный</h1>
+        <h2>Меняйте настройки маркера, выбирайте понравившийся вариант</h2>
+        <div>
+            <ul>
+                <li>Будем стилизовать маркеры</li>
+                <li>с помощью псевдоэлемента</li>
+                <li>важно что настройке поддаются не все параметры</li>
+            </ul>
+            <ol>
+                <li>меняйте тип маркера</li>
+                <li>меняйте настройки</li>
+                <li>оценивайте изменения</li>
+            </ol>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.container{
+    background-color: #bbbbbb;
+    color: white;
+    text-align: center;
+    display: flex;
+}
+.cube{
+    display: block;
+    margin: 25px;
+    width: 140px;
+    height: 140px;
+}
+.cube h1{
+    padding-top: 30px;
+}
+.cube#one{
+    background-color: lightgreen;
+}
+.cube#two{
+    background-color: gold;
+}

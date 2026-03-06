@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.text{
+    font-size: 20px;
+}
+
+div.text h4{
+    font-size: 60px;
+    text-align: center;
+}
+
+table{
+    font-size: 20px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+    thead{font-size: 40px; }
+    td,th{border: 1px solid pink; }
