@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus</title>
+    <style>
+        body {
+            font-size: 1.3em;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        .content {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        form {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        input {
+            display: block;
+            margin-bottom: 1%;
+            padding: 1%;
+        }
+
+        input::placeholder {
+            color: #3f0274;
+            font-weight: bold;
+        }
+
+        /* допишите свои стили для плэйсхолдера внутри текстового поля */
+    </style>
+</head>
+
+<body>
+    <h1>Псевдоэлемент ::placeholder позволяет настроить внешний вид текста заполнителя в полях формы.</h1>
+    <div class="content">
+        <form>
+            <h3>Представьтесь</h3>
+
+            <input type="text" size="30" placeholder="Иванов">
+            <input type="text" size="30" placeholder="Иван">
+            <input type="text" size="30" placeholder="Иванович">
+            <input type="email" size="30" placeholder="xxxx@xxxx.ru">
+            <input type="tel" placeholder="+7 XXX XXX XX XX">
+
+            <p>Введите сообщение:</p>
+            <p><textarea name="message" rows="10" cols="60"
+                    placeholder="Расскажите нам о себе в свободной форме"></textarea></p>
+            <p class="center">
+                <input type="reset" value="Очистить поля формы">
+                <input type="submit" value="Отправить">
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>

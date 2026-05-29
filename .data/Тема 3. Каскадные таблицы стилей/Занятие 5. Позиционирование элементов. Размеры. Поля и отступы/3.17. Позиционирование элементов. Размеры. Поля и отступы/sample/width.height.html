@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Свойства width и height</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* обратите внимание, что имена классов записаны без пробелов, а значит будут применяться только к тем элементам, у которых в атрибуте class прописаны оба значения */
+
+        .height.px {
+            height: 175px;
+        }
+
+        .height.vh {
+            height: 3vh;
+        }
+
+        /* Важно! Процент высоты блока берется от родителя, но для div.container высота явно не задана, поэтому вместо значения в процентах применится значение auto*/
+        .height.per {
+            height: 25%;
+        }
+
+        /* Раскомментируйте свойство ниже и блок появится */
+        /* .container { height: 400px; } */
+
+        .width.px {
+            width: 175px;
+        }
+
+        .width.vw {
+            width: 3vh;
+        }
+
+        .width.per {
+            width: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Изучите разметку страницы, управляйте свойствами в блоке style, меняйте единицы измерения.</h1>
+    <h2>Перейдите в Режим разработчика и на вкладке Стили следите как меняются размеры.</h2>
+    <h2>Установите значения в положение auto. Обратите внимание, что в файле style.css вынесены размеры блоков по умолчанию 150 на 150px.<h2>
+
+
+            <div class="container">
+                <h2>Меняем высоту</h2>
+
+                <div class="height px"></div>
+                <div class="height vh"></div>
+                <div class="height per"></div>
+
+            </div>
+
+
+            <div class="container">
+                <h2>Меняем ширину</h2>
+
+                <div class="width px"></div>
+                <div class="width vw"></div>
+                <div class="width per"></div>
+
+            </div>
+</body>
+
+</html>

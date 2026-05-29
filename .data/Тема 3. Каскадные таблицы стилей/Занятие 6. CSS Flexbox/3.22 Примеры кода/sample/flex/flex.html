@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flex</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* в Режиме Разработчика меняйте ширину страницы и следите за изменениями размеров */
+		/* измените настройки блоков, оцените произошедшие изменения */
+		.cube#one {
+			flex: 2 1 300px;
+		}
+
+		.cube#two {
+			flex: 1 2 300px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>.cube#one{flex: 2 1 300px;} .cube#two{flex: 1 2 300px;}</h1>
+	<div class="container">
+		<div class="cube" id="one">
+			<h1>flex: 2 1 300px;</h1>
+		</div>
+		<div class="cube" id="two">
+			<h1>flex: 1 2 300px;</h1>
+		</div>
+	</div>
+</body>
+
+</html>

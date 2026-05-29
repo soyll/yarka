@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-of-type last-of-type</title>
+    <style>
+        div {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 3%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: start;
+        }
+
+        nav li {
+            list-style-type: none;
+            padding-right: 1%;
+        }
+
+        .first-of-type li:first-of-type a,
+        .last-of-type li:last-of-type a {
+            color: red;
+        }
+
+        .select-p p:first-of-type,
+        .select-p p:last-of-type {
+            font-size: larger;
+            font-weight: 700;
+            font-style: italic;
+            text-indent: 4%;
+        }
+
+        .select-ol ol:first-of-type {
+            list-style-type: circle;
+        }
+
+        .select-ol ol:last-of-type {
+            list-style-type: square;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Рассмотрим несколько вариантов выборки первых и последних элементов указанного типа.</h1>
+    <h2>Открывайте закомментированный код, следите за изменениями, ищите причины.</h2>
+
+    <div class="first-of-type">
+        <h2>Выделим первый элемент списка</h2>
+        <nav>
+            <ul>
+                <!-- <span>Добавим элемент в блок. Ссылка Pechora-PRO все еще первый элемент указанного типа и поэтому
+                    красного цвета.</span> <br> -->
+                <li><a href="https://vk.com/pechora_pro">Pechora-PRO</a></li>
+                <li><a href="https://vk.com/@pechora_pro-my-i-pechora-proger">Мы</a></li>
+                <li><a href="https://vk.com/@pechora_pro-html-css">Самый лучший курс</a></li>
+                <li><a href="https://vk.com/@pechora_pro-bystryi-start-v-tehnologii-free">Быстрый старт</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="last-of-type">
+        <h2>Выделим последний элемент списка</h2>
+        <nav>
+            <ul>
+                <li><a href="https://vk.com/pechora_pro">Pechora-PRO</a></li>
+                <li><a href="https://vk.com/@pechora_pro-my-i-pechora-proger">Мы</a></li>
+                <li><a href="https://vk.com/@pechora_pro-html-css">Самый лучший курс</a></li>
+                <li><a href="https://vk.com/@pechora_pro-bystryi-start-v-tehnologii-free">Быстрый старт</a></li>
+                <span>Добавим элемент в блок. Ссылка Быстрый старт все еще последний элемент указанного типа и поэтому
+                    красного цвета.</span>
+            </ul>
+        </nav>
+    </div>
+
+    <div>
+        <h2>Выделим первый и последний абзац текста</h2>
+        <div class="select-p select-ol">
+
+            <p>Для наполнения используем рыбу. А выделять текст будем особыми настройками.<br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem consequatur vero aliquid, adipisci aut
+                deserunt, animi veniam odio unde nisi eveniet fuga rem quia! Placeat at nulla explicabo sit possimus!
+            </p>
+            <p>Добавим небольшой список, чтобы "разорвать" наш текст. Пусть это будет список следующих уроков.</p>
+            <ol>
+                <li>Настройка изображений</li>
+                <li>Редактирование форм</li>
+                <li>Анимации в CSS</li>
+            </ol>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam necessitatibus quisquam veniam odio
+                animi id
+                vitae cumque, quis officiis illo accusantium, assumenda voluptates dolore excepturi praesentium
+                explicabo.
+                Deleniti, aut voluptates?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, repudiandae. Sapiente aperiam
+                magnam
+                exercitationem placeat praesentium, ex maiores. Cumque, at. Ea cumque quaerat obcaecati molestiae
+                aliquam
+                placeat laborum atque quisquam.</p>
+
+            <p>А в этом списке пусть будут подразделы урока Анимации. Кстати, этот абзац тоже последний в блоке, поэтом
+                выделен.</p>
+
+            <ol>
+                <li>Свойство Animation</li>
+                <li>Свойство Transition</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

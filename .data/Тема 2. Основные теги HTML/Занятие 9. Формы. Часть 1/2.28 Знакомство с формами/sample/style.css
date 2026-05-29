@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{font-size: 2rem;}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    margin: 3%;
+}
+
+div{ margin-bottom: 3%;}
+
+select, textarea, input, button{
+    padding: 1%;
+    font-size: 1rem;
+}
+
+button{ 
+    margin: 2%; 
+    min-width: 200px;
+}
+
+form{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    padding: 3%;
+    background: linear-gradient(90deg, #ff5cf1, #b38ade, #66ebff);
+    color:#fff;
+}
+

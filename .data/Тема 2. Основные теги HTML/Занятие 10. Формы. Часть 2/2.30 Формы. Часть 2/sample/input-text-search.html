@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Элементы формы. Input</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Элементы формы. Input. </h1>
+      <h2>
+        Text и Search. Поля для ввода текста и поиска.
+      </h2>
+
+      <section>
+        <h3>Поле для ввода текста: input type="text".</h3>
+        <form>
+            <label for="text">
+              Тип поля input, используемый по умолчанию. Им браузер заменит любой другой не поддерживаемый input
+            </label>
+            <input id="text" type="text">
+
+            <label for="text-value">
+              Еще одно текстовое поле, но с атрибутом value. Это будет содержимое поля
+              по умолчанию. Пользователь может переписать его на свое собственное.
+            </label>
+            <input id="text-value" type="text" value="Текст по умолчанию">   
+
+        </form>
+      </section>
+
+
+      <section>
+
+        <h3>Поле поиска: input type="search".</h3>
+        
+        <form>
+
+          <label for="search">
+            Внешних отличий с простым текстовым полем на первый взгляд нет, но попробуйте вставить в поле любой символ...
+          </label>
+          <input id="search" type="search">
+
+          <label for="search-placeholder">
+            Тот же элемент, но добавили к полю атрибут placeholder с каким-то поясняющим текстом.
+            Оцените разницу между ним и атрибутом value из предыдущего примера.
+          </label>
+          <input id="search-placeholder" type="search" placeholder="Я ищу...">
+
+        </form>
+
+      </section>
+
+    </main>
+  </body>
+</html>

@@ -136,9 +136,8 @@ footer > div > p {
 
 .page div.sidebar {
 	float: left;
+	width: 200px;
 	margin-bottom: 20px;
-	margin-right: 10px;
-	width: 25%;
 	overflow: hidden;
 }
 .page div.sidebar p {
@@ -146,7 +145,7 @@ footer > div > p {
 }
 
 .page div.sidebar img {
-	width: 100%;
+	width: 95%;
 	border-radius: 5px;
 	padding: 1px 0 1px 0;
 	float: left;

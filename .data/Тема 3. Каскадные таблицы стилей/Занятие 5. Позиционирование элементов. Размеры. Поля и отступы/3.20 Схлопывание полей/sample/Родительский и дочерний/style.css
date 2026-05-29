@@ -1,0 +1,12 @@
+div.block {
+	width: 50%;
+	height: 200px;
+	background-color: darkslategrey;
+	margin: 0 auto;
+}
+
+div.wrapper {
+	width: 70%;
+	margin: 0 auto;
+	background-color: lightgray;
+}

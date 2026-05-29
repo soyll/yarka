@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Элементы формы. Input. Button</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <h1>Элементы формы. Input. Button</h1>
+    <h2>
+      Альтернатива использованию элемента button.
+    </h2>
+
+    <section>
+
+      <h3>Сравните отображение текущей страницы и страницы button.html.</h3>
+
+      <form>
+
+        <label for="button">Для обычной кнопки необходимо написать код JavaScript для выполнения какого-либо действия.
+          Наша кнопка сейчас просто кнопка.</label>
+        <input type="button" id="button" value="Просто кнопка">
+
+        <label for="inactive-button">Добавим атрибут disabled и сделаем нашу кнопку неактивной.</label>
+        <input type="button" id="inactive-button" value="Неактивная кнопка" disabled>
+
+        <label for="script-button">Добавим небольшой код JavaScript и теперь по клику на кнопку будет открываться
+          информационное окно.</label>
+        <input type="button" id="script-button" value="Кнопка со скриптом"
+          onclick="(alert('Подробнее о скриптах и Javascript в нашем курсе!'))">
+
+      </form>
+    </section>
+
+    <section>
+      <h3>Для кнопок Сбросить и Отправить существуют специально описанные действия.</h3>
+
+      <form action="https://vk.com/pechora_proger">
+
+        <label for="reset">Кнопка Сбросить сбросит все значения всех полей формы на значения по умолчанию. Напишите в
+          поле ниже любой текст и нажмите кнопку.</label>
+        <input type="text">
+        <input id="reset" type="reset">
+
+        <label for="submit">При нажатии на кнопку Отправить запустится сценарий прописанный в атрибуте action
+          открывающего тега form.<br>
+          Это может быть не только скрипт, но и например, адрес страницы. В нашем случае вы перейдете на страницу группы
+          ВКонтакте</label>
+        <input id="submit" type="submit">
+
+      </form>
+    </section>
+
+    <section>
+      <h3>Один из способов вставки изображения.</h3>
+      <p>Атрибут src определяет путь к изображению, атрибут alt - альтернативный текст. Вы можете использовать атрибуты
+        высоты и ширины, чтобы определить размер вставки изображения в пикселях.
+        Используются для создания графических кнопок отправки, т. е. кнопок отправки, которые принимают форму
+        изображения, а не текста.</p>
+
+      <form>
+        <label for="img">Обратите внимание, что размеры кнопки станут равны размеру изображения. Курсор при наведении на
+          элемент будет менять свой вид.</label>
+        <input type="image" src="icon.png" alt="Кнопка поиска">
+      </form>
+
+
+
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бинго Бонго</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="main">
+      <!-- Блок header содержит 3 блока -  logo, nav и icons-->
+      <header class="header">
+        <!-- Блок logo содержит 2 элемента - изображение и текст-->
+        <div class="logo">
+          <img src="img/logotype.png" alt="Логотип" class="logo__img">
+          <h1 class="logo__text">Бинго Бонго</h1>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="main.html" class="nav__link">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a href="main.html" class="nav__link">Каталог</a>
+            </li>
+            <li class="nav__item">
+              <a href="main.html" class="nav__link">Популярные игры</a>
+            </li>
+            <li class="nav__item">
+              <a href="main.html" class="nav__link">Игра месяца</a>
+            </li>
+            <li class="nav__item">
+              <a href="main.html" class="nav__link">Игротеки</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="icons">
+          <img src="img/search.svg" alt="Иконка поиска" class="icons__item">
+          <img src="img/profile.svg" alt="Иконка профиля" class="icons__item">
+          <img src="img/cart.svg" alt="Иконка корзины" class="icons__item">
+        </div>
+      </header>
+
+      <section class="banner">
+        <img
+          class="banner__img_top"
+          src="img/star-main.svg"
+          alt="Изображение звезды"
+          id="star_main">
+        <div class="banner__info">
+          <h2 class="banner__head">Настольные игры</h2>
+          <h2 class="banner__head banner__head_blue">Для любой компании</h2>
+          <p>
+            Самые популярные игры для детей и взрослых <br>
+            с бесплатной доставкой по всему миру
+          </p>
+
+          <button class="button banner__button">Смотреть каталог</button>
+        </div>
+        <img
+          class="banner__img_bottom"
+          src="img/flower-main.svg"
+          alt="Изображение цветка"
+          id="flower_main">
+      </section>
+    </section>
+
+    <section>
+      <div class="about">
+        <div class="about__text">
+          <h2 class="about__head">О нас</h2>
+          <p class="about__content">
+            Бинго Бонго – это место, где каждый найдет игру себе по душе.
+            Спортивные, логические, стратегические, развивающие и очень веселые
+            игры – широкий ассортимент нашего магазина никого не оставит
+            равнодушным.
+          </p>
+          <p class="about__content">
+            Офлайн-магазины Бинго Бонго находятся в 40 крупнейших городах
+            России. Сомневаетесь, какую игру выбрать? Приходите в магазин и наши
+            консультанты подскажут, сыграют с вами партию, и вы поймете, какая
+            игра вам подходит больше всего.
+          </p>
+          <p class="about__content">
+            Также Бинго Бонго регулярно проводит мероприятия и игротеки, где вы
+            можете поиграть в любые игры из нашего ассортимента, познакомиться с
+            новыми людьми, интересно и весело провести время в приятной
+            компании.
+          </p>
+        </div>
+        <div class="about__image">
+          <img src="img/game.png" alt="Изображение игры">
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="cards__item cards__item_purple">
+          <h4 class="cards__head">Для детей</h4>
+          <p class="cards__text">
+            Более 100 видов развивающих игр для детей возрастом от 6 месяцев
+          </p>
+          <div class="cards__block-img">
+            <img
+              class="cards__img"
+              src="img/magictrain.png"
+              alt="Изображение игры для детей">
+          </div>
+        </div>
+        <div class="cards__item cards__item_blue">
+          <h4 class="cards__head">Для взрослых</h4>
+          <p class="cards__text">
+            Стратегические, логические, простые веселые игры для любой компании
+          </p>
+          <div class="cards__block-img">
+            <img
+              class="cards__img"
+              src="img/wildgames.png"
+              alt="Изображение игры для взрослых">
+          </div>
+        </div>
+        <div class="cards__item cards__item_yellow">
+          <h4 class="cards__head">Для всей семьи</h4>
+          <p class="cards__text">
+            Разнообразные увлекательных игр, чтобы провести время в кругу семьи
+          </p>
+          <div class="cards__block-img">
+            <img
+              class="cards__img"
+              src="img/tres.png"
+              alt="Изображение игры для всей семьи">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="event">
+      <div class="info">
+        <h3 class="info__head">Октябрьская игротека</h3>
+        <p class="info__text">
+          Приглашаем вас на увлекательную игротеку от Бинго Бонго! Приходите
+          сами, приводите друзей и семью. Мы обещаем - будет очень весело!
+        </p>
+        <div class="stickers">
+          <div class="stickers__item stickers__item_flower">
+            <h5 class="stickers__head stickers__head_flower">3 ноября</h5>
+            <img
+              class="stickers__img"
+              src="img/flower.svg"
+              alt="Иконка Цветок">
+          </div>
+          <div class="stickers__item stickers__item_fire">
+            <h5 class="stickers__head stickers__head_fire">
+              Билет 300 &#8381;
+            </h5>
+            <img class="stickers__img" src="img/fire.svg" alt="Иконка Огонь">
+          </div>
+          <div class="stickers__item stickers__item_rhomb">
+            <h5 class="stickers__head stickers__head_rhomb">15:00</h5>
+            <img class="stickers__img" src="img/rhomb.svg" alt="Иконка Ромб">
+          </div>
+          <div class="stickers__item stickers__item_arrow">
+            <h5 class="stickers__head stickers__head_arrow">
+              ТЦ "Гига", Москва
+            </h5>
+            <img
+              class="stickers__img"
+              src="img/arrow.svg"
+              alt="Иконка Стрелка">
+          </div>
+        </div>
+      </div>
+
+      <form class="form" action="main.html">
+        <label for="name" class="muted">Имя</label>
+        <input type="text" name="name" id="name">
+
+        <label for="phone" class="muted">Телефон</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="+7 ___ ___ __ __">
+
+        <label for="email" class="muted">E-mail</label>
+        <input type="email" name="email" id="email">
+
+        <p>Выберите свой игровой уровень</p>
+        <div class="radio_group">
+          <input type="radio" name="level" id="beginner" checked>
+          <label for="beginner">Новичок</label>
+
+          <input type="radio" name="level" id="amateur">
+          <label for="amateur">Любитель</label>
+
+          <input type="radio" name="level" id="professional">
+          <label for="professional">Профиссионал</label>
+        </div>
+
+        <input type="checkbox" name="checkbox_data" id="data">
+        <label for="data"
+          >Я согласен на обработку моих персональных данных</label
+        >
+
+        <button class="button">Купить билет</button>
+      </form>
+    </section>
+    <footer class="footer">
+      <div class="footer__circle">
+        <p>Бинго Бонго</p>
+        <p>&#169; 2023</p>
+        <p>Все права защищены</p>
+      </div>
+      <div class="footer__networks">
+        <img
+          class="footer__networks_icon"
+          src="img/facebook.svg"
+          alt="Иконка facebook">
+        <img
+          class="footer__networks_icon"
+          src="img/instagram.svg"
+          alt="Иконка instagram">
+        <img class="footer__networks_icon" src="img/vk.svg" alt="Иконка vk">
+      </div>
+      <div class="footer__politic">
+        <p>Политика конфиденциальности</p>
+      </div>
+    </footer>
+  </body>
+</html>

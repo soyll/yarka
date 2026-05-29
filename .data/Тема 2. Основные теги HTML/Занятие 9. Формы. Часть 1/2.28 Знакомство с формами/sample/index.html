@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Личный кабинет 1.0</title>
+</head>
+
+<body>
+	<h1>Добро пожаловать в личный кабинет. Версия 1.0</h1>
+
+	<form name="profile">
+
+		<div>
+			Загрузка личных данных...
+			<progress id="progress" max="100">70%</progress>
+		</div>
+
+		<div>
+			Найдены профили...
+			<select name="select" id="select">
+				<option value="opt1">Кондратюк В.А.</option>
+				<option value="opt2">Лапин Ю.В.</option>
+				<option value="opt3">Шмелев П.Р.</option>
+				<option value="optn">Анонимный покупатель</option>
+			</select>
+		</div>
+	</form>
+
+
+	<form name="review">
+		<div>
+			Выберите товар для отзыва
+			<select name="select-group" id="select-group">
+				<optgroup label="Заказанные товары">
+					<option value="opt1">Новогодняя лесочка</option>
+					<option value="opt2">Гирлянда</option>
+					<option value="opt3">Елочные игрушки</option>
+					<option value="opt4">Мишура</option>
+				</optgroup>
+				<optgroup label="Товары в списке желаемого">
+					<option value="opt1">Сладкий набор для детей</option>
+					<option value="opt2">Костюм Деда Мороза</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<div>
+			Оцените выбранный товар
+
+			<input type="text" list="datalist">
+
+			<datalist id="datalist">
+				<option value="1 звезда">Товар очень плохого качества</option>
+				<option value="2 звезды">Товар плохого качества</option>
+				<option value="3 звезды">Товар среднего качества</option>
+				<option value="4 звезды">Товар хорошего качества</option>
+				<option value="5 звезд">Товар отличного качества</option>
+			</datalist>
+		</div>
+
+		<textarea name="textarea" id="textarea" cols="20" rows="10"></textarea>
+
+		<div id="fieldset">
+			<button type="submit">Отправить</button>
+			<button type="reset">Очистить</button>
+			<button type="button">Проверить</button>
+			<button type="button">Отложить</button>
+		</div>
+
+	</form>
+</body>
+
+</html>

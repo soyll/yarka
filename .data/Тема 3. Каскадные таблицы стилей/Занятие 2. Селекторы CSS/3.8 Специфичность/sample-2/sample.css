@@ -1,0 +1,25 @@
+
+/*возрастание специфичности*/
+p {
+	color: blue;
+}
+
+.select {
+	color: red;
+}
+
+#text {
+	color: green;
+}
+
+/*селекторы с одинаковой специфичностью*/
+
+.first {
+	font-size: xx-large;
+}
+
+.second {
+	font-size:small;
+}
+
+

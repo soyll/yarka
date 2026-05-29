@@ -1,0 +1,8 @@
+div.block {
+	width: 400px;
+	height: 200px;
+	background-color: rgb(99, 240, 240);
+	padding: 2%;
+	font-size: xx-large;
+	font-weight: bold;
+}

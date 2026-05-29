@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Элементы формы. Input</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Элементы формы. Input</h1>
+      <h2>
+        Выбор одного или нескольких вариантов. Checkbox. RadioButton.
+      </h2>
+
+      <section>
+        <h3>Выбор нескольких вариантов: input id="checkbox-{#}" type="checkbox" </h3>
+        <form>
+          Выбираем варианты из представленных. Обратите внимание, что флажки и подписи к ним вложены в элементы label.
+          <p>Продолжите фразу. Я сегодня чудо как ... </p>    
+          <label> <input id="checkbox-1" type="checkbox" checked> Первый вариант. Хороша </label>
+          <label> <input id="checkbox-2" type="checkbox"> Второй вариант. Умна </label>
+          <label> <input id="checkbox-3" type="checkbox"> Третий вариант. Скромна</label> 
+        </form>
+      </section>
+
+      <section>
+        <h3>Кнопка-переключатель: input type="radio"</h3>
+        <form>
+          Благодаря одинаковому значению атрибута name все три элемента оказываются связанными друг с другом и выбор одного из них автоматически отключает все остальные.
+          <p>Продолжите фразу. Я сегодня чудо как ... </p>  
+          <label> <input name="radio" type="radio"> Первый вариант. Хороша </label>
+          <label> <input name="radio" type="radio"> Второй вариант. Умна </label>
+          <label> <input name="radio" type="radio"> Третий вариант. Скромна</label>
+          <p>Почувствовали разницу?</p>
+        </form>
+      </section>
+  
+    </main>
+  </body>
+</html>

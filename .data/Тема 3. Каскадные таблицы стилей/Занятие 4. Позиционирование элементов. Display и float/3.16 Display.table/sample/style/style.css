@@ -1,0 +1,33 @@
+* { margin:0; padding:0;}
+
+body {
+	font-size: 0.75em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container, footer {
+	width: 90%;
+	margin: 0 auto;
+}
+.container {background: #e2e2e2;}
+
+header {background-color: #fff0e6;}
+
+section {
+	background-color: #d8edf5;
+	width:67.708333333%;
+	float:left;
+}
+
+aside{
+	background-color: #efe5cc;
+	width:31.25%;
+	float:right;
+}
+
+footer{
+	background-color: #afd0a6;
+	clear:both;
+}
+
+

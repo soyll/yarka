@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Валидация формы</title>
+  <style>
+    main {
+      width: 80%;
+      margin: 0 auto;
+      font-size: 2rem;
+      color: #333333;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    section {
+      background: linear-gradient(90deg, #ff5cf1, #b38ade, #66ebff);
+      margin: 2rem;
+      padding: 2rem;
+    }
+
+    form div {
+      padding: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+
+    input,
+    select {
+      padding: 1%;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Валидация формы</h1>
+    <section>
+      <form>
+        <h2>Представьтесь</h2>
+        <label for="name">
+          Введите ваше имя (кириллица, пробел; от 2 до 10 символов)</label>
+        <input id="name" type="text" required pattern="[а-яА-ЯёЁ\-\s]{2,10}" placeholder="Иван">
+        <label for="surname">
+          Введите вашу фамилию (кириллица, пробел; от 2 до 15 символов)
+        </label>
+        <input id="surname" type="text" required pattern="[а-яА-ЯёЁ\-\s]{2,15}" placeholder="Иванов">
+        <label for="email"> Введите адрес электронной почты </label>
+        <input type="email" required id="email" placeholder="example@mail.ru">
+
+        <hr>
+        <h2>Расскажите о себе</h2>
+        <p>
+          Укажите ваш пол <input type="radio" name="sex" value="m">мужской
+          <input type="radio" name="sex" value="f" checked>женский
+          <input type="radio" name="sex" value="h">другой
+        </p>
+        <p>
+          Выберите свой возраст
+          <select name="selection">
+            <option value="option1">до 18-ти</option>
+            <option value="option2" selected>19-30</option>
+            <option value="option3">31-45</option>
+            <option value="option4">46 и старше</option>
+          </select>
+        </p>
+
+        <hr>
+        <label for="number"> Введите ваш идентификатор </label>
+
+        <input id="number" type="number" min="4" max="22">
+
+        <hr>
+        <h2>Оставьте свое мнение</h2>
+        <p>Введите сообщение:</p>
+        <p>
+          <textarea required name="message" rows="10" cols="50"></textarea>
+        </p>
+        <p>
+          <input type="reset" value="Очистить поля формы">
+          <input type="submit" value="Отправить">
+        </p>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

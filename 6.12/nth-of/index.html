@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор элемента по индексу</title>
+    <style>
+        .container{
+            width:80%;
+            margin:0 auto;
+        }
+
+        span.select{
+           font-style: italic;
+        }
+
+        li.active:nth-child(-n + 3) {
+            border:1px solid #333333;
+            padding:1%;    
+            font-weight: bold;
+        }
+
+        :nth-child(-n + 3 of li.active-of) {
+            border:1px solid #333333;
+            padding:1%;    
+            font-weight: bold;
+        }  
+
+
+    </style>
+</head>
+<body>
+    <h1>Настраиваем выбор активных курсов если они находятся в пределах первых трех элементов списка с помощью: <span class="select"> li.active:nth-child(-n + 3) </span></h1>
+    <div class="container">
+        <div class="sample">
+            <p>Список курсов:</p>
+            <ul>
+                <li class="active">HTML & CSS | активный</li>
+                <li>Bootstrap5</li>
+                <li class="active">Основы программирования вна языке PHP | активный</li>
+                <li class="active">Программирование в Javascript | активный</li>
+                <li>Работа с CMS Wordpress</li>
+                <li>JavaScript фреймворк Vue.JS 3.0</li>
+                <li>Быстрый старт в Laravel</li>
+            </ul>
+        </div>
+    </div>
+    <h1>Настраиваем выбор первых трех активных курсов в списке с помощью:  <span class="select">:nth-child(-n + 3 of li.active-of)</span></h1>
+    <div class="container">
+        <div class="sample">
+            <p>Список курсов:</p>
+            <ul>
+                <li class="active-of">HTML & CSS | активный</li>
+                <li>Bootstrap5</li>
+                <li class="active-of">Основы программирования вна языке PHP | активный</li>
+                <li class="active-of">Программирование в Javascript | активный</li>
+                <li>Работа с CMS Wordpress</li>
+                <li class="active-of">JavaScript фреймворк Vue.JS 3.0 | активный</li>
+                <li class="active-of">Быстрый старт в Laravel | активный</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

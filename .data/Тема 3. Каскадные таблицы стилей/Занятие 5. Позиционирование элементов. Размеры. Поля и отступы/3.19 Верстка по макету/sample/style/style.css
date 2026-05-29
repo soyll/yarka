@@ -1,0 +1,157 @@
+/*для всех элементов страницы обнуляются значения отступов и полей и задается режим отображения*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font: 14pt Arial, sans-serif;
+	height: 100%;
+	color: #036;
+	text-align: justify;
+	line-height: 1.5;
+}
+
+/*настройки для все элементов со значением атрибута class="wrapper"*/
+.wrapper {
+	min-height: 100%;
+}
+
+/* настройки оформления блока Header
+-----------------------------------------------------------------------------*/
+header {
+	overflow: hidden; /*отображение содержания блочного элемента, если оно целиком не помещается и выходит за область заданных размеров*/
+	background-image: url(../image/header-bckgr.jpg); /*установка фонового изображения*/
+}
+
+/*настройки для всех div, входящих непосредственно в header*/
+header > div {
+	text-align: center; /*выравнивание текста внутри блока*/
+}
+
+/*настройка для заголовков разных уровней, вложенных в div, вложенных в header*/
+header > div > h1,
+header > div > h2,
+header > div > h3 {
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /*тень для текста*/
+}
+
+header > div > h1 {
+	font-size: 36pt;
+}
+header > div > h2 {
+	font-size: 28pt;
+}
+header > div > h3 {
+	font-size: 24pt;
+	font-style: italic; /* стиль шрифта - курсив */
+	background-color: rgba(102, 102, 102, 0.7); /*фон текста задаем в таком формате, чтобы задать прозрачность*/
+}
+
+header > div > hr {
+	border: none; /* убираем границу  */
+	color: #fff; /* цвет линии */
+	background-color: #fff; /* цвет фона */
+}
+
+/* настройки оформления раздела Меню
+-----------------------------------------------------------------------------*/
+
+/* форматирование для всех элементов nav */
+nav {
+	background-color: #666;
+	color: #c0c0c0;
+	text-align: center;
+	font-style: italic;
+}
+nav a {
+	text-decoration: none;
+	color: #c0c0c0;
+}
+nav a:hover {
+	/* форматирование для всех элементов a внутри блока nav при наведении на них указателя мыши*/
+	color: #fff; /* Цвет ссылки */
+	text-decoration: underline; /*оформление текста - подчеркнутый*/
+}
+
+/* настройки оформления основной части страниц
+-----------------------------------------------------------------------------*/
+
+.content {
+	overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+	/* форматирование для нескольких элементов */
+	font-style: italic;
+}
+
+h1 {
+	text-align: center;
+}
+
+/*  настройки оформления блока Footer
+-----------------------------------------------------------------------------*/
+footer {
+	background-color: #666;
+}
+
+footer > div > p {
+	font-size: 12pt;
+	font-style: italic;
+	color: #c0c0c0;
+	text-align: center;
+}
+
+/*  настройки оформления страницы INDEX
+-----------------------------------------------------------------------------*/
+
+.fill {
+	background-color: rgba(0, 51, 102, 0.1);
+	box-shadow: 0 0 10px rgba(0, 51, 102, 0.7);
+}
+
+.select {
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* настройки оформления страницы FEEDBACK
+-----------------------------------------------------------------------------*/
+
+form {
+	background: #666;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+	color: #fff;
+}
+
+form p.center {
+	text-align: center;
+}
+
+/*оформление элементов с атрибутом type и значением submit и reset*/
+input[type="submit"],
+input[type="reset"] {
+	background-color: #666;
+	border: 1px solid #fff; /*настройки границы*/
+	color: #fff;
+	cursor: pointer; /*в пределах элемента тип курсора меняется на руку*/
+	border-radius: 6px;
+}
+
+/*изменение оформления элементов при наведении*/
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+	background-color: #fff;
+	border: 1px solid #666;
+	color: #666;
+}

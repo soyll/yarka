@@ -1,0 +1,11 @@
+div.new_font{
+	font-family: Courier;
+	font-size: 18pt;
+}
+div#bg{
+	background-color: #c0c0c0;
+}
+
+div.text{
+	color: red;
+}

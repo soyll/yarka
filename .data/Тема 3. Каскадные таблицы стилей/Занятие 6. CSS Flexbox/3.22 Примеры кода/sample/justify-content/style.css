@@ -1,0 +1,49 @@
+.container {
+	margin: 0 auto;
+	background-color: #bbbbbb;
+	width: 90%;
+	height: 80%;
+	color: white;
+	text-align: center;
+	display: flex;
+}
+.one {
+	display: block;
+	background-color: green;
+	margin: 25px;
+	width: 100px;
+	height: 150px;
+}
+.one h1 {
+	padding-top: 35px;
+}
+.two {
+	display: block;
+	background-color: gold;
+	margin: 25px;
+	width: 150px;
+	height: 100px;
+}
+.two h1 {
+	padding-top: 10px;
+}
+.three {
+	display: block;
+	background-color: red;
+	margin: 25px;
+	width: 150px;
+	height: 150px;
+}
+.three h1 {
+	padding-top: 30px;
+}
+.four {
+	display: block;
+	background-color: blue;
+	margin: 25px;
+	width: 300px;
+	height: 200px;
+}
+.four h1 {
+	padding-top: 60px;
+}

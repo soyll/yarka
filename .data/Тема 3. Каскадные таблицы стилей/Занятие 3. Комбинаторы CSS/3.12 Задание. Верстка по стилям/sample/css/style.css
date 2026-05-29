@@ -1,0 +1,105 @@
+/* общие настройки */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font: 1.2em Arial, Helvetica, sana-serif;
+	color: #333333;
+	background: #c39f7a;
+}
+
+/* параметры шапки сайта */
+header {
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding: 15px 15px 15px;
+}
+
+header h1 {
+	text-align: center;
+	font-size: 4em;
+	font-style: italic;
+	color: #2f1617;
+	float: right;
+	padding-right: 5%;
+	padding-top: 7%;
+}
+
+header img.logo {
+	padding-left: 5%;
+}
+
+/* общие настройки контейнера страницы */
+.container {
+	background: #41413a;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+
+.container .dishes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.container .dish {
+	margin: 1em 4em 1em;
+	padding: 1em 1em;
+	background: #1f272f;
+	text-align: center;
+	min-width: 90%;
+}
+
+/* настройки блока с описанием товара */
+
+/* первая часть блока информация */
+.info {
+	width: 50%;
+	float: left;
+	text-align: left;
+}
+
+.info p {
+	color: #c39f7a;
+	line-height: 1.5;
+}
+
+p.dish-info-price {
+	font-style: bold italic;
+	font-size: 3em;
+}
+
+p.dish-info-name {
+	font-style: italic;
+	font-size: 2em;
+}
+
+span.select {
+	font-weight: bold;
+}
+
+/* вторая часть блока - фото */
+.photo img {
+	width: 40%;
+}
+
+/* настройка подвала сайта */
+
+footer {
+	display: flex;
+	align-items: center;
+	height: 150px;
+	width: 100%;
+	padding-left: 5%;
+}
+
+footer p {
+	color: #2f1617;
+}

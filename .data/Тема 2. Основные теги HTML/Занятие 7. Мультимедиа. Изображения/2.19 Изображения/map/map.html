@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта изображение</title>
+    <style>
+        img {
+            display: block;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Выбери фигуру и перейди по ссылке</h1>
+
+    <!-- <area> определяет активную область на изображении и, при желании, связывает её с гипертекстовой ссылкой.
+         Этот элемент используется только внутри элемента <map>. -->
+
+    <map name="sample-map">
+        <area shape="rect" coords="18,18,148,200" href="first.html" target="_blank" alt="Первая страница">
+        <area shape="circle" coords="300,100,90" href="second.html" target="_blank" alt="Вторая страница">
+        <area shape="poly" coords="90,400,200,200,310,400" href="third.html" target="_blank" alt="Третья страница">
+    </map>
+
+    <!-- Важно, чтобы для вашего изображения был задан точный размер.
+    О том как это делается мы поговорим в следующих уроках -->
+
+    <!-- атрибут usemap содержит ссылку на name карты -->
+    <img usemap="#sample-map" src="map.jpg" alt="Моя карта">
+
+</body>
+
+</html>

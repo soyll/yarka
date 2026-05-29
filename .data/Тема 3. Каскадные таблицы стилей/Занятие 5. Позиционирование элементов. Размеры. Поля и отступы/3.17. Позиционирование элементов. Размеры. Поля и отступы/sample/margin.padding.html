@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свойства margin и padding</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* раскомментируйте следующие настройки, чтобы следить за изменениями внешних полей */
+
+        /* .container {
+            border: 2px solid black;
+        } */
+
+        .margin.px {
+            margin: 20px 30px 15px 10px;
+        }
+
+        .margin.per {
+            margin: 2% 5%;
+        }
+
+        .padding.px {
+            padding: 5px 15px 15px 10px;
+        }
+
+        .padding.per {
+            padding: 1% 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Изучите разметку страницы, управляйте свойствами в блоке style, меняйте единицы измерения и список настроек.
+    </h1>
+    <h2>Перейдите в Режим разработчика и на вкладке Стили следите как меняются настройки.
+        Обратите внимание, что в файле style.css вынесены размеры блоков по умолчанию 150 на 150px.</h2>
+
+
+    <div class="container">
+        <h2>Меняем внешние отступы</h2>
+
+        <div class="margin px">Для блока заданы все четыре внешних отступа в пикселях</div>
+        <div class="margin per">Для блока заданы два внешних отступа в процентах</div>
+
+    </div>
+
+
+    <div class="container">
+        <h2>Меняем Внутренние поля</h2>
+
+        <div class="padding px">Для блока заданы все четыре внутренних отступа в пикселях</div>
+        <div class="padding per">Для блока заданы два внутренних отступа в процентах</div>
+
+    </div>
+</body>
+
+</html>

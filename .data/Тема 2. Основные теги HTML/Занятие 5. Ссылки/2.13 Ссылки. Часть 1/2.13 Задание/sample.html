@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ссылки</title>
+  <style>
+    body {
+      font-size: 2em;
+      color: #fff;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    section {
+      width: 60%;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .link div {
+      width: 50%;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .link {
+      display: flex;
+      margin-top: 1rem;
+      background: linear-gradient(90deg, #ff5cf1, #b38ade, #66ebff);
+      border: 3px solid #fff;
+      border-radius: 10px;
+      align-items: center;
+    }
+
+    a {
+      cursor: pointer;
+      font-weight: 700;
+      color: #333;
+    }
+
+    a.click {
+      display: flex;
+      justify-content: center;
+      padding: 2%;
+      background-color: #ffffff50;
+      border: 1px solid #ff5cf1;
+    }
+
+    a.click div {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h2>Варианты атрибутов и их значений</h2>
+    <div class="link">
+      <div>Тег а без атрибутов, выглядит как неактивная ссылка</div>
+      <div>
+        <a>Ссылка - заполнитель</a>
+      </div>
+    </div>
+    <div class="link">
+      <div>
+        Добавим к ссылке атрибут href, который содержит адрес открываемого
+        ресурса
+      </div>
+      <div>
+        <a href="https://vk.com/pechora_proger">Откроем страницу нашей группы Вконтакте</a>
+      </div>
+    </div>
+    <div class="link">
+      <div>
+        Тот же атрибут, но новое содержимое - якорь. Перейдем не просто на
+        страницу, а в конкретное ее место.
+      </div>
+      <div>
+        <a href="#content">Значение атрибута #content направит нас к элементу страницы с
+          атрибутом id="content"</a>
+      </div>
+    </div>
+    <div class="link">
+      <div>Изменим место открытия ссылки с помощью атрибута target</div>
+      <div>
+        <a href="https://vk.com/pechora_proger" target="_blank">Откроем нашу страницу в новой вкладке, задав значение
+          _blank
+        </a>
+      </div>
+    </div>
+    <div class="link">
+      <div>
+        Атрибут download превращает инструмент перехода в инструмент
+        скачивания. Важно, работоспособность этого атрибута проверяйте на
+        сервере.
+      </div>
+      <div>
+        <a href="sample.txt" download="загруженный файл">Скачиваем файл sample.txt из текущей директории с именем
+          "загруженный файл"</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="content">
+    <h2>А вот и блок с id="content"</h2>
+    <h2>Дополнительные варианты использования тега а</h2>
+
+    <div class="link">
+      <div>
+        Создаем кликабельную картинку. Такой подход может быть положен в
+        основу создания простой галереи, когда при клике на превью открывается
+        полноразмерная версия изображения.
+      </div>
+      <div>
+        <a href="big-img.jpg">
+          <img src="small-img.jpg" alt="маленькая картинка" /></a>
+      </div>
+    </div>
+
+    <div class="link">
+      <div>
+        Еще один вариант и теперь ссылкой станет не картинка или текст, а целый блок.
+        В соответствии с последней спецификацией тег a может содержать внутри div.
+        Для уточнения в html 4.1 нельзя так делать, а вот в html5 — можно, но всё зависит от родителя.
+        Конструкция a>div не может лежать внутри строчного элемента (например внутри span-а).
+      </div>
+      <div>
+        <a class="click" href="https://vk.com/pechora_proger">
+          <div>Кликабельный блок</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="link">
+      <div>
+        Используем протокол tel и при нажатии на ссылку запускается мехнизм
+        вызова абонента
+      </div>
+      <div>
+        <a href="tel:+79041041706">+79041041706</a>
+      </div>
+    </div>
+
+    <div class="link">
+      <div>Или протокол mailto и запускаем почтовый клиент</div>
+      <div>
+        <a href="mailto:pechora-proger@yandex.ru">pechora-proger@yandex.ru</a>
+      </div>
+    </div>
+
+    <div class="link">
+      <div>Еще один способ использования а</div>
+      <div>
+        <a href=#top>Вернитесь к началу страницы</a>
+      </div>
+    </div>
+
+  </section>
+</body>
+
+</html>

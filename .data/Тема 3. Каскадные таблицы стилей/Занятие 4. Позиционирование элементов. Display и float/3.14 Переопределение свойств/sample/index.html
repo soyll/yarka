@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Свойство Display</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* переопределите значения свойства display по умолчанию следующим элементам верстки */
+		/* для первого блока - абзацы */
+		/* для второго блока - ссылки и элементы span */
+		/* для третьего блока - элементы списка */
+		/* для последнего блока - изображения */
+	</style>
+</head>
+
+<body>
+
+	<h1>Каждый элемент имеет предопределенное значение свойства display.</h1>
+	<h2>Изменяйте значения свойства в блоке style страницы и следите за изменениями.</h2>
+
+	<div class="text">
+		<p class="first">Абзацы текста имеют значение block. Это позволяет начинать каждый абзац с новой строки.</p>
+		<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis omnis ducimus praesentium placeat eveniet
+			ea? Delectus aspernatur illo officia doloribus? Ut delectus voluptas dolor facere quo, repellendus
+			recusandae aut excepturi! </p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente minima maiores eveniet maxime voluptate
+			esse beatae ipsum ducimus excepturi doloribus tempora, nemo amet quibusdam fuga soluta architecto ipsa unde
+			hic?</p>
+	</div>
+	<div class="select">
+		<p class="first">Теперь те же абзацы, но с непростым сдержимым. Включим внутрь абзаца элементы span и ссылки. По умолчанию значение свойства display для них - inline.</p>
+		<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis omnis ducimus praesentium placeat eveniet
+			ea?
+			<span>Этот текст поместили внутрь элемента span, чтобы дополнительно выделить его внутри абзаца</span>  Ut delectus voluptas dolor facere quo, repellendus recusandae
+			aut excepturi! </p>
+		<p>Lorem ipsum dolor sit amet  <a href="#">а здесь внутри текста ссылка, например на страницу какого-то справочника или источника информации из текста</a> . Sapiente minima maiores eveniet maxime voluptate
+			esse beatae ipsum ducimus excepturi doloribus tempora, nemo amet quibusdam fuga soluta architecto ipsa unde hic?
+		</p>
+	</div>
+	<div class="list">
+		<p class="first">Каждый элемент списка - display:block, поэтому и начинается новый пункт с новой строки.</p>
+		<ol>
+			<li>Помните, что</li>
+			<li> нумерованный список</li>
+			<li> используется если</li>
+			<li> вам важен </li>
+			<li>порядок элементов.</li>
+		</ol>
+	</div>
+
+	<div class="gallery">
+		<p class="first">А какое значение свойства display у изображений?</p>
+		<img src="img/img-1.jpg" alt="photo-1">
+		<img src="img/img-2.jpg" alt="photo-2">
+		<img src="img/img-3.jpg" alt="photo-3">
+		<img src="img/img-4.jpg" alt="photo-4">
+	</div>
+
+
+</body>
+
+</html>

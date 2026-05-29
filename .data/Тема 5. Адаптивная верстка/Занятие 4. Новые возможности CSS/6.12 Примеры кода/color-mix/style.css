@@ -1,0 +1,160 @@
+:root{
+	--main-color:#0d00ff;
+	--first-color:#ffea00;
+	--second-color:#aa0505;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+h1,
+h2 {
+	display: block;
+	width: 100%;
+}
+.step {
+	display: flex;
+	flex-wrap: wrap;
+}
+.block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+	width: 150px;
+	height: 150px;
+	border-radius: 5%;
+	margin: 10px;
+	color: #ffffff;
+}
+
+.color {
+	background-color:var(--main-color);
+}
+
+/* --------------прозрачность-------------- */
+.trans-0 {
+	background: color-mix(in srgb, var(--main-color), transparent 0%);
+}
+.trans-10 {
+	background: color-mix(in srgb, var(--main-color), transparent 10%);
+}
+.trans-20 {
+	background: color-mix(in srgb, var(--main-color), transparent 20%);
+}
+.trans-30 {
+	background: color-mix(in srgb, var(--main-color), transparent 30%);
+}
+.trans-40 {
+	background: color-mix(in srgb, var(--main-color), transparent 40%);
+}
+.trans-50 {
+	background: color-mix(in srgb, var(--main-color), transparent 50%);
+}
+.trans-60 {
+	background: color-mix(in srgb, var(--main-color), transparent 60%);
+}
+.trans-70 {
+	background: color-mix(in srgb, var(--main-color), transparent 70%);
+}
+.trans-80 {
+	background: color-mix(in srgb, var(--main-color), transparent 80%);
+}
+.trans-90 {
+	background: color-mix(in srgb, var(--main-color), transparent 90%);
+}
+
+/* --------------процент цвета-------------- */
+.color-0 {
+	background: color-mix(in srgb, var(--main-color) 0%), white;
+}
+.color-10 {
+	background: color-mix(in srgb, var(--main-color) 10%, white);
+}
+.color-20 {
+	background: color-mix(in srgb, var(--main-color) 20%, white);
+}
+.color-30 {
+	background: color-mix(in srgb, var(--main-color) 30%, white);
+}
+.color-40 {
+	background: color-mix(in srgb, var(--main-color) 40%, white);
+}
+.color-50 {
+	background: color-mix(in srgb, var(--main-color) 50%, white);
+}
+.color-60 {
+	background: color-mix(in srgb, var(--main-color) 60%, white);
+}
+.color-70 {
+	background: color-mix(in srgb, var(--main-color) 70%, white);
+}
+.color-80 {
+	background: color-mix(in srgb, var(--main-color) 80%, white);
+}
+.color-90 {
+	background: color-mix(in srgb, var(--main-color) 90%, white);
+}
+
+
+/* --------------смешение цветов-------------- */
+
+.first-color {
+	background-color:var(--first-color);
+}
+
+.second-color {
+	background-color:var(--second-color);
+}
+
+/* --------------разные пространства-------------- */
+.srgb {
+	background: color-mix(in srgb, var(--first-color), var(--second-color));
+}
+.srgb-linear {
+	background: color-mix(in srgb-linear, var(--first-color), var(--second-color));
+}
+.lab {
+	background: color-mix(in lab, var(--first-color), var(--second-color));
+}
+.oklab {
+	background: color-mix(in oklab, var(--first-color), var(--second-color));
+}
+.xyz {
+	background: color-mix(in xyz, var(--first-color), var(--second-color));
+}
+.xyz-d50  {
+	background: color-mix(in xyz-d50, var(--first-color), var(--second-color));
+}
+.xyz-d65    {
+	background: color-mix(in xyz-d65, var(--first-color), var(--second-color));
+}
+  
+.hsl {
+	background: color-mix(in hsl, var(--first-color), var(--second-color));
+}
+.hwb {
+	background: color-mix(in hwb, var(--first-color), var(--second-color));
+}
+.lch {
+	background: color-mix(in lch, var(--first-color), var(--second-color));
+}
+.oklch {
+	background: color-mix(in oklch, var(--first-color), var(--second-color));
+}
+
+/* --------------разные методы интерполяции-------------- */
+.shorter {
+	background: color-mix(in hsl shorter hue, var(--first-color), var(--second-color));
+}
+.longer {
+	background: color-mix(in hsl longer hue, var(--first-color), var(--second-color));
+}
+.decreasing {
+	background: color-mix(in hsl decreasing hue, var(--first-color), var(--second-color));
+}
+.increasing {
+	background: color-mix(in hsl increasing hue, var(--first-color), var(--second-color));
+}
+

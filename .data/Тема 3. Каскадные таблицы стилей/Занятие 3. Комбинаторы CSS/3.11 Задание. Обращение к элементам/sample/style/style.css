@@ -1,0 +1,190 @@
+/* все элементы страницы */
+ {
+	margin: 0;
+	padding: 0;
+}
+
+/* элемент body */
+ {
+	font: 14pt/20pt Arial, sans-serif;
+	height: 100%;
+	color: #036;
+	text-align: justify;
+}
+
+/* любые элементы с классом wrapper */
+
+ {
+	margin: 0 auto;
+	height: auto !important;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+
+/* элемент header */
+ {
+	height: 550px;
+	overflow: hidden;
+	background-image: url(../image/header-bckgr.jpg);
+}
+
+/* все элементы div строго вложенные в header */
+
+ {
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	padding: 1%;
+}
+
+/* настройки общие заголовков h1, h2 и h3, строго вложенных в блоки div строго внутри header*/
+ {
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	padding: 1%;
+	color: #fff;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* настройки заголовков h1 строго вложенных в блоки div строго внутри header */
+ {
+	font-size: 36pt;
+}
+
+/* настройки заголовков h2 строго вложенных в блоки div строго внутри header */
+ {
+	font-size: 28pt;
+}
+
+/* настройки заголовков h3 строго вложенных в блоки div строго внутри header */
+ {
+	font-size: 24pt;
+	font-style: italic;
+	background-color: rgba(102, 102, 102, 0.7);
+	margin-top: 5%;
+}
+
+/* элементы hr внутри div внутри header, вся вложенность строгая */
+
+ {
+	border: none;
+	color: #fff;
+	background-color: #fff;
+	height: 2px;
+	margin-top: 5%;
+}
+/* Middle
+-----------------------------------------------------------------------------*/
+
+/* все элементы nav */
+ {
+	background-color: #666;
+	color: #c0c0c0;
+	text-align: center;
+	font-style: italic;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+/* все ссылки внутри блока навигации без учета вложенности */
+ {
+	text-decoration: none;
+	color: #c0c0c0;
+}
+
+/* любые элементы с классом content */
+ {
+	width: 80%;
+	margin: 0 auto;
+	padding: 2%;
+	overflow: hidden;
+}
+
+/* все абзацы текста внутри любых блоков с классов content */
+ {
+	padding: 1%;
+}
+
+/* любые элементы с классом select */
+ {
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* заголовки первого уровня */
+ {
+	text-align: center;
+}
+
+/* свойства общие для заголовков первого, второго и третьего уроовней */
+ {
+	font-style: italic;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+
+/* элемент footer */
+ {
+	background-color: #666;
+}
+
+/* все блоки div, находящиеся внутри блока footer */
+ {
+	margin: 0 auto 0;
+	padding: 1%;
+	width: 80%;
+}
+
+/* абзацы внутри блоков div внутри подвала сайта, вся вложенность строгая */
+footer > div > p {
+	font-size: 12pt;
+	font-style: italic;
+	color: #c0c0c0;
+	text-align: center;
+}
+
+/* Страница INDEX
+-----------------------------------------------------------------------------*/
+/* все элементы с классом list1 */
+ {
+	padding: 0;
+	list-style: "\2714";
+}
+
+/* элементы списка внутри блоков с классом list1 */
+ {
+	padding-left: 1%;
+	position: relative;
+	padding: 1%;
+	margin-top: 1%;
+	margin-left: 5%;
+}
+
+/* всем элементы с классами list2 или list3 */
+ {
+	padding: 0;
+}
+
+/* элементы списка в списке с классом list2*/
+ {
+	position: relative;
+	border-left: 4px solid #036;
+	padding: 1%;
+	margin-left: 5%;
+}
+
+/* элементы списка в списке с классом list3*/
+ {
+	margin-left: 10%;
+}
+
+/* все элементы с классом fill */
+ {
+	background-color: rgba(0, 51, 102, 0.1);
+	box-shadow: 0 0 10px rgba(0, 51, 102, 0.7);
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flex: stretch, baseline</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.container {
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+			/* align-items: baseline; */
+		}
+
+		/* эти настройки должны быть включены для align-items:stretch */
+		/* допишите недостающие классы, чтобы все блоки растянулись по высоте родителя*/
+		.container,
+		.one,
+		.two {
+			height: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>align-items: stretch | baseline;</h1>
+	<div class="container">
+		<div class="one">
+			<h1>1</h1>
+		</div>
+		<div class="two">
+			<h1>2</h1>
+		</div>
+		<div class="three">
+			<h1>3</h1>
+		</div>
+		<div class="four">
+			<h1>4</h1>
+		</div>
+	</div>
+</body>
+
+</html>

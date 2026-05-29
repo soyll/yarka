@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus</title>
+    <style>
+        body{
+            font-size: 1.3em;
+        }
+        h1,h2{
+            text-align: center;
+        }
+        .content{
+            width: 80%;
+            margin: 0 auto;
+        }
+        form{
+            width: 70%;
+            margin: 0 auto;
+        }
+        input{
+            padding: 1%;
+        }
+
+        /* input:focus{
+            outline-offset: 3px;
+            outline-color:  rgb(36, 9, 186);
+        } */
+
+
+    </style>
+</head>
+<body>
+    <h1>Псевдокласс :focus позволяет настроить внешний вид элемента при получении фокуса.</h1>
+    <h2>Сначала рассмотрите настройки для элементов по умолчанию. Далее расскомментируйте стили в блоке style.</h2>
+    <h2>Измените эти настройки, самостоятельно настройте другие элементы формы, экспериментируйте.</h2>
+    <div class="content">
+        <form action="answer.html">
+            <h3>Представьтесь</h3>
+
+            <input type="text" size="30" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ">
+            <input type="email" size="30" placeholder="ВВЕДИТЕ ЭЛЕКТРОННУЮ ПОЧТУ">
+
+            <h3>Расскажите о себе</h3>
+            <p>Укажите ваш пол
+                <input type="radio" id="sex_m" name="sex" value="m"><label for="sex_m">мужской</label>
+                <input type="radio" id="sex_f" name="sex" value="f" checked><label for="sex_f">женский</label>
+                <input type="radio" id="sex_h" name="sex" value="h"><label for="sex_h">другой</label>
+            </p>
+            <p>Выберите свой возраст
+                <select name="selection">
+                    <option value="option1"> до 18-ти
+                    <option value="option2" selected> 19-30
+                    <option value="option3"> 31-45
+                    <option value="option4"> 46 и старше
+                </select>
+            </p>
+
+            <h3>Оставьте свое мнение</h3>
+            <p>Выберите наиболее интересные для вас категории:</p>
+            <p>
+                <input type="checkbox" id="sport" name="sport" value="sport"> <label for="sport">Спорт</label>
+                <input type="checkbox" id="tech" name="tech" value="tech"> <label for="tech">Техника</label>
+                <input type="checkbox" id="education" name="education" value="education"> <label for="education">Образование</label>
+                <input type="checkbox" id="culture" name="culture" value="culture"> <label for="culture">Культура</label>
+            </p>
+            <p>Введите сообщение:</p>
+            <p><textarea name="message" rows="10" cols="60"></textarea></p>
+            <p class="center">
+                <input type="reset" value="Очистить поля формы">
+                <input type="submit" value="Отправить">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

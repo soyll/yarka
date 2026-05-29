@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape-outside</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .round{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(53, 4, 81);
+            border-radius: 50%;
+            float:left;
+            border:10px solid red;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .mb{
+            shape-outside: margin-box;
+        }
+        .bb{
+            shape-outside: border-box;
+        }
+        .pb{
+            shape-outside: padding-box;
+        }
+        .cb{
+            shape-outside: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> shape-outside: margin-box;</h1>
+        <div class="round mb"></div>
+        <div class="text">
+            <p>Определяет форму, ограниченную внешним краем отступа. Угловые радиусы этой формы определяются соответствующими значениями border-radius и margin. </p> 
+            <p>Если соотношение border-radius/margin ≥1, то радиус угла равен border-radius+margin. </p>
+                <p>Если соотношение меньше 1, то радиус угла равен border-radius + (margin * (1 + (ratio - 1)^3))</p>
+        </div>
+    </div>
+    <div class="container">
+        <h1>shape-outside: border-box;</h1>
+        <div class="round bb"></div>
+        <div class="text">
+            <p>Определяет форму, ограниченную внешним краем границы. </p>
+            <p>Добавим рыбы, чтобы оценить эффект...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam distinctio natus voluptas culpa ullam incidunt? Architecto obcaecati officiis corrupti qui! Eum et perferendis excepturi, dolores iure quae vero vitae amet?</p>
+        </div>
+    </div>
+    <div class="container">
+        <h1>shape-outside: padding-box;</h1>
+        <div class="round pb"></div>
+        <div class="text">
+            <p>Определяет форму, заключенную в внешний край padding. </p> 
+            <p>Добавим рыбы, чтобы оценить эффект...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam distinctio natus voluptas culpa ullam incidunt? Architecto obcaecati officiis corrupti qui! Eum et perferendis excepturi, dolores iure quae vero vitae amet?</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>shape-outside: content-box;</h1>
+        <div class="round cb"></div>
+        <div class="text">
+            <p>Определяет форму, ограниченную внешним краем контента. Каждый угловой радиус больше 0 или имеет значение border-radius – border – width − padding.</p>
+            <p>Добавим рыбы, чтобы оценить эффект...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam distinctio natus voluptas culpa ullam incidunt? Architecto obcaecati officiis corrupti qui! Eum et perferendis excepturi, dolores iure quae vero vitae amet?</p>
+        </div>
+    </div>
+</body>
+</html>

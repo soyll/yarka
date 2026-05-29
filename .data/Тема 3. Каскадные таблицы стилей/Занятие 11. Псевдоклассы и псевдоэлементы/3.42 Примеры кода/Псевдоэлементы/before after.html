@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before After</title>
+    <style>
+        div {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 3%;
+        }
+
+        nav ul {
+            display: flex;
+            font-size: 1.3em;
+        }
+
+        nav li {
+            list-style-type: none;
+            padding-right: 2%;
+        }
+
+        .link a {
+            text-decoration: none;
+        }
+
+        .hover a:hover {
+            text-decoration: underline;
+        }
+
+        /* дополните код так, чтобы после послднего li черта не добавлялась */
+        nav li::after {
+            content: "|";
+            padding-left: 20px;
+        }
+
+        ul.list {
+            list-style: none;
+            font-size: 1.2em;
+        }
+
+        ul.list li::before {
+            content: '\2734';
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Стилизуем меню. Добавим после каждого пункта горизонтальную черту, отделяя тем самым один пункт от другого.</h1>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="https://vk.com/pechora_pro">Pechora-PRO</a></li>
+                <li><a href="https://vk.com/@pechora_pro-my-i-pechora-proger">Мы</a></li>
+                <li><a href="https://vk.com/@pechora_pro-html-css">Самый лучший курс</a></li>
+                <li><a href="https://vk.com/@pechora_pro-bystryi-start-v-tehnologii-free">Быстрый старт</a></li>
+                <li><a href="https://vk.com/@pechora_pro">Статьи</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1>Еще один способ стилизовать списки - псевдоэлемент ::before</h1>
+    <div>
+        <ul class="list">
+            <li>нестандартный список</li>
+            <li>используем необычные звездочки</li>
+            <li>код символа \2734</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

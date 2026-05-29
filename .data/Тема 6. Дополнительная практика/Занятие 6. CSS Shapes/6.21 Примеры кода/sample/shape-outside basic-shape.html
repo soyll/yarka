@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shape-outside</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .block {
+        width: 300px;
+        height: 150px;
+        background-color: rgb(216, 185, 241);
+      }
+
+      .left {float: left;}
+      .right {float: right;}
+      p {text-align: justify;}
+
+      .inset-left{
+        shape-outside: inset(50px 50px 20% 50px round 50px);
+        /* shape-outside: inset(100px 100px 20% 100px); */
+        /* shape-outside: inset(20px 750px 50% 30px round 200px); */
+      }
+
+      .inset-right{
+        shape-outside: inset(50px 50px 20% 50px round 50px);
+        /* shape-outside: inset(100px 100px 20% 100px); */
+        /* shape-outside: inset(20px 750px 50% 30px round 200px); */
+      }
+
+      .circle-left {
+        shape-outside: circle(30% at 20px 30px);
+        /* shape-outside: circle(150px at center); */
+        /* shape-outside: circle(farthest-side); */
+        /* shape-outside: circle(closest-side); */
+      }
+      .circle-right {
+        shape-outside: circle(30% at 280px 30px);
+        /* shape-outside: circle(150px at center); */
+        /* shape-outside: circle(farthest-side); */
+        /* shape-outside: circle(closest-side); */
+      }
+
+      .ellipse-left {
+        shape-outside: ellipse(100px 20px at 20% 20%);
+      }
+      .ellipse-right {
+        shape-outside: ellipse(50px 70px at 20% 20%);
+      }
+
+      .poligon-left {
+        shape-outside: polygon(0 0, 100% 100%, 0 100%);
+      }
+      .poligon-right {
+        shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+      }
+
+      .path {
+        shape-outside: path("M 50,245 A 160,160 0,0,1 360,120 z");
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+        <h1>inset(50px 50px 20% 50px round 50px);</h1>
+        <div class="main">
+            <div class="block left inset-left"></div>
+            <div class="block right inset-right"></div>
+            <p>
+                Определяет область обтекания в форме прямоугольника.
+                Когда указаны все первые четыре аргумента, они представляют верхнее, правое, нижнее и левое смещения от поля внутрь, и определяют положение краев вставленного прямоугольника. Количество аргументов можно сократить аналогично сокращениям полей и отступов.
+                Необязательный параметр round определяет закругленные углы для вставленного прямоугольника, используя тот же синтаксис, что и border-radius.                
+            </p>
+      </div>
+      </div>
+      <div class="container">
+        <h1>circle-left(30% at 20px 30px);</h1>
+        <h1>circle-right(30% at 280px 30px);</h1>
+        <div class="main">
+          <div class="block left circle-left"></div>
+          <div class="block right circle-right"></div>
+          <p>
+            Определяет круг, используя радиус и положение центра.
+            Значение радиуса может быть задано длиной или процентами, а также ключевыми словами: closest-side (длина от центра фигуры до ближайшей стороны), farthest-side (длина от центра фигуры до самой дальней стороны). Отрицательные значения недействительны. 
+            Аргумент position определяет центр круга. По умолчанию это центр, если не указано иное. Можно задать точку центра через смещение от левой и верхней границ области или с помощью пары ключевых слов right, left, top, bottom.            
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1>ellipse(100px 20px at 20% 20%);</h1>
+        <h1>ellipse(50px 70px at 20% 20%);</h1>
+        <div class="main">
+          <div class="block left ellipse-left"></div>
+          <div class="block right ellipse-right"></div>
+          <p>
+            Определяет эллипс, используя два радиуса и положение центра. Работает аналогично circle(). Отрицательные значения недействительны. 
+            Аргумент position определяет центр круга. По умолчанию это центр, если не указано иное. Можно задать точку центра через смещение от левой и верхней границ области или с помощью пары ключевых слов right, left, top, bottom.            
+          </p>
+        </div>
+      </div>
+      
+      <div class="container">
+        <h1>polygon(0 0, 100% 100%, 0 100%) | polygon(100% 0, 100% 100%, 0 100%);</h1>
+        <div class="main">
+          <div class="block left poligon-left"></div>
+          <div class="block right poligon-right"></div>
+          <p>
+              Определяет многоугольник, используя параметр fill-rule и пары координат набора вершин (xi, yi).
+              Атрибут fill-rule— это атрибут представления, определяющий алгоритм, используемый для определения внутренней части фигуры. Возможные значения: nonzero и evenodd. Значение по умолчанию, если оно опущено, равно nonzero.
+          </p>
+        </div>
+      </div>
+  </body>
+</html>

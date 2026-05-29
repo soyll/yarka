@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Свойство Display</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.float img {
+			float: left;
+			/* float:right; */
+			/* float:none; */
+		}
+
+
+		.clear img.left {
+			float: left;
+		}
+
+		.clear img.right {
+			float: right;
+		}
+
+		.clear p {
+			clear: none;
+			/* clear: left; */
+			/* clear:right; */
+			/* clear:both; */
+		}
+
+		/* h2{
+		clear:both;
+		} */
+
+		.gallery img {
+			float: left;
+		}
+
+		/* .gallery p{
+			clear:left;
+		} */
+	</style>
+</head>
+
+<body>
+	<h1>Управляйте настройками в блоке style с помощью комментариев.</h1>
+
+	<h2>Изменяйте настройки обтекания изображения в блоке.</h2>
+
+	<div class="float">
+		<img src="img/img-1.jpg" alt="photo-1">
+		<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores similique voluptatum corporis iusto totam
+			illo. Quaerat eveniet quia natus explicabo? Excepturi obcaecati facere modi hic tempore. Quo non eveniet
+			eius!Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores similique voluptatum corporis iusto
+			totam
+			illo. Quaerat eveniet quia natus explicabo? Excepturi obcaecati facere modi hic tempore. Quo non eveniet
+			eius! </p>
+	</div>
+
+	<h2>Настройки обтекания остаются неизменными. Манипулируем исключительно его отменой для соседнего блока абзаца.
+		Попробуйте также поменять изображения местами и оцените изменения</h2>
+	<p>Какие стили нужно добавить, чтобы следующие элементы начинались с новой строки после всех
+		изображений и текста? Сделайте это!</p>
+	<div class="clear">
+		<img src="img/img-1.jpg" class="left" alt="photo-1">
+		<img src="img/img-2.jpg" class="right" alt="photo-1">
+		<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores similique voluptatum corporis iusto totam
+			illo. Quaerat eveniet quia natus explicabo? Excepturi obcaecati facere modi hic tempore. Quo non eveniet
+			eius!Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores similique voluptatum corporis iusto
+			totam
+			illo. Quaerat eveniet quia natus explicabo? Excepturi obcaecati facere modi hic tempore. Quo non eveniet
+			eius! </p>
+	</div>
+
+	<h2>Еще один вариант: для изображений добавили float:left</h2>
+	<div>
+		<p>Обратите внимание, что при использовании инструментов разработчика, при выделении блока, изображения выходят
+			за
+			его границы.</p>
+		<p>Мы вывели их с помощью float из основного потока контента. При этом оставшиеся элементы блока, также как и
+			следующий блок, их обтекают.</p>
+		<p>Раскомментируйте строчку с clear:left для текста этого блока.</p>
+
+	</div>
+	<div class="gallery">
+		<img src="img/img-1.jpg" alt="photo-1">
+		<p>Подпись к рисунку или его краткое описание</p>
+		<img src="img/img-3.jpg" alt="photo-3">
+		<p>Подпись к рисунку или его краткое описание</p>
+		<img src="img/img-4.jpg" alt="photo-4">
+		<p>Подпись к рисунку или его краткое описание</p>
+	</div>
+</body>
+
+</html>

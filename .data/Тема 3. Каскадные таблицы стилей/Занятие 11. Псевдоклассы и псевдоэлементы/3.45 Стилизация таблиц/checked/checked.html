@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Скрытые элементы</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            font-size: x-large;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #333333;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #333333;
+            padding: 1%;
+        }
+
+        /* обычный label стилизованный под кнопку */
+        #btn {
+            margin: 0 3px;
+            display: inline-block;
+            padding: 3px 6px;
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            background-color: #969696;
+            border-radius: 3px;
+
+        }
+
+        /* если наш скрытый чекбокс выбран, то label-кнопка меняет свой вид*/
+        #ishidden:checked~#btn,
+        #ishidden:checked~* #btn {
+            background: #B5B5B5;
+            box-shadow: inset rgba(0, 0, 0, 0.4) 0 -5px 12px, inset rgba(0, 0, 0, 1) 0 1px 3px, rgba(255, 255, 255, 0.4) 0 1px;
+        }
+
+        /* скрытый элементы */
+        #ishidden,
+        .hidden {
+            display: none;
+        }
+
+        /* если наш скрытый чекбокс выбран, все скрытые элементы отображаются на странице */
+        #ishidden:checked~* tr.hidden {
+            display: table-row;
+            background: #cccccc;
+
+        }
+
+        #ishidden:checked~p.hidden,
+        #ishidden:checked~* p.hidden {
+            display: block;
+            background: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Скрытые элементы</h1>
+
+        <!-- скрытый чекбокс, состояние которого мы считываем для использования псевдокласса -->
+        <input type="checkbox" id="ishidden">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Колонка #1</th>
+                    <th>Колонка #2</th>
+                    <th>Колонка #3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="hidden">
+                    <td>[текст ячейки]</td>
+                    <td>[текст ячейки]</td>
+                    <td>[текст ячейки]</td>
+                </tr>
+                <tr>
+                    <td>[текст ячейки]</td>
+                    <td>[текст ячейки]</td>
+                    <td>[текст ячейки]</td>
+                </tr>
+                <tr>
+                    <td>[текст ячейки]</td>
+                    <td>[текст ячейки]</td>
+                    <td>[текст ячейки]</td>
+                </tr>
+                <tr class="hidden">
+                    <td>[текст ячейки]</td>
+                    <td>[текст ячейки]</td>
+                    <td>[текст ячейки]</td>
+                </tr>
+                <tr class="hidden">
+                    <td>[текст ячейки]</td>
+                    <td>[текст ячейки]</td>
+                    <td>[текст ячейки]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Текст в этом абзаце мы видим всегда...</p>
+
+        <!-- связанная с чекбоксом подпись -->
+        <p><label for="ishidden" id="btn">Показать скрытые элементы</label></p>
+
+        <p class="hidden">Хоба... скрытый текст, которые появился очень неожиданно...</p>
+        <p>...также как и в этом...</p>
+    </div>
+</body>
+
+</html>

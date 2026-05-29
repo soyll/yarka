@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Личный кабинет 1.1</title>
+</head>
+
+<body>
+	<h1>Добро пожаловать в личный кабинет. Версия 1.1</h1>
+
+	<form name="auth" action="index.html">
+		<div>
+			<h2>Выберите удобный для вас способ авторизации</h2>
+
+			<fieldset>
+				<legend>Варианты авторизации</legend>
+				<input id="auth-email"><label>Email</label>
+				<input id="auth-login"><label>Логин</label>
+				<input id="auth-tel" checked><label>Телефон</label>
+			</fieldset>
+		</div>
+
+		<div>
+			<h2>Заполните данные для связи с Вами</h2>
+
+			<label>Email</label>
+			<input id="email" placeholder="Введите email...">
+
+			<label>Телефон</label>
+			<input id="tel" placeholder="Введите телефон...">
+			<br>
+			<label>Страница в соцсетях или личный сайт</label>
+			<input id="url" placeholder="Введите адрес страницы...">
+		</div>
+
+		<div>
+			<h2>Измените пароль</h2>
+			<label>Пароль</label>
+			<input id="password" placeholder="Введите пароль..."> <br>
+			<label>Подтверждение пароля</label>
+			<input id="password-confirm" placeholder="Повторите пароль...">
+
+		</div>
+
+		<input value="Сохранить">
+	</form>
+
+
+
+	<form name="profile" action="index.html">
+		<div>
+			<h2>Расскажите нам о себе</h2>
+
+			<label>Имя: <input name="name" id="name"></label>
+			<label>Фамилия: <input name="surname" id="surname"></label><br>
+			<label>Дата рождения: <input name="birthday" id="birthday"></label> <br>
+			<label>Фото профиля: <input name="photo" id="photo" accept="image/png,image/jpeg"></label>
+
+			<input value="Сохранить">
+		</div>
+	</form>
+
+
+	<form name="message" action="index.html">
+		<h2>Кому желаете отправить сообщение:</h2>
+
+		<div>
+			<label> <input id="destination-dis" checked> Главный дизайнер</label>
+			<label> <input id="destination-mod"> Модератор</label>
+			<label> <input id="destination-adm"> Администратор</label>
+		</div>
+
+		<div>
+			<label>Тема сообщения:</label>
+			<input id="theme" placeholder="Введите тему сообщения...">
+			<br>
+			<label>Сообщение:</label> <br>
+			<textarea name="message" id="message" cols="50" rows="10" placeholder="Введите сообщение..."></textarea>
+		</div>
+
+		<input id="personal">
+		<label>Согласие на обработку персональных данных</label>
+
+		<input value="Отправить">
+	</form>
+
+</body>
+
+</html>

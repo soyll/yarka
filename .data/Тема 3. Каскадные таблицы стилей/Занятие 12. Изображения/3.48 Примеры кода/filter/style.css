@@ -1,0 +1,217 @@
+.container {
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 3%;
+	display: flex;
+	justify-content: space-around;
+}
+
+div {
+	text-align: center;
+}
+img {
+	width: 250px;
+}
+
+p {
+	display: block;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+/* -----------Filter blur------------ */
+.b-1 {
+	filter: blur(5);
+}
+
+.b-2 {
+	filter: blur(10px);
+}
+
+.b-3 {
+	filter: blur(15px);
+}
+
+.b-4 {
+	filter: blur(30px);
+}
+
+/* -----------Filter brightness------------ */
+.bn-1 {
+	filter: brightness(0);
+}
+
+.bn-2 {
+	filter: brightness(1);
+}
+
+.bn-3 {
+	filter: brightness(50%);
+}
+
+.bn-4 {
+	filter: brightness(200%);
+}
+
+/* -----------Filter contrast------------ */
+
+.cont-1 {
+	filter: contrast(0%);
+}
+
+.cont-2 {
+	filter: contrast(50%);
+}
+
+.cont-3 {
+	filter: contrast(100%);
+}
+
+.cont-4 {
+	filter: contrast(150%);
+}
+
+/* -----------Filter  drop-shadow------------ */
+
+.ds-1 {
+	filter: drop-shadow(16px 16px 10px black);
+}
+
+.ds-2 {
+	filter: drop-shadow(10px 10px 5px rgb(66, 9, 136));
+}
+
+.ds-3 {
+	filter: drop-shadow(5px 5px 1px rgb(109, 109, 109));
+}
+
+.ds-4 {
+	filter: drop-shadow(1px 1px 0px black);
+}
+
+/* -----------Filter  grayscale------------ */
+
+.gs-1 {
+	filter: grayscale(25%);
+}
+
+.gs-2 {
+	filter: grayscale(50%);
+}
+
+.gs-3 {
+	filter: grayscale(75%);
+}
+
+.gs-4 {
+	filter: grayscale(100%);
+}
+
+/* -----------Filter   hue-rotate------------ */
+
+.hr-1 {
+	filter: hue-rotate(30deg);
+}
+
+.hr-2 {
+	filter: hue-rotate(90deg);
+}
+
+.hr-3 {
+	filter: hue-rotate(180deg);
+}
+
+.hr-4 {
+	filter: hue-rotate(270deg);
+}
+
+/* -----------Filter invert------------ */
+
+.in-1 {
+	filter: invert(25%);
+}
+
+.in-2 {
+	filter: invert(50%);
+}
+
+.in-3 {
+	filter: invert(75%);
+}
+
+.in-4 {
+	filter: invert(140%);
+}
+
+/* -----------Filter opacity------------ */
+
+.op-1 {
+	filter: opacity(25%);
+}
+
+.op-2 {
+	filter: opacity(50%);
+}
+
+.op-3 {
+	filter: opacity(75%);
+}
+
+.op-4 {
+	filter: opacity(100%);
+}
+
+/* -----------Filter saturate------------ */
+
+.sr-1 {
+	filter: saturate(0%);
+}
+
+.sr-2 {
+	filter: saturate(50%);
+}
+
+.sr-3 {
+	filter: saturate(100%);
+}
+
+.sr-4 {
+	filter: saturate(200%);
+}
+
+/* -----------Filter sepia------------ */
+
+.s-1 {
+	filter: sepia(25%);
+}
+
+.s-2 {
+	filter: sepia(50%);
+}
+
+.s-3 {
+	filter: sepia(75%);
+}
+
+.s-4 {
+	filter: sepia(100%);
+}
+
+/* -----------Filter multi------------ */
+
+.d-1 {
+	filter: opacity(75%) grayscale(100%);
+}
+
+.d-2 {
+	filter: saturate(200%) hue-rotate(180deg);
+}
+
+.d-3 {
+	filter: blur(5px) drop-shadow(16px 16px 10px black);
+}
+
+.d-4 {
+	filter: contrast(175%) brightness(75%);
+}

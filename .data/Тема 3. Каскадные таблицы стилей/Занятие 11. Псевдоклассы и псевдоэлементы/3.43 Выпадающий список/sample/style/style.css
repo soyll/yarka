@@ -1,0 +1,175 @@
+/*для всех элементов страницы обнуляются значения отступов и полей*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Всем html5 тегам будет задан блочный тип отображения*/
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+
+html {
+	height: 100%; /*высота блока 100% экрана*/
+}
+
+/*настройки общие для тела документа*/
+body {
+	background-color: #666;
+	font: 14pt/20pt Arial, sans-serif; /*настройки шрифта*/
+	height: 100%;
+	color: #036; /* цвет текста внутри элемента body, если не задано иное */ 
+	text-align: justify; /* выравнивание текста внутри элемента body, если не задано иное*/
+	line-height:1.5; /*междустрочный интервал*/
+}
+
+/*настройки для все элементов со значением атрибута class="wrapper"*/
+.wrapper {
+	margin:0 auto; /*выравнивание блока по центру с помощью отступов*/
+	height: auto !important;
+	width:70%;
+	background-color: #f0f0f0;
+}
+
+/* настройки оформления блока Header
+-----------------------------------------------------------------------------*/
+header {
+	margin:0 auto;
+	width:70%;
+	height:auto  !important;
+	overflow:hidden; /*отображение содержания блочного элемента, если оно целиком не помещается и выходит за область заданных размеров*/
+	background-image: url(../images/header-bckgr.jpg); /*установка фонового изображения*/
+	background-size: 100%;
+}
+
+/*настройки для всех div, входящих непосредственно в header*/
+header>div{
+	text-align: center; /*выравнивание текста внутри блока*/
+	width: 80%; /*ширина блока*/
+	margin:0 auto;
+	padding:1%; /*настройка полей внутри блока*/
+}
+
+/*настройка для всех заголовков, вложенных в div, вложенных в header*/
+header>div>h1, header>div>h2, header>div>h3{
+	text-align: center; 
+	width: 80%;
+	margin:0 auto;
+	padding:1%;
+	color:#fff;
+	text-shadow: 0 0 10px rgba(0,0,0,0.7); /*тень для текста*/
+}
+	
+header>div>h1 {
+	font-size: 36pt; 
+}
+header>div>h2 {
+	font-size: 28pt; 
+}
+header>div>h3 {
+	font-size: 24pt; 
+	font-style:italic; /* стиль шрифта - курсив */ 
+	background-color:rgba(102, 102, 102, 0.7); /*фон текста*/
+	margin-top:5%;
+	
+}
+
+header>div>hr{
+    border: none; /* убираем границу  */
+    color: #fff; /* цвет линии */
+    background-color: #fff; /* цвет фона */
+    height: 2px; /* толщина линии */
+	margin-top:5%;
+}
+
+/* настройки оформления основной части страницы
+-----------------------------------------------------------------------------*/
+
+/* форматирование для всех элементов nav */
+nav{ 
+
+	text-align: center; 
+	font-style: italic; 
+} 
+
+.content {
+	width:80%;
+	margin:0 auto;
+	padding:2%;
+	overflow:hidden;
+}
+	.content>p { padding:1%;}
+	
+.select {
+	font-weight:bold; /*оформление текста - полужирный*/
+	font-style:italic;
+}
+	
+h1 	{ text-align: center;} 
+	
+h1, h2, h3{  /* форматирование для нескольких элементов */
+	font-style: italic;
+	padding-top:2%;
+	padding-bottom:2%;
+}
+
+.fill {
+	background-color:rgba(0, 51, 102, 0.1);
+	box-shadow: 0 0 10px rgba(0,51,102,0.7); 
+}
+	
+	
+.row{
+	float:left;
+	width:100%;	
+	padding:5px;
+	text-align:center;
+}
+.col {
+	width:100%;
+	text-align:center;
+	font-weight:bold;
+	padding:5px;
+	font-size:24pt;
+}
+.col-4{
+	width:25%;
+	float:left;
+	text-align:center;
+}
+
+
+
+/*  настройки оформления блока Footer
+-----------------------------------------------------------------------------*/
+footer {	background-color: #666; }
+
+footer>div{
+	margin: 0 auto 0;
+	padding-top:1%;
+	padding-bottom:1%;
+	width: 70%; 
+	background-color:#708090;
+}
+
+footer>div>p {
+	font-size: 12pt; 
+	font-style: italic;
+	color: #ffffff;
+	text-align: center;
+}
+
+	
+
+
+
+
+
+
+
+
+
+  
+
+
+

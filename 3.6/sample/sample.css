@@ -58,3 +58,8 @@ input[type=button] {
 	color: #ffffff; /*цвет текста*/
 	background-color: #666666; /*цвет заливки*/
 }
+
+p.i {
+	text-align: left;
+	font-family: 'Times New Roman', Times, serif;
+}

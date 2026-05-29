@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+form{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    padding: 3%;
+    background: linear-gradient(90deg, #ff5cf1, #b38ade, #66ebff);
+    color:#fff;
+    font-size: 1.3rem;
+}
+
+div{
+    margin-bottom: 3%;
+}
+
+h1, h2{
+    text-align: center;
+    margin: 3%;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+
+label{
+    margin:3%;
+}
+fieldset, legend{
+    padding: 3%;
+}
+
+input{
+    padding:1%;
+    margin-bottom: 2%;
+}
+
+input[type=button], input[type=submit]{
+    display: block;
+    margin: 0 auto;
+width:300px;
+}

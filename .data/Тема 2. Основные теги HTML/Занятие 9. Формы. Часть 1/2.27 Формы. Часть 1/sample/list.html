@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Элементы формы. Списки</title>
+  </head>
+  <body>
+    <main>
+      <h1>Элементы формы. Списки</h1>
+      
+      
+      <section>
+      <h3>Выпадающий список</h3>  
+        <form>
+            <label for="select">
+              Позволяет выбрать и передать одно из значений в списке. 
+            </label>
+
+            <select name="select" id="select">
+              <option value="opt1">Вариант 1</option>
+              <option value="opt2" selected>Вариант 2</option> <!--благодаря атрибуту selected этот пункт будет выбран по умолчанию-->
+              <option value="opt3">Вариант 3</option>
+              <option value="opt4">Вариант 4</option>
+            </select>
+
+            <label for="select-multiple">Добавим к select атрибут multiple - и выберем
+            одновременно несколько значений.</label>
+            <select name="select-multiple" id="select-multiple" multiple>
+              <option value="opt1">Вариант 1</option>
+              <option value="opt2">Вариант 2</option>
+              <option value="opt3">Вариант 3</option>
+              <option value="opt4">Вариант 4</option>
+            </select>
+
+            <label for="select-multiple">Полная копия предыдущего списка, но с указанным размером отображаемой области. Как видите из-за настроек отступов и размеров при прокрутке стрелками некоторые пункты "проскакивают".</label>
+            <select name="select-multiple" id="select-multiple" size="1" multiple>
+              <option value="opt1">Вариант 1</option>
+              <option value="opt2">Вариант 2</option>
+              <option value="opt3">Вариант 3</option>
+              <option value="opt4">Вариант 4</option>
+            </select>
+        </form>
+      </section>
+      
+      <section>
+        <h3>Группировка внутри списка</h3>
+        <form>
+          <label for="select-optgroup">
+            Еще один список, в котором значения сгруппированы с помощью
+            элемента optgroup. Возможности взаимодействия с одной из них
+            ограничены. Также обратите внимание, что размер элемента изменился
+            в зависимости от содержимого.
+          </label>
+
+          <select name="select-optgroup" id="select-optgroup">
+            <!-- атрибут disabled отключает возможность взаимодействия с элементом и его содержимым-->
+            <optgroup label="Первая неактивная группа" disabled>
+              <option value="opt1">Вариант 1</option>
+              <option value="opt2">Вариант 2</option>
+            </optgroup>
+
+            <optgroup label="Вторая активная группа">
+              <option value="opt3">Вариант 3</option>
+              <option value="opt4">Вариант 4</option>
+            </optgroup>
+
+          </select>
+        </form>
+      </section>
+
+      <section>
+        <h3>Элемент datalist</h3>
+        <form>
+            <label for="datalist">
+              По внешнему виду напоминает элемент select. Но, выбранное значение
+              будет установлено для элемента input, с атрибутом list. Также
+              пользователь может ввести свое собственное значение.
+            </label>
+            <input type="text" list="data" />
+            <datalist id="data">
+              <option value="Вариант 1"></option>
+              <option value="Вариант 2"></option>
+              <option value="Вариант 3"></option>
+              <option value="Вариант 4"></option>
+            </datalist>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

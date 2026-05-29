@@ -1,0 +1,41 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+div.container {
+	margin: 0 auto;
+	width: 80%;
+	min-height: 300px;
+	margin-bottom: 5%;
+}
+
+h1 {
+	text-align: center;
+	padding: 2%;
+}
+
+h2 {
+	padding: 2%;
+}
+.height,
+.width,
+.margin,
+.padding {
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin-left: 3%;
+}
+
+.px {
+	background-color: blue;
+}
+.vh,
+.vw {
+	background-color: crimson;
+}
+.per {
+	background-color: rgb(255, 151, 224);
+}

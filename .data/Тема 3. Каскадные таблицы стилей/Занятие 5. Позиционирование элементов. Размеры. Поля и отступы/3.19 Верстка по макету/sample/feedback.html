@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Обратная связь</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body>
+	<header>
+		<div>
+			<h1>Муниципальный район "Печора"</h1>
+			<h2>Неофициальный портал</h2>
+			<hr>
+			<h3>Печора - душа республики</h3>
+		</div>
+	</header>
+
+	<div class="wrapper">
+
+		<nav>
+			<a href="index.html">Главная страница</a> |
+			<a href="gallery.html">Галерея</a> |
+			<a href="history.html">Из истории</a> |
+			<a href="chronicle.html">Летопись</a> |
+			<a href="feedback.html">Обратная связь</a>
+		</nav>
+
+		<div class="content">
+			<h1>Обратная связь</h1>
+
+			<form action="answer.html">
+				<h2>Представьтесь</h2>
+
+				<input type="text" size="20" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ">
+				<input type="text" size="20" placeholder="ВВЕДИТЕ ВАШУ ФАМИЛИЮ">
+
+				<hr>
+
+				<h2>Расскажите о себе</h2>
+				<p>Укажите ваш пол
+					<input type="radio" name="sex" value="m">мужской
+					<input type="radio" name="sex" value="f" checked>женский
+					<input type="radio" name="sex" value="h">другой
+				</p>
+				<p>Выберите свой возраст
+					<select name="selection">
+						<option value="option1"> до 18-ти
+						<option value="option2" selected> 19-30
+						<option value="option3"> 31-45
+						<option value="option4"> 46 и старше
+					</select>
+				</p>
+
+				<hr>
+
+				<h2>Оставьте свое мнение</h2>
+				<p>Выберите наиболее интересные для вас страницы:</p>
+				<p>
+					<input type="checkbox" name="index" value="index"> Главная
+					<input type="checkbox" name="history" value="history">Из истории
+					<input type="checkbox" name="chronicle" value="chronicle">Летопись
+					<input type="checkbox" name="gallery" value="gallery">Галерея
+				</p>
+				<p>Введите сообщение:</p>
+				<p><textarea name="message" rows="10" cols="50"></textarea></p>
+				<p class="center">
+					<input type="reset" value="Очистить поля формы">
+					<input type="submit" value="Отправить">
+				</p>
+			</form>
+		</div>
+	</div>
+
+	<footer>
+		<div>
+			<p>Материал взят из официальных источников:<br>pechoraonline.ru<br>ru.wikipedia.org</p>
+		</div>
+	</footer>
+</body>
+
+</html>

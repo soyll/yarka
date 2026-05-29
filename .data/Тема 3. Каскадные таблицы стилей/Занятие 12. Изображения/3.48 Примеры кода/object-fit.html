@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit и котики</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 3%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        p {
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        img {
+            width: 150px;
+            height: 220px;
+            border: 1px solid #333333;
+        }
+
+        img.normal {
+            width: 600px;
+            height: auto;
+        }
+
+        .fill {
+            object-fit: fill;
+        }
+
+        .contain {
+            object-fit: contain;
+        }
+
+        .cover {
+            object-fit: cover;
+        }
+
+        .scale-down {
+            object-fit: scale-down;
+        }
+
+        .none {
+            object-fit: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Заполнение контейнера изображением</h1>
+    <h2>Исходный размер наших изображений 600 на 600 точек. Искусственно задаем им размер 150 на 200.</h2>
+    <h2>В зависимости от выбранного значения object-fit меняется результат заполнения контейнера изображением</h2>
+    <div class="container">
+        <img src="images/cool.jpg" class="normal" alt="Крутой котик">
+        <div>
+            <p>fill</p>
+            <img src="images/cool.jpg" class="fill" alt="Крутой котик">
+        </div>
+        <div>
+            <p>contain</p>
+            <img src="images/cool.jpg" class="contain" alt="Крутой котик">
+        </div>
+        <div>
+            <p>cover</p>
+            <img src="images/cool.jpg" class="cover" alt="Крутой котик">
+        </div>
+        <div>
+            <p>scale-down</p>
+            <img src="images/cool.jpg" class="scale-down" alt="Крутой котик">
+        </div>
+        <div>
+            <p>none</p>
+            <img src="images/cool.jpg" class="none" alt="Крутой котик">
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="images/love.webp" class="normal" alt="Влюбленные котики">
+        <div>
+            <p>fill</p>
+            <img src="images/love.webp" class="fill" alt="Влюбленные котики">
+        </div>
+        <div>
+            <p>contain</p>
+            <img src="images/love.webp" class="contain" alt="Влюбленные котики">
+        </div>
+        <div>
+            <p>cover</p>
+            <img src="images/love.webp" class="cover" alt="Влюбленные котики">
+        </div>
+        <div>
+            <p>scale-down</p>
+            <img src="images/love.webp" class="scale-down" alt="Влюбленные котики">
+        </div>
+        <div>
+            <p>none</p>
+            <img src="images/love.webp" class="none" alt="Влюбленные котики">
+        </div>
+    </div>
+    <div class="container">
+        <img src="images/omg.jpg" class="normal" alt="Придумайте сами какой котик)">
+        <div>
+            <p>fill</p>
+            <img src="images/omg.jpg" class="fill" alt="Придумайте сами какой котик)">
+        </div>
+        <div>
+            <p>contain</p>
+            <img src="images/omg.jpg" class="contain" alt="Придумайте сами какой котик)">
+        </div>
+        <div>
+            <p>cover</p>
+            <img src="images/omg.jpg" class="cover" alt="Придумайте сами какой котик)">
+        </div>
+        <div>
+            <p>scale-down</p>
+            <img src="images/omg.jpg" class="scale-down" alt="Придумайте сами какой котик)">
+        </div>
+        <div>
+            <p>none</p>
+            <img src="images/omg.jpg" class="none" alt="Придумайте сами какой котик)">
+        </div>
+    </div>
+    <div class="container">
+        <img src="images/morning.webp" class="normal" alt="Утренний котик">
+        <div>
+            <p>fill</p>
+            <img src="images/morning.webp" class="fill" alt="Утренний котик">
+        </div>
+        <div>
+            <p>contain</p>
+            <img src="images/morning.webp" class="contain" alt="Утренний котик">
+        </div>
+        <div>
+            <p>cover</p>
+            <img src="images/morning.webp" class="cover" alt="Утренний котик">
+        </div>
+        <div>
+            <p>scale-down</p>
+            <img src="images/morning.webp" class="scale-down" alt="Утренний котик">
+        </div>
+        <div>
+            <p>none</p>
+            <img src="images/morning.webp" class="none" alt="Утренний котик">
+        </div>
+
+
+
+
+
+    </div>
+    <div class="container">
+        <img src="images/kus.jpg" class="normal" alt="Кусь">
+        <div>
+            <p>fill</p>
+            <img src="images/kus.jpg" class="fill" alt="Кусь">
+        </div>
+        <div>
+            <p>contain</p>
+            <img src="images/kus.jpg" class="contain" alt="Кусь">
+        </div>
+        <div>
+            <p>cover</p>
+            <img src="images/kus.jpg" class="cover" alt="Кусь">
+        </div>
+        <div>
+            <p>scale-down</p>
+            <img src="images/kus.jpg" class="scale-down" alt="Кусь">
+        </div>
+        <div>
+            <p>none</p>
+            <img src="images/kus.jpg" class="none" alt="Кусь">
+        </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>

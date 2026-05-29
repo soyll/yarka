@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-child last-child</title>
+    <style>
+        div {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 3%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: start;
+        }
+
+        nav li {
+            list-style-type: none;
+            padding-right: 1%;
+        }
+
+        /* уберите a из селектора и объясните что произошло */
+        .first-child li:first-child a,
+        .last-child li:last-child a {
+            color: red;
+        }
+
+        .select-p p:first-child,
+        .select-p p:last-child {
+            font-size: larger;
+            font-weight: 700;
+            font-style: italic;
+            text-indent: 4%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Рассмотрим несколько вариантов выборки первых и последних элементов.</h1>
+    <h2>Открывайте закомментированный код, следите за изменениями, ищите причины.</h2>
+
+    <div class="first-child">
+        <h2>Выделим первый элемент списка</h2>
+        <nav>
+            <ul>
+                <li><a href="https://vk.com/pechora_pro">Pechora-PRO</a></li>
+                <li><a href="https://vk.com/@pechora_pro-my-i-pechora-proger">Мы</a></li>
+                <li><a href="https://vk.com/@pechora_pro-html-css">Самый лучший курс</a></li>
+                <li><a href="https://vk.com/@pechora_pro-bystryi-start-v-tehnologii-free">Быстрый старт</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="last-child">
+        <h2>Выделим последний элемент списка</h2>
+        <nav>
+            <ul>
+                <li><a href="https://vk.com/pechora_pro">Pechora-PRO</a></li>
+                <li><a href="https://vk.com/@pechora_pro-my-i-pechora-proger">Мы</a></li>
+                <li><a href="https://vk.com/@pechora_pro-html-css">Самый лучший курс</a></li>
+                <li><a href="https://vk.com/@pechora_pro-bystryi-start-v-tehnologii-free">Быстрый старт</a></li>
+                <!-- <li>Заглушка без ссылки</li> -->
+            </ul>
+        </nav>
+    </div>
+
+    <div>
+        <h2>Выделим первый и последний абзац текста</h2>
+        <div class="select-p">
+
+            <!-- <h2>Расскомментируйте эту строчку и оцените произошедшие изменения</h2> -->
+
+            <p>Для наполнения используем рыбу. А выделять будем текст особыми настройками текста.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem consequatur vero aliquid, adipisci aut
+                deserunt, animi veniam odio unde nisi eveniet fuga rem quia! Placeat at nulla explicabo sit possimus!
+            </p>
+            <p>Добавим небольшой список, чтобы "разорвать" наш текст. Пусть это будут мои планы на вечер.</p>
+            <ol>
+                <li>Приду с работы и буду работать</li>
+                <li>Ух люблю свою работушку любимую</li>
+                <li>А как устану работать, кофеек дерну и опять работать</li>
+            </ol>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam necessitatibus quisquam veniam odio
+                animi id
+                vitae cumque, quis officiis illo accusantium, assumenda voluptates dolore excepturi praesentium
+                explicabo.
+                Deleniti, aut voluptates?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, repudiandae. Sapiente aperiam
+                magnam
+                exercitationem placeat praesentium, ex maiores. Cumque, at. Ea cumque quaerat obcaecati molestiae
+                aliquam
+                placeat laborum atque quisquam.</p>
+
+            <!-- Раскомментируйте список ниже. Объясните произошедшие изменения -->
+
+            <!-- <ol>
+                <li>Приду с работы и буду работать</li>
+                <li>Ух люблю свою работушку любимую</li>
+                <li>А как устану работать, кофеек дерну и опять работать</li>
+            </ol> -->
+        </div>
+    </div>
+</body>
+
+</html>
