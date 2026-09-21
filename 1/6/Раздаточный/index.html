@@ -7,22 +7,67 @@
         <link rel="stylesheet" href="style/style.css" />
         <title>Преподаватель</title>
         <script>
-			// инициализируем объект
-			// определяем основные свойства объекта
-            // название объекту можете дать свое
+            const ask = (label, defaultValue) => {
+                if (typeof window.prompt === 'function') {
+                    return window.prompt(label, defaultValue);
+                }
+                return defaultValue;
+            };
+
             let person = {
-                // ...
-            }
-			
-			 // добавляем к объекту некоторые дополнительные свойства
-			 // значения свойствам назначаем через диалоговое окно prompt 
-			 // ...
-			
-			
-			// формируем форматированную строку
-			// инкапсулируем в строку данные объекта
-			// ...
-        </script> 
+                surname: "Михеева",
+                name: "Татьяна",
+                patronymic: "Александровна",
+                occupation: "Преподаватель специальных дисциплин",
+                degree: "Высшее",
+                education: "Московский государственный институт электронной техники (технический университет)",
+                qualification: "Инженер-программист инфокоммуникационных систем",
+                specialty: "Программное обеспечение радиоэлектронных систем",
+                discipline: ["Основы алгоритмизации и программирования", "Компьютерная графика"],
+                category: "",
+                experience: "",
+                email: "",
+                site: ""
+            };
+
+            person.category = ask("Введите категорию педагога:", "Высшая");
+            person.experience = ask("Введите стаж работы:", "10 лет");
+            person.email = ask("Введите адрес электронной почты:", "teacher@example.com");
+            person.site = ask("Введите персональный сайт:", "https://example.com");
+
+            window.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".info");
+                const disciplines = person.discipline
+                    .map((item) => `<li>${item}</li>`)
+                    .join("");
+
+                section.innerHTML = `
+                    <h1>${person.surname} ${person.name} ${person.patronymic}</h1>
+                    <h2>${person.occupation}</h2>
+                    <hr class="info__hr" />
+                    <h3>Основная информация:</h3>
+                    <ul class="info__list">
+                        <li><span class="info__item">Уровень образования: </span>${person.degree}</li>
+                        <li><span class="info__item">Образование: </span>${person.education}</li>
+                        <li><span class="info__item">Квалификация: </span>${person.qualification}</li>
+                        <li><span class="info__item">Специализация: </span>${person.specialty}</li>
+                        <li>
+                            <span class="info__item">Преподаваемые дисциплины:</span>
+                            <ul>
+                                ${disciplines}
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>Дополнительная информация:</h3>
+                    <ul class="info__list">
+                        <li><span class="info__item">Категория: </span>${person.category}</li>
+                        <li><span class="info__item">Стаж: </span>${person.experience}</li>
+                        <li><span class="info__item">E-mail: </span>${person.email}</li>
+                        <li><span class="info__item">Персональный сайт: </span>${person.site}</li>
+                    </ul>
+                `;
+            });
+        </script>
     </head>
     <body>
     <header class="header">
@@ -50,56 +95,7 @@
     </section>
     
     <section class="info">
-        
-
-        <!-- 
-            блок информации о педагоге, который должен использоваться
-			в качестве форматированной строки для инкапсуляции данных объекта
-        -->
-        <h1>ФИО</h1>
-        <h2>Должность</h2>
-        <hr class="info__hr" />
-        <h3>Основная информация:</h3>
-        <ul class="info__list">
-            <li>
-                <span class="info__item">Уровень образования: </span>{ Уровень образования }
-            </li>
-            <li>
-                <span class="info__item">Образование: </span>{ Институт }
-            </li>
-            <li>
-                <span class="info__item">Квалификация: </span>{ Квалификация по диплому }
-            </li>
-            <li>
-                <span class="info__item">Специализация: </span>{ Специализация }
-            </li>   
-            <li>
-                <span class="info__item">Преподаваемые дисциплины: 
-                    <ul>
-                        <li>{ Дисциплина 1 }</li>
-                        <li>{ Дисциплина 2 }</li>
-                    </ul>
-                </span>
-            </li>  
-        </ul>
-        <h3>Дополнительная информация:</h3>
-        <ul class="info__list">
-            <li>
-                <span class="info__item">Категория: </span>{ Категория }
-            </li>
-            <li>
-                <span class="info__item">Стаж: </span>{ Стаж }
-            </li>
-            <li>
-                <span class="info__item">E-mail: </span>{ Электронная почта  }
-            </li>           
-            <li>
-                <span class="info__item">Персональный сайт: </span>{ Сайт }
-            </li>
-        </ul>
-        <!-- конец блока информации о педагоге -->
-
-
+        <h1>Загрузка данных...</h1>
     </section>
     </main>
 

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Курс JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1 align="center">Введение в JavaScript</h1>
+    </header>
+
+    <div class="content">
+        <script>
+            const surname = 'Карамзин';
+            const name = 'Виктор';
+            const patronymic = 'Геннадьевич';
+            const ocupation = 'Преподаватель специальных дисциплин';
+            const degree = 'Высшее';
+            const category = 'Первая';
+            const education = 'Московский государственный институт электронной техники (технический университет)';
+            const discipline = 'Информатика';
+            const note = 'Педагогический опыт и высокий профессиональный уровень.';
+
+            const personData = [
+                surname + ' ' + name + ' ' + patronymic,
+                'Должность: ' + ocupation,
+                'Уровень образования: ' + degree,
+                'Категория: ' + category,
+                'Образование: ' + education,
+                'Дисциплина: ' + discipline,
+                'Примечание: ' + note
+            ];
+
+            for (let i = 0; i < personData.length; i++) {
+                document.write(personData[i] + '<br>');
+            }
+        </script>
+    </div>
+
+    <footer align="center">
+        <h3>Добро пожаловать на pechora_PROger</h3>
+        <a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
+    </footer>
+</body>
+</html>

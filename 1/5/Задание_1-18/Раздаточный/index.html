@@ -4,10 +4,18 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Курс JavaScript</title>
 	<script>
-		// инициализируем объект
+		const person = {
+			category: 'Высшая',
+			site: 'master.sweb.ru',
+			email: 'master@mail.ru',
+			note: 'Нет данных'
+		};
 
-		// создаем дополнительные свойства объекта
-
+		person.surname = prompt('Введите фамилию', 'Баранов');
+		person.name = prompt('Введите имя', 'Виктор');
+		person.patronymic = prompt('Введите отчество', 'Александрович');
+		person.ocupation = prompt('Введите должность', 'Преподаватель специальных дисциплин');
+		person.degree = prompt('Введите уровень образования', 'Высшее');
 	</script>
 </head>
 
@@ -18,10 +26,17 @@
 	
 	<div class="content">
 		<script>
-			// формируем строку
+			const line = `
+				<h2>${person.surname} ${person.name} ${person.patronymic}</h2>
+				<p><i>Должность:</i> ${person.ocupation}</p>
+				<p><i>Уровень образования:</i> ${person.degree}</p>
+				<p><i>Категория:</i> ${person.category}</p>
+				<p><i>Сайт:</i> ${person.site}</p>
+				<p><i>E-mail:</i> ${person.email}</p>
+				<p><i>Примечание:</i> ${person.note}</p>
+			`;
 
-			// выводим строку в браузер
-			
+			document.write(line);
 		</script>		
 	</div>
 		

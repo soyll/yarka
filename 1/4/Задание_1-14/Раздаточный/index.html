@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Курс JavaScript</title>	
+	<title>Курс JavaScript</title>
+	<script src="person.js"></script>
 </head>
 
 <body>
@@ -11,16 +12,16 @@
 	</header>
 	
 	<script>
-		// подключите файл person.js
-		// создайте массив
-		// запишите в массив предопределенные переменные из файла 
-		// при записи переменных соблюдайте дополнительные условия
+		const personData = [
+			String(surname) + ' ' + String(name) + ' ' + String(patronymic),
+			Number(String(generalExperience).replace(/\D+/g, '')),
+			Number(String(collegeExperience).replace(/\D+/g, '')),
+			Boolean(actual),
+			String(date)
+		];
 
-		// добавьте в массив строковые элементы, обозначающие
-		// - сайт
-		// - email
-
-		// выведите массив в консоль
+		personData.push('master.sweb.ru', 'master@mail.ru');
+		console.log(personData);
 	</script>	
 	
 	<footer align = "center">

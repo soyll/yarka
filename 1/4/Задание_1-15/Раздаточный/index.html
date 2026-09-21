@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Курс JavaScript</title>	
+	<title>Курс JavaScript</title>
+	<script src="person.js"></script>
 </head>
 
 <body>
@@ -11,17 +12,34 @@
 	</header>
 	
 	<script>
-		// подключите файл person.js
-		// создайте объект
-		// запишите в свойства объекта предопределенные переменные из файла 
-		// при записи переменных соблюдайте дополнительные условия
+		const person = {
+			surname: String(surname),
+			name: String(name),
+			patronymic: String(patronymic),
+			generalExperience: parseFloat(String(generalExperience).replace(/\D+/g, '')),
+			collegeExperience: parseFloat(String(collegeExperience).replace(/\D+/g, '')),
+			actual: Boolean(actual),
+			date: String(date),
+			discipline: String(discipline),
+			education: String(education),
+			site: 'master.sweb.ru',
+			email: 'master@mail.ru'
+		};
 
-		// добавьте в объект два дополнительных свойства со строковыми значениями
-		// - site
-		// - email
+		console.log(person);
 
-		// выведите объект в консоль
-		// выведите данные объекта в браузер
+		const line = `
+			<h2>${person.surname} ${person.name} ${person.patronymic}</h2>
+			<p><b>Общий стаж:</b> ${person.generalExperience} лет</p>
+			<p><b>Стаж в техникуме:</b> ${person.collegeExperience} лет</p>
+			<p><b>Актуальность:</b> ${person.actual}</p>
+			<p><b>Дата:</b> ${person.date}</p>
+			<p><b>Дисциплина:</b> ${person.discipline}</p>
+			<p><b>Образование:</b> ${person.education}</p>
+			<p><b>Сайт:</b> ${person.site}</p>
+			<p><b>E-mail:</b> ${person.email}</p>
+		`;
+		document.write(line);
 	</script>	
 	
 	<footer align = "center">

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Курс JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1 align="center">Введение в JavaScript</h1>
+    </header>
+
+    <div class="content">
+        <script>
+            const person = {
+                surname: 'Карамзин',
+                name: 'Виктор',
+                patronymic: 'Геннадьевич',
+                ocupation: 'Преподаватель специальных дисциплин',
+                degree: 'Высшее',
+                category: 'Первая',
+                education: [
+                    'Московский государственный институт электронной техники (технический университет)',
+                    'Российский государственный социальный университет'
+                ],
+                disciplines: ['Информатика', 'Математика', 'Основы программирования'],
+                note: 'Педагогический опыт и высокий профессиональный уровень.'
+            };
+
+            document.write('<h2>' + person.surname + ' ' + person.name + ' ' + person.patronymic + '</h2>');
+            document.write('<p><i>Должность:</i> ' + person.ocupation + '</p>');
+            document.write('<p><i>Уровень образования:</i> ' + person.degree + '</p>');
+            document.write('<p><i>Категория:</i> ' + person.category + '</p>');
+            document.write('<p><i>Образование:</i></p><ul>');
+            for (let i = 0; i < person.education.length; i++) {
+                document.write('<li>' + person.education[i] + '</li>');
+            }
+            document.write('</ul>');
+            document.write('<p><i>Преподаваемые дисциплины:</i></p><ul>');
+            for (let i = 0; i < person.disciplines.length; i++) {
+                document.write('<li>' + person.disciplines[i] + '</li>');
+            }
+            document.write('</ul>');
+            document.write('<p><i>Примечание:</i> ' + person.note + '</p>');
+        </script>
+    </div>
+
+    <footer align="center">
+        <h3>Добро пожаловать на pechora_PROger</h3>
+        <a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
+    </footer>
+</body>
+</html>

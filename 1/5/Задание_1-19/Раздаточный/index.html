@@ -5,7 +5,6 @@
 	<title>Курс JavaScript</title>
 
 	<script>
-		// инициализируем объект
 		let person = new Object();
 		
 		person.surname = "Довлатов";
@@ -19,8 +18,11 @@
 		person.email = "suitcase@mail.ru";
 		person.note = "Я оглядел пустой чемодан. На дне – Карл Маркс. На крышке – Бродский. А между ними – пропащая, бесценная, единственная жизнь.";
 
-		// завершаем формирование свойств объекта
-		
+		person.discipline = [];
+		const count = Number(prompt('Сколько дисциплин ведёт преподаватель?', '3'));
+		for (let i = 0; i < count; i++) {
+			person.discipline.push(prompt(`Введите дисциплину ${i + 1}`, 'Информатика'));
+		}
 	</script>
 
 </head>
@@ -34,10 +36,22 @@
 	<div class="content">
 		
 		<script>
-			// формируем строку
+			const line = `
+				<h2>${person.surname} ${person.name} ${person.patronymic}</h2>
+				<p><i>Должность:</i> ${person.post}</p>
+				<p><i>Образование:</i> ${person.ocupation}</p>
+				<p><i>Уровень образования:</i> ${person.degree}</p>
+				<p><i>Категория:</i> ${person.category}</p>
+				<p><i>Сайт:</i> ${person.site}</p>
+				<p><i>E-mail:</i> ${person.email}</p>
+				<p><i>Примечание:</i> ${person.note}</p>
+				<p><i>Дисциплины:</i></p>
+				<ul>
+					${person.discipline.map(item => `<li>${item}</li>`).join('')}
+				</ul>
+			`;
 
-			// выводим строку в браузер
-
+			document.write(line);
 		</script>		
 
 	</div>

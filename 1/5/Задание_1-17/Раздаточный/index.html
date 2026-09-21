@@ -5,11 +5,20 @@
 	<title>Курс JavaScript</title>
 
 	<script>
-		// инициализируем объект
-		
-		
-		// выводим объект в консоль
+		const person = {
+			category: 'Высшая',
+			site: 'master.sweb.ru',
+			email: 'master@mail.ru',
+			note: 'Нет данных'
+		};
 
+		person.surname = prompt('Введите фамилию', 'Баранов');
+		person.name = prompt('Введите имя', 'Виктор');
+		person.patronymic = prompt('Введите отчество', 'Александрович');
+		person.ocupation = prompt('Введите должность', 'Преподаватель специальных дисциплин');
+		person.degree = prompt('Введите уровень образования', 'Высшее');
+
+		console.log(person);
 	</script>	
 
 </head>
