@@ -43,13 +43,12 @@ h1:hover {
     color: #333;
     background: #e8eef3;
     border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s;
 }
 
 .menu a:hover {
     background: #3498db;
     color: #fff;
-    transform: translateY(-2px);
 }
 
 .cards {
@@ -64,7 +63,7 @@ h1:hover {
     text-align: center;
     background: #d8edf5;
     border-radius: 6px;
-    transition: background-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+    transition: all 0.3s;
 }
 
 .card:hover {
@@ -81,7 +80,7 @@ h1:hover {
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
+    transition: all 0.3s;
 }
 
 .btn:hover {

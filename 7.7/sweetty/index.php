@@ -9,7 +9,6 @@
   $result = $mysqli->query($sql);
   // обрабатываем данные полученные выполненным запросом
   foreach ($result as $item){
-    // выводим блоки страницы в цикле
     echo $item["content"];
   }
   

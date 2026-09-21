@@ -1,17 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Макет 2 — именованные линии</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div class="grid">
-		<div class="a">A</div>
-		<div class="b">B</div>
-		<div class="c">C</div>
-		<div class="d">D</div>
-	</div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table class="maket">
+            <tr>
+                <td class="r-header" colspan="4"></td>
+            </tr>
+
+            <tr>
+                <td class="r-body" colspan="4"></td>
+            </tr>
+
+            <tr>
+                <td class="col-left" rowspan="6"></td>
+                <td class="col-middle r-small" rowspan="2"></td>
+                <td class="col-c r-small"></td>
+                <td class="col-d r-small"></td>
+            </tr>
+            <tr>
+                <td class="r-small"></td>
+                <td class="r-small"></td>
+            </tr>
+
+            <tr>
+                <td class="col-middle r-small" rowspan="2"></td>
+                <td class="r-small"></td>
+                <td class="r-small"></td>
+            </tr>
+            <tr>
+                <td class="r-small"></td>
+                <td class="r-small"></td>
+            </tr>
+
+            <tr>
+                <td class="col-middle r-small" rowspan="2"></td>
+                <td class="r-small"></td>
+                <td class="r-small"></td>
+            </tr>
+            <tr>
+                <td class="r-small"></td>
+                <td class="r-small"></td>
+            </tr>
+
+            <tr>
+                <td class="r-footer" colspan="4"></td>
+            </tr>
+        </table>
+    </body>
 </html>

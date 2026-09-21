@@ -641,3 +641,51 @@ footer .footer__menu nav ul li {
 		font-size: 1.5rem;
 	}
 }
+
+:root {
+	--ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+	--reveal-duration: 0.7s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	body:not(.is-ready) {
+		opacity: 0;
+	}
+
+	body.is-ready {
+		opacity: 1;
+		transition: opacity 0.35s var(--ease-reveal);
+	}
+
+	.reveal {
+		opacity: 0;
+		transform: translate3d(0, 16px, 0);
+		transition:
+			opacity var(--reveal-duration) var(--ease-reveal),
+			transform var(--reveal-duration) var(--ease-reveal);
+		transition-delay: var(--reveal-delay, 0ms);
+	}
+
+	.reveal.is-visible {
+		opacity: 1;
+		transform: none;
+	}
+
+	.reveal--from-top {
+		transform: translate3d(0, -10px, 0);
+	}
+
+	#content.is-swapping > section {
+		opacity: 0;
+		transform: translate3d(0, 12px, 0);
+		transition:
+			opacity 0.45s var(--ease-reveal),
+			transform 0.45s var(--ease-reveal);
+		transition-delay: var(--reveal-delay, 0ms);
+	}
+
+	#content.is-swapping > section.is-visible {
+		opacity: 1;
+		transform: none;
+	}
+}

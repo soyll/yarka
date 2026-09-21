@@ -20,26 +20,18 @@
     <div class="content">
       <h2>А КАКИМ БУДЕТ ТВОЙ ТОРТ?</h2>
       <?php
-        //создание переменной для контента
         $data = "";
-        //запрос к базе данных
         $sql = "SELECT * FROM `fillings`";
-        //выполнение запроса
         $result = $mysqli->query($sql);
-        //обработка полученных данных
         while($row = $result->fetch_assoc()){
-          //формирование контента в переменную
           $data .= sprintf('
           <figure class="filling">
-          <!--Фото начинки из базы и название в качестве альтернативного текста-->
             <img src="%s" alt="%s">
-            <!--Название начинки из базы-->
             <figcaption>%s</figcaption>
           </figure>
           ', $row['path'], $row['name'], $row['name']);
           
         }
-        //вывод контента
         echo $data;
       ?>
     </div>

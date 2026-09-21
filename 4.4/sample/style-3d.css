@@ -25,34 +25,29 @@
 	backface-visibility: inherit;
 	font-size: 5em;
 	color: #fff;
+	background-color: rgba(0,0,0,0.6);
 }
 
 .front {
-	background: rgba(7, 184, 184, 0.7);
 	transform: translateZ(100px);
 }
 
 .back {
-	background: rgba(0, 210, 0, 0.7);
 	transform: rotateY(180deg) translateZ(100px);
 }
 
 .right {
-	background: rgba(210, 0, 0, 0.7);
 	transform: rotateY(90deg) translateZ(100px);
 }
 
 .left {
-	background: rgba(0, 0, 210, 0.7);
 	transform: rotateY(-90deg) translateZ(100px);
 }
 
 .top {
-	background: rgba(210, 210, 0, 0.7);
 	transform: rotateX(90deg) translateZ(100px);
 }
 
 .bottom {
-	background: rgba(190, 1, 187, 0.7);
 	transform: rotateX(-90deg) translateZ(100px);
 }
