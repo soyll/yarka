@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>Некоторые люди хотят увидеть твое падение. Разочаруй их! (Джокер)</h2>
+
+	<script>	
+		// сохраняем в localStorage число
+		window.localStorage.setItem("num", 55);
+
+		// сохраняем в localStorage булево значение
+		window.localStorage.setItem("bol", true);
+
+		// сохраняем в localStorage массив
+		window.localStorage.setItem("arr", [55, true, "hello"]);
+
+		// сохраняем в localStorage объект
+		window.localStorage.setItem("obj", { num: 255, bool:true, msg:"hello" });
+
+		// извлекаем из localStorage данные
+		let num = localStorage.getItem('num');
+
+		let bol = localStorage.getItem('bol');		
+
+		let arr = localStorage.getItem('arr');
+
+		let obj = localStorage.getItem('obj');		
+
+		// выводим данные в консоль браузера
+		console.log(num);
+
+		console.log(bol);
+		
+		// ! обратите внимание, как выводится массив
+		console.log(arr);
+
+		// ! обратите внимание, как выводится объект
+		console.log(obj);
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>>

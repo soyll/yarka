@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<script>	
+		var outerFunction = function () {
+			// внешняя переменная
+			let first = 'First';
+			
+			var firstInnerFunction = function () {
+				// внутренняя переменная
+				let second = 'Second';
+				console.log("Вложенная функция firstInnerFunction:");
+				console.log('First variable: ' + first); 
+
+				var secondInnerFunction = function () {
+					console.log("Вложенная функция secondInnerFunction:");
+					console.log('First variable: ' + first);
+					console.log('Second variable: ' + second);
+				}
+				// вызов второй внутренней функции
+				secondInnerFunction();
+			};
+			// вызов первой внутренней функции
+			firstInnerFunction(); 
+		};
+		
+		// вызов внешней функции
+		outerFunction(); 
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

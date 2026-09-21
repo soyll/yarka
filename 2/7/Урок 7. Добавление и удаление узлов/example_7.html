@@ -1,0 +1,87 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+	
+	<h2>Топ лучших фильмов (по версии paramountcomedy.ru)</h2>
+
+	<ol>
+		<li>Зеленая миля: 
+			<ul>
+				<li>режиссёр: Фрэнк Дарабонт</li>
+				<li>год: 1999</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Криминальное чтиво:
+			<ul>
+				<li>режиссёр: Квентин Тарантино</li>
+				<li>год: 1994</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Форрест Гамп: 
+			<ul>
+				<li>режиссёр: Роберт Земекис</li>
+				<li>год: 1994</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+	</ol>
+
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>	
+
+	<script>
+		// создаем элемент маркированного списка
+		let ul = document.createElement("ul");
+		
+		// создаеми пункты маркированного списка
+		// создаем текстовые узлы для пунктов списка
+		let li1 = document.createElement("li");
+		let txt1 = document.createTextNode("режиссёр: Алла Сурикова");
+		li1.append(txt1);
+		
+		let li2 = document.createElement("li");
+		let txt2 = document.createTextNode("год: 1987");
+		li2.append(txt2);
+		
+		let li3 = document.createElement("li");
+		let txt3 = document.createTextNode("страна: СССР");
+		li3.append(txt3);	
+		// ----------
+		
+		// вставляем пункты в маркированный список
+		ul.append(li1, li2, li3);
+
+		// маркированный список выводим в консоль
+		console.log(ul);
+		// ----------
+
+		// создадим пункт списка
+		let li = document.createElement("li");
+		let txt = document.createTextNode("Человек с бульвара Капуцинов:");
+		li.append(txt);
+		// ----------
+		
+		// в пункт нумерованного списка добавим созданный элемент <ul>
+		li.append(ul);
+		// ----------
+		
+		// выберем элемент списка <ol> 
+		let ol = document.querySelector("ol"); 
+
+		// теперь всю созданную ветвь добавим в элемент списка <ol>
+		ol.append(li);
+	</script>
+
+</body>
+</html>

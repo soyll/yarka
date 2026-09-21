@@ -1,0 +1,40 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Метасимволы</h1>
+	</header>
+	
+	<div>
+		<h2>Pechora-PRO лучший ресурс для начинающего разработчика!<p>
+		{{1}}
+
+		{{2}}
+
+		{{3}}
+	</div>	
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>	
+
+	<script>
+		// забираем из документа содержимое блока div
+		var str = document.body.querySelector("div").innerHTML;
+
+		// выполняем замену с использованием захватывающих скобок
+		// ([1-9]) - захват числа
+		// $1 - захватываемое число
+		var newstr = str.replace(/{{([1-9])}}/g, `<img src='$1.jpg' width='350px'>`);
+
+		// замещаем блок новым содержимым 
+		document.body.querySelector("div").innerHTML = newstr;
+	</script>
+
+</body>
+</html>

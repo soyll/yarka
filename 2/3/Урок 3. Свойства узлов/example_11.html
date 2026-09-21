@@ -1,0 +1,48 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+	
+	<h2>Эрих Мария Ремарк — цитаты из книг</h2>
+	<!-- блок цитат -->
+	<div id="citate">
+		<p>Самое худшее, когда нужно ждать и не можешь ничего сделать. От этого можно сойти с ума.</p>
+		
+		<p>Любовь не терпит объяснений. Ей нужны поступки.</p>
+
+		<p>Трудно найти слова, когда действительно есть, что сказать.</p>
+	</div>	
+
+	<script>
+		// ссылка на узел body
+		let body = document.body; 
+		
+		// получили доступ к элементу h2
+		let h = body.firstElementChild.nextElementSibling;
+		
+		// ссылка на узел комментарий
+		let comment = h.nextSibling.nextSibling;
+		
+		// ссылка на текстовый узел
+		let txt = comment.nextElementSibling.firstElementChild.firstChild;	
+
+		// выводим в консоль значение узлов
+		console.log(comment.nodeValue); 
+		
+		console.log(txt.nodeValue);
+		
+		// устанавливаем новое значение узлов
+		txt.nodeValue = "Кто хочет удержать – тот теряет. Кто готов с улыбкой отпустить – того стараются удержать.";
+		
+		comment.nodeValue = "Эрих Мария Ремарк блок цитат";
+	</script>
+	
+</body>
+</html>

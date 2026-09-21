@@ -1,0 +1,46 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<script>
+		let data = {
+			id_user : 3,
+			user:{
+				name : "Евгений",
+				surname : "Даугава",
+				login : "master",
+				email : "pechora-pro@mail.ru"
+			},
+			personal:{
+				inn : 123456789,
+				police : "12-V23",
+				certificate :"yes",			
+				phone : "8(912)552-92-25"
+			}
+		};
+		
+		with(data) {
+			with(user){
+				var html = `
+					Пользователь: ${name} ${surname} <p>
+					Идентификатор в системе: ${id_user} <p>
+				`;
+			}
+		}
+
+		document.write(html);
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

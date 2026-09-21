@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>Я знаю, что голоса в моей голове ненастоящие… но иногда их идеи просто потрясающие! (Джокер)</h2>
+
+	<script>	
+		// получим JSON-представление объекта из localStorage
+		let userJSON = localStorage.getItem('user'); 
+
+		console.log("Объект создан на странице example_6-1.html:");
+		
+		// объект JSON
+		console.log(userJSON);
+
+		// объект JS
+		console.log(JSON.parse(userJSON));
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

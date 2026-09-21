@@ -1,0 +1,37 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа со строками</h1>
+	</header>
+	
+	<h2>Японская поэзия</h2>
+
+	<h3>
+		На чумазых котят <br/>
+		Так похожи сережки ивы, <br/>
+		А ведь тоже цветы!
+	</h3>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>	
+
+	<script>
+		// определяем строку
+		str = document.getElementsByTagName("h3")[0].innerText;
+
+		// ищем вхождение
+		console.log(str.includes("сережки")); // true 
+		
+		// а так?
+		console.log(str.includes("серёжки")); // ???
+	</script>
+
+</body>
+</html>

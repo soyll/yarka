@@ -1,0 +1,49 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+
+	<h2>Оскар Уайльд</h2>
+	<!-- блок цитат -->
+	<div id="citate">
+		<p>Мы не выносим людей с теми же недостатками, что и у нас.</p>
+		
+		<p>Самые нелепые поступки человек совершает всегда из благороднейших побуждений.</p>
+
+		<p>Трагедия старости не в том, что человек стареет, а в том, что он душой остается молодым...</p>
+	</div>	
+
+	<script>
+		// ссылка на элемент h
+		let h = document.body.firstElementChild.nextElementSibling;
+
+		// ссылка на элемент div
+		let div = h.nextElementSibling;
+		
+		// ссылка на абзацы p тега div
+		let set = div.children;
+
+		// создаем объект
+		let obj = new Object();
+
+		obj.author = h.innerText;
+
+		obj.citate = [
+			set.item(0).innerText,
+			set.item(1).innerText,
+			set.item(2).innerText,
+		];
+		
+		// вывод объекта в консоль
+		console.log(obj);		
+	</script>
+
+</body>
+</html>

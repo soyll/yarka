@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+	
+	<script>
+		// исходный массив
+		let courses = [
+			{id: 1, name: "JavaScript разработчик с нуля", time: "7 месяцев", shedule: "По будним дням 13:00-15:00", level: "Junior", teacher: "Данилов В.Е.", price: 40000},
+			{id: 2, name: "Python-рузработчик", time: "12 месяцев", shedule: "По будним дням 12:00-15:00", level: "Middle", teacher: "Ливанов Б.В.", price: 55000},
+			{id: 3, name: "Data Scientist", time: "10 месяцев", shedule: "По выходным 18:00-20:00", level: "Junior", teacher: "Вавилов Н.И.", price: 48000},
+			{id: 4, name: "Фронтенд-разработчик", time: "5 месяцев", shedule: "По выходным дням 10:00-12:00", level: "Middle", teacher: "Татарский А.М.", price: 78000},
+			{id: 5, name: "Тестирование веб-приложений на Python", time: "2 месяцев", shedule: "По выходным дням 15:00-18:00", level: "Middle", teacher: "Горшенёв М.Ю.", price: 40000},
+			{id: 6, name: "Разработчик C++", time: "9 месяцев", shedule: "Индивидуально", level: "Middle", teacher: "Князев А.С.", price: 126000},
+			{id: 4, name:"Фронтенд-разработчик на JavaScript", time: "3 месяца", shedule: "По будним дням, по согласованию", level: "Middle", teacher: "Карасев Ю.И.", price: 65000}, 
+			{id: 7, name: "Android-разработчик", time: "12 месяцев", shedule: "Индвивидуально", level: "Junior", teacher: "Маляров В.В.", price: 168000}
+		];
+
+		// функция коллбэк
+		let fnCallback = (item) => { 
+			// элемент массива возвращается при предикате равном true
+			return item.name.includes(criterion) ? true : false;
+		}
+
+		// критерий фильтрации
+		const criterion = "JavaScript";
+
+		// находит вхождения
+		// или возвращает пустой массив - []
+		let courseJS = courses.filter (fnCallback);
+			
+		console.log("Исходный массив:");
+		console.log(courses);
+
+		console.log("Результат фильтрации:");
+		console.log(courseJS);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

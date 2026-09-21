@@ -1,0 +1,52 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Доступ к элементам DOM</h1>
+	</header>
+	
+	<div id="citate">
+		<p>А она — подошла к столу и выпила, залпом, ещё сто пятьдесят, ибо она была совершенна, а совершенству нет предела (В.Ерофеев).</p>
+		
+		<p>Хорошо идти, когда зовут. Ужасно — когда не зовут. Однако лучше всего, когда зовут, а ты не идёшь (С.Довлатов).</p>
+
+		<p>Замечательный день сегодня. То ли чай пойти выпить, то ли повеситься (А.Чехов).</p>
+	</div>	
+
+	<script>
+
+		// nextSibling, previousSibling — свойства, позволяющие получить следующий и предыдущий  элементы (в том числе, текст и комментарии).
+		
+		// ссылка на узел body
+		let body = document.body; 
+		console.log(body);
+
+		// первый дочерний html-узел для body это header 
+		let header = body.firstElementChild;
+		// console.log("--> ", header);
+		
+		// следующий узел за header это пустой #text
+		let txt1 = header.nextSibling;
+		// console.log("--> ", txt1);		
+		
+		// следующий узел за txt1 это div#citate
+		let div1 = txt1.nextSibling;
+		// console.log("--> ", div1);
+		
+		// следующий узел за div#citate это пустой #text
+		let txt2 = div1.nextSibling;
+		// console.log("--> ", txt2);
+		
+		// вернемся обратно к div#citate
+		let div2 = txt2.previousSibling;
+		// console.log("--> ", div2);		
+		
+	</script>
+
+</body>
+</html>

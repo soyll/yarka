@@ -1,0 +1,37 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Объект Date</h1>
+	</header>
+
+	<div id="demo"></div>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>
+
+	<script>
+		// новый объект Date с текущими датой и временем
+		var d = new Date();
+		
+		// текущий объект Date, но 22 часа
+		d.setHours(22);
+		console.log(d);
+		
+		// текущий объект Date, но 30 минут
+		d.setMinutes(30);
+		console.log(d);
+	
+		// текущий объект Date, но 45 секунд
+		d.setSeconds(45);
+		console.log(d);
+	</script>
+	
+</body>
+</html>

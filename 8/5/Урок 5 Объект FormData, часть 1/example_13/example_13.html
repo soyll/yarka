@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<form id="frm">
+		Логин: <input type="text" name="login" value="DenisDream"><p>
+		E-mail: <input type="email" name="email" value="denis-dream@gmail.com"><p>
+		Пароль: <input type="password" name="pwd" value="qwerty@"><p>
+		<input type="submit">
+	</form>
+
+	<script>
+		// создание объекта FormData
+		let form_data = new FormData (document.querySelector("#frm"));
+
+		form_data.append("name", "Денис");
+		form_data.append("surname", "Калинин");
+
+		console.log(form_data.values()); // FormData Iterator
+
+		// перебор значений объекта FormData 
+		for (const val of form_data.values()) {
+			console.log(val);
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>	

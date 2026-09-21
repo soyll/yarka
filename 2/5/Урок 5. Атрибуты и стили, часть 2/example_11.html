@@ -1,0 +1,27 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 2</h1>
+	</header>
+	
+ 	<input id="input" type="text" value="Long Live Rock 'n' Roll">
+
+	<script>
+		// ссылка на узел input
+		let input = document.body.firstElementChild.nextElementSibling; 
+
+		// поменяем свойство
+		input.value = 'Shape of My Heart'; 
+
+		// атрибут не поменялся
+		console.log (input.getAttribute('value') ); 
+	</script>
+
+</body>
+</html>

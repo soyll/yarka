@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<form id="frm">
+		<!-- -->
+		<input type="file" name="file">		
+	</form>
+	
+	<script>
+		// создаем объект FormData 
+		let form = document.querySelector("#frm");
+		let data = new FormData (form);
+		
+		// получаем ссылку на элемент type="file"
+		let file = data.get("file");
+
+		// тестируем вывод
+		console.log(file); // File
+		console.log(file.name); // <empty string>
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

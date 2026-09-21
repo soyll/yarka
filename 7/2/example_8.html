@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<button id="btn">Тест свойства объекта-обработчика</button>
+
+	<script>
+		// null-объект в качестве обработчика
+		// метод handleEvent содержит ссылку на функцию sayHello
+		btn.addEventListener("click", {handleEvent: sayHello, msg: "Hello User!" });
+		
+		// функция с параметром null-объекта
+		function sayHello() {
+			alert(this.msg); // msg - свойство null-объекта 	
+		}
+	</script>
+	
+	<footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<h1>Мао Цзэдун цитаты</h1>
+	
+	<div id="codecs">
+		<h3>Ма́о Цзэду́н — китайский революционер, государственный, политический и партийный деятель XX века, главный теоретик маоизма, создатель современного китайского государства.</h3>
+	</div>
+
+	<button class="citate">Цитата Великого кормчего</button><p>
+	
+	<button class="citate">Цитата Великого кормчего</button><p>
+	
+	<button class="citate">Цитата Великого кормчего</button><p>
+
+	<!-- файл цитат -->
+	<script src="citateMao.js"></script>
+
+	<script>
+		// коллекция элементов button
+		btns = document.querySelectorAll(".citate");
+		
+		// на каждый элемент button навесим событие
+		btns.forEach( (btn) => {
+			// количество цитат
+			let max = citate.length;
+			// случайное целое число в заданном интервале
+			let num = Math.floor(Math.random() * max);
+			let msg = citate[num];
+			
+			// применение объекта-обработчика
+			btn.addEventListener("click", {handleEvent : loadCitate, msg : msg} );
+		})
+		
+		// функция инструкция
+		function loadCitate(){
+			alert(this.msg)
+		}
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

@@ -1,0 +1,52 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+
+	<h2>О сколько нам открытий чудных…</h2>
+	
+	<script>
+		try {
+			// программа проявляет чудеса толерантности			
+			if (confirm("Вы хотите получить ошибку?")){
+				
+				// ну, если пользователь так хочет ...
+				throw Error("Ошибка на ровном месте... :-(");
+			} else {
+				// жить без ошибок - здорово!
+				alert ("Спасибо, вы настоящий друг!");
+			}		
+		} catch(err){
+			// вывод информации об ошибке
+			console.log("Пользователь тешится ;)");
+			console.log(err.name + ": " + err.message);
+			// следующий блок выполнится в любом случае
+		} finally {  
+
+			// красивые стихи уместны всегда
+			let msg = `
+<pre><h2>
+О сколько нам открытий чудных
+Готовят просвещенья дух
+И Опыт, сын ошибок трудных,
+И Гений, парадоксов друг,
+И Случай, бог изобретатель.</h2>
+(Александр Пушкин)
+</pre>`;
+			// вывод сообщения в браузер
+			document.write(msg); 
+		}
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

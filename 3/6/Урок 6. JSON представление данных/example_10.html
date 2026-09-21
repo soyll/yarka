@@ -1,0 +1,37 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">JSON представление данных</h1>
+	</header>
+	
+	<script>
+		// -- пользователь запросил информацию о товаре на сайте одежды
+
+		// информация о товаре поступила в виде строки JSON
+		let orderJSON = '{ "id" : 1, "title" : "Утепленная стеганая куртка", "brand" : "MARCO DI RADI", "colour" : "Синий", "country" : "Китай", "hood" : "Есть", "size" : "52", "price" : 25.590, "image" : "steganaya-marco.jpg" }';
+
+		// вывод в консоль
+		console.log(orderJSON);
+
+		// для доступа к данным преобразуем JSON в JS-объект
+		let order = JSON.parse(orderJSON);
+
+		// вывод в консоль звказа в виде JS-объекта
+		console.log(order);
+
+		// тестируем доступ
+		console.log(order.title);
+	</script>	
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

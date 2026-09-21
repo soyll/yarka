@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<script>	
+		// определение первой функции
+		function fnFirst () {
+			const first = `I'm variable of fnFirst`;
+			console.log(first);
+		}
+		
+		// определение второй функции
+		function fnSecond () {
+			// вызов первой функции
+			fnFirst();
+			// пробуем получить доступ к переменной first
+			console.log(first); // Uncaught ReferenceError: first is not defined
+		}
+		
+		// вызов второй функции
+		fnSecond();		
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

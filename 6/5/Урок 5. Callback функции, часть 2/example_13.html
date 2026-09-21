@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<script>
+		// определение исходного JS-объекта
+		let person = {
+			surname : "Бородина", 
+			name : "Ксения", 
+			patronymic : "Алексеевна",
+			category : "Соответствие занимаемой должности", 
+			post : "Преподаватель",			
+			level_edu : "Высшее профессиональное", 
+			email : "borodina-x@gmail.com",
+			phone : "2-12-85-0A", 				
+			experience_college : 14.5
+		};	
+		
+		// сериализуем JSON с дополнительной функцией
+		personJSON = JSON.stringify(person, fnCollback);
+		
+		// вывод сериализованного JSON
+		console.log(personJSON);
+
+		// функция преобразования 
+		function fnCollback (key, value) {
+
+			if (key == "experience_college") return undefined;
+
+			if (key == "email" ) return "metodic@pedsov.ru";
+
+			if (key == "phone") return "Скрыто пользователем";
+
+			// по умолчанию возвращаем исходное значение - value
+			return value;
+		}		
+	</script>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

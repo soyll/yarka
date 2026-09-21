@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body> 
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<!-- обработчик события click определен в HTML-атрибуте -->
+	<button id="btn" onclick="alert('Клик!')">Эта кнопка умеет кликать сама себя!</button><p>
+	
+	Это поле умеет вызывать onchange без пользователя!<br>
+	<input id="inp" type="text" value="">
+	
+	<script>
+		// создаем событие
+		var eventClick = new Event("click");
+		// вызов события
+		btn.dispatchEvent(eventClick);
+		
+		// определяем обработчик события change
+		inp.onchange = function () {this.value='Hello my dear user!'}
+		// создаем событие
+		var eventChange = new Event("change");
+		// вызов события
+		inp.dispatchEvent(eventChange);
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

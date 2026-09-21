@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="persons.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<h2>Стремись не к тому, чтобы добиться успеха, а к тому, чтобы твоя жизнь имела смысл (Альберт Эйнштейн)</h2>
+
+	<div id="data"></div>
+
+	<script>
+		// функция получения данных 
+		function getData() {
+			// моделируем запрос на внешний ресурс
+			// сохраняем идентификатор setInterval
+			setInterval(() => {
+				
+				// генерируем случайное число
+				i = Math.floor(Math.random() * 5);
+				
+				// определение данных
+				// используем переменную i как индекс массива
+				user = persons[i];
+			}, 3000);
+		};
+
+		// функция вывода данных
+		function outData() {
+			// сохраняем идентификатор setInterval
+			setInterval(() => {
+				// если данные не определены
+				if (user.name == undefined || user.surname == undefined)
+					// формируем предупреждение
+					html = '<h2>Нет данных</h2>';
+				else {
+					// иначе интерполируем переменные в строку
+					html = `
+						<h2>Сервер вернул следующие данные:</h2>
+						Имя: <b>${user.name}</b> <br>
+						Логин: <b>${user.surname}</b> <br>
+					`;	
+
+					// console.log(html);				
+				}
+
+				// вывод данных в браузер
+				document.getElementById("data").innerHTML = html;		
+				
+			}, 500)
+		};
+
+		// инициируем пустой объект
+		user = {};
+
+		// вызов функции получения данных 
+		getData();
+		// вызов функции выода данных
+		outData();
+	</script>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

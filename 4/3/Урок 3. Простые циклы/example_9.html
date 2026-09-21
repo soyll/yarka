@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+	
+	<h2>Дискография группы Pink Floyd</h2>
+	
+	<table border=1 width="75%">
+		<tr>
+			<th>ID</th>
+			<th>Альбом</th>
+			<th>Дата выпуска</th> 
+			<th>Лейбл</th>
+			<th>Носитель</th>
+			<th>Статус</th>
+		</tr>
+		<tbody>
+		<tr>
+			<td>1</td>
+			<td>Atom Heart Mother</td>
+			<td>10 октября 1970</td> 
+			<td>EMI, Harvest, Capitol</td>
+			<td>LP, CD</td>
+			<td>Золотой (USA)</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Meddle</td>
+			<td>30 октября 1971</td>
+			<td>EMI, Harvest, Capitol</td>
+			<td>Vinyl, кассета, CD</td>
+			<td>Платиновый (USA)</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Obscured by Clouds</td>
+			<td>3 июня 1972</td>
+			<td>EMI, Harvest, Capitol</td>
+			<td>LP, кассета, CD</td>
+			<td>Золотой (USA), Серебряный (GBR)</td>
+		</tr>
+		<tr>	
+			<td>4</td>
+			<td>The Dark Side Of The Moon</td>
+			<td>17 марта 1973</td>
+			<td>Harvest, Capitol, EMI</td>
+			<td>LP, кассета, CD, SACD</td>
+			<td>Платиновый (USA), Платиновый (GBR), Бриллиантовый (CAN)</td>
+		</tr>	
+		<tr>	
+			<td>5</td>
+			<td>Wish You Were Here</td>
+			<td>15 сентября 1975</td>
+			<td>Harvest, EMI, Columbia, Capitol</td>
+			<td>LP, 8-track, кассета, CD, SACD</td>
+			<td>Платиновый (USA), Золотой (GBR), Платиновый (CAN)</td>
+		</tr>
+		</tbody>
+	</table>	
+
+	<script>
+		// получаем коллекцию строк таблицы
+		var elements = document.querySelectorAll('tbody tr');
+		
+		// количество элементов коллекции
+		let len = elements.length;
+		
+		// инициируем переменные
+		var arr = [];
+		var i = 0;
+		
+		// цикл while
+		while (i < len) {
+			// получаем коллекцию элементов td для каждой строки tr
+			let td = elements.item(i).children;
+			
+			// объявляем пустой объект
+			obj = {};
+			// свойствам объекта присваиваем значения ячеек
+			obj.name =  td.item(1).innerText;
+			obj.date = td.item(2).innerText;
+			obj.status = td.item(5).innerText;
+
+			// записываем объект в массив
+			arr[i] = obj;
+
+			// увеличиваем итератор цикла
+			i++;
+		}
+		// упакуем массив объектов в JSON-формат
+		var arrJSON = JSON.stringify(arr);
+
+		document.write("<h2>Упакованный в JSON массив</h2>");
+
+		// выводим сформированный JSON-контент в браузер
+		document.write(arrJSON);
+		// в консоль
+		console.log(arr);
+	</script>
+	
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

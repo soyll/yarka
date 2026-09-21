@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>	
+		// JS-объект данных
+		let user = {
+			name: "Евгений",
+			surname: "Лукашин",
+			address: {
+				street: "3-я улица Строителей, дом 25",
+				city: "Ленинград",
+				post: 101101
+			},
+			phone: [
+				"(912)552-92-25",
+				"(904)104-17-06"
+			]
+		}
+
+		// преобразуем JS в JSON
+		userJSON = JSON.stringify(user);
+
+		// сохраним строку JSON в localStorage
+		window.localStorage.setItem("user", userJSON);
+
+		// JSON-объект, который получим на странице example_7-2.html
+		console.log("Предварительный вывод объекта:");
+		console.log(localStorage.getItem("user"));
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>Неудача побеждает проигравших, но вдохновляет победителей (Джокер)</h2>
+
+	<a href="example_7-2.html" target="_blank">Тестируем передачу объекта в localStore</a>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

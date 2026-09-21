@@ -1,0 +1,37 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа со строками</h1>
+	</header>
+	
+	<div>
+		<h2>Pechora-PRO лучший ресурс для начинающего разработчика!<p>
+		{{img}}
+	</div>	
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>	
+
+	<script>
+		// забираем из документа содержимое блока div
+		var str = document.body.querySelector("div").innerHTML;
+
+		// выполняем замену
+		var newstr = str.replace(/{{img}}/, "<img src='img.jpg' width='350px'>");
+
+		// это самое простое применение метода .replace
+		// возможности метода безграничны (почти;)
+
+		// замещаем блок новым содержимым 
+		document.body.querySelector("div").innerHTML = newstr;
+	</script>
+
+</body>
+</html>

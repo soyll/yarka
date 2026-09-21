@@ -1,0 +1,53 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа со строками</h1>
+	</header>
+	
+	<h2>Разбираем сотовый номер телефона</h2>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>	
+
+	<script>
+		// полный сотовый номер
+		let phone = "8(912)552-92-25";
+
+		// страна
+		let country = phone.slice(0,1);
+
+		// оператор
+		let operator = phone.slice(2,4);
+
+		// регион (может не соответствовать реальному)
+		let region = phone.substring(4,5);
+
+		// абонент
+		let abonent = phone.substring(6);
+
+		// формируем строку для вывода
+		let out = `
+			<h3>Информация о владельце номера</h3>
+			Номер: <b>${phone}</b> <br/>
+			Международный код страны: ${country} <br/>
+			Оператор сотовой связи: ${operator} <br/>
+			Регион: ${region} <br/>
+			Абонент: ${abonent}
+		`;
+		
+		// получаем доступ к элементу h2
+		var el = document.querySelector("h2");
+		
+		// вставляем строку в документ
+		el.insertAdjacentHTML("afterend", out);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="courses.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<h2>Вложенные циклы</h2>
+	
+	<script>
+		var tbody = "";
+
+		// перебор объектов массива courses
+		for (obj of courses) {
+			
+			let str = "";
+			
+			// перебор ключей объекта
+			for (key in obj) {
+				str += `<td>${obj[key]}</td>`;
+			}
+
+			// console.log(obj);
+			
+			// формируем строки таблицы
+			tbody += `<tr>${str}</tr>`;
+		}
+		
+		// формируем контент страницы
+		let content = `
+			<table border=1>
+				<tr>
+					<th>ID</th>
+					<th>Название</th>
+					<th>Время обучения</th>
+					<th>Расписание</th>
+					<th>Уровень</th>
+					<th>Преподаватель</th>
+					<th>Цена</th>
+				</tr>
+				${tbody}
+			</table>`;
+
+		document.write(`${content}`);
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

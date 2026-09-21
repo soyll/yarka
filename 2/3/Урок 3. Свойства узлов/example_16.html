@@ -1,0 +1,58 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+
+	<div id="content">
+		<pre>
+			«Мой дядя самых честных правил,
+			Когда не в шутку занемог,
+			Он уважать себя заставил
+			И лучше выдумать не мог.
+			Его пример другим наука;
+			Но, боже мой, какая скука
+			С больным сидеть и день и ночь,
+			Не отходя ни шагу прочь!
+			Какое низкое коварство
+			Полуживого забавлять,
+			Ему подушки поправлять,
+			Печально подносить лекарство,
+			Вздыхать и думать про себя:
+			Когда же черт возьмет тебя!»
+		</pre>
+	</div>	
+	
+	<script>
+		// ссылка на элемент div
+		let div = document.body.firstElementChild.nextElementSibling;
+		
+		// добавим набор пользовательских свойств
+		div._id = 1105;
+		div._title = "Евгений Онегин";
+		div._author = {name : "Александр", patronymic : "Сергеевич", surname : "Пушкин"};
+		div._characters = ["Евгений Онегин", "Татьяна Ларина", "Ольга Ларина", "Владимир Ленский"];
+		
+		// выводим свойства элемента div
+
+		// стандартные свойства узла-элемента
+		console.log("Cтандартные свойства:");
+		console.log(div.id);
+		console.log(div.nodeName);
+		
+		// пользовательскте свойства узла-элемента
+		console.log("Пользовательские свойства:");
+		console.log(div._id);
+		console.log(div._title);
+		console.log(div._author.surname);
+		console.log(div._characters[1]);		
+	</script>
+
+</body>
+</html>

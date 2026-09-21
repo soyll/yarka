@@ -1,0 +1,58 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+	
+	<!-- beforebegin -->
+	<ul>
+		<!-- afterbegin -->
+		<li>PHP</li>
+		<li>MySQL</li>
+		<!-- beforeend -->
+	</ul>
+	<!-- afterend -->
+
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>
+
+	<script>
+		// выберем целевой элемент
+		let ul = document.querySelector("ul"); 
+
+		// создадим 1-й элемент
+		let elem1 = document.createElement("h2");
+		elem1.append("Технологии для Backend-разработчика");
+		console.log(elem1);
+
+		// создадим 2-й элемент
+		let elem2 = document.createElement("li");
+		elem2.append("<b>Laravel</b>");  // append не понимает теги
+
+		// создадим 3-й элемент
+		let elem3 = document.createElement("li");
+		elem3.innerText = "<b>Python</b>";  // innerText не понимает теги
+
+		// создадим 4-й элемент
+		let elem4 = document.createElement("div");
+		elem4.innerHTML = "<h3>На странице группы pechora-PROger в VKонтакте</h3>";
+
+		// выполняем вставку
+		ul.insertAdjacentElement('beforebegin', elem1); 
+
+		ul.insertAdjacentElement('afterbegin', elem2); 
+
+		ul.insertAdjacentElement('beforeend', elem3); 
+
+		ul.insertAdjacentElement('afterend', elem4); 		
+	</script>
+
+</body>
+</html>

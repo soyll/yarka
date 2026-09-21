@@ -1,0 +1,43 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+	
+	<h2>Известные цитаты Достоевского</h2>
+	<!-- блок цитат -->
+	<div id="citate">
+		<p>Сострадание есть высочайшая форма человеческого существования.</p>
+		
+		<p>Свобода не в том, чтоб не сдерживать себя, а в том, чтоб владеть собой.</p>
+
+		<p><b>Человек — это поле битвы между Богом и дьяволом.</b></p>
+	</div>	
+
+	<script>
+		// ссылка на узел body
+		let body = document.body; 
+
+		// получили доступ к элементу header
+		let header = body.firstElementChild;
+
+		// далее спускаемся вниз по дереву узлов
+		let h = header.nextElementSibling;
+		let div = h.nextElementSibling;	
+		let p = div.firstElementChild.nextElementSibling.nextElementSibling;
+
+		// выводим html-узел, соответсвующий первому элементу p
+		console.log(p.outerHTML); 
+
+		// заменим узел целиком 
+		p.outerHTML = "<h2>Есть три вещи, которых боится большинство людей: доверять, говорить правду и быть собой.</h2>";
+	</script>
+
+</body>
+</html>

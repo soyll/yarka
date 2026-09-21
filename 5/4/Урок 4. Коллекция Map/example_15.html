@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// создаем объект коллекции Map
+		var clothes = new Map();
+
+		// чейним элементы коллекции		
+		clothes.
+			set("id", "3").
+			set("title", "Парка").
+			set("brand", "Cap Horn").
+			set("colour", "Зеленый").
+			set("country", "Китай").
+			set("hood", "Есть").
+			set("size", "48").
+			set("price", "14.590").
+			set("image", "images/parka-cap.jpg");
+
+		// возвращает итерируемый объект - набор пар ключ-значение
+		console.log(clothes.entries());
+
+		console.log("---------------");		
+
+		// перебираем пары ключ – значение коллекции
+		for (arr of clothes.entries()) {
+			console.log(arr[0], " -> ", arr[1]);
+		};
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

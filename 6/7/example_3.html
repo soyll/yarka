@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Область видимости и лексическое окружение</h1>
+	</header>	
+	
+	<script>		
+		// глобальная переменная с записью в window
+		var aVarGlobal = "Var Global variable";	
+
+		// глобальная переменная без записи в window
+		let aLetGlobal = 'Let Global variable'; 
+
+		// глобальная переменная с записью в window
+		// без ключевого слова var/let
+		aGlobal = 'Global variable';  
+
+		// определяем функцию
+		function aReVariable() {            			
+   			// переопределяем глобальную переменную var
+   			aVarGlobal = "Alea jacta est"; 
+   			
+   			// переопределяем глобальную переменную let
+   			aLetGlobal = "Fiat lux!";   
+   			
+   			// переопределяем глобальную переменную без var/let
+   			aGlobal = "Acta est fabŭla!"; 
+		}
+
+		// вызываем функцию
+		aReVariable();
+
+		// выводим новые значения глобальных переменных
+		console.log(aVarGlobal);  // Alea jacta est
+		console.log(aLetGlobal);  // Fiat lux!
+		console.log(aGlobal);  // Acta est fabŭla
+		
+		// ----------
+		console.log(window);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

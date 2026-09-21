@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<script>
+		// определение/вызов функции по месту
+		( function fnSetData(login, pwd, email) {
+			// инициируем объект 
+			let data = {
+				login : login,
+				pwd : pwd,
+				email: email
+			};
+			
+			// вывод объекта в консоль браузера
+			console.log("вызов функции по месту:"); 
+			console.log(data);
+		} ) ("Мастер", "12345", "master@mail.ru");
+	</script>
+
+	<footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

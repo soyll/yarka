@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="televisions.js"></script>	
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+
+	<script>
+		// определяем коллбэк функции
+
+		// все ли телевизоры имеют частоту более 60 Гц 
+		function checkFreq(item) {
+
+			if (parseInt(item[2]) >= 60) 
+				return true;
+		}
+
+		// все ли телевизоры имеют LED Матрицу 
+		function checkMatrix(item, i) {
+
+			if (/led|LED/.test(item[1])) 
+				return true;
+		}		
+		
+		// есть ли телевизоры дороже 200.000
+		function checkPrice(item, i, televisions) {
+
+			if (parseFloat(item[6]) > 70) 
+				return true;
+		}
+		
+		console.log("Тестируем -Some");
+
+		console.log("-> все ли телевизоры имеют частоту более 60 Гц ?");
+		console.log(televisions.some(checkFreq));
+
+		console.log("-> все ли телевизоры имеют LED Матрицу ?");	
+		console.log(televisions.some(checkMatrix));	
+
+		console.log("-> есть ли телевизоры дороже 200.000 ?");
+		console.log(televisions.some(checkPrice));	
+	</script>
+    
+</body> 
+</html>

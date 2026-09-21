@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<div id="data"></div>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+
+	<script>
+		// функция получения данных 
+		function getData() {
+			// моделируем запрос на внешний ресурс
+			setTimeout(() => {
+				// определяем данные объекта user
+				user = { name: "John", login: "master" }
+			}, 5000);
+		};
+
+		// функция вывода данных
+		function outData() {
+			// функция setInterval возвращает идентификатор таймера
+			intervalId = setInterval(() => {
+				// если данные не определены
+				if (user.name == undefined || user.login == undefined) {
+					// формируем предупреждение
+					html = '<h2>Нет данных</h2>';
+						
+					// вывод номера запроса
+					console.log(`Запрос ${k++}. Нет данных`);				
+				}
+				else {
+					
+					// иначе интерполируем переменные в строку
+					html = `
+						<h2>Сервер вернул следующие данные:</h2>
+						Имя: <b>${user.name}</b> <br>
+						Логин: <b>${user.login}</b> <br>
+					`;	
+
+					// если данные пришли, останавливаем вызовы
+					clearInterval(intervalId);		
+				}
+				
+				// вывод данных в браузер
+				document.getElementById("data").innerHTML = html;		
+		
+			}, 500)
+		};
+
+		// инициируем пустой объект
+		user = {};
+
+		// счетчик количества запросов
+		k = 1;
+
+		// вызов функции получения данных 
+		getData();
+		// вызов функции выода данных
+		outData();
+	</script>	
+
+</body> 
+</html>

@@ -1,0 +1,50 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+
+	<h2>Топ лучших фильмов (по версии paramountcomedy.ru)</h2>
+	
+	<ol>
+		<li>Зеленая миля</li>
+		<li>Криминальное чтиво</li>
+		<li>Форрест Гамп</li>
+	</ol>
+
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>	
+
+	<script>
+		// выбор целевого элемента (нумерованного списка)
+		let target = document.querySelector("ol"); 
+		
+		// создаем первый узел h2
+		let h1 = document.createElement("h2");
+		let txt1 = document.createTextNode("Джентльмены удачи");
+		h1.style.color = "red";
+		h1.append(txt1);
+		console.log(h1)
+		
+		// создаем второй узел h2
+		let h2 = document.createElement("h2");
+		h2.style.color = "blue";
+		h2.append("Гараж");
+		console.log(h2);
+
+		// вставим первый узел перед списком
+		target.before(h1);
+		
+		// вставим второй узел после списка
+		target.after(h2);
+	</script>
+	
+</body>
+</html>

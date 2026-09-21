@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+	
+	<h2>Топ 5 лучших фильмов (по версии paramountcomedy.ru)</h2>
+
+	<ol>
+		<li>Зеленая миля
+			<ul>
+				<li>режиссёр: Фрэнк Дарабонт</li>
+				<li>год: 1999</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Криминальное чтиво
+			<ul>
+				<li>режиссёр: Квентин Тарантино</li>
+				<li>год: 1994</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Форрест Гамп
+			<ul>
+				<li>режиссёр: Роберт Земекис</li>
+				<li>год: 1994</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+	</ol>	
+
+	<script>
+		// получаем коллекцию элементов li
+		var elements = document.getElementsByTagName('ol')[0].children;
+			
+		// количество элементов коллекции
+		let len = elements.length;
+		
+		// инициализация переменных цикла
+		var line = "";
+		var i = 0;
+		
+		// цикл do
+		do {
+			// получаем текстовый узел - название фильма
+			let el = elements[i].firstChild;
+			
+			// получаем элементы вложенного списка li
+			let li = elements[i].getElementsByTagName("li");
+			
+			// формируем элементы списка для вывода
+			line += `
+				<li><b>${el.data}</b> (
+					${li[2].innerText} /
+					${li[0].innerText} / 
+					${li[1].innerText}
+					)</li>
+			`; 
+			i++;
+		} while (i < len);
+
+		line = "<ul>" + line + "</ul>"; 
+
+		// добавляем заголовок
+		let html = "<h2>Динамический список лучших фильмов</h2>" + line;
+		
+		// выводим список в браузер
+		document.write(html);
+	</script>
+	
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

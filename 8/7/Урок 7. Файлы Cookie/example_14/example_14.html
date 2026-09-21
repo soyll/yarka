@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="characters.js"></script>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<a href="target.html">Go-go</a><p>
+	
+	<script>
+		// сохраняем в виде строки JSON объект character
+		let characterJSON = JSON.stringify(character);
+		
+		// сохраняем cookie
+		document.cookie = `character=${characterJSON}; path=/`;
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<script>
+		// объявление функции discr()
+		function discr() {
+			let b = 6;
+			let a = 2;
+			let c = 1;
+			let d = b**2 - 4 * a * c;
+			return d;	
+		};
+		
+		// вызов функции discr()
+		console.log(discr()); 		
+		
+		// присвоение новой переменной исходного кода функции
+		var new_var = discr;
+
+		// вызов функции через новую переменную
+		console.log(new_var()); 	
+
+		// вывод исходного кода функции
+		console.log(new_var); 			
+	</script>		
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

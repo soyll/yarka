@@ -1,0 +1,45 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+
+	<h2>Цитаты из романа "Золотой теленок"</h2>
+
+	<div id="citate">
+		<p>С деньгами нужно расставаться легко, без стонов.
+		
+		<p>Ударим автопробегом по бездорожью, разгильдяйству и бюрократизму!
+
+		<p>Судьба играет человеком, а человек играет на трубе.
+	</div>	
+	
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>
+
+	<script>
+		// создаем узел-элемент тега <p>
+		let node_p = document.createElement("p");
+		
+		// создаем текстовый узел
+		let node_txt = document.createTextNode('Жизнь прекрасна, невзирая на недочеты.');
+		
+		// в узел node_p вставляем текстовый узел node_txt
+		node_p.append(node_txt);
+		
+		// выбираем элемент <div id="citate">
+		let div = document.querySelector("div#citate");
+		
+		// в узел-элемент div вставляем узел-элемент node_p 
+		div.prepend(node_p);
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,41 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		let min = 1;
+		let max = 6;
+
+		min = Math.ceil(min);
+		max = Math.floor(max);
+
+		// получаем случайное число
+		// максимум и минимум включаются
+		let num = Math.floor(Math.random() * (max - min + 1)) + min; 
+
+		// console.log(num);
+		
+		// формируем элемент изображения
+		var img = `<img src='${num}.png'>`;
+
+		// вывод сообщения
+		alert("Вы набрали " + num + " баллов");
+
+		// вывод изображения
+		document.write(img);
+	</script>	
+	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Объект Math</h1>
+	</header>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+</body>
+</html>

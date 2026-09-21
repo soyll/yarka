@@ -1,0 +1,46 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+	
+	<script>
+		try {
+			// данные с сервера
+			let json = '{"name":"John","age":30}'; 
+			
+			// преобразуем текстовое JSON-представление в JS-объект
+			let user = JSON.parse(json); 
+
+			// user - JS-объект со свойствами - name и age 
+			console.log("Начинаем выводить свойства объекта:");
+			console.log(user.name); // John
+			console.log(user.age);  // 30	
+			
+			// свойство login может отсутствовать
+			// поэтому проверяем его особо
+			if (user.login){
+				console.log(user.login); 			
+			} else {
+				// генерируем ошибку типа Error со свойством message
+				throw Error ("Упс. Что-то пошло не так...");
+			}		
+		} catch(err){
+			// ситуация, когда ошибка скорее хорошо, чем плохо
+			// выводим информацию о сгенерированной ошибке
+			console.log (err.name + ". ", err.message);
+			console.log ("Ошибка обработки JSON данных.");
+		}
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

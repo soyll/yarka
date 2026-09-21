@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<button class="btn" id="btn1">Нажмите, пожалуйста 1</button><p>
+
+	<button class="btn" id="btn2">Нажмите, пожалуйста 2</button><p>
+
+	<button class="but" id="btn3">Нажмите, пожалуйста 3</button><p>
+
+	<button class="but" id="btn4">Нажмите, пожалуйста 4</button><p>
+	
+	<script>
+		// получаем коллекцию элементов button.btn
+		let btns = document.getElementsByClassName("btn"); 
+		
+		// на каждый элемент коллекции навешиваем событие click и его обработчик 
+		for (btn of btns) {
+			// используем метод addEventListener
+			btn.addEventListener("click", function() { 
+				alert(this.innerText + ` ( id = ${this.id} )`);
+				console.log(this);
+			})
+		}
+		
+		// получаем коллекцию элементов button.but
+		let buts = document.getElementsByClassName("but"); 
+		// на каждый элемент коллекции навешиваем событие click и его обработчик 
+		for (but of buts) {
+			// используем свойство узла
+			but.onclick = function() { 
+				alert(this.innerText + ` ( id = ${this.id} )`);
+				console.log(this);
+			}
+		}		
+	</script>	
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

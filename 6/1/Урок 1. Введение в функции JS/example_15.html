@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// два представленных примера НЕ эквивалентны
+		// 1. - объявление, вызов 
+		// 2. - вызов, объявление
+
+		// объявление функции sayHello
+		const sayHello = function (name) {
+			console.log('Hello,', name, '!');
+		}
+		
+		// вызов функции sayHello
+		sayHello("Mari");
+	
+		// ====================
+
+		// вызов функции myGreeting
+		myGreeting("John");	
+
+		// объявление функции myGreeting
+		const myGreeting = function (name) {
+			console.log('Welcome  friend', name, '!');
+		}	
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

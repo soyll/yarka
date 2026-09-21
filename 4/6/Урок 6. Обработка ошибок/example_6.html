@@ -1,0 +1,35 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+	
+	<script>
+		try {
+			let name, login; 
+			// место генерирования объекта ошибки
+			let user = `${name} (${logim})`; 
+
+		} catch(error) {
+
+			console.log("Свойства ошибки:");
+
+			console.log("Свойство name: ", error.name); // ReferenceError
+
+			console.log("Свойство message: ", error.message); // logim is not defined
+
+			console.log("Свойство stack: ", error.stack); // ReferenceError: logim is not defined
+		}		
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		let arr = [1, 2, 3, 4, 5];
+		console.log ("Исходный массив: ", arr);
+		
+		// укорачиваем массив до двух элементов
+		arr.length = 2; 
+		console.log ("Измененный массив: ", arr); // [1, 2]
+		
+		 // возвращаем исходную длину length
+		arr.length = 5;
+		console.log ("Восстановить массив нельзя: ", arr); // [1, 2, ...]
+
+		// длину массива восстановили, данные нет
+		console.log (arr.length); 
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>Я думал, что опустился на самое дно, как вдруг снизу постучали…</h2>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+	
+	<h2>Цитаты из книг Ярослав Гашек</h2>
+	<!-- блок цитат -->
+	<div id="citate">
+		<p>Пусть было, как было, — ведь как-нибудь да было! Никогда так не было, чтобы никак не было.</p>
+		
+		<p>Беда, когда человек вдруг примется философствовать — это всегда пахнет белой горячкой.</p>
+
+		<p>Уж если нам надо кого-нибудь посадить, повод всегда найдется.</p>
+	</div>	
+	
+	<hr />
+
+	<script>
+		// получаем ссылку на элемент div
+		let div = document.body.firstElementChild.nextElementSibling.nextElementSibling; 
+		
+		// получаем набор элементов p
+		let set = div.children;
+		
+		// вывод в браузер содержимого элементов p
+		document.write("<ol>");
+		document.write("<li>", set.item(0).innerText, "</li`>");
+		document.write("<li>", set.item(1).innerText, "</li>");
+		document.write("<li>", set.item(2).innerText, "</li>");
+		document.write("</ol>");
+	</script>
+	
+</body>
+</html>

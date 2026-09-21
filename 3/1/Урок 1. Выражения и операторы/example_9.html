@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Операции в JavaScript</h1>
+	</header>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">Добро пожаловать на pechora_PROger</a></h3>
+	</footer>
+
+	<script>
+		let a = 3;
+		let b = 5;
+		let c;
+
+		let count = ((c = a++ - -b) + 1) && (a / c); // 0.5
+		// выражение в первых скобках не false, идем дальше (операция - &&)
+		// результат по выражению (a / c)
+
+		// анализ переменных
+		console.log("a=" + a, "b=" + b, "c=" + c, "count=" + count);
+
+		let result = count && b || -7; // 5 
+		// count не false, идем дальше (операция - &&)
+		// b не false - стоп (операция - ||)
+		// результат по переменной - b
+
+		console.log(result);
+	</script>
+
+</body>
+</html>

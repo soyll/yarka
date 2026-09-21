@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// инициируем массив из смешанных элементов
+		let courses =[
+			{id: 1, name: "JavaScript разработчик с нуля", price: 40000},
+			[2, "Python-разработчик", "12 месяцев", 55000],
+			[3, "Data Scientist", 48000],
+			{id: 4, name: "Фронтенд-разработчик", price: 78000},
+			{id: 5, name: "Тестирование веб-приложений на Python", price: 40000},
+			{id: 6, name: "Разработчик C++", price: 126000},
+			[4, "Фронтенд-разработчик на JavaScript", 65000], 
+			{id: 7, name: "Android-разработчик", price: 168000}
+		]
+
+		// переберем элементы внешнего массива
+		for (i=0; i < courses.length; i++) {
+			if (Array.isArray(courses[i])) console.log(`Элемент ${i} - массив`);
+		}
+	</script>
+	
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+	
+	<h2>Мир состоит из бездельников, которые хотят иметь деньги, не работая, и придурков, которые готовы работать задаром</h2>
+	
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

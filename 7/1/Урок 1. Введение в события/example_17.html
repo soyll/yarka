@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<button onclick="alert(this.login)">Нажмите, пожалуйста</button><p>
+
+	<button data-login="dataLogin" onclick="alert(this.dataset.login)">Нажмите, пожалуйста</button><p>
+
+	<button onclick="fun_1()">Нажмите, пожалуйста</button><p>
+
+	<button onclick="fun_2()">Нажмите, пожалуйста</button><p>
+
+	<button onclick="fun_3()">Нажмите, пожалуйста</button><p>
+
+	<script>
+		// глобальная переменная login
+		login = "admin";
+
+		// функция-инструкция 
+		function fun_1 () {
+			// изменим глобальную переменную login
+			login = "globalUser";
+			// обращение к глобальной переменной
+			alert (this.login);
+		}
+		
+		// функция-выражение
+		fun_2 = function () {
+			// локальная переменная login
+			let login = "localUser";
+			// обращение к глобальной переменной
+			alert (this.login);
+		}
+
+		// функция-стрелка
+		fun_3 = () => {
+			// локальная переменная login
+			var login = "localUser";
+			// обращение к глобальной переменной
+			alert (this.login);
+		}
+	</script>
+    
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+	
+	<h2>Многим нулям кажется, что они — орбита, по которой вращается мир</h2>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+
+	<script>
+		// исходный массив объектов       		
+		let teams = new Array(
+			{id:1, name:"Aerosmith", style:["хард-рок", "блюз-рок", "рок-н-ролл", "глэм-метал"]},
+
+			{id:2, name:"Pink Floyd", style:["психоделический-рок", "арт-рок", "эйсид-рок", "прогрессивный-рок"]},
+
+			{id:3, name:"The Beatles", style:["рок", "рок-н-ролл", "поп", "хард-рок"]},
+
+			{id:4, name:"AC/DC", style:["хард-рок", "блюз-рок", "рок-н-ролл"]},
+
+			{id:5, name:"Scorpions", style:["хард-рок", "глэм-метал", "хеви-метал"]},
+
+			{id:6, name:"Ленинград", style:["рок", "ска", "фолк", "панк", "панк-рок"]}
+		);
+
+		// определение функции выносим за цикл forEach 
+		// стрелочная функция должна быть определена до вызова
+		let callback = item => {
+			// сериализуем в строку свойство объекта style
+			item.style = JSON.stringify(item.style);
+		};
+
+		// исходный код функции
+		// console.log(callback);
+
+		// перебираем элементы массива
+		teams.forEach (callback);
+		
+		// вывод результата
+		console.log(teams);  
+	</script>
+    
+</body> 
+</html>

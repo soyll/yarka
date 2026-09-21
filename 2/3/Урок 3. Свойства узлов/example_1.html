@@ -1,0 +1,50 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+
+	<div>— Кто ты? — спросил Маленький принц. — Какой ты красивый!</div>
+
+	<p>— Я — Лис, — сказал Лис.</p>
+	
+	<span>— Поиграй со мной, — попросил Маленький принц. — Мне так грустно…</span>
+	
+	— Не могу я с тобой играть, — сказал Лис. — Я не приручен.
+	
+	<!-- Ах, извини, — сказал Маленький принц. -->
+
+	<script>
+		// выбираем узлы документа
+		let header = document.body.firstElementChild;
+		
+		let div = header.nextElementSibling;
+		
+		let p = div.nextElementSibling;
+		
+		let span = p.nextElementSibling;
+		
+		let txt = span.nextSibling;
+		
+		let comment = txt.nextSibling;
+		
+		let script = comment.nextElementSibling;
+		
+		// выводим имена классов узлов
+		console.log(header.constructor.name);
+		console.log(div.constructor.name);
+		console.log(p.constructor.name);
+		console.log(span.constructor.name);
+		console.log(txt.constructor.name);
+		console.log(comment.constructor.name);
+		console.log(script.constructor.name);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Выбор элементов DOM</h1>
+	</header>
+	
+	<h2>Ваш отзыв о статье</h2>
+
+	<form id="auth">
+		Имя <input name="name" type="text" value="Фауст" /><br /><br/>
+		Логин <input name="login" type="text" value="master" /><br /><br/>
+		Пароль <input name="pwd" type="password" value="12345" /><br /><br/>
+		Сообщение <textarea name="message"></textarea>
+	</form>
+
+	<footer>
+		<h3 align = "center">Добро пожаловать на pechora_PROger</h3>
+	</footer>
+
+	<script>
+		// выбираем элемент 
+		let login = document.querySelector('[name="login"]');
+		
+		// определяем родителя, получаем его id
+		let id = login.closest("form").getAttribute("id");
+		
+		// выводим id родителя
+		console.log(id);				
+	</script>
+
+</body>
+</html>

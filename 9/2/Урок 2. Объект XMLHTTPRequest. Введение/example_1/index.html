@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Асинхронный JavaScript</h1>
+	</header>
+	
+	<script>
+		// 1. создаём объект XMLHttpRequest
+		let xhr = new XMLHttpRequest();
+
+		// проверим тип переменной	
+		console.log(typeof xhr); // object
+
+		// проверим объект	
+		console.log(xhr); // XMLHttpRequest 
+
+		// 2. инициализируем объект 
+		xhr.open('GET', 'http://js/server.php');
+
+		// 3. отправка запроса
+		xhr.send();
+		
+		// пока ничего не происходит,
+		// просто отправлен запрос на сервер			
+	</script>
+
+    <footer align="center">
+        <h3>Разработка асинхронных приложений на JavaScript</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

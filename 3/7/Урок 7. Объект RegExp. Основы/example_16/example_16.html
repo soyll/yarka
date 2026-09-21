@@ -1,0 +1,49 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Регулярные выражения</h1>
+	</header>
+	
+	<div>
+		<h2>1. Я спокоен</h2> {{img1}} <br/>
+		<h2>2. Я открыт к позитивным изменениям</h2> {{img2}} <br/>
+		<h2>3. Из тела уходит напряжение</h2> {{img3}} <br/>
+		<h2>4. Я хорошо справляюсь с любыми трудностями</h2> {{img4}} <br/>
+		<h2>5. Мне хорошо и уютно</h2> {{img5}} 
+	</div>	
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>	
+
+	<script>
+		// забираем из документа содержимое блока div
+		var str = document.body.querySelector("div").innerHTML;
+
+		// выполняем замену 1 вхождения
+		var newstr = str.replace(/{{img1}}/, `<img src='pict1.jpg' width='250px'>`);
+
+		// выполняем замену 2 вхождения
+		newstr = newstr.replace(/{{img2}}/, `<img src='pict2.jpg' width='250px'>`);
+
+		// выполняем замену 3 вхождения
+		newstr = newstr.replace(/{{img3}}/, `<img src='pict3.jpg' width='250px'>`);
+
+		// выполняем замену 4 вхождения
+		newstr = newstr.replace(/{{img4}}/, `<img src='pict4.jpg' width='250px'>`);
+
+		// выполняем замену 5 вхождения
+		newstr = newstr.replace(/{{img5}}/, `<img src='pict5.jpg' width='250px'>`);								
+		
+		// замещаем блок новым содержимым 
+		document.body.querySelector("div").innerHTML = newstr;
+	</script>
+
+</body>
+</html>

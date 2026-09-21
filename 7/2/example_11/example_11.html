@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<div id="personnel">
+		<div data-id="11">Бородина Ксения Алексеевна</div>
+		<div data-id="23">Красикова Вера Николаевна</div>
+		<div data-id="51">Рыбкина Ольга Витальевна</div>
+		<div data-id="44">Маркова Елизавета Андреевна</div>
+		<div data-id="75">Ильчук Виталина Георгиевна</div>
+	</div>	
+	<hr>
+	
+	<!-- контейнер для вставки данных -->
+	<div id="console"></div>
+	
+	<!-- массив данных педагогов -->
+	<script src="personnels.js"></script>
+	
+	<script>	
+		// обойдем в цикле коллекцию элементов div
+		document.querySelectorAll("div#personnel div").forEach ( (div) => {
+			// навесим событие click на каждый элемент div	
+			div.addEventListener("click",  
+				// объект-обработчик
+				{ 
+					// метод handleEvent объекта-обработчика
+					handleEvent() { 
+						// поиск преподавателя по его id
+						data = personnels.find( (el) => {
+							return this.id == el.id_personnel;
+						})
+						// console.log(this.person);
+						// console.log(data);
+					
+						// формирование строки для вывода
+						str = `
+							<h2>${this.person}</h2>
+							<b>Категория:</b> ${data.category}<br>
+							<b>Email:</b> ${data.email}<br>
+							<b>Опыт работы в колледже:</b> ${data.experience_college}<br>
+							<b>Общий опыт работы:</b> ${data.experience_total}<br>
+							<b>Образование:</b> ${data.level_edu}<br>
+							<b>Должность:</b> ${data.post}<br>
+							<b>Сайт:</b> ${data.site}<br>
+							<hr>
+						`;
+					
+						// вставка контента в документ
+						document.getElementById("console").innerHTML = str;
+					
+					}, 
+					// свойства объекта-обработчика
+					id : div.dataset.id, 
+					person : div.innerText 
+				})
+			}
+		);
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

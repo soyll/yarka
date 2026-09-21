@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// инициировали массив альбомов группы Pink Floyd
+		var albums = [
+			[
+				2,
+				"Meddle",
+				"30 октября 1971",
+				"EMI, Harvest, Capitol",
+				"Vinyl, кассета, CD",
+				"Платиновый (USA)"
+			],
+			[
+				3,
+				"Obscured by Clouds",
+				"3 июня 1972",
+				"EMI, Harvest, Capitol",
+				"LP, кассета, CD",
+				"Золотой (USA), Серебряный (GBR)"
+			],
+			[
+				4,
+				"The Dark Side",
+				"17 марта 1973",
+				"Harvest, Capitol, EMI",
+				"LP, кассета, CD, SACD",
+				"Платиновый (USA), Платиновый (GBR), Бриллиантовый (CAN)"
+			]
+		];		
+
+		var newAlbum = 	[
+			[
+				6,
+				"Animals",
+				"23 января 1977",
+				"Harvest, EMI, Columbia, Capitol",
+				"LP, 8-track, кассета, CD",
+				"Платиновый (USA), Золотой (GBR), Платиновый (CAN)"
+			],
+			[
+				7,
+				"The Wall",
+				"30 ноября 1979",
+				"Harvest, EMI, Columbia, Capitol",
+				"LP, 8-track, кассета, CD",
+				"Платиновый (USA), Платиновый (GBR), Бриллиантовый (CAN)"
+			]
+		];
+
+		// выведем исходный массив
+		console.log("Исходный массив: ", albums);			
+
+		// добавим в конец массива новый элемент
+		albums.push([
+			5,
+			"Wish You Were",
+			"15 сентября 1975",
+			"Harvest, EMI, Columbia, Capitol",
+			"LP, 8-track, кассета, CD, SACD",
+			"Платиновый (USA), Золотой (GBR), Платиновый (CAN)"
+		]);
+		
+		// добавили в массив элемент
+		console.log("Исходный массив + новый элемент: ", albums);	
+
+		// добавим два элемента
+		albums.push(newAlbum[0], newAlbum[1]);
+		
+		// выведем обновленный массив
+		console.log("Обновленный массив: ", albums);		
+
+		// последний элемент удалим и сохраним в переменной
+		let el = albums.pop();
+
+		// выведем результирующий массив
+		console.log("Результирующий массив: ", albums);		
+		console.log("Этот массив был удален: ", el);	
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

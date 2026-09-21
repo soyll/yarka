@@ -1,0 +1,45 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа со строками</h1>
+	</header>
+	
+	<h2>Японская поэзия</h2>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>	
+
+	<script>
+		// перевод строки добавлен с помощью символа перевода строки
+		let hokku1 = "Снова весна.\nПриходит новая глупость\nСтарой на смену.";
+		
+		// многострочная строка, созданная с использованием обратных кавычек
+		let hokku2 = `Снова весна.
+Приходит новая глупость
+Старой на смену.`;
+
+		// сложение строк
+		let hokku3 = "Снова весна.\n" +
+"Приходит новая глупость\n" +
+"Старой на смену.";
+
+		// визуальное отображение строк
+		console.log (hokku1);
+		console.log (hokku2);
+		console.log (hokku3);
+		
+		// сравнение строк
+		console.log('hokku1 === hokku2', hokku1 === hokku2); // true   
+		console.log('hokku1 === hokku3', hokku1 === hokku3); // true   
+		console.log('hokku2 === hokku3', hokku2 === hokku3); // true   				
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// объявляем функцию суммирования чисел
+		function sum () {
+		    let result = 0;
+
+		    // arguments - специальный объект
+		    // console.log(arguments);
+		    
+		    // выполняем перебор аргументов циклом for
+		    for(i = 0; i < arguments.length; i++) {
+		    	result += arguments[i];
+		    }
+
+		    // выводим результат в консоль 
+		    console.log(result);
+		}
+
+		// вызываем функцию с разным количеством аргументов
+		sum(5);  // 5
+		sum(5, 5);  // 10
+		sum(5, 5, 5);  // 15 	
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>Если умеешь что-то, не делай это бесплатно (Джокер)</h2>
+
+	<script>	
+		// объект для сохранения в localStorage
+		let user = {
+		   name: "Евгений",
+		   surname: "Лукашин",
+		   address: {
+		       street: "3-я улица Строителей, дом 25",
+		       city: "Ленинград",
+		       post: 101101
+		   },
+		   phone: [
+		       "(912)552-92-25",
+		       "(904)104-17-06"
+		   ]
+		};
+		
+		// просто сохранить объект не получится
+		// объект необходимо перевести в формат JSON 
+		let userJSON = JSON.stringify(user);
+
+		// сохраняем объект JSON в localStorage
+		window.localStorage.setItem("user", userJSON);
+
+		// проверим значение localStorage
+		console.log(localStorage.getItem("user"));
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

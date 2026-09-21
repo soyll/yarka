@@ -1,0 +1,53 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Доступ к элементам DOM</h1>
+	</header>
+	
+	<div id="citate">
+		<p>А она — подошла к столу и выпила, залпом, ещё сто пятьдесят, ибо она была совершенна, а совершенству нет предела (В.Ерофеев).</p>
+		
+		<p>Хорошо идти, когда зовут. Ужасно — когда не зовут. Однако лучше всего, когда зовут, а ты не идёшь (С.Довлатов).</p>
+
+		<p>Замечательный день сегодня. То ли чай пойти выпить, то ли повеситься (А.Чехов).</p>
+	</div>	
+	
+	<script>
+
+		// parentNode — свойство, содержащее ссылку на непосредственного родителя элемента
+		// parentElement  — содержит ссылку на непосредственного родителя (html элемент)
+		
+		// ссылка на узел body
+		let body = document.body; 
+		console.log(body);
+
+		// первый дочерний html-узел для body это header 
+		let header = body.firstElementChild;
+		// console.log("--> ", header);
+		
+		// следующий html-узел за header это div
+		let div = header.nextElementSibling;
+		// console.log("--> ", div);
+		
+		// первый дочерний узел для узла div
+		let p1 = div.firstElementChild;
+		// console.log("--> ", p1);
+		
+		// следующий за p1 html-узел 
+		let p2 = p1.nextElementSibling;
+		// console.log("--> ", p2);
+		
+		// родительский элемент для второго абзаца p
+		let node = p2.parentNode;
+		//console.log("--> ", node);
+			
+	</script>
+
+</body>
+</html>

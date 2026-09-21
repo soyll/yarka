@@ -1,0 +1,36 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+	
+	<script>
+		// шаблон RegExp
+		var reg = /^[а-яё-]{3,25}$/i;
+		
+		// инициализируем переменную через диалог с пользователем
+		var surname = prompt("Введите фамилию. Символы [а-яё-] в количестве от 3 до 25");
+
+		// проверка соответствия вернет true или false
+		if (reg.test(surname)) {
+			
+			// если true
+			alert ("Вы успешно справились с заданием!");
+		} else {
+			
+			// если false
+			alert ("Бумс... Что-то пошло не так?");
+		} 
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body> 
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<script>
+		// глобальные переменные
+		var login = "GlobalLogin";
+		var pwd = "GlobalPwd";
+		var email = "global-email@mail.ru";
+		
+		// назначаем элементу document пользовательское событие и обработчик
+		document.addEventListener("getdata", function(e) {
+			// вывод в браузер 
+			document.write (
+				`
+					Контекст <b>${this}</b><br>
+					<b>Свойства контекста:</b><br>
+					Логин: ${this.login}<br>
+					Пароль: ${this.pwd}<br>
+					e-mail: ${this.email}<br>
+					---------- <p>
+					<b>Свойства пользовательского события:</b><br>
+					Логин: ${e.detail.login}<br>
+					Пароль: ${e.detail.pwd}<br>
+					e-mail: ${e.detail.email}<br>
+				`
+			);
+		});
+
+		// инициируем пользовательское событие на элементе document
+		document.dispatchEvent(new CustomEvent("getdata", {
+			detail: { 
+				// свойства события берем из глобального контекста
+				login: this.login,
+				pwd: this.pwd,
+				email: this.email
+			}
+		}));
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

@@ -1,0 +1,40 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		// только эксперименты расставят все на свои места
+		console.log(Number.parseInt('0011')); // 11 (10-тичное)
+		
+		console.log(Number.parseInt('0011', 2)); // 3 (2-ичное)
+
+		// 16-ричная система счисления распознается
+		console.log(Number.parseInt('0x011')); // 17 (16-ричное)
+		
+		// 8-, 2-ичные системы счисления не распознаются 
+		console.log(Number.parseInt('0o0011')); // 0
+		console.log(Number.parseInt('0b0011')); // 0
+		
+		// указание основания для системы счисления не поможет
+		console.log(Number.parseInt('0o0011', 8)); // 0
+		console.log(Number.parseInt('0b0011', 2)); // 0
+		
+		// вот так можно
+		console.log(Number.parseInt('0011', 8)); // 8 (8-ричное)
+		console.log(Number.parseInt('0011', 2)); // 3 (2-ичное)		
+	</script>	
+	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа с числами</h1>
+	</header>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+</body>
+</html>

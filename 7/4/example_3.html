@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body> 
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+    <a id="link" href="https://vk.com/pechora_pro">Переход на vk.com/pechora_pro</a>
+    
+	<script>
+		// получаем елемент с id=link
+		const link = document.getElementById("link"); 
+
+		// определяем обработчик клика по ссылке
+		link.onclick = function(e) {
+			alert(`
+				Cейчас будет выполнен переход по ссылке.\n
+				тег: ${e.target.tagName}\n
+				href: ${e.target.href}\n
+			`)
+		}
+		
+		/*
+			// так работать не будет
+			const event = new Event("click");
+		*/
+		
+		// создаем событие
+		const myevent = new MouseEvent("click");
+		// вызов события
+		link.dispatchEvent(myevent);
+    </script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

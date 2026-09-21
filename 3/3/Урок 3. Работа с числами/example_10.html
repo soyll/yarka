@@ -1,0 +1,51 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		// --- строка (объект String) ---
+		// инициализация строки через создание объекта String
+		// str - экземпляр объекта String
+		let str = new String("Welcome pechora_PRO ...");
+
+		// вызов метода includes на экземпляре объекта String
+		console.log(str.includes("pechora")); // true 
+
+		// --- число (объект Number) ---
+		// инициализация числа через создание объекта Number
+		// num - экземпляр объекта Number
+		let num = new Number(2.333);
+
+		// вызов метода toString на экземпляре объекта Number
+		console.log(num.toString()); // '2.333'
+
+		// !!! к статическим методам объекта необходимо обращаться
+		// без создания экземпляра этого объекта
+		// например:
+
+		// вызов метода isFinite() происходит напрямую на объекте Number
+		// без создания экземпляра объекта
+		/*
+			let digit = new Number(25); 
+			digit.isFinite(); // ошибка вызова
+			Number.isFinite(digit); // так правильно			
+		*/
+
+		// вызов метода isFinite на объекте Number
+		console.log(Number.isFinite(NaN)); // false
+	</script>	
+	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа с числами</h1>
+	</header>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+</body>
+</html>

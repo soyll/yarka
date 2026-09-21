@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+	
+	<a id='link' href="#">Переход к файлу target.html</a>
+	
+	<script>
+		// создаем объект URL
+		let url = new URL(location.origin + '/target.html');
+		
+		// добавляем параметры
+		url.searchParams.append('topic', 'Управляющие конструкции');
+		url.searchParams.append('lesson', 'Специальные циклы');
+		url.searchParams.append('section', 'Цикл for-of');
+
+		// устанавливаем атрибут href
+		document.getElementById('link').setAttribute('href', url.href)
+
+		// просмотр атрибута в консоли
+		console.log(url.href);
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

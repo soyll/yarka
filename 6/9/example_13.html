@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Замыкания</h1>
+	</header>	
+		
+	<script>
+		// глобальные переменные
+		name = "Anonymous";
+		login = "Unknown";
+		email = "Unknown";
+		role = "user";
+
+		// объект
+		let user = {
+		    name: "Дениc",
+		    login: "DenisDream",
+		    email: "denis-dream@mail.ru",
+		    role: "superAdmin",
+		    userInfo: function() {
+		        let str = `<h2>Информация о пользователе</h2>
+		        	Имя: ${this.name} <br>
+		        	Логин: ${this.login} <br>
+		        	E-mail: ${this.email} <br>
+		        	Роль: ${this.role} <br>`;
+
+		        console.log(str);
+		    }
+		}
+
+		// аргумент функции - callback (метод объекта)
+		function outUser(callback) {
+			// вызов callback
+			callback();
+		}
+
+		// вызов метода объекта
+		user.userInfo(); 
+
+		// передача кода метода (callback)
+		// потеря контекста this
+		outUser(user.userInfo);
+
+		// передача кода метода (callback)
+		// потеря контекста this
+		setTimeout(user.userInfo, 1000);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

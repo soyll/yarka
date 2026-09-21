@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<div id="data"></div>
+	
+	<script>
+		// передаем код другой функции в качестве аргумента
+		// такой аргумент и называется коллбэком
+		function getData(collback) {
+			// моделируем запрос
+		  	setTimeout(() => {
+		  		// получаем данные, в реальном приложении это результат внешнего запроса
+		  		user = {name:"John", login:"master"};
+		  		
+				// аргумент функции - функция коллбэк
+				// добавлая скобки коду коллбэка - вызываем функцию
+			  	collback();
+		  	}, 500);
+		 }; 
+		
+		// функция вывода данных
+		function outData() {
+			// интерполируем данные в строку
+			html = `
+				<h2>Здравствуйте, вы вошли в приложение как:</h2>
+				Имя: <b>${user.name}</b> <br>
+				Логин: <b>${user.login}</b> <br>
+			`;
+			
+			// вывод данных в браузер
+			document.getElementById("data").innerHTML = html;		
+		};
+
+		// вызов функции получения данных
+		// вызываем функцию getData
+		// функция outData - аргумент-коллбэк
+		getData(outData);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

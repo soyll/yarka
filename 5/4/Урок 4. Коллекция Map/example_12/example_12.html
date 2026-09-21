@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="televisions.js"></script>
+
+	<script>
+		// создаем объект коллекции Map
+		var tel = new Map();
+
+		// динамическое создание коллекции Map
+		// со случайно сгенерированным значением ключа 
+		televisions.forEach( (item, index) => {
+			// генерируем значение ключа
+			// максимум не включается, минимум включается
+			let key = Math.floor(Math.random() * (1000 - 1)) + 1;
+			// сохраняем в коллекцию пару ключ – значение, где:
+			// -> ключ - id# + случайное число
+			// -> значение - объект массива televisions
+			tel.set("id#" + key, item);
+		});
+
+		// коллекция ключей
+		// console.log(tel.keys());
+
+		// итерация по ключам коллекции
+		for (key of tel.keys()) {
+			console.log(key);
+			console.log(tel.get(key));
+			console.log("===============");
+		};
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

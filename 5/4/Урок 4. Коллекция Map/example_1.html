@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>	
+		// создаем объект коллекции Map
+		let map = new Map();
+
+		// устанавливаем объекту значения
+		map.set(101, "number");  // число как ключ
+		map.set(true, "boolean");  // булево значение как ключ
+		map.set("1", "string");  // строка как ключ
+		map.set(1, "digit");  // цифра как ключ
+
+		// получаем доступ к значениям объекта
+		console.log("map.get(101) =", map.get(101));  // number
+		console.log("map.get(true) =", map.get(true));  // boolean		
+
+		// обычный объект Object приводит ключи к строкам
+		// Map сохраняет тип ключей, так что в этом случае сохранится 2 разных значения:
+		console.log("map.get(1) =", map.get(1));  // digit
+		console.log("map.get('1') =", map.get("1"));  // string
+
+		console.log("----------");
+
+		console.log("Размер коллекции: ", map.size); // 4
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

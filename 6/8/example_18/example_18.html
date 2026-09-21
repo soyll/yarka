@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Лексическое окружение и контекст</h1>
+	</header>
+
+	<!-- подключение первого модуля -->
+	<script type="module">
+		// импорт массива orders
+		import { orders } from './orders.js';
+		
+		// представление массива в формат JSON
+		let JSONorders = JSON.stringify(orders);
+
+		// console.log(JSONorders);
+
+		// сохранение представления JSON в объект хранилища
+		window.localStorage.setItem('orders', JSONorders);
+	</script>
+
+	<!-- подключение второго модуля -->
+	<script type="module">
+
+		// достаем JSON из хранилища данных
+		let orders = window.localStorage.getItem('orders');
+
+		// парсим JSON-строку в массив объектов
+		orders = JSON.parse(orders);
+
+		console.log(orders[0]); // Object
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

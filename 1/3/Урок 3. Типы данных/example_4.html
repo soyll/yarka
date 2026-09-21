@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Курс JavaScript</title>
+	
+	<script>
+		// создадим объект
+		var obj1 = {x:10}; // объект - переменная ссылочного типа
+		var obj2 = obj1; // присваиваем одну переменную другой,
+		// при этом значение не копируется, 
+		// обе переменные будут ссылаться на одну область памяти
+
+		document.write("<h2>Начальные значения свойств объектов</h2>"); 
+
+		document.write("obj1.x – "  +  obj1.x); // 10
+		document.write("<br>obj2.x – " + obj2.x); // 10
+
+		document.write("<h2>Изменяем значение свойства объекта obj1</h2>"); 
+		// изменим свойство объекта obj1
+		// свойство объекта obj2 должно измениться автоматически
+		obj1.x = 25; 
+
+		document.write("obj1.x – "  +  obj1.x); // 25
+		document.write("<br>obj2.x – " + obj2.x); // 25
+	</script>
+			
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Введение в JavaScript</h1>
+	</header>
+	
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PROger</h3>
+		<a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
+	</footer>
+</body>
+</html>

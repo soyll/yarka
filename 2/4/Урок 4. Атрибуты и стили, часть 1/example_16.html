@@ -1,0 +1,42 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 1</h1>
+	</header>
+	
+	<div id="citate" title="Мертвые души" onclick="alert('Мертвые души (Н.В. Гоголь)')" style="margin:20px; border:1px solid #c0c0c0; padding:10px; background: #f5f5f5;">
+		Эх, тройка! Птица тройка, кто тебя выдумал? Знать, у бойкого народа ты могла только родиться, в той земле, что не любит шутить, а ровнем-гладнем разметнулась на полсвета, да и ступай считать версты, пока не зарябит тебе в очи...		
+	</div>	
+
+	<script>
+		// ссылка на узел div
+		let div = document.body.firstElementChild.nextElementSibling; 
+
+		// набор -> NamedNodemap
+		// console.log(div.attributes);
+
+		// получим узел атрибута c именем id
+		console.log(div.attributes.getNamedItem("id"));
+		console.log(div.attributes[0]); // тот же узел, но через индекс
+
+		// получим узел атрибута c именем title
+		console.log(div.attributes.getNamedItem("title"));
+		// console.log(div.attributes[1]); // тот же узел, но через индекс
+
+		// получим узел атрибута с именем onclick
+		console.log (div.attributes.getNamedItem("onclick"));
+		// console.log(div.attributes[2]); // тот же узел, но через индекс
+
+		// получим узел атрибута c именем style
+		console.log(div.attributes.getNamedItem("style"));
+		// console.log(div.attributes[3]); // тот же узел, но через индекс
+	</script>
+
+</body>
+</html>

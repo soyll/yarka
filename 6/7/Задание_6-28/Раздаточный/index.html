@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Область видимости и лексическое окружение</h1>
+	</header>	
+	
+	<script>
+		// функция расчета цены со скидкой
+		function calcDiscount(price, count) {
+			if ( count >= 10 ){
+			      let discount = 15; // 
+			      // расчет цены с учетом скидки
+			      let newprice = price - (price * discount / 100); 
+			}     
+			// возвращаем новую цену 
+			return newprice; // получаем ошибку
+		}
+
+		// вызов функции
+		// аргументы:
+		// -- старая цена
+		// -- скидка
+		console.log(calcDiscount(30000, 11));
+	</script>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<div id="testEvent">
+	
+		<input id="btn" class="button" type="button" value="Нажми меня">
+
+		<p><a id="link" class="link" href="#">Лучше меня</a></p>
+
+		<p id="par" class="paragraph">Или меня</p>
+
+		<div id="dv" class="div">С тебя кликбейт, дружище...</div>
+
+		<p><button id="but" class="button">А хотите, я вам на рояле поиграю?</button></p>
+	
+	</div>
+	
+	<!-- контейнер для вывода -->
+	<div id="con"></div>
+
+	<script>
+		// коллекция элементов блока #testEvent
+		elems = document.getElementById("testEvent").children;
+
+		// назначим событие каждому элементу коллекции
+		for(el of elems) {
+			el.onclick = function() {
+				// формирование данных об элементе коллекции
+				let info = `
+					Тип события: ${event.type} <br>
+					Тег: ${event.target.tagName} <br>
+					id: ${event.target.id} <br>
+					className: ${event.target.className} <br>
+					innerHTML: ${event.target.innerHTML} <br>
+					nodeType: ${event.target.nodeType} <br>
+				`;
+				// вывод данных
+				con.innerHTML = info;
+			}
+		};
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

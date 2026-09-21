@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<script>
+		// инициируем объект
+		let regions = {
+			"country": "Россия",
+			"40": "Калужская область",
+			"33": "Владимирская область",
+			"23": "Краснодарский край",
+			"31": "Белгородская область",
+			"11": "Республика Коми",
+			"explanation": "Автомобильные коды регионов",
+			"note": ""
+		};
+		
+		// перебираем ключи объекта
+		for (key in regions) {
+			document.write(key + "<p>");
+		}
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
+	</footer>
+</body>
+</html>

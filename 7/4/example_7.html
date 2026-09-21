@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body> 
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<h2>Знаменитые цитаты Фридриха Ницше</h2>
+	
+	<div id="citate">
+		<p class="p1">Я не расстроен, что ты мне солгал, я расстроен, что отныне не могу тебе верить.</p>
+		<p class="p2">Чем выше мы парим, тем меньше кажемся тем, кто не умеет летать</p>
+		<p class="p3">Что говорит твоя совесть? Ты должен стать тем, кто ты есть.</p>
+		<p class="p4">У вас есть свой путь. У меня есть свой путь. Что же касается правильного пути, верного пути и единственного пути, то его не существует.</p>
+		<p class="p5">На дороге всегда будут камни. Они будут камнями преткновения или ступеньками; все зависит от того, как вы их используете.</p>
+		<p class="p6">То, что нас не убивает, делает нас сильнее.</p>
+	</div>
+
+	<script>
+		// получаем коллекцию элементов P
+		pars = document.querySelector("#citate").children;
+		
+		// на каждый элемент коллекции навесим пользовательское событие
+		for (par of pars) {
+			/*
+			дополнительная информация заключена:
+				-- в самом событии
+				-- в свойствах текущего элемента -this
+			*/
+			par.addEventListener("userevent", function(e) {
+				// текущий элемент коллекции pars
+				alert(this + "; class=" + this.className);
+				// свойства пользовательского события
+				console.log (e.detail._this);
+				console.log (e.detail.msg);
+			});
+		}
+		
+		// создадим объект пользовательского события
+		userevent = new CustomEvent("userevent", {
+			detail: { 
+				msg: "Тестируем пользовательское событие",
+				_this: this // всегда window
+			}
+		})			
+		
+		// переберем элементы коллекции
+		for (let par of pars) {
+			// вызываем событие на клике по элементу
+			par.addEventListener("click", function() {
+				par.dispatchEvent(userevent)
+			});
+		}		
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

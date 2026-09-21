@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Область видимости и лексическое окружение</h1>
+	</header>	
+	
+	<script>				
+		// область видимости функции
+		
+		// определяем функцию выражение
+		reVariable = function () {            
+			// локальная переменная var
+			// var-переменная ЗНАЕТ о существовании блока	
+   			var aVarLocal = "Var Local variable";    			
+   			
+   			// локальная переменная let
+   			// let-переменная ЗНАЕТ о существовании блока
+   			let aLetLocal = "Let Local variable";    
+
+  			// локальная переменная без var/let
+			// такая переменная НЕ ЗНАЕТ о существовании блока	
+   			aGlobal = "I'm Global variable";    			
+   			
+   			// блоковая область видимости
+   			console.log("Локальные переменные уровня функции:");   
+			console.log(aVarLocal);  // Var Local variable
+			console.log(aLetLocal);  // Let Local variable
+			console.log(aGlobal);  // I'm Global variable
+		}
+
+		// вызов функции
+		reVariable();
+
+		console.log("Доступ к локальным переменным из глобальной области:"); 
+
+		// Uncaught ReferenceError: aVarLocal is not defined
+		// console.log(aVarLocal);  // Error
+		
+		// Uncaught ReferenceError: aLetLocal is not defined
+		// console.log(aLetLocal);  // Error
+
+		console.log(aGlobal);  // I'm Global variable
+
+		// ----------
+		console.log(window);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

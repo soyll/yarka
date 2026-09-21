@@ -1,0 +1,39 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+	
+	<script>
+		try {
+			// такие данные могли прийти с сервера
+			let json = '{"name":"John",age:30}'; 
+			
+			// преобразуем текстовое JSON-представление в JS-объект
+			let user = JSON.parse(json); 
+
+			// user - JS-объект со свойствами name и age
+			document.write(user.name); // John
+			document.write("<br>");
+			document.write(user.age);  // 30			
+		} catch(err){
+			// возможно не имеет смысла посвящать во все тонкости пользователя,
+			// поэтому ему достаточно и такого сообщения
+			alert( "Извините, при получении данных произошла ошибка.\nВиновные будут приговорены к тюремным срокам!");
+
+			// а вот веб-разработчику куда полезнее окажется эта информация  
+			console.log ("Ошибка (" + err.name + "): " + err.message);
+		}
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

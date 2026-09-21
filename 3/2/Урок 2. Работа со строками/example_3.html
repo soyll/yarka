@@ -1,0 +1,38 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа со строками</h1>
+	</header>
+	
+	<h2>Легендарные фразы из голливудских фильмов...</h2>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+
+	<script>
+		// выберем целевой элемент
+		let h2 = document.querySelector("h2"); 
+
+		let txt1 = "<h3>Однажды Шарлотта Вейл сказала: Oh, Jerry, don't let's ask for the moon. We have the stars</h3>";
+
+		let txt2 = '<h3>Однажды Дон Корлеоне сказал: I"m gonna make him an offer he can"t refuse</h3>';
+
+		let txt3 = `<h3>Однажды Терминатор сказал: 'I'll be back'</h3>`;
+
+		// вставляем фрагмент в документ
+		h2.insertAdjacentHTML('afterend', txt1); 
+
+		h2.insertAdjacentHTML('afterend', txt2); 
+
+		h2.insertAdjacentHTML('afterend', txt3);
+	</script>
+
+</body>
+</html>

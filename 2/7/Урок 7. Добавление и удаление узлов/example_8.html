@@ -1,0 +1,65 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+	
+	<h2>Топ лучших фильмов (по версии paramountcomedy.ru)</h2>
+	
+	<ol>
+		<li>Зеленая миля: 
+			<ul>
+				<li>режиссёр: Фрэнк Дарабонт</li>
+				<li>год: 1999</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Криминальное чтиво:
+			<ul>
+				<li>режиссёр: Квентин Тарантино</li>
+				<li>год: 1994</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Форрест Гамп: 
+			<ul>
+				<li>режиссёр: Роберт Земекис</li>
+				<li>год: 1994</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+	</ol>
+
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>	
+
+	<script>
+		// создаем элемент списка
+		let li = document.createElement("li");
+		
+		// менее трудоемкий но и менее быстрый способ вставки
+		li.innerHTML = ` 
+			Человек с бульвара Капуцинов:
+				<ul>
+					<li>режиссёр: Алла Сурикова</li>
+					<li>год: 1987</li>
+					<li>страна: СССР</li>
+				</ul>
+		`;	
+		
+		// выберем целевой список <ol> 
+		let ol = document.querySelector("ol"); 
+		
+		// добавим элемент <li> в целевой список <ol>
+		ol.prepend(li);
+	</script>
+
+</body>
+</html>

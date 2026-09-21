@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">JSON представление данных</h1>
+	</header>
+	<div class="content">
+	
+		<script>
+			// -- пользователь запросил информацию о двух товарах на сайте одежды
+
+			// информация о товаре поступила в виде JSON-массива
+			let orderJSON = `[
+				{
+					"id" : 1,
+					"title" : "Утепленная стеганая куртка",
+					"brand" : "MARCO DI RADI",
+					"colour" : "Синий",
+					"country" : "Китай",
+					"hood" : "Есть",
+					"size" : 52,
+					"price" : 25.590,
+					"image" : "steganaya-marco.jpg"
+				},
+				{
+					"id" : 2,
+					"title" : "Пальто",
+					"brand" : "Allsaints",
+					"colour" : "Коричневый",
+					"country" : "Китай",
+					"hood" : "Отсутствует",
+					"size" : 50,
+					"price" : 53.990,
+					"image" : "palto-allsaints.jpg"
+				}
+			]`;			
+
+			// вывод в консоль
+			console.log(orderJSON);
+
+			// для доступа к данным преобразуем JSON в JS-массив
+			let order = JSON.parse(orderJSON);
+
+			// вывод в консоль звказа в виде JS-массива
+			console.log(order);
+
+			// тестируем доступ
+			console.log(order[0].title);
+			console.log(order[1].title);			
+		</script>	
+		
+	</div>
+	
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

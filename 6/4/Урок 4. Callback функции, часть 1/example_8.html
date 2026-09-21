@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<div id="data"></div>
+	
+	<script>
+		// проблему решаем тем, что свалили код получения и вывода данных в одну кучу
+
+		// функция получения данных 
+		function getData() {
+			// моделируем запрос к API (на внешние ресурсы)
+			setTimeout(() => {
+				// определение данных
+				user = { name: "John", login: "master" };
+				
+				// данные получены, можно использовать в сценарии
+				html = `
+					<h2>Здравствуйте, вы вошли в приложение как:</h2>
+					Имя: <b>${user.name}</b> <br>
+					Логин: <b>${user.login}</b> <br>
+				`;
+				
+				// вывод данных в браузер
+				document.getElementById("data").innerHTML = html;				
+			}, 500);
+		};
+
+		// функция вывода данных
+		function outData() {
+			/*
+				а как же я??? :(
+			*/
+		};
+		
+		// вызов функций 
+		getData();
+		
+		// outData();
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

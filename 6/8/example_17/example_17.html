@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+		
+	<script>
+		// набор глобальных переменных
+		var title = "Not defined";
+		var brand = "Not defined";
+		var color = "Not defined";	
+		var country = "Not defined";	
+		var img = "no-image.jpg";	
+
+		// массив объектов
+		var clothes = [
+			{
+				id: 1,
+				title: 'Утепленная стеганая куртка',
+				brand: 'MARCO DI RADI',
+				color: 'Синий',
+				country: 'Китай',
+				img: 'steganaya-marco.jpg'
+			},
+			{
+				id: 2,
+				title: 'Пальто',
+				brand: 'Allsaints',
+				color: 'Коричневый',
+				country: 'Китай',
+				img: 'palto-allsaints.jpg'
+			}
+		];
+		
+		// объект c функцией-методом для вывода
+		var order = {
+
+			outOrder:	function ()  {
+				document.write (`
+					Название: ${this.title} <br>
+					Бренд: ${this.brand} <br>
+					Цвет: ${this.color} <br>
+					Страна: ${this.country} <br>
+					<img src='images/${this.img}' width='200px'>
+					<hr>
+				`);
+			}
+		}
+
+		// метод call сравним с методом bind
+		order.outOrder.call(clothes[0]);
+
+		// метод bind в контексте this
+		fn1 = order.outOrder.bind();
+
+		// метод bind в контексте объекта
+		fn2 = this.order.outOrder.bind(clothes[1]);
+
+		// вызов результата
+		fn1();
+
+		// fn2();
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

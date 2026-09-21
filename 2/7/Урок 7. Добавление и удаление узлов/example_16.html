@@ -1,0 +1,41 @@
+﻿ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+
+	<h2>Статичная коллекция</h2>
+
+	<ol>
+		<li>Криминальное чтиво</li>
+		<li>Зеленая миля</li>
+		<li>Форрест Гамп</li>
+	</ol>
+
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>	
+
+	<script>
+		// querySelectorAll
+		// !! статичная коллекция
+
+		var stat = document.querySelectorAll('li');
+		console.log("Исходная коллекция:");
+		console.log(stat);
+
+		// удаляем элемент из DOM
+		stat[0].remove();
+
+		console.log("Коллекция после удаления элемента из DOM:");	
+		console.log(stat);
+	</script>
+
+</body>
+</html>

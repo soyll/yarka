@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Лексическое окружение и контекст</h1>
+	</header>	
+		
+	<script>
+		// глобальные переменые
+		var login = "Login is not defined";
+		var pwd = "Password is not defined";
+		var email = "Email is not defined";		
+
+		// объект user
+		var user = {
+			// свойства объекта
+			login: "Den",
+			pwd: "SuperAdmin",
+			email: "denis@gmail.ru"
+		}
+
+		// определение функции вывода привязанных к контексту данных
+		function fnOutData()  {
+
+			console.log(this.login);
+			console.log(this.pwd);
+			console.log(this.email); 
+		}
+
+		// вызов функции в контексте глобального объекта
+		window.fnOutData();
+
+		// вызов функции в контексте глобального объекта
+		// альтернативный вариант
+		// window.fnOutData.call(this); 
+
+		// вызоа функции в контексте объекта 'user'
+		// window.fnOutData.call(user);		
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

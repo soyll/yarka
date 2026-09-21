@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	Свойство Href: <button id="btn-href">Go.Href</button><p>
+	
+	Метод Assign: <button id="btn-assign">Go.Assign</button><p>
+	
+	<!-- обратите внимание, шаг назад это не предыдущая страница -->
+	Метод Replace: <button id="btn-replace">Go.Replace</button><p>
+	
+	Метод Reload: <button id="btn-reload">Go.Reload</button>
+	
+	<script>
+		// свойство href
+		document.getElementById("btn-href").onclick = () => {
+			location.href = "target.html";	
+		}
+		
+		// метод assign
+		document.getElementById("btn-assign").onclick = () => {
+			location.assign("target.html");	
+		}		
+		
+		// метод replace
+		document.getElementById("btn-replace").onclick = () => {
+			location.replace("target.html");	
+		}
+		
+		// метод reload
+		document.getElementById("btn-reload").onclick = () => {
+			location.reload(true);	
+		}
+	</script>	
+		
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

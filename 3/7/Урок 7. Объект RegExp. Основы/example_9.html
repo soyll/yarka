@@ -1,0 +1,47 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Регулярные выражения</h1>
+	</header>
+
+	<h2>Изучаем Веб-технологии с pechora-PRO</h2>
+	<ul>
+		<li>Python</li>
+		<li>OpenServer</li>
+		<li>Figma</li>
+		<li>JavaScript</li>
+		<li>MySQL</li>
+	</ul>
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>		
+
+	<script>
+		// строка в которой будем искать совпадение с шаблоном
+		let str = document.querySelector("ul").innerText;
+
+		// вывод строки в консоль
+		console.log(str);
+
+		// шаблон для разделения
+		let reg = new RegExp("\n");
+
+		// разбиваем строку по шаблону в массив
+		let arr = str.split(reg);
+
+		// вывод массива
+		console.log(arr); // Array
+
+		// тестируем доступ к массиву
+		console.log(arr[3]);	
+	</script>
+
+</body>
+</html>

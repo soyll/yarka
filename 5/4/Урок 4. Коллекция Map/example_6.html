@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>	
+		// создаем объекты
+		let john = { name: "John" };
+		let michael = { name: "Michael", login:"mich-mich" };
+
+		// создаем коллекцию
+		let person = new Map();
+
+		// записываем в коллекцию значения
+		// в качестве ключей используем объекты 
+		person.set(john, 123);
+		person.set(michael, "moderator");
+
+		// доступ к значению коллекции по ключу-объекту
+		console.log(person.get(john)); // 123
+		console.log(person.get(michael)); // moderator
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		// тестируем параметр по ссылке
+		
+		// объявляем функцию - выражение
+		// в функцию передаем параметр-массив arr
+		fnChangeArr = function (arr) {
+		    // меняем первый элемент массива 
+		    arr[0] = "javaScript";
+		}
+				 
+		// инициируем массив исходными данными
+		var numbers = [1, 2, 3];
+		 
+		console.log("исходный массив: ", numbers);  // [1, 2, 3]
+		
+		// вызываем функцию
+		fnChangeArr (numbers);
+		
+		console.log("массив после вызова функции: ", numbers);   // ["javascript", 2, 3] 
+	</script>	
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

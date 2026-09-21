@@ -1,0 +1,42 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="poem.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+	
+	<h2>К сведению</h2>
+	
+	<h4>Если пользователь кликнет на кнопке ОК — confirm возвращает логическое значение true.</h4>
+	
+	<h4>Если пользователь кликнет на кнопке Отмена — confirm возвращает логическое значение false.</h4>
+
+	<script>
+		// дадим пользователю право определить порядок выполнения кода
+		if (confirm("Вы хотите изучать JavaScript?")) {
+			
+			alert ("Очень хорошо!\nПриготовьтесь погрузиться в удивительный мир frontend разработки!!!") ;  
+		} else if (confirm("Может тогда PHP?")){
+			
+			alert ("Прекрасно ;)");
+		}
+		else if (confirm("Ну может из Пастернака что-нибудь??")) {
+			
+			document.write (poem);
+		} else {
+
+			alert("Вам трудно угодить ...")
+		}  
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Область видимости и лексическое окружение</h1>
+	</header>	
+
+	<h2>Цепочки объектов лексического окружения</h2>
+	
+	<script>		
+		// глобальное лексическое окружение  
+		let a = 4; // 4
+		let c = 2; // 2
+
+		// функция глобального лексического окружения
+		function atheEquation(b) {
+			// область видимости функции theEquation
+			// локальное (первое вложенное) лексическое окружение 
+			 
+			let d = b**2 - 4 * a * c;
+
+			// функция вложенного лексического окружения
+			function aroots(d) {
+				// область видимости функции roots
+				// локальное (второе вложенное) лексическое окружение 
+				
+				if (d > 0) {
+					let x1 = (-b + Math.sqrt(d)) / (2 * a);
+					let x2 = (-b - Math.sqrt(d)) / (2 * a);
+					
+					return `x1 = ${x1}; x2 = ${x2}`;
+				} else if (d == 0) {
+					let x = -b / (2 * a);
+
+					return `x = ${x}`;
+				} else {
+
+					return 'нет корней';
+				}
+			}
+
+			// вызов функции сформирует второе вложенное лексическое окружение 
+			return `d = ${d} \n` + aroots(d);
+		}
+
+		// вызов функции сформирует первое вложенное лексическое окружение 
+		console.log(atheEquation(6));
+
+		// ----------
+		console.log(window);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

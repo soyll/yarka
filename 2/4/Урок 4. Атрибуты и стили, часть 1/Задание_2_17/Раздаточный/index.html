@@ -1,0 +1,38 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		.go {
+			padding: 30px;
+			margin: 10px;
+			font-family: Arial;
+			font-size: 10pt;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 1</h1>
+	</header>
+	
+	<div id='one' class="go" onclick="alert('Никола́й Васи́льевич Го́голь (1809-1852)')">
+		Эх, тройка! Птица тройка, кто тебя выдумал? Знать, у бойкого народа ты могла только родиться, в той земле, что не любит шутить, а ровнем-гладнем разметнулась на полсвета, да и ступай считать версты, пока не зарябит тебе в очи...		
+	</div>	
+
+	<div id="two" onclick="" class="par">
+		Не так ли и ты, Русь, что бойкая необгонимая тройка несешься? Дымом дымится под тобою дорога, гремят мосты, все отстает и остается позади. Остановился пораженный божьим чудом созерцатель: не молния ли это, сброшенная с неба?...	
+	</div>
+
+	<script>
+		let div1 = document.body.firstElementChild.nextElementSibling; 
+		let div2 = div1.nextElementSibling; 
+
+		// ...
+
+	</script>
+
+</body>
+</html>

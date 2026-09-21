@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Лексическое окружение и контекст</h1>
+	</header>	
+		
+	<script>
+		let fnDeclare = {
+			// объявление метода объекта
+			mtdOutData: function(msg) {
+				// контекст this будет определен во время вызова
+
+				let html = `
+					<h2>${msg}</h2>
+					<h3>${this.name}</h3>
+					Бренд: <b> ${this.brand} </b><br>
+					Тип двигателя: <b> ${this.type} </b><br>
+					Мощность (л.с): <b> ${this.power} </b><br>
+					<img src="images/${this.image}" width='250px'> <br>
+				`;
+				return html;
+			}
+		}
+
+		// объект lada
+		let lada = {
+	        id: 13,
+	        name: "LADA Kalina",
+	        brand: "АвтоВАЗ",
+	        type: "Бензиновый",
+	        power: "90",
+	        image: "lada-kalina.jpg"
+		}
+	
+		// объект toyota
+		let toyota = {
+	        id: 2,
+	        name: "Toyota Land Cruiser",
+	        brand: "Toyota",
+	        type: "Дизельный",
+	        power: "249",
+	        image: "land-cruiser.jpg"
+		}
+
+		// объект kia
+		let kia = {
+	        id: 7,
+	        name: "Kia Sorento Prime",
+	        brand: "Kia",
+	        type: "Дизельный",
+	        power: "200",
+	        image: "kia-sorento-prime.png"
+		}	
+		
+		// в каждый из вызовов добавим дополнительный параметр
+
+		// функция в контексте объекта 
+		document.write(fnDeclare.mtdOutData.call(kia, "Корейский автопром рулит?")); 
+
+		// функция в контексте объекта 
+		// document.write(fnDeclare.mtdOutData.call(toyota, "Япония, вперед!")); 
+
+		// функция в контексте глобального window
+		// document.write(fnDeclare.mtdOutData.call(lada, "Владейте на здоровье :("));  
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

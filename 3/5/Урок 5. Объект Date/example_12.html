@@ -1,0 +1,36 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		var d1 = new Date("January 25 2015");
+		
+		var d2 = new Date("Jan 25 2015");
+		
+		// запятые игнорируются
+		// имена регистронезависимы
+		var d3 = new Date("JANUARY, 25, 2015");
+		
+		// так не работает
+		var d4 = new Date("Январь, 25, 2015");		
+		
+		console.log(d1);
+		console.log(d2);
+		console.log(d3);
+		console.log(d4);
+	</script>	
+	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Объект Date</h1>
+	</header>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+</body>
+</html>

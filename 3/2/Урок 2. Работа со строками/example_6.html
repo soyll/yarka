@@ -1,0 +1,40 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа со строками</h1>
+	</header>
+	
+	<pre>
+	<h3>
+		Англичанин мне друг
+		Но пришлось утопить...
+		Пакетик чая	
+	</h3>
+	</pre>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>	
+
+	<script>
+		let str = 
+		"Англичанин мне друг" + 
+		"Но пришлось утопить..." + 
+		"Пакетик чая"
+	
+		// проверяем вхождение подстрок
+		console.log (str.indexOf("друг")); // 15
+
+		console.log (str.indexOf("враг")); // -1
+
+		console.log (str.indexOf("хуже татарина")); // -1
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<a href="target.html">Go-go</a><p>
+	
+	<script>	
+		/*
+			сутки = 24 * 60 * 60 * 1000 || 86400 * 1000 (мсек.)
+		*/
+		
+		// создаем объект Date + 1 день
+		let date = new Date(Date.now() + 86400 * 1000);
+		
+		console.log(date); // Date
+
+		date = date.toUTCString();
+
+		console.log(date);  // string
+		
+		// сохраняем cookie с временем жизни - 1 день
+		document.cookie = `login=DenisDream; path=/; expires=${date}`;
+		document.cookie = `pwd=qwerty@; path=/; expires=${date}`;
+		document.cookie = `email=denis-dream@gmail.com; path=/; expires=${date}`;
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

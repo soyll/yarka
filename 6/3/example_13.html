@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		function outScreen() {
+			// первый вызов функции выведет в браузер строку
+			document.write (`
+				<header>
+					<h1 align="center">Функции JavaScript</h1>
+				</header>
+			`);
+
+			// при первом вызове функции поменяем ее исходный код
+			outScreen = function(){
+			    document.write (`
+					<footer align="center">
+						<h3>Верстка | Дизайн | Программирование</h3>
+						<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+					</footer>
+			    `);
+			}
+		} // end function outScreen()
+	</script>
+
+</head>
+<body>
+	<script>
+		// первый вызов функции
+		outScreen();
+	</script>	
+
+	<h2>Переопределение функций</h2>
+
+	<script>
+		// второй вызов функции
+		outScreen();
+	</script>
+</body>
+</html>

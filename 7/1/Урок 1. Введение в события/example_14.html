@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<!-- ! для навешивания события используем метод addEventListener -->
+
+	<h2>Выбери жизненные принципы</h2>
+
+	<h3>Пороки</h3>
+	<div id="vice">
+		<ul>
+			<li><span>Чревоугодие</span> <input name="rb1" type="radio"></li>
+			<li><span>Похоть</span> <input name="rb2" type="radio"></li>
+			<li><span>Жадность</span> <input name="rb3" type="radio"></li>
+			<li><span>Лень</span> <input name="rb4" type="radio"></li>
+			<li><span>Гнев</span> <input name="rb5" type="radio"></li>	
+			<li><span>Зависть</span> <input name="rb6" type="radio"></li>	
+			<li><span>Гордыня</span> <input name="rb7" type="radio"></li>				
+		</ul>
+	</div>
+
+	<h3>Добродетели</h3>
+	<div id="good">
+		<ul>
+			<li><span>Умеренность</span> <input name="rb1" type="radio"></li>
+			<li><span>Целомудрие</span> <input name="rb2" type="radio"></li>
+			<li><span>Щедрость</span> <input name="rb3" type="radio"></li>
+			<li><span>Трудолюбие</span> <input name="rb4" type="radio"></li>
+			<li><span>Терпение</span> <input name="rb5" type="radio"></li>
+			<li><span>Доброта</span> <input name="rb6" type="radio"></li>
+			<li><span>Смирение</span> <input name="rb7" type="radio"></li>
+		</ul>
+	</div>	
+	
+	<p><button id="btnControl">Сделайте свой выбор!</button>
+
+	<!-- контейнер для вывода -->
+	<div>
+		<ul id="con"></ul>
+	</div>
+	
+	<script>
+		// навешиваем обработчики на событие click элемента button
+		btnControl.addEventListener("click", outList);
+		btnControl.addEventListener("click", clearList);
+		
+		// обработчик Вывод выбранного
+		function outList() {		
+			inputs = document.querySelectorAll("ul input[type=radio]:checked");
+			
+			if (inputs.length) {
+				con.innerHTML = "";
+
+				inputs.forEach ( (elem) => {
+					con.insertAdjacentHTML("afterbegin", '<li>' + elem.parentNode.innerText + '</li>');
+				} )			
+			} else
+				alert("Список пуст. Определитесь!")
+		}
+		
+		// обработчик Очистить список
+		function clearList() {
+		
+			inputs = document.querySelectorAll("ul input[type=radio]");
+
+			inputs.forEach ( (elem) => {
+				elem.checked = false; 
+			} )
+		}
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

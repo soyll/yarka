@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+	
+	<script>
+		// создаем объект URL
+		let url = new URL('http://js/target.php?course=javascript&topic=bom&lesson=object-url#encoding');
+
+		// вывод в консоль строки параметров
+		console.log(url.searchParams);
+		
+		// вывод в консоль итератора
+		console.log(url.searchParams.entries());
+		
+		// вывод в консоль: имя параметра -> значение
+		// конструкции в циклах идентичны
+
+		for (let [key, value] of url.searchParams.entries()){	
+			console.log(key, ' -> ', value);
+		}
+
+		console.log('-------');
+
+		for (let [key, value] of url.searchParams){
+			console.log(key, ' -> ', value);
+		}
+	</script>	
+		
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>		
+</body>
+</html>

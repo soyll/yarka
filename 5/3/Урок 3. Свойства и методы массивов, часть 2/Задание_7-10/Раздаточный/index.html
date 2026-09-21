@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+	
+	<script>
+		// исходный массив		
+		let teams = new Array(
+			{id:1, name:"Aerosmith", country:"США", date:"1970", style:["хард-рок", "блюз-рок", "рок-н-ролл", "глэм-метал"]},
+
+			{id:2, name:"Pink Floyd", country:"Великобритания", date:"1965", style:["психоделический-рок", "арт-рок", "эйсид-рок", "прогрессивный-рок"]},
+
+			{id:3, name:"The Beatles", country:"Великобритания", date:"1960", style:["рок", "рок-н-ролл", "поп", "хард-рок"]},
+
+			{id:4, name:"AC/DC", country:"Австралия", date:"1973", style:["хард-рок", "блюз-рок", "рок-н-ролл"]},
+
+			{id:5, name:"Scorpions", country:"ФРГ", date:"1965", style:["хард-рок", "глэм-метал", "хеви-метал"]},
+
+			{id:6, name:"Ленинград", country:"Россия", date:"1997", style:["рок", "ска", "фолк", "панк", "панк-рок"]}
+		);
+
+		// массив для сохранения данных
+		result = new Array();
+
+		// перебор элементов исходного массива
+		teams.forEach ((item, index, teams) => {
+			
+			// если в стиле группы есть слова -хард-
+			if (item.style.includes("хард")) 
+				result.push(item.name);  
+		})
+		
+		// вывод результирующего массива в консоль
+		console.log(result);
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

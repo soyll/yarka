@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+
+		<div id="console"><h1></h1></div>
+	</header>	
+	
+	<script>
+		// объявление функции 
+		var myHello = function () {
+			document.getElementById("console").firstChild.innerText = "Будь таким, каким хочешь казаться (Сократ)";
+		};
+		
+		var el =  myHello(); 
+		
+		console.log(el);  // undefined 
+	</script>
+	
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

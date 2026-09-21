@@ -1,0 +1,30 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Метасимволы</h1>
+	</header>
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>		
+
+	<script>
+		console.log("maan".match(/ma+n/g)); // ['maan']
+		
+		console.log("man".match(/ma+n/g)); // ['man']
+		
+		console.log("mann".match(/ma+n/g)); // ['man']
+		
+		console.log("main".match(/ma+n/g)); // null
+		
+		console.log("woman".match(/ma+n/g)); // ['man']
+	</script>
+
+</body>
+</html>

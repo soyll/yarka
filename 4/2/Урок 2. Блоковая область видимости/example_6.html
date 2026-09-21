@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<script>	
+		// сделать информацию о пользователе можно глобальной, 
+		// и более специфичной
+		window.myData = {
+			login: "denis",
+			level: "macho" 
+		};
+		// доступ к переменной где угодно в коде
+		alert(myData.login); // denis
+		
+		// получить login из window можно явно
+		console.log(window.myData.login); // denis
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

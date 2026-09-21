@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Лексическое окружение и контекст</h1>
+	</header>	
+	
+	<script>
+		// функция-шаблон вывода товаров
+		outTemplate = function () {
+
+			return `
+			    Артикул: <b>${this.articul}</b> <br>
+			    Название: <b>${this.name}</b> <br>
+			    Графический процессор: <b>${this.gpu}</b> <br>
+			    Процессор: <b>${this.cpu}</b> <br>
+			    Кол. ядер: <b>${this.cpu_cores}</b> <br>
+			    Память RAM: <b>${this.ram}</b> <br>
+				Диагональ: <b>${this.diagonal}</b> <br>
+				Цена: <b>${this.price}</b> <br>
+				<img src='${this.image}' <br>
+			`;
+		}
+			
+		/*
+			- отобрать товар с категорией category="laptop"
+			- написать функцию вывода отобранных товаров
+		*/
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

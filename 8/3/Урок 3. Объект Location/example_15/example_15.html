@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="courses.js"></script>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+	
+	<script>
+		// начальное значение переменной
+		menu = '';
+		
+		// в цикле формируем меню
+		courses.forEach( course => {
+			menu += `
+				<a href="#" id="topic-${course.id}">
+					${course.topic}
+				</a><br>
+			`;
+		} )
+
+		// вывод меню в браузер
+		document.write('<div id="menu">' + menu + '</div><hr>')
+
+		// выбор ссылок меню
+		links = document.querySelectorAll("div#menu a");
+		
+		// навешиваем обработчик события click на ссылки меню
+		for (link of links) {
+			link.addEventListener("click", function() {
+				
+				let topic = this.innerText;				
+				let href = `target.php?topic=${topic}`;
+				
+				// выполняем переход на ресурс target.php
+				location.assign(href);
+			})
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

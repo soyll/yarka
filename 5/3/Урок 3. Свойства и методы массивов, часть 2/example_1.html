@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+	
+	<h2>Лучшие ноутбуки для работы по цене и качеству в 20XX году</h2>
+
+	<script>
+		// инициируем одномерный массив строк
+		let note = [
+			"Acer Extensa 15 EX215-22-R8E3",
+			"Asus VivoBook 15 OLED K513EA",
+			"HUAWEI MateBook D 15",
+			"Apple MacBook Air 13 2022"	
+		];
+		
+		// проверяем на вхождение в элементы массива подстроки -Asus-
+		// выполняем String.includes()
+		console.log(note[0].includes("Asus")); // false
+
+		console.log(note[1].includes("Asus")); // true
+
+		console.log(note[2].includes("Asus")); // false
+
+		console.log(note[3].includes("Asus")); // false
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

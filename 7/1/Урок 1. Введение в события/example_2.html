@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<!-- ! для навешивания события используем атрибут HTML -->
+
+	<button onclick="outMessage()">Нажмите, пожалуйста</button><p>
+
+	<button onclick="outMoreMessage()">Нажмите, пожалуйста</button>
+	
+	<script>
+		// функция-инструкция
+		function outMessage() {
+			alert ("Ой... А ведь здравствуйте! ;)");
+		}
+
+		// функция-стрелка
+		outMoreMessage = () => {
+			alert ("Виделись...");
+		}
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

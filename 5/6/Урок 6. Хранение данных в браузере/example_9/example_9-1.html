@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="data/leaders.js"></script>
+	<script src="data/courses.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>То, что я стою один, не означает, что я один. Это значит, что я достаточно силен, чтобы справиться со всем сам (Джокер)</h2>
+
+	<script>	
+		// очистим хранилище
+		localStorage.clear();
+
+		let id_course = 4;
+
+		// поиск курса с идентификатором id_course = 4
+		course = courses.find( item => {
+			return item.id == id_course;
+		});
+		
+		// console.log(course);
+		
+		// поиск всех ведущих курса
+		persons = leaders.filter( item => {
+			return item.courses.includes(id_course);
+		});
+
+		// console.log(persons);
+	
+		// формирование JS-объекта данных
+		let data = {
+			course: course,
+			persons: persons
+		};
+
+		// JS в JSON
+		dataJSON = JSON.stringify(data);
+
+		// сохраним строку JSON в хранилище localStorage
+		localStorage.setItem("data", dataJSON);
+	</script>
+
+	<a href="example_9-2.html">Перейдем на страницу example_9-2.html</a>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

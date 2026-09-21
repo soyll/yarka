@@ -1,0 +1,60 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Регулярные выражения</h1>
+	</header>
+
+	<pre>
+		<h2>Путь (А. Белый)</h2>
+		<h3>
+		Чтоб бранью сухой не встречали,
+		Жилье огибаю, как трус, –
+		И дале – и дале – и дале –
+		Вдоль пыльной дороги влекусь.
+		</h3>
+	</pre>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+
+	<script>
+		// строка в которой будем искать совпадение с шаблоном
+		let text = document.querySelector("pre h3").innerText;
+		
+		// шаблон поиска, используем флаг -g
+		let reg = new RegExp("дале", "ig");
+		
+		// 1-ый поиск 
+		let arr = reg.exec(text);
+		// 
+		console.log("\n\n1-ый поиск"); 
+		console.log(arr); 
+		console.log("Сопоставление найдено в позиции ", arr["index"]);
+		console.log("Следующий поиск с позиции ", reg.lastIndex);
+
+		// 2-ой поиск 
+		arr = reg.exec(text);
+		// 
+		console.log("\n\n2-ой поиск"); 
+		console.log(arr); 
+		console.log("Сопоставление найдено в позиции ", arr["index"]);
+		console.log("Следующий поиск с позиции ", reg.lastIndex);
+
+		// 3-ий поиск 
+		arr = reg.exec(text);
+		// 
+		console.log("\n\n3-ий поиск"); 
+		console.log(arr); // null
+		console.log("Сопоставление найдено в позиции ", arr["index"]); // ошибка
+		console.log("Следующий поиск с позиции ", reg.lastIndex);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<h2>Дискография группы Pink Floyd</h2>
+	
+	<table border="1px">
+		<tr>
+			<td>1</td>
+			<td>Atom Heart Mother</td>
+			<td>10 октября 1970</td> 
+			<td>EMI, Harvest, Capitol</td>
+			<td>LP, CD</td>
+			<td>Золотой (USA)</td>
+			<td><input type="checkbox"></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Meddle</td>
+			<td>30 октября 1971</td>
+			<td>EMI, Harvest, Capitol</td>
+			<td>Vinyl, кассета, CD</td>
+			<td>Платиновый (USA)</td>
+			<td><input type="checkbox"></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Obscured by Clouds</td>
+			<td>3 июня 1972</td>
+			<td>EMI, Harvest, Capitol</td>
+			<td>LP, кассета, CD</td>
+			<td>Золотой (USA), Серебряный (GBR)</td>
+			<td><input type="checkbox"></td>
+		</tr>
+		<tr>	
+			<td>4</td>
+			<td>The Dark Side Of The Moon</td>
+			<td>17 марта 1973</td>
+			<td>Harvest, Capitol, EMI</td>
+			<td>LP, кассета, CD, SACD</td>
+			<td>Платиновый (USA), Платиновый (GBR), Бриллиантовый (CAN)</td>
+			<td><input type="checkbox"></td>
+		</tr>	
+		<tr>	
+			<td>5</td>
+			<td>Wish You Were Here</td>
+			<td>15 сентября 1975</td>
+			<td>Harvest, EMI, Columbia, Capitol</td>
+			<td>LP, 8-track, кассета, CD, SACD</td>
+			<td>Платиновый (USA), Золотой (GBR), Платиновый (CAN)</td>
+			<td><input type="checkbox"></td>
+		</tr>
+	</table>
+
+	<p><button id="btn">Вывод выбранных альбомов</button></p>
+	
+	<!-- контейнер -->
+	<div id="con"></div>
+
+	<script>
+		// при построениии DOM сразу навесим обработчики
+		document.addEventListener("DOMContentLoaded", loadDOM);
+		btn.onclick = show;
+		
+		// описание функции определения обработчиков change элементов input
+		function loadDOM() {
+			// выбор всех элементов input
+			let inputs = document.querySelectorAll('table tr input');
+			// массив сбора данных
+			arr = [];
+			// навешивание обработчика на каждый input
+			inputs.forEach( (input) => {
+				input.addEventListener("change", fnHandle);
+			})		
+		}
+
+		// функция создания массива отобранных элементов
+		function fnHandle() {
+						
+			tds = this.closest("tr").children;
+			// если input выбран				
+			if (this.checked) {
+				// добавляем в массив объект данных 
+				arr.push (
+				{
+					id: tds.item(0).innerText,
+					name: tds.item(1).innerText,
+					date: tds.item(2).innerText,
+					label: tds.item(3).innerText,
+					format: tds.item(4).innerText,
+					status: tds.item(5).innerText
+				})	
+			// если input деактивирован
+			} else {
+				// перезаписываем массив
+				// в новый массив не войдет объект деактивированной строки 
+				arr = arr.filter( (obj) => {
+					return (tds.item(0).innerText !== obj.id)
+				})
+			}
+
+			// тестируем содержимое массива
+			// console.log(arr)
+		}
+
+		// вывод отобранных данных в браузер
+		function show() {
+			// очишаем контейнер
+			con.innerHTML = "";
+			
+			// формируем строку для вывода
+			arr.forEach( (obj) => {
+				out = `
+					Название: <b>${obj.name}</b><br>
+					Дата выпуска: <b>${obj.date}</b><br>
+					Лейбл: <b>${obj.label}</b><br>
+					Формат: <b>${obj.format}</b><br>
+					Статус: <b>${obj.status}</b><br>
+					<hr>
+				`
+				// вставка строки в контейнер
+				con.insertAdjacentHTML("beforeend", out);
+			} )			
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

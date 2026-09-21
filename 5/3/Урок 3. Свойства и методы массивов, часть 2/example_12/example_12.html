@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="televisions_obj.js"></script>
+
+	<script>
+		// метод map в отличии от forEach возвращает результат
+		// результатом будет новый массив
+		let res = televisions.map( item => {
+			// если фирма LG, то запишем в новый массив сочетание данных firm-model
+			if (item.firm.includes("LG"))
+				return `${item.firm} (${item.model})`;
+		});
+
+		// исходный массив
+		console.log(televisions);
+
+		// результирующий массив
+		console.log(res);
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

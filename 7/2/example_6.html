@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<button id="btn">Метод bind в привязке параметров</button>
+
+	<script>
+		// функция трех аргументов
+		function loadData(arg1, arg2, arg3) {
+			alert(arg1);	
+			alert(arg2);
+			alert(arg3);
+		}
+		// привязка контента с помощью метода bind
+		btn.addEventListener("click", loadData.bind(null, 'Im first argument', 'Hello, User', 'Надеюсь понятно объяснил?'));
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

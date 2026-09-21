@@ -1,0 +1,32 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 1</h1>
+	</header>
+	
+	<div id="citate">
+		Эх, тройка! Птица тройка, кто тебя выдумал? Знать, у бойкого народа ты могла только родиться, в той земле, что не любит шутить, а ровнем-гладнем разметнулась на полсвета, да и ступай считать версты, пока не зарябит тебе в очи...		
+	</div>	
+
+	<script>
+		// ссылка на узел div
+		let div = document.body.firstElementChild.nextElementSibling; 
+
+		// выведем объект style
+		console.log(div.style);
+		
+		// изменим некоторые CSS-свойства узла
+		div.style.backgroundColor = "darkgrey";
+		div.style.color = "#fff";
+		div.style.border = "2px dotted red";
+		div.style.padding = "20px";
+	</script>
+
+</body>
+</html>

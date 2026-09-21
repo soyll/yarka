@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Замыкания</h1>
+	</header>	
+		
+	<script>
+		// определение объекта
+		let user = {
+  			login: "DenisDream",
+  			// метод объекта 
+  			welcome: function() {
+    			return `Привет, ${this.login}!`;
+ 	 		}
+		};
+	
+		// вывод определения метода объекта в консоль
+		console.log(user.welcome); 
+		/*
+			консоль:
+			ƒ () {
+    			return `Привет, ${this.login}!`;
+ 	 		}
+		*/
+
+		// user.welcome <> user.welcome()
+
+		// запуск метода в контексте объекта
+		console.log(user.welcome()); 
+		/*
+			консоль:
+			Привет, DenisDream!
+		*/
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<!-- подключаем файл функций -->
+	<script src="function.js"></script>
+	<style>
+		div {padding:20px; margin:10px; border:1px solid #c0c0c0; background: #f5f5f5}
+		div p.best {color: #0000ff}
+	</style>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<h2>Топ 5 лучших фильмов (по версии paramountcomedy.ru)</h2>
+
+	<div>
+		<p data-director="Фрэнк Дарабонт" data-year="1999" data-country="США">Зеленая миля</p>
+
+		<p class="best" data-director="Квентин Тарантино" data-year="1994" data-country="США">Криминальное чтиво</p>
+
+		<p data-director="Роберт Земекис" data-year="1994" data-country="США">Форрест Гамп</p>
+
+		<p data-director="Дэвид Финчер" data-year="1999" data-country="США, Германия">Бойцовский клуб</p>
+
+		<p class="best" data-director="Фрэнк Дарабонт" data-year="1994" data-country="США">Побег из Шоушенка</p>
+	</div>
+
+	<h2>Фильмы помеченные классом .best</h2>
+
+	<div id="out"></div>
+
+    <footer align="center">
+        <h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>Видишь ли, в свои последние минуты люди показывают вам, кто они на самом деле (Джокер)</h2>
+
+	<script>	
+		// сложная структура данных для хранения
+		let user = {
+		   name: "Евгений",
+		   surname: "Лукашин",
+		   address: {
+		       street: "3-я улица Строителей, дом 25",
+		       city: "Ленинград",
+		       post: 101101
+		   },
+		   phone: [
+		       "(912)552-92-25",
+		       "(904)104-17-06"
+		   ]
+		};
+
+		// предварительно очистим объект
+		localStorage.clear();
+
+		// доступ как к обычному объекту
+		localStorage.num = 100;
+
+		localStorage.str = "Добро пожаловать!";		
+
+		localStorage.bool = true;
+
+		localStorage.arr = JSON.stringify(["js", "шпрехшталмейстер", "балалайка"]);		
+
+		localStorage.obj = JSON.stringify(user);
+
+		// вывод свойств объекта в консоль
+		console.log(localStorage.num);
+
+		console.log(localStorage.str);
+		
+		console.log(localStorage.bool);
+		
+		console.log(JSON.parse(localStorage.arr));
+		
+		console.log(JSON.parse(localStorage.obj));
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

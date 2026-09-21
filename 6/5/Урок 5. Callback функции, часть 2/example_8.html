@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		// массив скалярных значений
+		var course = [
+			"Дизайнер визуальных коммуникаций", 
+			"Ювелирный 3D-модельер", 
+			"Fashion-стилист",
+			"Fashion-фотограф",
+			"BIM-координатор с нуля",
+			"Маркетинг для fashion-брендов",
+			"Продюсер в Fashion"
+		];
+			
+		// создаем новый массив
+		var fashionCourse = course.filter(callback);
+		
+		// определение функции обратного вызова
+		// определение функции-инструкции можно выполнить после вызова
+		function callback(el) {
+			// проверяем наличие в элементе массива вхождения подстроки
+			reg = RegExp(/fashion/, "i");
+			return reg.test(el);
+		}			
+		
+		// проверяем элементы нового массива
+		console.dir(fashionCourse);
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

@@ -1,0 +1,50 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Регулярные выражения</h1>
+	</header>
+
+	<pre>
+		<h2>Вешалка дураков</h2>
+		<h3>
+		Ослу образованье дали.
+		Он стал умней? Едва ли.
+		Но раньше, как осел,
+		Он просто чушь порол,
+		А нынче – ах злодей –
+		Он, с важностью педанта,
+		При каждой глупости своей
+		Ссылается на Канта.	
+		(Саша Черный)
+		</h3>	
+	</pre>
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>			
+
+	<script>
+		// строка в которой будем искать совпадение с шаблоном
+		let str = document.querySelector("pre").textContent;
+		
+		// полученная строка
+		console.log(str);
+		
+		// шаблон поиска в литеральной нотации
+		let reg = /Кант/;
+
+		// поиск вхождения
+		let pos = str.search(reg);
+
+		// вывод позиции вхождения
+		console.log(pos); // 213		
+	</script>
+
+</body>
+</html>

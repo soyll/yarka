@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<ol>
+		<li>Японские марки авто
+			<ul>
+				<li>Acura</li>
+				<li>Daihatsu</li>
+				<li>Datsun</li>
+			</ul>
+		</li>
+		<li>Американские марки авто
+			<ul>
+				<li>Buick</li>
+				<li>Cadillac</li>
+				<li>Chevrolet</li>
+			</ul>
+		</li>
+	</ol>
+
+	<script>
+		// инициируем строку
+		let str = "Тестируем параметры функции";		
+		
+		// инициируем коллекцию 
+		let coll = document.querySelectorAll("ul li"); 
+
+		// инициируем объект
+		let obj = {login:"master", pwd:"12345"};
+
+		// инициируем массив
+		let arr = ["Buick", "Cadillac", "Chevrolet", "Chrysler"];
+
+		// объявляем функцию
+		// в качестве параметров - строка, коллекция, объект, массив
+		function fnOutData (myStr, myCollection, myObj, myArray){
+			console.log("Строка: ", myStr);
+			console.log("Коллекция: ", myCollection);
+			console.log("Объект: ", myObj);
+			console.log("Массив: ", myArray);
+		}
+		
+		// вызов функции 
+		fnOutData (str, coll, obj, arr);
+	</script>
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

@@ -1,0 +1,60 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+
+	<h2>Нахождение корней квадратного уравнения</h2>
+
+	<script>
+		// запрашиваем у пользователя значения коэффициентов
+		let a = prompt("a = ?", 1);
+		let b = prompt("b = ?", 2);
+		let c = prompt("c = ?", 3);
+
+		// находим дискриминант квадратного уравнения
+		let d = b ** 2 - 4 * a * c;			
+
+		try {
+		
+			// если дискриминант меньше нуля прерываем работу программы
+			if (d < 0) {
+				throw Error("Уравнение не имеет корней");
+			}
+			else if (d > 0) {
+				// расчитываем корни: х1, х2
+				let x1 = (-b - Math.sqrt(d)) / 2 * a;
+				let x2 = (-b + Math.sqrt(d)) / 2 * a;
+				
+				// выводим сообщение в консоль / браузер
+				console.log(x1, x2);
+				document.write(`<h3>x1 = ${x1}<br>x2 = ${x2}</h3>`);
+			} else {
+				// расчитыаем корень: х
+				let x = (-b / 2 * a);
+				
+				// выводим сообщение в консоль / браузер 
+				console.log(x);
+				document.write(`<h3>x = ${x}</h3>`);			
+			}
+
+		} catch (err) {
+			// дискриминант меньше нуля, выводим предупреждение
+			// в консоль
+			console.log(err.name + ". " + err.message);
+			// в браузер
+			document.write("<h3>Уравнение не имеет корней</h3>");		
+		}
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

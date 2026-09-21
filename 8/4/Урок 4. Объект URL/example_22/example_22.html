@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+	
+	<a id="link" href="#">Переход к файлу target.html</a>
+
+	<ol>
+		<li>
+			<span>Введение в JavaScript</span>
+			<ul>	
+				<li>Введение в сценарии JS</li>
+				<li>Переменные и константы</li>
+				<li>Типы данных</li>
+				<li>Преобразование типов</li>
+				<li>Диалоговые окна</li>
+			</ul>
+		</li>
+		<li>
+			<span>DOM - Document Object Model</span>
+			<ul>
+				<li>Введение в DOM</li>
+				<li>Доступ к DOM</li>
+				<li>Свойства узлов</li>
+				<li>Атрибуты и стили, часть 1</li>
+				<li>Атрибуты и стили, часть 2</li>
+				<li>Выбор элементов DOM</li>
+				<li>Добавление и удаление узлов</li>
+			</ul>
+		</li>	
+		<!-- данные для передачи -->	
+		<li class="my-choice">		
+			<span>Операции в JavaScript</span>
+			<ul>	
+				<li>Выражения и операторы</li>
+				<li>Работа со строками</li>
+				<li>Работа с числами</li>
+				<li>Объект Math</li>
+				<li>Объект Date</li>
+				<li>JSON представление данных</li>
+				<li>Объект RegExp. Основы</li>
+				<li>Объект RegExp. Метасимволы</li>
+			</ul>
+		</li>
+		<li>
+			<span>Управляющие конструкции</span>
+			<ul>	
+				<li>Условные инструкции</li>
+				<li>Блоковая область видимости</li>
+				<li>Простые циклы</li>
+				<li>Специальные циклы</li>
+				<li>Вложенные циклы</li>
+				<li>Обработка ощибок</li>
+			</ul>
+		</li>
+	</ol>	
+
+	<script>
+		// выбор пунктов списка в коллекцию
+		lis = document.querySelectorAll("ol > li");
+
+		// перебор коллекции
+		for (let li of lis) {
+			if (li.className == "my-choice") {
+				let topic = li.firstElementChild.innerText;
+				let ul = li.lastElementChild;
+
+				// формируем объект для передачи
+				data = JSON.stringify({
+					topic: topic,
+					lesson: ul.innerText
+				});
+
+				// создаем объект URL
+				url = new URL(location.origin + '/target.html');
+				
+				// добавляем параметр data
+				url.searchParams.append('data', data);
+			}
+		}
+		
+		// формируем атрибут href ссылки
+		document.getElementById("link").setAttribute("href", url.href);
+	</script>	
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>		
+</body>
+</html>

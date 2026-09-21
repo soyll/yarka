@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		// тестируем параметр по ссылке
+		
+		// объявляем стрелочную функцию
+		// в функцию передаем параметр-объект obj
+		fnChangeObj =  obj => {
+		    // меняем свойство объекта
+		     obj.role = "moderator";
+		}
+				 
+		// инициируем объект исходными данными
+		var obj = {login: "master", role:"user", email:"master@mail.ru"};
+		 
+		console.log("-> исходный объект: ", obj);
+		
+		// вызываем функцию
+		fnChangeObj(obj);
+		
+		console.log("-> объект после вызова функции: ", obj); 
+	</script>	
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

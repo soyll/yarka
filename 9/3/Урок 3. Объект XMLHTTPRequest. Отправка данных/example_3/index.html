@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Асинхронный JavaScript</h1>
+	</header>
+
+	<script>
+		let xhr = new XMLHttpRequest();
+		xhr.open ("POST", "server.php");
+		
+		// тип передаваемых данных
+		xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+		// формируем отправляемые в теле запроса данные
+		data = "name=Денис&login=DenisDream&email=denis-dream@gmail.com";
+
+		// отправка запроса
+		// к запросу добавляем тело сообщения
+		xhr.send(data);
+
+		// обработчик ответа сервера
+		xhr.onload = function() {
+			console.log(xhr.response);
+		} 
+	</script>
+
+    <footer align="center">
+        <h3>Разработка асинхронных приложений на JavaScript</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

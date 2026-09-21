@@ -1,0 +1,60 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа со строками</h1>
+	</header>
+	
+	<h2>Музеи Мира. Статьи.</h2>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>	
+
+	<script>
+		// статьи для вывода, в виде массива объектов 
+		// могли быть получены, например, от сервера при асинхронном запросе
+		// каждый объект - фрагмент информации о статье 
+		let article = [
+			{
+				teazer: "Художественный дар — это одновременно и талант, и огромный труд. Так как искусство во многом близко ремеслу, в нем сочетается безусловное природное дарование и простые технические навыки, без которых настоящего художника никогда не будет.",	
+				href: "https://muzei-mira.com/article/2148-hudozhnik-i-ego-talant.html"
+			},
+			{
+				teazer: "Наверное, в мире нет более известного полотна, чем «Мона Лиза». Она популярна во всех странах, широко растиражирована как узнаваемый и броский образ.",
+			 	href: "https://muzei-mira.com/article/2147-zagadka-kartiny-mony-lizy-leonardo-da-vinchi.html"
+
+			},
+			{
+ 				teazer: "Художники-передвижники внесли огромную лепту в развитие русского и мирового искусства, создав совершенно новую эстетическую шкалу и расширив сюжетный круг станковой живописи.",
+				href: "https://muzei-mira.com/article/2125-kto-takie-peredvizhniki-i-pochemu-ih-tak-nazyvayut-.html"
+			}
+		];
+
+		// формируем из массива строки-ссылки для вывода
+		let p1 = `<a href='${article[0].href}' target='blank'>${article[0].teazer.substr(0,31)} ...</a>`;
+
+		let p2 = `<a href='${article[1].href}' target='blank'>${article[1].teazer.substr(0,31)} ...</a>`;
+
+		let p3 = `<a href='${article[2].href}' target='blank'>${article[2].teazer.substr(0,31)} ...</a>`;
+
+		// формируем список из ссылок
+		let out = `
+			<ul>
+				<li>${p1}</li>
+				<li>${p2}</li>
+				<li>${p3}</li>
+			</ul>
+		`;
+
+		// вставляем список в документ
+		document.body.querySelector("h2").insertAdjacentHTML("afterend", out);
+	</script>
+
+</body>
+</html>

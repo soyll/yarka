@@ -1,0 +1,42 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		.go {
+			background: #f5f5f5; 
+			padding: 10px
+		}
+		.border {
+			border: 2px double red; 
+		}
+		.font {
+			font-family: Arial;
+			color:  blue;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 1</h1>
+	</header>
+	
+	<div id="citate" class="go">
+		Эх, тройка! Птица тройка, кто тебя выдумал? Знать, у бойкого народа ты могла только родиться, в той земле, что не любит шутить, а ровнем-гладнем разметнулась на полсвета, да и ступай считать версты, пока не зарябит тебе в очи...		
+	</div>	
+
+	<script>
+		// ссылка на узел div
+		let div = document.body.firstElementChild.nextElementSibling; 
+	
+		// добавим class узлу
+		div.classList.add("border");
+		
+		// и еще один
+		div.classList.add("font");
+	</script>
+	
+</body>
+</html>

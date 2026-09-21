@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<!-- ! для навешивания события используем метод addEventListener -->
+
+	<button id="btn1">Умная мысль тут у меня ...</button><p>
+	
+	<button id="btn2">Что что?</button><p>
+
+	<button id="btn3">Это ты мне сказал?</button>
+	
+	<script>
+		// для элемента btn1 навешиваем событие, назначаем обработчик 
+		btn1.addEventListener("click", function(){
+			alert("Задача сделать человека счастливым не входила в план сотворения мира (З. Фрейд).");
+		});
+
+		// для элемента btn2 навешиваем событие, назначаем обработчик 
+		btn2.addEventListener("click", () => {
+			alert("Голос интеллекта тих, но он не устает повторять — и слушатели находятся (З.Фрейд).");
+		});
+
+		// для элемента btn3 навешиваем событие, назначаем обработчик 
+		btn3.addEventListener("click", fnSayCitate);	
+
+		// функция-обработчик
+		function fnSayCitate() {
+			alert("Масштаб вашей личности определяется величиной проблемы, которая способна вас вывести из себя (З.Фрейд)");
+		}	
+	</script>	
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

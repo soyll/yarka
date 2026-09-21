@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Замыкания</h1>
+	</header>	
+		
+	<script>
+		// внешняя функция
+		function outer() {
+		    // возвращаем определение функции inner
+		   	return function inner() {
+		        console.log('Привет!');
+		    }
+		}	
+
+		// вывод в консоль определения вложенной функции
+		console.log(outer());
+		/*
+			консоль:
+			ƒ inner () {
+				console.log('Привет!');
+			}
+		*/
+
+		// вызов вложенной функции
+		// такие вызовы и есть замыкания
+		outer()();
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

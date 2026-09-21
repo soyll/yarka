@@ -1,0 +1,37 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 1</h1>
+	</header>
+
+	<div id="citate" style="width: 90%; color: blue;">
+		<input type="checkbox" checked>
+		Даю согласие на обработку своих персональных данных.
+	</div>	
+
+	<script>
+		// ссылка на элемент div
+		let div = document.body.firstElementChild.nextElementSibling;
+
+		// свойство из атрибута - строка 
+		console.log(div.id);
+
+		// свойство из атрибута - объект
+		console.log(div.style);	
+		
+		// доступ к свойству объекта
+		console.log(div.style.width);			
+
+		// свойство из атрибута - логическое значение
+		let el = div.firstElementChild;		
+		console.log(el.checked);
+	</script>
+
+</body>
+</html>

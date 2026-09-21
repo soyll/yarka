@@ -1,0 +1,43 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Метасимволы</h1>
+	</header>
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>		
+
+	<script>
+		// определение строки для поиска
+		let str = "Языки PHP и JavaScript монстры Fullstack разработки";
+
+		// 1-й шаблон поиска
+		// ищем слово JavaScript в любом регистре
+		let reg1 = /JavaScript/gi;
+		
+		// 2-й шаблон поиска
+		// ищем любые английские слова, где:
+		// - допустимые буквы от 'a' до 'z'
+		// - количество букв от 3 до 15
+		let reg2 = /[a-z]{3,15}/gi;
+		
+		// вывод результата поиска:
+		// ['JavaScript']	
+		console.log(str.match(reg1)); 
+		
+		// вывод результата поиска:
+		// ['PHP', 'JavaScript', 'Fullstack']
+		console.log(str.match(reg2)); 
+
+		// метасимволы читаются любыми методами  
+	</script>
+
+</body>
+</html>

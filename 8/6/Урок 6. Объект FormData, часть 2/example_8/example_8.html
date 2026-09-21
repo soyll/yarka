@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<form id="frm">
+		<!-- -->
+		<input id="file" type="file" name="file">		
+	</form>
+	
+	<script>
+		// получаем ссылку на элемент type="file"
+		let form = document.querySelector("#frm");
+
+		// обработка события - выбор файла
+		document.getElementById('file').onchange = function(e) {
+ 			// этот код ...
+ 			node = e.target;
+ 			console.log(node.files[0]); // File
+ 			console.log(node.files[0].name); 
+
+			// тоже самое, что этод ...
+			let data = new FormData (form);
+			let file = data.get("file");
+			console.log(file); // File
+			console.log(file.name);
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

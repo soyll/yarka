@@ -1,0 +1,33 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 1</h1>
+	</header>
+	
+	<div id="citate" title="Н.В. Гоголь" class="go" style="border:1px solid #c0c0c0; background: #f5f5f5; padding:10px;">
+		Эх, тройка! Птица тройка, кто тебя выдумал? Знать, у бойкого народа ты могла только родиться, в той земле, что не любит шутить, а ровнем-гладнем разметнулась на полсвета, да и ступай считать версты, пока не зарябит тебе в очи...		
+	</div>	
+
+	<script>
+		// ссылка на узел div
+		let div = document.body.firstElementChild.nextElementSibling; 
+
+		console.log("Коллекция атрибутов узла: ", div.attributes);
+		
+		// доступ к первому атрибуту 
+		console.log(div.attributes.item(1));
+		// или так...
+		console.log(div.attributes[1]);
+		
+		console.log("Имя третьего атрибута: ", div.attributes.item(2).name);
+		console.log("Значение третьего атрибута: ", div.attributes.item(2).value);	
+	</script>
+
+</body>
+</html>

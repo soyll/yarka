@@ -1,0 +1,48 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Объект Math</h1>
+	</header>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>
+
+	<script>
+		// диапазон для генератора случайных чисел
+		let rangeMin = 0;
+		let rangeMax = 50;		
+
+		// генерируем пять случайных чисел
+		let num1 = Math.floor(Math.random() * (rangeMax - rangeMin)) + rangeMin; 
+
+		let num2 = Math.floor(Math.random() * (rangeMax - rangeMin)) + rangeMin; 
+
+		let num3 = Math.floor(Math.random() * (rangeMax - rangeMin)) + rangeMin; 
+
+		let num4 = Math.floor(Math.random() * (rangeMax - rangeMin)) + rangeMin; 
+
+		let num5 = Math.floor(Math.random() * (rangeMax - rangeMin)) + rangeMin; 
+
+		// вывод в консоль
+		console.log(num1, num2, num3, num4, num5); 
+
+		// из диапазона чисел выбираем
+		// -> минимальное
+		let min = Math.min(num1, num2, num3, num4, num5);
+		// -> максимальное
+		let max = Math.max(num1, num2, num3, num4, num5);
+
+		// выводим найденные значения в консоль
+		console.log("Min = ", min); 
+		console.log("Max = ", max); 
+	</script>
+
+</body>
+</html>

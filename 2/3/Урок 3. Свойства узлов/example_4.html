@@ -1,0 +1,42 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+	
+	<h2>Антуан де Сент-Экзюпери — цитаты из книг</h2>
+	<!-- блок цитат -->
+	<div id="citate">
+		<p>У каждого человека свои звезды. Одним — тем, кто странствует, они указывают путь. Для других это просто огоньки.</p>
+		
+		<p>Я ведь не хотел, чтобы тебе было больно. Ты сам пожелал, чтобы я тебя приручил.</p>
+
+		<p>Дети должны быть очень снисходительными к взрослым.</p>
+	</div>	
+
+	<script>
+		// ссылка на элемент div
+		let div = document.body.firstElementChild.nextElementSibling.nextElementSibling; 
+		
+		// выведем textContent элемента
+		console.log(div.textContent); 
+		
+		// пока отличий от innerText не видно
+		console.log(div.innerText); 
+		
+		// определим новое текстовое содержимое узла div
+		// h1 - не сработает ;)
+		div.textContent = "<h1>Упс..., содержимое блока div удалено</h1>"; 
+		
+		// на замене innerText работает аналогично
+		// div.innerText = "<h1>Упс..., содержимое блока div удалено</h1>"; 
+	</script>
+
+</body>
+</html>

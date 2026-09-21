@@ -1,0 +1,39 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+	
+	<form id="myform">
+			Логин: <input type="text" name="login" value="denis"><p>
+			Пароль: <input type="password" name="pwd" value="12345"><p>
+			<input type="submit">
+	</form>
+	
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PROger</h3>
+		<a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
+	</footer>
+	
+	<script>
+		let form = document.body.firstElementChild.nextElementSibling;
+		// вывод свойств узла form 
+		console.log(form.tagName, form.id);
+		
+		let input = form.firstElementChild;
+		// вывод свойств узла input
+		console.log(input.nodeName, input.value);
+		
+		let a = form.nextElementSibling.lastElementChild;
+		// вывод свойств узла a
+		console.log(a.tagName, a.href);
+	</script>
+
+</body>
+</html>

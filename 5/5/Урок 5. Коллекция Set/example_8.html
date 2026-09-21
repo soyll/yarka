@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>	
+		// исходный массив
+		let res = ["php", "js", 0];
+		// пустая коллекция Set
+		let set = new Set();
+
+		// набор новых элементов для тестирования
+		var newel = "php"; // не будет добавлен
+		// var newel = "js "; // будет добавлен
+		// var newel = 20; // будет добавлен
+
+		res.push(newel);
+
+		// коллекция сохранит только уникальные значения				
+		for (let elem of res) {
+			set.add(elem);
+		};
+		
+		// проверим значения коллекции
+		console.log(set);
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

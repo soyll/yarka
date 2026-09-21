@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+	
+	<script>
+		// определение объекта		
+		let person = {
+			surname: "Строганова", 
+			name: "Ксения", 
+			post: "Преподаватель",
+			email: "strog-x@gmail.com",
+			phone: "2-12-85-06",
+			experience: 14.5,
+			img: "ava.jpg"
+		};
+
+		// определение/вызов функции по месту
+		( function ouDataPerson (data) {
+			// интерполируем свойства объекта в строку
+			with (data){
+				html = `
+					<img src="${img}"> <br>
+					Фамилия:  <b> ${surname} </b><br> 
+					Имя: <b> ${name} </b><br>
+					Должность: <b> ${post} </b><br>
+					E-mail: <b> ${email} </b><br>
+					Телефон: <b> ${phone} </b><br>
+					Cтаж: <b> ${experience} </b><br>
+				`;
+			}
+			
+			// вывод html-строки в документ браузера
+			document.write(html);
+		} ) (person); 	
+	</script>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

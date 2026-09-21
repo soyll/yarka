@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="teams-albums.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+	
+	<h2>Вложенные циклы</h2>
+
+	<div id="data"></div>	
+
+	<script>
+		let data = document.getElementById("data");
+		
+		teams = JSON.parse(teams);
+
+		// console.log(teams);
+
+		let out = "";
+
+		for (let i = 0; i < teams.length; i++) {
+			out = `
+				<h3>${teams[i].name} (id = ${teams[i].id})</h3>
+				Алиас: <b>${teams[i].alias}</b><br>
+				Страна: <b>${teams[i].country}</b><br>
+				Описание: ${teams[i].content}<br>
+				Дата основания: <b>${teams[i].date}</b><br>
+				<b>Альбомы:</b>
+			`;
+			
+			var albums = teams[i].albums;
+			let list = '';
+			
+			for (album of albums) {
+				list += `
+					<li>
+					${album.name} (Количество треков: ${album.track}, Дата написания: ${album.date})
+					</li>
+				`;
+			}
+			
+			out += '<ol>' + list + '</ol><hr>';
+			data.insertAdjacentHTML('beforeend', out);
+		}
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

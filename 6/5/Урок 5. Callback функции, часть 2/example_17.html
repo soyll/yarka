@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+	
+	<div>
+		<h2>Pink Floyd</h2>
+		Британская рок-группа {{ Pink Floyd }} знаменита своими продолжительными композициями и объединёнными в тематические сюиты песнями, звуковыми экспериментами, философскими текстами, дизайном обложек альбомов и грандиозными концертными шоу. Является одной из наиболее влиятельных и коммерчески успешных групп в истории мировой рок-музыки. В активе {{ Pink Floyd }} более 250 млн проданных альбомов в мире, в том числе 75 млн - в США. <p>
+		<!-- здесь ссылка не вставляется -->
+		P.S. Любите ли вы Pink Floyd так, как люблю его я?
+	</div>
+
+	<script>
+		// забираем из документа содержимое блока div
+		var str = document.body.querySelector("div").innerHTML;
+
+		callback = (el) => {
+
+			// console.log(el);
+
+			let link = "https://ru.wikipedia.org/wiki/Pink_Floyd";
+
+			let match = el.match(/{{([\s-_a-z]{1,20}[^\s])\s?}}/i);
+
+			// console.log(match);
+
+			return `<a href="${link}" target="_blank">${match[1]}</a>`;
+		}
+
+		// забираем из документа содержимое блока div
+		var str = document.body.querySelector("div").innerHTML;
+
+		// выполняем замену
+		var newstr = str.replace(/{{[a-z\s-]{1,50}}}/ig, callback);
+
+		// замещаем блок новым содержимым 
+		document.body.querySelector("div").innerHTML = newstr;
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

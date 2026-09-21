@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<h2>Заполните специальные данные. Страница 3</h2>
+	
+	<form id="frm" action="result.html" method="get" onsubmit="return fnSubmit()">
+		<!-- заполним данные формы и идем дальше -->
+		ИНН <input type="text" name="inn" value="123"><p>
+		СНИЛС <input type="text" name="snils" value="456"><p>
+		Полис ОМС <input type="text" name="oms" value="789"><p>
+
+		<input type="submit">
+	</form>
+
+	<script>
+		// создаем объект URLSearchParams
+		// сохраним в объект данные строки запроса
+		let params = new URLSearchParams(document.location.search);
+		
+		// функция отправки пользовательских данных
+		function fnSubmit() {
+			// создаем объект FormData
+			// сохраним в объект данны формы
+			let data = new FormData(document.getElementById("frm"));
+
+			// добавляем к объекту URLSearchParams данные FormData
+			for (let [key, val] of data.entries()) {
+				params.append(key, val)
+			}
+
+			// переписываем window.location
+			window.location.assign(document.getElementById('frm').getAttribute('action') + '?' + params.toString());
+
+			return false;	
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

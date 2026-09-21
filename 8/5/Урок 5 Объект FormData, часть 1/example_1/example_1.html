@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<form id="frm" name="frm">
+		<!-- -->
+	</form>
+	
+	<script>
+		// тестируем способы получения доступа к форме
+
+		var form = document.forms;
+		console.log(form);
+		// console.log(form[0]);
+
+		var form = document.getElementsByName("frm");
+		console.log(form); 
+		// console.log(form.item(0));
+	
+		var form = document.querySelector("#frm");
+		console.log(form);
+
+		var form = document.getElementById("frm");
+		console.log(form);
+		
+		// и др.
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

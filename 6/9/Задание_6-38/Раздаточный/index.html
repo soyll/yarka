@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+	
+	<!-- подключение массива books -->
+	<script src="books.js"></script>
+	
+	<script>	
+		// массив подключен
+		console.log(books);
+
+		// цикл по массиву
+		for (var i=0; i<books.length; i++) {
+			
+			setTimeout( () => {console.log(books[i].name)}, 1000 );
+
+			// ошибка ... 
+
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>
+

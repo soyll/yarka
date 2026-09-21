@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<div id="console"></div>
+
+	<script>
+		// с помощью функции setInterval каждые 2 сек. выводим файлы cookie 
+		let int = setInterval( () => {
+			if(document.cookie == ''){
+				clearInterval(int);
+				document.getElementById("console").innerHTML = '<h2>Все!</h2>';
+			} else
+				document.getElementById("console").insertAdjacentHTML("beforeend", document.cookie + '<p>');
+		}, 2000);
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

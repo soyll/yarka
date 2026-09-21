@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// инициируем исходный массив
+		var arr = new Array("php", "mysql", "laravel", "javaScript", ["css", "bootstrap"]);
+		
+		// создаем подмассивы из исходного массива
+		let serv = arr.slice(0,3);
+
+		let client = arr.slice(3,);
+
+		// выводим полученные массивы
+		console.log ("Изучаем серверные технологии: ", serv); // php, mysql, laravel
+		
+		console.log ("Изучаем клиентские технологии: ", client); // javaScript, [css, bootstrap]
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>Любовь не терпит объяснений. Ей нужны поступки</h2>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

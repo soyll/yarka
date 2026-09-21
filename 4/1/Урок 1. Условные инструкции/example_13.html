@@ -1,0 +1,75 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+
+	<h2>Проверка данных, введенных пользователем</h2>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>		
+
+	<script>
+		// на сайте действует скидка - 20%
+		// если сумма заказа свыше 10.000, то скидка - 25%
+		let orderJSON = `
+		{
+			"user":{
+				"name":"Евгений",
+				"login":"master",
+				"email":"master@gmail.ru"},
+			"info":{
+				"date":"06.01.23",
+				"price":12500,
+				"newprice":"undefined"
+			},
+			"course":[
+				{
+					"id":41,
+					"name":"Frontend- и backend- программирование: PHP и JavaScript",
+					"hours":90,
+					"certificate":"yes",
+					"price":7500
+				},
+				{
+					"id":12,
+					"name":
+					"Веб анимация средствами JavaScript и CSS",
+					"hours":30,
+					"certificate":"yes",
+					"price":5000
+				}
+			]
+		}`;
+		
+		// парсим строку JSON в JS объект
+		let order = JSON.parse(orderJSON);
+
+		// текущая цена без учета скидок
+		price = order.course[0].price + order.course[1].price;
+
+		// вычисляем действующий процент скидки 
+		if (price > 10000) {
+			discount = 0.25;
+		} else {
+			discount = 0.2;
+		}
+		
+		// вычисляем новую цену
+		newprice = price - (price * discount);
+		
+		// записыаеи в массив новую цену
+		order.info.newprice = newprice;
+
+		console.dir(order);
+	</script>
+
+</body>
+</html>

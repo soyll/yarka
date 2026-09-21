@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<h2>Автомобиль это не роскошь, а средство передвижения</h2>
+
+	<script>
+		// инициируем массив
+		let auto = ["Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge", "Ford", "Pontiac", "Hummer"];
+
+		// объявляем функцию
+		// параметр функции - переменная arr
+		function fnArray (arr) {
+			// теперь arr - локальная переменная-массив внутри функции 
+			
+			// инициализируем строку для вывода списка
+			let line = "";
+			
+			// формируем список
+			for (elem of arr) {
+				line += `<li>${elem}</li>`;
+			}
+			// возвращаем строку, которая является списком
+			return "<ul>" + line + "</ul>";
+		}
+		
+		// вызов функции, аргумент - массив auto
+		// вывод на экран результата вызова
+		document.write (fnArray(auto));
+	</script>		
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

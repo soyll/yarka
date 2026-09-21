@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Лексическое окружение и контекст</h1>
+	</header>	
+	
+	<script>		
+		// набор глобальных переменных
+		var aVar = "I am a VAR variable";
+		let aLet = "I am a LET variable";
+		const aCONST = 'I am a CONST'; 
+		aWithOut = "I am a WITHOUT variable";
+
+		// функция инструкция
+		function aFnStatement() {
+			console.log('I am a FUNCTION STATEMENT');
+		}
+
+		// функция выражение
+		var aFnExpression = function () {
+			console.log("I'm a FUNCTION EXPRESSION");
+		}
+
+		// функция стрелка
+		var aFnArrow = () => {
+			console.log("I'm a FUNCTION ARROW");
+		}
+
+		// объект
+		var aMyObj = {
+			name: "master",
+			login: "qwerty",
+			fn: function() {
+				console.log("I am a FUNCTION METHOD");
+			}
+		};
+
+		console.log(this.aVar); // I am a VAR variable
+
+		console.log(this.aLet); // undefined
+
+		console.log(this.aCONST); // undefined
+
+		console.log(this.aWithOut); // I am a WITHOUT variable
+
+		console.log(this.aFnStatement); // function aFnStatement()
+
+		console.log(this.aFnExpression); // function aFnExpression()
+
+		console.log(this.aFnArrow); // function aFnArrow()
+
+		console.log(this.aMyObj); // Object
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

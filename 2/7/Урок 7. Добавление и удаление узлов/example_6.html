@@ -1,0 +1,60 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		.sel {
+			border: 1px solid #0000ff;
+			padding:5px;
+		}
+		#par {background-color: #f5f5f5;}
+	</style>	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+
+	<h2>Цитаты из романа "Золотой теленок"</h2>
+
+	<div id="citate">
+		<p>Рио-де-Жанейро - эта хрупкая мечта моего детства, не касайтесь ее своими лапами!
+		
+		<p>Транспорт совсем от рук отбился, остается одно – принять ислам и передвигаться на верблюдах.
+
+		<p>Финансовая пропасть — самая глубокая из всех пропастей, в нее можно падать всю жизнь.
+	</div>	
+	
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>
+
+	<script>
+		// переменная с текстом для текстового узла
+		let txt = 'Автомобиль — не роскошь, а средство передвижения.';
+		
+		// выбираем элемент <div id="citate">
+		let div = document.querySelector("div#citate");
+		
+		// создаем узлы
+		let node_p = document.createElement("p");
+		let node_txt = document.createTextNode(txt);
+		
+		// текстовый узел вставляем в узел-элемент p
+	 	node_p.append(node_txt);	
+		
+	 	// назначаем узлу свойства
+		node_p.className = "sel";
+		node_p.id = "par";
+		
+		// вставляем новый узел в элемент div
+		div.append(node_p);
+
+		// выведем узел в консоль
+		console.log(node_p);
+	</script>
+	
+</body>
+</html>

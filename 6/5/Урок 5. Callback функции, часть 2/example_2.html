@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		.show { color: black; }
+		.blur {	color: red; }	
+	</style>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<div id="att">
+		<h1>Attention!</h1>
+	</div>
+	<div id="msg">
+		<h3>Время изучать JavaScript пришло!</h3>
+	</div>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+	
+	<script>
+    	// функция setInterval возвращает идентификатор таймера
+    	let intervalId = setInterval(() => {
+		
+			// получаем ссылки на узлы 
+			const attElem = document.getElementById("att");
+			const msgElem = document.getElementById("msg");
+
+  			// управляем классом блока
+  			msgElem.className = msgElem.className === "blur" ? "show" : "blur";
+		
+			// управляем видимостью блока
+			attElem.style.visibility = attElem.style.visibility === "hidden" ? "visible" : "hidden";
+    	}, 1000);
+
+    	console.log("идентификатор setInterval: ", intervalId);
+	</script>	
+
+</body> 
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<h2>Переопределение функций</h2>
+	
+	<script>
+		function fnMessage(){
+		    console.log("Великий Цезарь, идущие на смерть приветствуют тебя!");
+		    fnMessage = function(){
+		        console.log("Разделяй и властвуй");
+		    	fnMessage = function(){
+		        	console.log("Жребий брошен");
+		    	}
+		    }
+		}
+
+		fnMessage(); // ...
+
+		msg = fnMessage;
+		
+		fnMessage(); // ...
+		
+		msg(); // ...
+	</script>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

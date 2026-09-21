@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Замыкания</h1>
+	</header>	
+		
+	<script>
+		// внешняя функция счетчика
+		function createCounter() {
+  			let count = 0;
+			
+			// вложенная функция счетчика
+  			function increment() {
+    			count += 1;
+    			return count;
+  			}
+			// возврат текущего значения 
+			return increment;
+		}
+
+		// создаем замыкание
+		const counter = createCounter();
+
+		// console.log(counter);
+
+		// вызов замыкания
+		console.log(counter()); // 1
+		console.log(counter()); // 2
+		console.log(counter()); // 3
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

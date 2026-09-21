@@ -1,0 +1,42 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+	
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>	
+	
+	<script>
+		// определим переменные для хранения данных
+		let name = "Джон Джозеф Траволта"; // не вписывается в длину 
+
+		let login = "john-travolta";
+
+		let pwd = "holly@wood!"; // символ ! - не валиден
+
+		// определим шаблоны длч проверки данных
+		let namePattern = /^[а-яё ]{3,15}$/i;
+		let loginPattern = /^[a-z0-9-]{3,15}$/i;		
+		let pwdPattern = /^[a-z_@#$0-9-]{5,15}$/i;
+
+		// выполним проверку данных на валидность
+		let nameValid = namePattern.test(name);
+		let loginValid = loginPattern.test(login);
+		let pwdValid = pwdPattern.test(pwd);
+		
+		// выведем сообщение, если валидация не пройдена
+		if (!nameValid) console.log("Значение Имя не валидно"); 	
+		if (!loginValid) console.log("Значение Логин не валидно"); 	
+		if (!pwdValid) console.log("Значение Пароль не валидно"); 	
+	</script>
+
+</body>
+</html>

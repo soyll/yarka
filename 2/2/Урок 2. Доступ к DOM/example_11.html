@@ -1,0 +1,44 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Доступ к элементам DOM</h1>
+	</header>
+	
+	<div id="citate">
+		<p>А она — подошла к столу и выпила, залпом, ещё сто пятьдесят, ибо она была совершенна, а совершенству нет предела (В.Ерофеев).</p>
+		
+		<p>Хорошо идти, когда зовут. Ужасно — когда не зовут. Однако лучше всего, когда зовут, а ты не идёшь (С.Довлатов).</p>
+
+		<p>Замечательный день сегодня. То ли чай пойти выпить, то ли повеситься (А.Чехов).</p>
+	</div>	
+
+	<script>
+
+		// item() - возвращает узел с указанным индексом в DOM
+		
+		// ссылка на узел body
+		let body = document.body; 
+		
+		// получаем доступ к узлу div#citate 
+		let div = body.firstElementChild.nextElementSibling;
+		
+		// получаем набор дочерних узлов-элементов (теги <p>)
+		let nodes = div.children; 
+
+		// вывод в консоль дочерних узлов
+		console.log("0 --> ", nodes.item(0));	
+
+		console.log("1 --> ", nodes.item(1));	
+		
+		console.log("2 --> ", nodes.item(2));	
+		
+	</script>
+
+</body>
+</html>

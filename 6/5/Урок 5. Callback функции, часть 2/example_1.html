@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<div id="data"></div>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+
+	<script>
+		// функция получения данных 
+		function getData() {
+			// моделируем запрос на внешний ресурс
+			setTimeout(() => {
+				// определяем данные объекта user
+				user = { name: "John", login: "master" }
+			}, 500);
+		};
+
+		// функция вывода данных
+		function outData() {
+			// если данные не определены
+			if (user.name == undefined || user.login == undefined)
+				// формируем предупреждение
+				html = '<h2>Сбой авторизации в системе</h2>';
+			else 
+				// иначе интерполируем переменные в строку
+				html = `
+					<h2>Здравствуйте, вы вошли в приложение как:</h2>
+					Имя: <b>${user.name}</b> <br>
+					Логин: <b>${user.login}</b> <br>
+				`;
+			
+			// вывод данных в браузер
+			document.getElementById("data").innerHTML = html;	
+		};
+
+		// инициируем пустой объект
+		user = {};
+
+		// данные внешнего источника пришли через 0.5 сек.
+		getData();
+		// так как outData вызывается сразу, внешние данные не видны
+		outData();
+	</script>	
+
+</body> 
+</html>

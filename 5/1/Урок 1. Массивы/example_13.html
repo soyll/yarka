@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>Сохранение коллекции в двумерный массив</h2>
+	<h3>Лучшие франшизы в категории Обучение</h3>
+
+	<table border=1>
+		<thead>
+			<tr>
+				<th>Компания</th>
+				<th>Инвестиции (₽)</th>
+				<th>Прибыль (₽)</th>
+				<th>Окупаемость</th>
+				<th>Количество точек</th>
+				<th>Описание</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>SmartyKids</td>
+				<td>750 000</td>
+				<td>250 000</td>
+				<td>6 месяцев</td>
+				<td>303</td>
+				<td>Smartykids - это бизнес для людей, которым важно понимать, что их работа приносит пользу обществу.</td>
+			</tr>
+			<tr>
+				<td>Lil Ballerine</td>
+				<td>850 000</td>
+				<td>500 000</td>
+				<td>3 месяца</td>
+				<td>121</td>
+				<td>Lil Ballerine – детская школа балета. Уникальная школа с авторскими методами обучения в сочетании с традициями русской школы балета.</td>
+			</tr>	
+			<tr>
+				<td>Lancman School</td>
+				<td>2 500 000</td>
+				<td>60 000</td>
+				<td>6 месяцев</td>
+				<td>50</td>
+				<td>Lancman School – школа подготовки к ЕГЭ и ОГЭ, которая работает на рынке дополнительного образования больше 10 лет.</td>
+			</tr>
+			<tr>
+				<td>Lash&Look</td>
+				<td>180 000</td>
+				<td>150 000</td>
+				<td>2 месяца</td>
+				<td>8</td>
+				<td>“Lash&Look” - аккредитованная школа по наращиванию ресниц, после окончания обучения в которой выдается диплом государственного образца о повышении квалификации или о переподготовке.</td>
+			</tr>			
+		</tbody>		
+	</table>
+
+	<script>
+		// получение коллекции элементов списка
+		let tr = document.querySelectorAll('table > tbody > tr');
+		
+		// console.log(tr);
+
+		// количество элементов коллекции
+		let len = tr.length;
+
+		// инициируем массив
+		let franchise = [];
+	
+		// внешний цикл for
+		for (let i=0; i < len; i++) {	
+			
+			franchise[i] = [];
+
+			td = tr.item(i).querySelectorAll("td");
+
+			// console.log(td);
+			
+			franchise[i] = [];
+
+			// вложенный цикл for
+			for  (k=0; k < td.length; k++) {			
+				// заполняем массив третьего уровня
+				franchise[i].push(td.item(k).innerText);
+			}
+		}
+
+		// выводим массив в консоль
+		console.log(franchise);
+
+		// доступ к двумерному массиву через два индекса
+		console.log(franchise[1][0]);
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

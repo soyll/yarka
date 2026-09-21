@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		// определение функции
+		function fnHello (name){
+			return "Hello, my dear " + name + "!";
+		}
+		
+		// присвоение переменной hello ссылки на функцию fnHello
+		let hello = fnHello;
+		
+		// смотрим, что в переменной hello
+		console.log (hello);
+
+		// присвоение переменной result результата вызова функции fnHello
+		let result = fnHello("User");  
+
+		// смотрим, что в переменной result
+		console.log(result);
+	</script>	
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

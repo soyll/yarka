@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<h2>Вы запросили информацию об автомобиле</h2>
+
+	<script>
+		/*
+		программисту придется запоминать назначения индексов
+		->
+		0 - идентификатор
+		1 - бренд
+		2 - модель
+		3 - тип ДВС
+		4 - мощность л.с.
+		5 - расположение цилиндров
+		6 - рабочий объем
+		7 - число цилиндров
+		*/		
+		
+		// инициируем массив
+		let arr = [
+			'135',
+			'Toyota',
+			'Toyota Land Cruiser',
+			'Дизельный',
+			'249',
+			'V-образный',
+			'4461',
+			'8'
+		];		
+
+		// открываем тег маркированного списка
+		let html = `<ul>`;
+
+		// for-of перебирает !-значения-!
+		for (let elem of arr) {
+			// значение массива в каждой итерации
+			console.log("-> ", elem);
+			
+			// оборачиваем значение в теги списка
+			html += `<li>${elem}</li>`;
+		}
+
+		// закрываем тег маркированного списка
+		html += `</ul>`;
+		
+		// выводим список в браузер 
+		document.write(html);
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

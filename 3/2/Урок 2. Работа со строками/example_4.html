@@ -1,0 +1,36 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа со строками</h1>
+	</header>
+	
+	<h2>Японская поэзия</h2>
+
+	<p></p>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>	
+
+	<script>
+		let pre = document.getElementsByTagName("p")[0];
+		
+		// формируем строку,
+		// в качестве разделителя - символ переноса строки
+		let hokku = "Осенняя луна\nСосну рисует тушью\nНа синих небесах."
+				
+		// браузер переносов не видит, ему нужны теги
+		pre.innerHTML = hokku;
+
+		// консоль понятливее ;)
+		console.log (hokku);  
+	</script>
+
+</body>
+</html>

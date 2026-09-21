@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Курс JavaScript</title>
+	
+	<script>
+		// литеральное объявление объекта
+		let book = { 
+			"name": "Мастер и Маргарита",
+			"author": "М.Булгаков",
+			"year": 1940,
+			"genre": ["Мистика", "Триллер", "Драма", "Детектив"],
+			"bestseller": true
+		};
+
+		// формируем строку для вывода в браузер, 
+		// используем синтаксис косых кавычек
+		let line = `
+			<h2> ${book.name} </h2>
+			<p><i>Автор:</i>  ${book.author} <p>
+			<p><i>Год: </i> ${book.year} <p>
+			<p><i>Жанр: </i>
+				<ul>
+					<ol>${book.genre[0]}</ol>
+					<ol>${book.genre[1]}</ol>
+					<ol>${book.genre[2]}</ol>
+					<ol>${book.genre[3]}</ol>
+				</ul>
+			<p>
+			<p><i>Бестселлер: </i>${book.bestseller}
+		`;
+		
+		// выводим строку в браузер	
+		document.write (line);
+	</script>
+	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Введение в JavaScript</h1>
+	</header>
+	
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PROger</h3>
+		<a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
+	</footer>
+</body>
+</html>

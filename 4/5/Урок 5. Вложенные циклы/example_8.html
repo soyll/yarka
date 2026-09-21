@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<h2>Вложенные циклы</h2>
+	<h3>Лучшие книги — рейтинг Топ 100</h3>
+
+	<ol>
+		<li>Гарри Поттер и узник Азкабана
+			<ul>
+				<li>Джоан Роулинг</li>
+				<li>978-389-17021-6</li>
+				<li>2019</li>
+				<li>Махаон</li>
+			</ul>
+		</li>
+		<li>Зелёная миля
+			<ul>
+				<li>Стивен Кинг</li>
+				<li>978-5-17-085348-9</li>
+				<li>2014</li>
+				<li>АСТ</li>
+			</ul>
+		</li>
+		<li>Унесенные ветром
+			<ul>
+				<li>Маргарет Митчел</li>
+				<li>978-5-17-122888-0</li>
+				<li>2020</li>
+				<li>АСТ</li>
+			</ul>
+		</li>
+		<li>Свита короля
+			<ul>
+				<li>Нора Сакавич</li>
+				<li>978-5-6045889-7-0</li>
+				<li>2021</li>
+				<li>Popcorn Books</li>
+			</ul>
+		</li>
+		<li>Прислуга
+			<ul>
+				<li>Кэтрин Стокет</li>
+				<li>978-5-86471-732-5</li>
+				<li>2016</li>
+				<li>Фантом Пресс</li>
+			</ul>
+		</li>				
+	</ol>	
+
+	<script>
+		// массив хранения списка
+		var arr = [];
+
+		// получение HTML-коллекции элементов li внешнего списка
+		let elements = document.querySelectorAll('ol > li');
+									
+		// цикл for по элементам коллекции 
+		for (i = 0; i < elements.length; i++) {
+			
+			// массив хранения вложенного списка объявлен внутри цикла, 
+			// потому, что ->
+			// для каждого вложенного списка должен быть свой массив subarr
+			var subarr = [];
+			
+			arr[i] = [];
+
+			// первый элемент подмассива - скалярное значение
+			// -> Название книги
+			arr[i][0] = elements[i].firstChild.data;
+
+			// выбираем ul > li вложенного списка на каждой итерации
+			list = elements[i].firstElementChild.children;
+
+			// избавились от вложенного цикла
+			// иногда так легче читается код и больше маневра для верстки
+			subarr[0] = list[0].firstChild.data;
+			subarr[1] = list[1].firstChild.data;
+			subarr[2] = list[2].firstChild.data;
+			subarr[3] = list[3].firstChild.data;
+
+			// второй элемент подмассива - тоже массив
+			// -> Элементы вложенного списка
+			arr[i][1] = subarr;
+		};
+
+		console.log("Массив хранения списка");
+		console.log(arr);
+	</script>	
+
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

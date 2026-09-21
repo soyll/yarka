@@ -1,0 +1,44 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Регулярные выражения</h1>
+	</header>
+
+	<h2>Исходный текст</h2>
+	<p>
+		javascript — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript.<br />
+		javascript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
+	</p>
+
+	<h2>Редактированный текст</h2>
+	<div></div>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+
+	<script>
+		// строка в которой будем искать совпадение с шаблоном
+		let text = document.querySelector("p").innerHTML;
+
+		// глобальный шаблон поиска
+		let reg = new RegExp("javascript", "g");
+
+		// поиск и замена
+		let edit_text = text.replace(reg, "<b>JavaScript</b>");
+
+		// вставляем в документ измененный текст
+		document.querySelector("div").innerHTML = edit_text;
+
+		// вывод в консоль
+		// console.log(edit_text);	
+	</script>
+
+</body>
+</html>

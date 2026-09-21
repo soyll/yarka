@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<script>	
+		var a = 1;
+		b = 2;
+
+		console.log("a = ", window.a); // 1
+		console.log("b = ", window.b); // 2
+
+		console.log("---------------");
+
+		delete window.a; 
+		delete window.b; // cвойство 'b' было удалено и больше не существует
+
+		console.log("a = ", window.a); // 1
+		console.log("b = ", window.b); // undefined
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

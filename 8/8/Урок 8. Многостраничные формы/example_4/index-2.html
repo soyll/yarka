@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<h2>Заполните данные об образовании. Страница 2</h2>
+	
+	<form id="frm">
+		<!-- заполним данные формы и идем дальше -->
+		Уровень образования: <input type="text" name="degree" value="Высшее"><p>
+		Квалификация по диплому: <input type="text" name="qualification" value="Инженер"><p>
+		В каком году: <input type="text" name="date" value="2004"><p>
+	</form>
+
+	<a href="index-3.html" onclick="fnSubmit()">Дальше</a>	
+
+	<script>
+		// сохраняем JSON-строку cookie
+		let cookies = document.cookie.split('=')[1];
+
+		// console.log(cookies);
+
+		// преобразуем JSON в JS-массив
+		question = JSON.parse(cookies);
+
+		// console.log(question);
+
+		// функция отправки пользовательских данных
+		function fnSubmit() {
+			// сохраняем данные пользователя текущей формы
+			let data = new FormData(document.getElementById("frm"));
+
+			// объединяем данные пользователя
+			for(let [key, val] of data) {
+				question[key] = val;
+			}
+
+			// добавляем cookie
+			document.cookie = 'question=' + JSON.stringify(question) + '; path=/';				
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

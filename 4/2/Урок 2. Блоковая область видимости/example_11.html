@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<script>	
+		// глобальные переменные
+		var a = 5; 
+		var b = 20; 
+		
+		function go() {
+			// область видимости переменной – глобальный window
+			a = 50;
+			// область видимости переменной – текущая функция 
+			var b = 200;
+		}
+		
+		go();  
+		
+		// значение внешней (глобальной) переменной a поменялось
+		console.log("a = ", a); // 50
+
+		// значение внешней (глобальной) переменной b не поменялось
+		console.log("b = ", b); // 20
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

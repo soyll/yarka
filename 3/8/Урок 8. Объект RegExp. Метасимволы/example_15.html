@@ -1,0 +1,60 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Метасимволы</h1>
+	</header>
+
+	<div id="full">
+		<!-- буквы -a и -b для идентификации строк -->
+		Fullstack-developer-a
+		Fullstack-developer-b<br>
+	</div>
+	<hr>
+	<div id="frame">
+		<!-- буквы -a и -b для идентификации строк -->
+		<span>Framework-devel-a
+		Framework-devel-b
+	</div>
+	<hr>
+	<div id="web">
+		Web-разработчик - 120.000 <br> 
+		Web-devel - 70.000 <br>
+		Веб-дизайнер - 65.000 <br>
+		Веб-программист - 105.000 
+	</div>	
+		
+	<script>
+		var text = document.querySelector("#full").innerHTML;
+		
+		// выбрать только ту строку, где в конце - \n 
+		var pattern = /[a-z-]{1,25}(?=\n)/ig;
+		// выбрать только ту строку, где в конце - \br
+		// var pattern = /[a-z-]{1,25}(?=<br>)/ig;
+		console.log(text.match(pattern));
+		// --------------------
+		
+		var text = document.querySelector("#frame").innerHTML;
+		// выбрать только ту строку, где в начале - <span>
+		var pattern = /(?<=<span>)[a-z-]{1,25}/ig;	
+		console.log(text.match(pattern));
+		// --------------------
+
+		var text = document.querySelector("#web").innerHTML;
+		// выбрать только ту строку, где разрядов числа 7 и больше
+		// т.е. больше число
+		var pattern = /[a-zа-я-]{3,25}(?=.*[0-9.]{7})/ig;	
+		console.log(text.match(pattern));
+		// --------------------
+	</script>
+	
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

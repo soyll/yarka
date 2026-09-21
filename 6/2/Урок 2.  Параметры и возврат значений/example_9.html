@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// объявляем функцию с неопределенным количеством параметров
+		function fnParamsDisplay(...vars) {
+
+			// params - массив
+			// массив можно перебрать в цикле
+			for (value of vars){
+				console.log(value);
+			}
+		}
+		
+		// вызов функции c 4 аргументами
+		console.log ("-> вызов функции с 4 аргументами:");
+		fnParamsDisplay("99", 10, true, [{user:"sa"}, "php"]);		
+
+		console.log ("==========\n");
+
+		// вызов функции с 2 аргументами
+		console.log ("-> вызов функции с 2 аргументами:");
+		fnParamsDisplay("перестройка", "плоскогубцы");
+	</script>	
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

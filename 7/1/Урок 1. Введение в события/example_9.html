@@ -1,0 +1,50 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<!-- ! для навешивания события используем свойство DOM-объекта -->
+	
+	<button id="btn">Нажмите, пожалуйста</button>
+	
+	<script>
+		// массив, содержащий определения функций
+		let fun = [
+			() => {
+				alert ("Я Функция 1!")
+			},
+
+			() => {
+				alert ("Я Функция 2!")
+			},
+
+			() => {
+				alert ("Я Функция 3!")
+			}				
+		]
+
+		// получим доступ к кнопке
+		let btn = document.getElementById("btn");		
+
+		// получим случайное число
+		let num = Math.floor(Math.random() * 3);	
+
+		// console.log(num);	
+
+		// каждый раз при перезагрузке страницы
+		// навеcим случайную функцию на обработчик события onclick
+		btn.onclick = fun[num]
+	</script>	
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

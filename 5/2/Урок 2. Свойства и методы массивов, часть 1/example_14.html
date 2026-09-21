@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+	
+	<h2>Раздвоение личности — тяжелое психическое заболевание, так как сводит бесчисленное множество существ, на которые обычно раздроблен человек, к жалким двум</h2>
+
+	<script>
+		// исходный массив объектов
+		let teams = new Array(
+			{id:1, name:"Aerosmith", country:"США", date:"1970", style:["хард-рок", "блюз-рок", "рок-н-ролл", "глэм-метал"]},
+
+			{id:2, name:"Pink Floyd", country:"Великобритания", date:"1965", style:["психоделический-рок", "арт-рок", "эйсид-рок", "прогрессивный-рок"]},
+
+			{id:3, name:"The Beatles", country:"Великобритания", date:"1960", style:["рок", "рок-н-ролл", "поп", "хард-рок"]},
+
+			{id:4, name:"AC/DC", country:"Австралия", date:"1973", style:["хард-рок", "блюз-рок", "рок-н-ролл"]},
+
+			{id:5, name:"Scorpions", country:"ФРГ", date:"1965", style:["хард-рок", "глэм-метал", "хеви-метал"]},
+
+			{id:6, name:"Ленинград", country:"Россия", date:"1997", style:["рок", "ска", "фолк", "панк", "панк-рок"]}
+		);
+
+		let line = "";
+		
+		// переберем элементы массива
+		// не забывайте, каждый элемент массива - объект 
+		teams.forEach ((item, index, teams) => {
+			
+				line += `<li>${item.name}</li>`;
+
+				subline = "";
+
+				// массив стилей группы выведем подсписком второго уровня
+				item.style.forEach ((el, styles) => {
+					subline += `<li>${el}</li>`
+				}) 
+				subline = `<ul>${subline}</ul>`;
+
+				return  line += subline;
+			})
+			
+			// исходный массив
+			console.log(teams);
+
+			// сформированный двухуровневый список
+			document.write ("<ul>", line, "</ul>");
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

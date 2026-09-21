@@ -1,0 +1,43 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+	
+	<!-- beforebegin -->
+	<ul>
+		<!-- afterbegin -->
+		<li>HTML</li>
+		<li>CSS</li>
+		<!-- beforeend -->
+	</ul>
+	<!-- afterend -->
+
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>	
+
+	<script>
+		// выберем целевой элемент
+		let ul = document.querySelector("ul"); 
+
+		// выполняем вставку
+		ul.insertAdjacentHTML('beforebegin', "<h2>Технологии для Frontend-разработчика</h2>"); 
+		
+		ul.insertAdjacentHTML('afterbegin', "<li>JavaScript</li>");
+		
+		ul.insertAdjacentHTML('beforeend', "<li>Bootstrap</li>");
+
+		ul.insertAdjacentHTML('afterend', "<h3>На странице группы pechora-PROger в VKонтакте</h3>");
+
+		// посмотрите консоль разработчика вкладку Элементы обязательно
+	</script>
+
+</body>
+</html>

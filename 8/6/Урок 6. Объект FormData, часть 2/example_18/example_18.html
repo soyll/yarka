@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<h2>Пример асинхронного использования</h2>
+			
+	<form id="frm">
+		Логин:<input type="text" name="login" value="DenisDream"><p>
+		E-mail:<input type="text" name="email" value="denis-dream@gmail.com"><p>				
+		Пароль:<input type="text" name="pwd" value="qwerty@"><p>
+
+		<input type="submit" value="Отправить">
+	</form>
+	
+	<div id="response"></div>
+
+	<script>
+		// асинхронная отправка данных формы
+		frm.onsubmit = async () => {
+			event.preventDefault();
+
+			let response = await fetch('response.php', {
+				method: 'POST',
+				body: new FormData(frm) // а вот и наш объект FormData
+			});
+			
+			let result = await response.json();
+
+			let msg = `
+				<h3>Вы отправили на сервер и получили обратно следующие данные:</h3>
+				Фамилия:<b> ${result.login} </b><br>
+				Имя:<b> ${result.email} </b><br>
+				Отчество:<b> ${result.pwd} </b>
+			` 
+			// вставка в документ ответа сервера
+			document.getElementById("response").innerHTML = msg;
+		}	
+	</script>	
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

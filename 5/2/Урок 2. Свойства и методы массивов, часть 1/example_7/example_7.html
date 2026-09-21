@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="auto.js"></script>
+
+	<script>
+		// новый объект для добавления в массив
+		let car = {
+	        id: 7,
+	        name: "Kia Sorento Prime",
+	        brand: "Kia",
+	        dvs_type: "Дизельный",
+	        image: "images/kia-sorento-prime.png"
+    	};
+		
+		// два элемента массива удаляем 
+		// два элемента добавляем
+		let del = cars.splice(0, 2, {
+        	id: 6,
+        	name: "Chevrolet Tahoe",
+        	brand: "Chevrolet",
+        	dvs_type: "Бензиновый",
+        	image: "images/chevrolet-tahoe.png"
+    	}, car);
+
+		// конечный массив
+		console.log ("Конечный массив: ", cars);
+
+		// массив удаленных элементов
+		console.log ("Массив удаленных элементов: ", del);		
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>Если тебе плюют в спину, значит ты впереди</h2>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

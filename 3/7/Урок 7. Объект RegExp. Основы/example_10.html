@@ -1,0 +1,41 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Регулярные выражения</h1>
+	</header>
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>	
+
+	<script>
+		// строка в которой будем искать совпадение с шаблоном
+		let text = 
+`1;'Aerosmith';'aerosmith';'США';'1970';'хард-рок';'assets/teams/aerosmith.jpg'
+2;'Pink Floyd';'pink-floyd';'Великобритания';'1965';'психоделический-рок';'assets/teams/pink-floyd.jpg'
+3;'The Beatles';'the-beatles';'Великобритания';'1960';'рок-н-ролл';'assets/teams/beatles.jpg'
+4;'AC/DC';'ac-dc';'Австралия';'1973';'хард-блюз-рок';'assets/teams/acdc.jpg'
+5;'Scorpions';'scorpions';'ФРГ';'1965';'хард-рок';'assets/teams/scorpions_.jpg'
+6;'Ленинград';'ленинград';'Россия';'1997';'ска, фолк, панк';'assets/teams/leningrad.jpg'`;
+
+		// шаблон, разбивающий текст в массив построчно
+		let reg = new RegExp("\n");
+
+		// разбиваем строку по шаблону в массив
+		let arr = text.split(reg);
+
+		// вывод массива
+		console.log(arr); // 	
+
+		// вывод третьего элемента массива
+		console.log(arr[2]); // 	
+	</script>
+
+</body>
+</html>

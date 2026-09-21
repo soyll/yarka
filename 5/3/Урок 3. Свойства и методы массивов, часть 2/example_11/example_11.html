@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="flights.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+	
+	<script>
+		// сохраним массив flights.data.items в переменную items
+		let items = flights.data.items;
+		
+		// переберем массив items
+		items.forEach ((item, items) => { 
+			// сохраним массив item.flights в переменную flights
+			let flights = item.flights;
+
+			// цикл для отбора рейсов
+			result = flights.filter( flight => {
+				
+				// если рейс выполняется из Москвы, 
+				// поместии текущий объект массива в результирующий массив
+				return flight.from.city == "Moscow"; 
+			})
+		});
+			
+		// результат поиска	
+		console.log(result);
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

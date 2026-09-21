@@ -1,0 +1,41 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 1</h1>
+	</header>
+
+	<h2>Владимир Набоков</h2>
+
+	<div>
+		<p>Любовь к ближнему не котируется на бирже современных отношений.</p>
+		
+		<p>О, дайте мне хоть разок посентиментальничать. Я так устал быть циником!</p>
+
+		<p>Он продолжал молчать, и она замолчала тоже, и стала рыться в сумке, мучительно ища в ней тему для разговора.</p>
+	</div>	
+
+	<script>
+		// ссылка на элемент div
+		let div = document.body.firstElementChild.nextElementSibling.nextElementSibling;
+
+		// назначили собственное свойство элементу
+		div.mytitle = "Блок цитат Владимира Набокова"
+
+		// встроенное свойство
+		console.log(div.nodeName);
+
+		// встроенное свойство
+		console.log(div.textContent);
+
+		// пользовательское свойство
+		console.log("--> ", div.mytitle);		
+	</script>
+
+</body>
+</html>

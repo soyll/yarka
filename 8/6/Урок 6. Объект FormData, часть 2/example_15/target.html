@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+		
+	<script>
+		// заберем данные из localStorage
+		let dataJSON = localStorage.getItem("data");
+		
+		// парсим строку в объект	
+		data = JSON.parse(dataJSON);
+
+		console.log(data);
+
+		// вывод данных формы
+		for ([key, val] of data) {
+			document.write (key, ' = ', val, '<br>');
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

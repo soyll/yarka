@@ -1,0 +1,82 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		.wrapper { 
+			width: 80%; 
+			margin: 15% auto; 
+			display: flex;
+		}
+		.player { 
+			width: 50%; 
+			padding: 50px; 
+			background-color: #A6E3E9; 
+			margin-right: 10px 
+		}
+		input { 
+			display: block; 
+			width: 80%; 
+			margin: 10px auto; 
+			height: 3vh; 
+			background-color: #fff; 
+			text-align: center; 
+			font-size: 24px; 
+		}
+		.cubes { 
+			display: flex; 
+			padding-top: 30px 
+		}
+		img { width: 33% }
+	</style>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект Math</h1>
+	</header>
+
+	<div class="wrapper">
+		<div class="player">
+			<input type="text" name="gamerName" disabled>
+			<input type="text" name="gamerCount" disabled>
+			<div class="cubes">
+				<img src="1.png" alt="">
+				<img src="1.png" alt="">
+				<img src="1.png" alt="">
+			</div>
+		</div>
+
+		<div class="player">
+			<input type="text" name="gamerName" disabled>
+			<input type="text" name="gamerCount" disabled>
+			<div class="cubes">
+				<img src="1.png" alt="">
+				<img src="1.png" alt="">
+				<img src="1.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// объект для записи данных игроков
+		let game = {
+			gamer1: {
+				name: "",
+				count: undefined
+			},
+			gamer2: {
+				name: "",
+				count: undefined
+			}
+		}
+		
+		// ...
+		
+	</script>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>	
+</body>
+</html>

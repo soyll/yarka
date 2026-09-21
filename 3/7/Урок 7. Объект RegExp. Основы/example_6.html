@@ -1,0 +1,57 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Регулярные выражения</h1>
+	</header>
+
+	<pre>
+		<h2>Владимир Маяковский — Левый марш</h2>
+		<h3>
+		Глаз ли померкнет орлий?
+		В старое станем ли пялиться?
+		Крепи
+		у мира на горле
+		пролетариата пальцы!
+		Грудью вперед бравой!
+		Флагами небо оклеивай!
+		Кто там шагает правой?
+		Левой!
+		Левой!
+		Левой!
+		</h3>
+	</pre>
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>	
+
+	<script>
+		// строка в которой будем искать совпадение с шаблоном
+		let str = document.querySelector("pre").innerText;
+
+		// шаблон в конструкторе
+		let reg = new RegExp("левой", "i");
+
+		// поиск вхождения
+		let info = str.match(reg);
+
+		// вывод информации о результате поиска
+		// возвращается массив, но JS идентифицирует его как объект
+		console.log(typeof info);  // object
+		console.dir(info);
+
+		console.dir("----------"); 
+		
+		console.log(info[0]);
+		console.log(info['index']);
+		console.log(info['input']);
+	</script>
+
+</body>
+</html>

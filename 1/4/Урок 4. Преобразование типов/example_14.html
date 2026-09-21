@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Курс JavaScript</title>
+	
+	<script>	
+		// определение объекта
+		let user = {
+			name : "Денис",
+			surname : "Московский",
+			login : "DenisDream",
+			fnPersonal : function() {
+				let out = `
+					<h1>Персональный кабинет пользователя</h1>
+					<h2>${this.name} ${this.surname} (${this.login})</h2>
+				`;
+				// 
+				return out;
+			}
+		};
+
+		// вывод в консоль метода объекта
+		// синтаксис с точкой
+		document.write(user.fnPersonal());
+	</script>		
+	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Объекты</h1>
+	</header>
+	
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PROger</h3>
+		<a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
+	</footer>
+</body>
+</html>

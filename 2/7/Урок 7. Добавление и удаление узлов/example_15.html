@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+
+	<h2>Топ лучших фильмов</h2>
+	
+	<ol>
+		<li>Зеленая миля: 
+			<ul>
+				<li>режиссёр: Фрэнк Дарабонт</li>
+				<li>год: 1999</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Криминальное чтиво:
+			<ul>
+				<li>режиссёр: Квентин Тарантино</li>
+				<li>год: 1994</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Форрест Гамп: 
+			<ul>
+				<li>режиссёр: Роберт Земекис</li>
+				<li>год: 1994</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+	</ol>
+
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>
+
+	<script>
+		// выбор второго элемента нумерованного списка
+		let li = document.querySelector("ol > li:nth-child(2)"); 
+
+		// удаление выбранного элемента
+		li.remove();
+		
+		// удаленный элемент вывели в консоль
+		console.log(li);
+		
+		document.write("<hr>");
+		
+		// вставка в документ удаленного элемента
+		document.body.append(li);		
+	</script>
+
+</body>
+</html>

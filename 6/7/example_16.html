@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Область видимости и лексическое окружение</h1>
+	</header>	
+	
+	<script>		
+		// глобальное лексическое окружение 
+
+		// 1
+		let msg;
+		// 2
+		let msg = 'Добро пожаловать!';
+		// 3
+		msg = 'Посторонним В.';
+		// 4
+		function fnAuth(login, pwd, email) {
+			// область видимости функции 
+			// локальное (вложенное) лексическое окружение 
+
+			// console.log(login, pwd, email)	
+		}
+		
+		// 5
+		// первый вызов функции
+		fnAuth('Winnie-the-Pooh', 'ilovehoney', 'w-t-p@mail.ru');
+
+		// второй вызов функции 
+		fnAuth('Piglet', 'rainisstarting', 'pig&co@mail.ru') ;
+
+		// ----------
+		console.log(window);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

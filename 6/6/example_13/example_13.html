@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<h1>Функции в JavaScript</h1>
+	
+	<!-- модуль user-ini подключает объект user и переопределяет его свойства -->
+	<script type="module" src="./user-ini.js"></script>
+	
+	<!-- еще раз подключаем объект user -->
+	<script type="module">
+		import { user } from "./user.js";
+		
+		let per = `
+			<h3>Информация о пользователе</h3>
+			login: ${user.login}<br> 
+			email: ${user.email}<br>
+			role: ${user.role}
+		`;
+
+		document.getElementById("user").innerHTML = per;
+	</script>	
+
+	<div id="user"></div>
+
+    <footer align="center">
+        <h3>Образование | Веб-разработка | Frontend-программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

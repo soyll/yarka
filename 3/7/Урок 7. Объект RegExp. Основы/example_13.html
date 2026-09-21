@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Регулярные выражения</h1>
+	</header>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+
+	<script>
+		// массив заказа
+		let order = [
+			{
+				id : 1,
+				title : "Утепленная стеганая куртка",
+				brand : "MARCO DI RADI",
+				colour : "Синий",
+				country : "Китай",
+				hood : "Есть",
+				size : 52,
+				price : 25.590,
+				image : "images/steganaya-marco.jpg"
+			},
+			{
+				id : 2,
+				title : "Пальто",
+				brand : "Allsaints",
+				colour : "Коричневый",
+				country : "Китай",
+				hood : "Отсутствует",
+				size : "50",
+				price : 53.990,
+				image : "images/palto-allsaints.jpg"
+			},
+			{
+				id : 4,
+				title : "Парка",
+				brand : "Woolrich",
+				colour : "Синий",
+				country : "Вьетнам",
+				hood : "Есть",
+				size : 48,
+				price : 92.590,
+				image : "images/parka-woolrich.jpg"
+			},
+		];			
+
+		// преобразуем массив заказов в строку
+		let orderJSON = JSON.stringify(order);
+		
+		// вывод в консоль строки
+		// console.log(orderJSON); 
+		
+		// создание RegExp
+		let reg = new RegExp("Парка", "g");
+
+		// поиск в заказе товара - Парка
+		let res = reg.test(orderJSON);
+
+		// вывод результата поиска
+		console.log(res);  
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="teams.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<div id="console"></div>
+
+	<script>
+		// определение объекта со свойствами-функциями (методами)
+		let obj = {
+
+			// поиск данных в подключаемом массиве
+			searchData: function(name) {
+				// проходим по объектам массива
+				for(let team of teams) {
+					if (team.name == name) {
+						// если текущий объект искомый
+						return team;
+					}
+				}
+			},
+
+			// форматирование объекта данных для вывода 
+			formatData: function (data) {
+				with(data) {
+					formatTeam = `
+						<h3><a href='?id=${id}'>${name}</a></h3>
+						Страна: <b>${country}</b><br> 
+						О группе: <b>${content}</b><br> 
+						Дата основания: <b>${date}</b><br> 
+						Стиль исполнения: <b>${style}</b><br> 
+						<a href='${link}' target='_blank'>Смотреть в Википедии</a><br>
+					`;
+				}
+
+				return formatTeam;
+			},
+			
+			// вставка форматной строки в документ
+			outData: function (data) {
+				// выбор элемента по его id и вставка контента
+				document.getElementById("console").innerHTML = data;
+			}									
+		}	
+
+		// последовательный вызов функций-методов
+		
+		// поиск
+		let team = obj.searchData("Pink Floyd");
+		// форматирование
+		team = obj.formatData(team);
+		// вставка
+		obj.outData(team);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

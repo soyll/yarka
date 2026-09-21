@@ -1,0 +1,38 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		// числовая переменная
+		// если число не введено - по умолчанию 5
+		let r = prompt("Введите радиус окружности") || 5;
+
+		// если введено "не совсем" число
+		r = parseFloat(r);
+
+		// расчет длины окружности
+		let P = 2 * Math.PI * r;
+
+		// расчет площади круга
+		let S = Math.PI * r * r;
+
+		// вывод в браузер расчетных данных
+		document.write("<h2>При r = ", r, "</h2>");
+		document.write("<h3>Длина окружности: ", P, "</h3>");  
+		document.write("<h3>Площадь круга: ", S, "</h3>");
+	</script>		
+	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Объект Math</h1>
+	</header>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+</body>
+</html>

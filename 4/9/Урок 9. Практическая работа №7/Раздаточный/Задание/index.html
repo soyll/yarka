@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		table {
+			margin: 0 auto;
+			margin-top: 15px;
+		}
+		table * {
+			padding: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1 align="center">Выбор элементов DOM</h1>
+	</header>
+	
+	<!-- блок для вставки контента -->
+	<div class="flights"></div>
+
+	<!-- блок для вставки контента -->
+	<div class="passengers"></div>
+
+	<footer>
+		<h3 align="center">Добро пожаловать на pechora_PRO</h3>
+	</footer>
+
+	<script>
+		// составляем JS объект
+		obj = {
+			    "data": {
+			        "items": [
+			            {
+			                "code": "MGERS",
+			                "cost": 40000,
+			                "flights": [
+			                    {
+			                        "flight_id": 1,
+			                        "flight_code": "FP2100",
+			                        "from": {
+			                            "city": "Moscow",
+			                            "airport": "Sheremetyevo",
+			                            "iata": "SVO",
+			                            "date": "2020-10-01",
+			                            "time": "08:35"
+			                        },
+			                        "to": {
+			                            "city": "Kazan",
+			                            "airport": "Kazan",
+			                            "iata": "KZN",
+			                            "date": "2020-10-01",
+			                            "time": "10:05"
+			                        },
+			                        "cost": 10500,
+			                        "availability": 58
+			                    },
+			                    {
+			                        "flight_id": 2,
+			                        "flight_code": "FP1200",
+			                        "from": {
+			                            "city": "Kazan",
+			                            "airport": "Kazan",
+			                            "iata": "KZN",
+			                            "date": "2020-10-12",
+			                            "time": "12:00"
+			                        },
+			                        "to": {
+			                            "city": "Moscow",
+			                            "airport": "Sheremetyevo",
+			                            "iata": "SVO",
+			                            "date": "2020-10-12",
+			                            "time": "13:35"
+			                        },
+			                        "cost": 9500,
+			                        "availability": 58
+			                    }
+			                ],
+			                "passengers": [
+			                    {
+			                        "id": 1,
+			                        "first_name": "Ivan",
+			                        "last_name": "Ivanov",
+			                        "birth_date": "1990-02-20",
+			                        "document_number": "1234567890",
+			                        "place_from": null,
+			                        "place_back": null
+			                    },
+			                    {
+			                        "id": 2,
+			                        "first_name": "Ivan",
+			                        "last_name": "Sergeev",
+			                        "birth_date": "1990-03-20",
+			                        "document_number": "1224567890",
+			                        "place_from": null,
+			                        "place_back": null
+			                    }
+			                ]
+			            }
+			        ]
+			    }
+			};
+
+		// интерполируем данные объекта в HTML-строку, представляющую таблицу авиарейсов 
+		let flights = `
+			<table border="1">
+				<tr>
+					<th>Код</th>
+					<th>Откуда</th>
+					<th>Дата и время вылета</th>
+					<th>Куда</th>
+					<th>Дата и время прилета</th>
+					<th>Цена</th>
+				</tr>
+
+				<tr>
+					<td>${obj.data.items[0].flights[0].flight_code}</td>
+					<td>
+						${obj.data.items[0].flights[0].from.city}, 
+						${obj.data.items[0].flights[0].from.airport}
+						(${obj.data.items[0].flights[0].from.iata})
+					</td>
+					<td>
+						${obj.data.items[0].flights[0].from.date}
+						${obj.data.items[0].flights[0].from.time}
+					</td>
+					<td>
+						${obj.data.items[0].flights[0].to.city}, 
+						${obj.data.items[0].flights[0].to.airport}
+						(${obj.data.items[0].flights[0].to.iata})
+					</td>
+					<td>
+						${obj.data.items[0].flights[0].to.date}
+						${obj.data.items[0].flights[0].to.time}
+					</td>
+					<td>${obj.data.items[0].flights[0].cost}</td>
+				</tr>
+
+				<tr>
+					<td>${obj.data.items[0].flights[1].flight_code}</td>
+					<td>
+						${obj.data.items[0].flights[1].from.city}, 
+						${obj.data.items[0].flights[1].from.airport}
+						(${obj.data.items[0].flights[1].from.iata})
+					</td>
+					<td>
+						${obj.data.items[0].flights[1].from.date}
+						${obj.data.items[0].flights[1].from.time}
+					</td>
+					<td>
+						${obj.data.items[0].flights[1].to.city}, 
+						${obj.data.items[0].flights[1].to.airport}
+						(${obj.data.items[0].flights[1].to.iata})
+					</td>
+					<td>
+						${obj.data.items[0].flights[1].to.date}
+						${obj.data.items[0].flights[1].to.time}
+					</td>
+					<td>${obj.data.items[0].flights[1].cost}</td>
+				</tr>
+			</table>
+		`;
+
+		// интерполируем данные объекта в HTML-строку, представляющую таблицу пассажиров 
+		let passengers = `
+			<table border="1">
+				<tr>
+					<th>ID</th>
+					<th>Имя</th>
+					<th>Дата рождения</th>
+					<th>Номер документа</th>
+				</tr>
+
+				<tr>
+					<td>${obj.data.items[0].passengers[0].id}</td>
+					<td>
+						${obj.data.items[0].passengers[0].last_name}
+						${obj.data.items[0].passengers[0].first_name}
+					</td>
+					<td>${obj.data.items[0].passengers[0].birth_date}</td>
+					<td>${obj.data.items[0].passengers[0].document_number}</td>
+				</tr>
+
+				<tr>
+					<td>${obj.data.items[0].passengers[1].id}</td>
+					<td>
+						${obj.data.items[0].passengers[1].last_name}
+						${obj.data.items[0].passengers[1].first_name}
+					</td>
+					<td>${obj.data.items[0].passengers[1].birth_date}</td>
+					<td>${obj.data.items[0].passengers[1].document_number}</td>
+				</tr>
+			</table>
+		`
+
+		// выбираем блок для вставки
+		let con1 = document.querySelector(".flights");
+		// вставляем контент
+		con1.innerHTML = flights;
+
+		// выбираем блок для вставки
+		let con2 = document.querySelector(".passengers");
+		// вставляем контент
+		con2.innerHTML = passengers;		
+	</script>
+	
+</body>
+</html>

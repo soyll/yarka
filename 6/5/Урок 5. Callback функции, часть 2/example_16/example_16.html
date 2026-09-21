@@ -1,0 +1,50 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+	
+	<div>
+		<p>1. <b>Я спокоен</b> <img src='pict1.jpg' width='150px'> </p>
+		<p>2. <b>Я открыт к позитивным изменениям</b> <img src='pict2.jpg' width='150px'> </p>
+		<p>3. <b>Из тела уходит напряжение</b> <img src='pict3.jpg' width='150px'> </p>
+		<p>4. <b>Я хорошо справляюсь с любыми трудностями</b> <img src='pict4.jpg' width='150px'> </p>
+		<p>5. <b>Мне хорошо и уютно</b> <img src='pict5.jpg' width='150px'> </p> 
+	</div>		
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+
+	<script>
+		// функция коллбэк
+		fnCallback = (el) => {
+			
+			// console.log(el);
+
+			// match с флагом -g и без него дадут разный результат 
+			let info = el.match(/pict[1-5]\.jpg/);
+
+			// console.log(info);
+
+			return `<img src="censored.jpg" title="Исходное изображение: ${info[0]}" width="200px">`;
+		}
+
+		// забираем из документа HTML-содержимое блока div
+		var str = document.body.querySelector("div").innerHTML;
+
+		// получаем обновленый текстовый контент
+		var newstr = str.replace(/<img .*>/g, fnCallback);
+
+		// замещаем блок div новым контентом 
+		document.body.querySelector("div").innerHTML = newstr;		
+	</script>
+	    
+</body> 
+</html>

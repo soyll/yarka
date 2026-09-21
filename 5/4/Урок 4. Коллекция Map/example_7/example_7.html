@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="data.js"></script>
+
+	<script>	
+		// массив педагогов
+		let personnel = Array (
+			{
+				'id_personnel' : 11, 
+				'surname' : 'Бородина', 
+				'name' : 'Ксения', 
+				'patronymic' : 'Алексеевна'
+			},	
+			{
+				'id_personnel' : 23, 
+				'surname' : 'Красикова', 
+				'name' : 'Вера', 
+				'patronymic' : 'Николаевна' 
+			},
+			{
+				'id_personnel' : 53, 
+				'surname' : 'Рыбкина', 
+				'name' : 'Ольга', 
+				'patronymic' : 'Витальевна'
+			},		
+			{
+				'id_personnel' : 44, 
+				'surname' : 'Маркова', 
+				'name' : 'Елизавета', 
+				'patronymic' : 'Андреевна'
+			},
+			{
+				'id_personnel' : 75, 
+				'surname' : 'Ильчук', 
+				'name' : 'Виталина', 
+				'patronymic' : 'Георгиевна' 
+			}				
+		);
+	
+		// создаем объект Map
+		let personMap = new Map();
+
+		// выполняем итерацию по объектам массива personnel
+		personnel.forEach( person => {
+
+			// для каждого преподавателя ищем соответствие в массиве data
+			dataPerson = data.find( data => {
+				return person.id_personnel == data.id_personnel;
+			})
+
+			// запишем в коллекцию соответствующие другу другу объекты разных массивов
+			// объект из personnel - ключ 
+			// объект из data - значение ключа
+			personMap.set(person, dataPerson);
+		});
+
+		// т.о. объединили данные разных массивов в одну коллекцию
+
+		// вывод в консоль результирующей коллекции
+		console.log(personMap);
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

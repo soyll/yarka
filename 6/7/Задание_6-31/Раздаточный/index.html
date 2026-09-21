@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<!-- подключаем скрипт -->
+	<script src="script.js"></script>
+	
+	<!-- подключаем модуль -->
+	<script type="module">
+		// импортируем переменные
+		import { count } from "./module.js";
+	</script>
+
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Область видимости и лексическое окружение</h1>
+	</header>	
+	
+	<script>
+		// ???
+		count = 50;
+
+		// ???
+		function incCount(callback) {
+			let count = 80;
+			// ???
+			callback();
+		}
+
+		// ???
+		decCount = () => {
+			count++;
+		}
+
+		// ???
+		incCount(decCount);
+
+		console.log('count = ', count); // ???
+	</script>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<table border="1px">
+		<tr>	
+			<th>Название</th>
+			<th>Алиас</th>
+			<th>Страна</th>
+			<th>Год основания</th>
+			<th>Стиль</th>
+			<td></td>
+		</tr>		
+
+		<tr>	
+			<td>Aerosmith</td>
+			<td>aerosmith</td>
+			<td>США</td>
+			<td>1970</td>
+			<td>хард-рок</td>
+			<td><img src='icon.jpg' width="24"></td>
+		</tr>
+
+		<tr>
+			<td>Pink Floyd</td>
+			<td>pink-floyd</td>
+			<td>Великобритани</td>
+			<td>1965</td>
+			<td>психоделический-рок</td>			
+			<td><img src='icon.jpg' width="24"></td>
+		</tr>
+
+		<tr>
+			<td>AC/DC</td>
+			<td>ac-dc</td>
+			<td>Австралия</td>			
+			<td>1973</td>
+			<td>хард-блюз-рок</td>
+			<td><img src='icon.jpg' width="24"></td>
+		</tr>	
+
+		<tr>
+			<td>Ленинград</td>
+			<td>ленинград</td>
+			<td>Россия</td>			
+			<td>1997</td>
+			<td>ска, фолк, панк</td>
+			<td><img src='icon.jpg' width="24"></td>
+		</tr>		
+	</table>
+
+	<script>
+		// навесим обработчик на загрузку документа
+		document.addEventListener("DOMContentLoaded", addHandlerClick)
+		
+		// определим функцию, навесим обработчик на click по пиктограмме 
+		function addHandlerClick() {
+			// выбор пиктограмм
+			let images = document.querySelectorAll("table tr td img");
+			// перебираем все пиктограммы
+			images.forEach ( (img) => {
+				// навешиваем обработчики
+				img.addEventListener('click', fnClickInput);	
+			})
+		}
+
+		// функция скрытия строк
+		function fnClickInput() {
+			let elem = this.closest('tr').style.display = 'none';
+		}		
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

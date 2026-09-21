@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<!-- функция с передачей this -->
+	Функция c передачей аргумента this: <button onclick="fun_1(this)">Нажмите, пожалуйста</button><p>
+
+	<!-- функция без передачи this -->
+	Функция без передачи аргумента this: <button onclick="fun_2()">Нажмите, пожалуйста</button><p>
+
+	<script>
+		// this - ключевое слово,
+		// его нельзя использовать в параметре функции
+		function fun_1 (_this) {
+			alert (_this);
+		};
+		
+		function fun_2 () {
+			alert (this);
+		};
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

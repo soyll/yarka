@@ -1,0 +1,39 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		#citate {
+			background-color: lightgrey;
+			border-color: darkgrey;
+			padding: 20px; 
+		}		
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 1</h1>
+	</header>
+	
+	<div>
+		Эх, тройка! Птица тройка, кто тебя выдумал? Знать, у бойкого народа ты могла только родиться, в той земле, что не любит шутить, а ровнем-гладнем разметнулась на полсвета, да и ступай считать версты, пока не зарябит тебе в очи...		
+	</div>	
+
+	<script>
+		// ссылка на узел div
+		let div = document.body.firstElementChild.nextElementSibling; 
+
+		// создаем атрибут
+		var attr = document.createAttribute("id");
+		// назначим атрибуту значение
+  		attr.value = "citate";
+		div.attributes.setNamedItem(attr);
+
+		// или так ;)
+		// div.id = "citate";
+	</script>
+
+</body>
+</html>

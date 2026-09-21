@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+		
+	<input type="checkbox" onchange='fnMoodSwitch(this)'>Переключатель настроений<p>
+	
+	<button id="btn">Нажмите, пожалуйста</button>
+	
+	<script>
+		btn.addEventListener("click", fnHandler1);	
+		
+		// управление обработчиком события click
+		function fnMoodSwitch(_this) {
+			if (_this.checked) {
+				btn.removeEventListener("click", fnHandler1);
+				btn.addEventListener("click", fnHandler2);
+			} else {
+				btn.removeEventListener("click", fnHandler2);
+				btn.addEventListener("click", fnHandler1);			
+			}
+		}
+		
+		// объявим функции-обработчики  
+		// функция инструкция
+		function fnHandler1() {
+			// режим - пессимист
+			alert("Жизнь такая, что хуже не бывает! (говорит пессимист)");
+		}		
+		
+		// функция стрелка
+		fnHandler2 = () => {
+			// режим - оптимист
+			alert("Бывает, бывает... (говорит оптимист)");
+		}
+	</script>	
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

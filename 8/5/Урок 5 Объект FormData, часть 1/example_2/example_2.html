@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<form name="frm">  
+    	<input type="text" name="el" id="el">
+    </form>
+
+    <script>
+		// тестируем способы получения доступа к элементу формы 
+
+		// 1. прямой доступ по id
+		console.log(el); 
+	
+		// 2. дотуп как к коллекции элементов формы
+		console.log(document.forms[0].elements[0]);
+
+		// 3. доступ как к свойству узла формы
+		console.log(document.frm.el); 
+	
+		// 4. JS-метод getElementById() 
+		console.log(document.getElementById('el'));
+		
+		// 5. JS-метод getElementsByName() 
+		console.log(document.getElementsByName('frm')[0].el);	
+
+		// и другие ...
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

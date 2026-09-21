@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<!-- подключаем файл функций -->
+	<script src="function.js"></script>
+	<!-- подключаем файл данных -->
+	<script src="orders-clothes.js"></script>
+	<style>
+		div {font-family: Verdana; font-size: 10px;}
+	</style>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<script>
+		// получение данных о заказе с идентификатором = 1337424 
+		let order = fnGetOrderData("1337424");
+
+		// вывод форматированных данных о заказе
+		fnOutOrder (order);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

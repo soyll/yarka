@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="data.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<h2>Вложенные циклы</h2>
+
+	<div id="console"></div>
+
+	<script>	
+		// разбиваем исходную строку построчно в массив
+		// разделителем является символ переноса строк '\n'
+		let groups = data.split("\n");
+
+		// console.dir(groups);
+		
+		let arr = [];
+		i = 0;
+		
+		for (line of groups) {
+
+			// разбиваем каждый элемент массива groups в массив
+			// разделителем является символ ';'
+			arr[i] = line.split(";");
+
+			i++;
+		}
+	
+		console.log(arr);
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

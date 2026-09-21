@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+
+	<script>
+		// определение JSON-строки		
+		let personJSON = `{
+				"surname" : "Бородина", 
+				"name" : "Ксения", 
+				"post" : "Преподаватель",
+				"email" : "borodina-x@gmail.com",
+				"phone" : "2-12-85-0A",
+				"experience_college" : 14.5
+			}`;
+
+			// парсим JSON с дополнительной функцией
+			// коллбэк встроен в метод parse
+			let person = JSON.parse(personJSON, function (key, value) {
+				if (key == "experience_college") return undefined;
+
+				if (key=="phone") return "*****";
+				
+				if (key == "email" ) return "metodic@pedsov.ru";
+
+				// по умолчанию возвращаем исходное значение - value				
+				return value;
+			});
+
+			// вывод в консоль результата преобразования
+			console.log(person);
+	</script>
+
+</body> 
+</html>

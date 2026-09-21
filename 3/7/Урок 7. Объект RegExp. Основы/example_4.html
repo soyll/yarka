@@ -1,0 +1,34 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Регулярные выражения</h1>
+	</header>
+
+	<h2>Человек человеку волк (Плавт) (лат.: Homo homĭni lupus est. [Гхо́мо гхо́мини лю́пус эст])</h2>
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>			
+
+	<script>
+		// строка в которой будем искать совпадение с шаблоном
+		str = document.querySelector("h2").innerText;
+
+		// передаем не объект RegExp, а обычную строку - Homo
+		// строка будет неявно преобразована автоматически 
+
+		// поиск
+		let pos = str.search("Homo");
+
+		// вывод позиции вхождения
+		console.log(pos); // 37		
+	</script>
+
+</body>
+</html>

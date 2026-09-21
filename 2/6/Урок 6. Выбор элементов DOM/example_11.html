@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Выбор элементов DOM</h1>
+	</header>
+	
+	<h2>Ваш отзыв о статье</h2>
+
+	<form id="auth" class="personal">
+		Имя <input name="user-name" type="text" value="Леголас" /><br /><br/>
+		Логин <input name="user-login" type="text" value="master" /><br /><br/>
+		Пароль <input name="user-pwd" type="password" value="12345" /><br /><br/>
+	</form>
+
+	<form id="info" class="add">
+		ИНН <input name="inn" type="numeric" value="1234567891011" /><br /><br/>
+		E-mail <input name="email" type="email" value="master@mail.ru" /><br /><br/>
+		Phone <input name="phone" type="text" value="2-12-85-06" /><br /><br/>
+		Сообщение <textarea name="message"></textarea>
+	</form>
+
+	<footer>
+		<h3 align = "center">Добро пожаловать на pechora_PROger</h3>
+	</footer>
+
+	<script>
+		alert("Количество форм на странице: " + document.forms.length);
+
+		console.log("Первая форма: ", document.forms[0]);
+		console.log("Вторая форма: ", document.forms.item(1));
+
+		// получение коллекции форм
+		let frms = document.forms;
+		
+		// вывод коллекции
+		console.log(frms);
+		
+		// коллекция элементов второй формы
+		let set = frms[1].children;
+		console.log(set);
+	</script>
+
+</body>
+</html>

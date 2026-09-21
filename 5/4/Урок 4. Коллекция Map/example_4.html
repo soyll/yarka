@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// коллекция может быть сколько угодно сложной
+		// от этого логика ее создания не меняется
+		let map = new Map([
+			[
+				1,
+				{
+					id: 1,
+					title: 'Ноутбук HUAWEI MateBook D16 RLEF-X',
+					gpu: 'Intel Iris Xe Graphics',
+					cpu: 'Intel Core i5-12500H',
+					cpu_cores: 12,
+					ram: '16 ГБ',
+					diagonal: "16'",
+					price: 76.299,
+					img: "huawei-matebook-d16-rlef-x.jpg"
+				}
+			],
+			[
+				2,
+				{
+					id: 2,
+					title: 'Ультрабук HUAWEI MateBook D 15 BoM-WFQ9',
+					gpu: 'AMD Radeon Graphics',
+					cpu: 'AMD Ryzen 5 5500U',
+					cpu_cores: 6,
+					ram: '16 ГБ',
+					diagonal: "15.6'",
+					price: 62.999,
+					img: "huawei-matebook-d-15bom-wfq9.jpg"
+				}
+			]
+
+		]);
+
+		console.log("Коллекция Map:");
+		
+		// вывод коллекции в консоль
+		console.log(map);
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+	
+	<h2>Топ лучших фильмов</h2>
+	
+	<ol>
+		<li>Криминальное чтиво</li>
+		<li>Форрест Гамп</li>
+		<li>Зеленая миля</li>
+	</ol>
+
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>	
+
+	<script>
+		// выберем второй элемент исходного списка
+		let old_li = document.querySelector("ol li:nth-child(2)"); 
+
+		// создадим первый элемент списка с текстом
+		let new_li1 = document.createElement("li");
+		new_li1.innerText = "Белое солнце пустыни";
+
+		// создадим второй элемент списка с текстом
+		let new_li2 = document.createElement("li");
+		new_li2.innerText = "Берегись автомобиля";
+
+		// заменим элемент исходного списка на новые элементы
+		old_li.replaceWith(new_li1, new_li2);
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Асинхронный JavaScript</h1>
+	</header>
+	
+	<div id="content"><!-- место для вставки контента --></div>
+
+	<script>
+		// создаём объект XMLHttpRequest
+		let xhr = new XMLHttpRequest();
+
+		// инициализируем объект 
+		xhr.open('GET', 'server.php');
+
+		// укажем ожидаемый тип ответа
+		xhr.responseType = "json";
+
+		// отправка запроса
+		xhr.send();	
+
+		// сработает после получения ответа сервера
+		xhr.onload = function() {
+	 				
+			// ответ парсится автоматически
+			let resp = xhr.response;
+			
+			// формируем строку для вывода
+			out = `
+				<h3>${resp.name}</h3>
+				Идентификатор альбома: ${resp.id} <br /> 
+				Название: ${resp.name} <br />
+				Дата выхода: ${resp.date} <br />
+				Лейбл: ${resp.label} <br />
+				Формат: ${resp.format} <br />
+				Статус: ${resp.status} 
+			`;
+
+			// вставляем строку в документ
+			document.querySelector("#content").innerHTML = out; 
+		};
+	</script>
+
+    <footer align="center">
+        <h3>Разработка асинхронных приложений на JavaScript</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

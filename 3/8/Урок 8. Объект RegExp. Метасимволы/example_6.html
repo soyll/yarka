@@ -1,0 +1,34 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Метасимволы</h1>
+	</header>
+
+	<h2>Чeм бeзупрeчнee чeловeк снаружи, тeм большe дeмонов у нeго внутри (З.Фрeйд)</h2>
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>		
+
+	<script>
+		// строка в которой будем искать совпадение с шаблоном
+		str = document.getElementsByTagName("h2")[0].innerText;
+
+		// шаблон - поиск английских букв
+		let reg = /[a-z]/ig;
+
+		// поиск
+		let arr = str.match(reg);
+
+		// вывод позиции вхождения
+		console.log(arr); // 12 - совпадений (каких?)
+	</script>
+
+</body>
+</html>

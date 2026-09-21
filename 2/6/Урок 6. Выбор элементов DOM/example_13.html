@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Выбор элементов DOM</h1>
+	</header>
+	
+	<h2 align = "center">Устали ходить на работу и мало зарабатывать?</h2>
+	<h2 align = "center">А хочется не ходить на работу и зарабатывать много?? ;)</h2>
+	<h3 align = "center">Тогда вам к нам!</h3>
+	
+	<div>  
+		<ul>
+		<li><a href="#">Cекрет успеха "Закон творца".</a></li>
+		<li><a href="#">Как стать богатым и успешным человеком — пошаговый мануал.</a></li>
+		<li><a href="#">Как стать богатым человеком с нуля за год — Шаги, Законы и Принципы состоявшихся.</a></li>
+		<li><a href="#">Советы миллиардеров: как разбогатеть, даже если у вас нет богатых родителей.</a>
+		</ul>
+	</div>
+	
+	<footer>
+		<h3 align = "center">Добро пожаловать на pechora_PROger</h3>
+	</footer>
+
+	<script>
+		document.write("Количество ссылок на странице: ", document.links.length);
+		
+		// изменим свойства ссылок
+		document.links.item(0).style.color = "red";
+		document.links.item(1).style.textDecoration = "none";
+		document.links.item(2).style.cursor = "alias";
+		document.links.item(3).style.fontFamily = "Arial";
+
+		// получим в переменную коллекцию ссылок
+		let set = document.links;
+		// скроем вторую ссылку
+		// set[1].hidden = true;
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// инициируем первый массив
+		let arr1 = [1,2,3];
+		// инициируем второй массив
+		let arr2 = [4,5,6];
+
+		// объявляем функцию c неопределенным количеством параметров
+		function display(...params){
+
+			// контрольный вывод
+			console.log(params);
+			
+			// params - массив массивов
+			for (items of params){
+				// items - элемент, который сам является массивом
+	
+				// а если это массив, то перебираем его в цикле 
+				for (val of items) {
+					console.log(val);
+				}
+			}
+		}
+		
+		// вызов функции
+		display(arr1, arr2); 	
+	</script>
+	
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

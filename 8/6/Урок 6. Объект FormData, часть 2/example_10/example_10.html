@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+	
+	<h2>Анкета по литературе для старшеклассников</h2>
+
+	<form id="frm">
+		<h2>«Глупый пингвин робко прячет ... в утёсах» (М. Горький)</h2>
+			a) постную грудинку: <input type="radio" name="q-1" value="0"><br>
+			б) заначку: <input type="radio" name="q-1" value="0"><br>
+			в) тело жирное: <input type="radio" name="q-1" value="1"><br>
+			г) акваланг, оружие и документы: <input type="radio" name="q-1" value="0"><br>
+
+		<h2>Образ Базарова</h2>
+			а) отрицательный: <input type="checkbox" name="q-2-1" value="1"><br>
+			б) положительный: <input type="checkbox" name="q-2-2" value="0"><br>
+			в) равен нулю: <input type="checkbox" name="q-2-3" value="0"><br>
+			г) с усами: <input type="checkbox" name="q-2-4" value="0"><br>		
+	</form>
+	
+	<p><a href="#" onclick="fnSubmit(event)">Дальше</a>	
+
+	<script>
+		function fnSubmit(e) {
+
+			e.preventDefault();
+
+			// создаем объект FormData 
+			// не все поля формы попадут в объект FormData
+			let data = new FormData(document.getElementById("frm"));
+
+			// создаем пользовательский объект
+			let questions = {}
+			
+			// сохраняем в пользовательский объект данные формы
+			for(let [key, val] of data) {
+				questions[key] = val;
+			}
+
+			// вывод в консоль
+			console.log(questions)	
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

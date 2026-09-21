@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script>
+		// обработчик загрузки документа
+		function fnLoadDOM() {
+			// alert("Load!");
+			console.log("Load!");
+		}
+
+		// обработчик изменения размеров окна
+		function fnResizeWindow() {
+			// alert("Resize!");
+			console.log("Resize!");
+		}	
+
+		// обработчик прокрутки документа
+		function fnScroll() {
+			alert("Scroll!");
+			console.log("Scroll!");
+		}			
+	</script>
+</head>
+
+<!-- ! для навешивания события используем атрибут HTML -->
+
+<body 
+		onload="fnLoadDOM()" 
+		onresize="fnResizeWindow()" 
+		onscroll="fnScroll()"
+>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<ol>
+		<li>Зеленая миля: 
+			<ul>
+				<li>режиссёр: Фрэнк Дарабонт</li>
+				<li>год: 1999</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Криминальное чтиво:
+			<ul>
+				<li>режиссёр: Квентин Тарантино</li>
+				<li>год: 1994</li>
+				<li>страна: США</li>
+			</ul>
+			</li>
+		<li>Форрест Гамп: 
+			<ul>
+				<li>режиссёр: Роберт Земекис</li>
+				<li>год: 1994</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Общество мертвых поэтов: 
+			<ul>
+				<li>режиссёр: Питтер Уир</li>
+				<li>год: 1989</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Бойцовский клуб: 
+			<ul>
+				<li>режиссёр: Дэвид Финчер</li>
+				<li>год: 1999</li>
+				<li>страна: США, Германия</li>
+			</ul>
+		</li>
+		<li>Умница Уилл Хантинг: 
+			<ul>
+				<li>режиссёр: Гас Ван Сент</li>
+				<li>год: 1997</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Побег из Шоушенка: 
+			<ul>
+				<li>режиссёр: Фрэнк Дарабонт</li>
+				<li>год: 1994</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Красота по-американски:
+			<ul>
+				<li>режиссёр: Сэм Мендес</li>
+				<li>год: 1999</li>
+				<li>страна: США</li>
+			</ul>
+		</li>
+		<li>Начало: 
+			<ul>
+				<li>режиссёр: Кристофер Нолан</li>
+				<li>год: 2010</li>
+				<li>страна: США, Великобритания</li>
+			</ul>
+		</li>
+		<li>1+1:
+			<ul>
+				<li>режиссёр: Оливье Накаш</li>
+				<li>год: 2010</li>
+				<li>страна: Франция</li>
+			</ul>
+		</li>
+	</ol>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

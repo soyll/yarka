@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+	
+	<a href="#" id="link">Передача строки в формате JSON</a>
+
+	<script>
+		// формируем ссылку с данными формата JSON		
+		let href = '/target.html?par=' + JSON.stringify(
+			{
+				topic: "Vvedenie-v-JavaScript",
+				lesson: [
+					"Vvedenie-v-scenarii-JS", 
+					"Peremennye-i-konstanty",
+					"Tipy-dannyh"
+				]
+			});
+		
+		// вставка ссылки с данными в атрибут href
+		document.getElementById('link').setAttribute('href', href);
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

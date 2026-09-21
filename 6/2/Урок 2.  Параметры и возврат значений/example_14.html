@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// эта функция будет выступать в качестве аргумента
+		function getRole() {
+			// здесь выполняем какие-то действия, например, запрос к серверу
+			// результат этих действий возвращаем во внешнюю программу
+			let result = "Модератор";
+			return result;
+		}
+		
+		function showUser(user, role=getRole()) {
+			// getRole() выполнится только если не передан параметр role
+			// результат выполнения = значение role 
+			let msg = user + " (" + role + ")";
+			alert(msg);
+		}
+
+		// первый вызов, 2 аргумента
+		showUser("Евгений", "Администратор");
+		
+		// второй вызов, 1 аргумент
+		// будет выполнена функция getRole()
+		showUser("Евгений");
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

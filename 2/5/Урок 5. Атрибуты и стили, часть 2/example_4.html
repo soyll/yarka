@@ -1,0 +1,33 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 2</h1>
+	</header>
+	
+	<div id="citate" class="go" name="text" title="Н.В.Гоголь `Мертвые души`" book="Мертвые души" author="Н.В.Гоголь"> 
+		"... женщины, это такой предмет... просто и говорить нечего! Поди-ка попробуй рассказать или передать все то, что бегает на их лицах, все те излучинки, намеки, – а вот просто ничего не передашь. Одни глаза их такое бесконечное государство, в которое заехал человек – и поминай как звали! ..."			
+	</div>	
+
+	<script>
+		let header = document.body.firstElementChild; 
+		let div = header.nextElementSibling;
+
+		// нестандартный атрибут
+		console.log ("Нестандартный атрибут name: ");
+		console.log ("name = ", div.getAttribute ("name")); 
+		console.log (div.attributes.getNamedItem ("name"));
+		
+		// придуманные атрибуты
+		console.log ('Придуманные атрибуты: ');
+		console.log ("book = ", div.getAttribute ("book"));
+		console.log (div.attributes.getNamedItem ("author"));		
+	</script>
+
+</body>
+</html>

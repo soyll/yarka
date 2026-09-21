@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+	
+	<script>
+		// создаем объект URL
+		let url = new URL('http://js/target.php?course=javascript&topic=bom&lesson=object-url');
+	
+		// вывод ссылки в браузер
+		document.write("href: ", url.href, "<p>");	
+		
+		// получаем значение параметра lesson
+		let par = url.searchParams.get("lesson");
+		
+		// добавляем идентификатор фрагмента
+		par = par + "#encoding";	
+
+		// обновляем значение параметра lesson
+		url.searchParams.set("lesson", par);
+
+		// вывод обновленной ссылки в браузер
+		document.write("href: ", url.href);	
+	</script>	
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

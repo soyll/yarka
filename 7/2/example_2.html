@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<button class="btn">Контекст окна Window</button>
+	<p>
+	<button class="btn">Контекст элемента button</button>
+
+	<script>
+		// контекст - объект window
+		fnMessage0 = () => {
+			alert(this);
+		}		
+
+		// контекст - элемент button
+		function fnMessage1 ()  {
+			alert(this);
+		}
+
+		// получаем коллекцию элементов button
+		const btns = document.querySelectorAll(".btn");
+
+		// к элементам коллекции обращаемся по индексу
+		btns[0].addEventListener("click", fnMessage0);
+
+		btns[1].addEventListener("click", fnMessage1);
+	</script>	
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>
+

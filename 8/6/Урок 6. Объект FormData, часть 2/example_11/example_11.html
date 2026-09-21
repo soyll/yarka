@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="user.js"></script>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+	
+	<form id="frm">			
+		<!-- -->
+		<input type="submit" value="Отправить">
+	</form>
+	
+	<script>
+		// обходим массив в цикле
+		// формируем форму для редактирования данных пользователя
+		user.forEach( obj => {
+			
+			if(obj.login[1] == "DenisDream") {
+				
+				inputs = '';
+
+				for(key in obj) {
+					inputs += 
+					`<span>${obj[key][0]}</span>
+					<input type="text" name="${key}" value="${obj[key][1]}"><p>`
+				}				
+			}
+		} )
+
+		// вставка элементов в форму
+		document.getElementById("frm").insertAdjacentHTML("afterbegin", inputs)
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

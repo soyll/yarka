@@ -1,0 +1,44 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<button id="btn" onclick='alert("Событие - как атрибут HTML")'>Нажмите, пожалуйста</button>
+	
+	<script>
+		// начальное значение атрибута onclick
+		console.log("Значение атрибута onclick:");
+		console.log(btn.getAttribute("onclick"));
+		
+		// начальное значение свойства onclick
+		console.log("Значение свойства onclick:");
+		console.log(btn.onclick);
+
+		// перезапишем свойство onclick
+		btn.onclick = () => {
+			alert ("Я здесь главный!");
+		}
+
+		console.log("----------");
+
+		// значение атрибута
+		console.log("Значение атрибута onclick:");
+		console.log(btn.getAttribute("onclick"));
+
+	    // значение свойства
+		console.log("Значение свойства onclick:");
+		console.log(btn.onclick);
+	</script>	
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

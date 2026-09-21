@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Область видимости и лексическое окружение</h1>
+	</header>	
+	
+	<script>		
+		// глобальная область видимости
+		
+		// глобальные переменные
+		var aVarVariable = 'Global variable Var';
+		let aLetVariable = 'Global variable Let';
+		aVariable = 'Global variable';
+			
+		// область видимости блока (скобок)
+		{
+			// переменные уровня блока 
+			// создаем переменные с именами глобальных переменных
+			
+			// локальная переменная var
+			// var-переменная НЕ ЗНАЕТ о существовании блока
+			var aVarVariable = null;
+			
+			// локальная переменная let
+			// let-переменная ЗНАЕТ о существовании блока
+			let aLetVariable =  null;
+			
+			// локальная переменная без var/let
+			// переменная НЕ ЗНАЕТ о существовании блока
+			aVariable = null;
+
+			console.log('блоковая область видимости'); 
+			// выведем значения переменных после блока
+			console.log(aVarVariable);  // null
+			console.log(aLetVariable);  // null
+			console.log(aVariable);  // null
+		}
+		
+		console.log('глобальная область видимости'); 
+		// выведем значения переменных после блока
+		console.log(aVarVariable);  // null
+		console.log(aLetVariable);  // Global variable Let	
+		console.log(aVariable);  // null
+
+		// ----------
+		console.log(window);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

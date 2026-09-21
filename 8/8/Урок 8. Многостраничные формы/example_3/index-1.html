@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+	
+	<h2>Заполните общие персональные данные. Страница 1</h2>
+	
+	<form id="frm">
+		<!-- заполним данные формы и идем дальше -->
+		Фамилия: <input type="text" name="surname" value="Иванов"><p>
+		Имя: <input type="text" name="name" value="Иван"><p>
+		Отчество: <input type="text" name="patronymic" value="Иванович"><p>	
+	</form>
+	
+	<a href="index-2.html" onclick="fnSubmit()">Дальше</a>	
+
+	<script>
+		// функция отправки пользовательских данных
+		function fnSubmit() {
+			// создаем объект FormData 
+			let data = new FormData(document.getElementById("frm"));
+
+			// создаем пользовательский объект
+			let questions = {}
+			
+			// сохраняем в пользовательский объект данные формы
+			for(let [key, val] of data) {
+				questions[key] = val;
+			}
+
+			// удаляяем старые данные
+			window.localStorage.removeItem('questions');
+
+			// сохраняем данные пользователя
+			window.localStorage.setItem('questions', JSON.stringify(questions));			
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

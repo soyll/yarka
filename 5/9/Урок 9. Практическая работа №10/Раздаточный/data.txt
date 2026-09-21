@@ -1,0 +1,18 @@
+Монитор 23.8' ASUS VA24EHL
+1920x1080, IPS LED, 5ms, 250 cd/m, 178°/178°, 100M:1, D-Sub, DVI, HDMI, 75Hz, колонки, GamePlus Tec., HAS, Tilt, Swivel, Pivot, VESA, Black
+12 760
+images/ASUS-VA24EHL.jpg
+
+=============================================
+
+Мышь Logitech B100 910-003357
+black, USB, 800dpi
+588
+images/Logitech-B100.jpg
+
+=============================================
+
+Ноутбук Acer Nitro 5 AN NH.QFWEP.006
+i7-12700H/8GB/512GB SSD/RTX 3060 6GB/17.3" FHD TFT IPS/noDVD/cam/BT/WiFi/noOS/EN kbd/black
+195 846
+images/Acer-Nitro-5-AN.jpg

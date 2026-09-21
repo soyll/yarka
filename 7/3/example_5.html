@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru" onclick="alert('Тег html')">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		.elem{
+			border:1px solid #c0c0c0;
+			padding:15px;
+			margin:20px;
+		}
+	</style>
+</head>
+
+<body class="elem" onclick="alert('Тег body')">body
+	<section class="elem" onclick="alert('Тег section')">section
+		<div class="elem" onclick="alert('Тег div')">div
+			<p class="elem" onclick="alert('Тег p')">p
+				<!-- старт событиям onclick -->
+				<button class="elem" onclick="outMessage()">Погнали!</button>			
+			</p>
+		</div>	
+	</section>
+
+	<script>
+		function outMessage() {
+			alert ("Ой... Здравствуйте!");
+		}
+	</script>
+		
+</body>
+</html>
+

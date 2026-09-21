@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Область видимости и лексическое окружение</h1>
+	</header>	
+	
+	<script>		
+		// ГЛОБАЛЬНАЯ переменная с записью в window
+		var aVarGlobal = 'Var Global variable';
+		
+		// ГЛОБАЛЬНАЯ переменная без записи в window
+		let aLetGlobal = 'Let Global variable'; 
+			
+		// ГЛОБАЛЬНАЯ константа без записи в window
+		const aConstGlobal = 'This is a constant';
+
+		// ГЛОБАЛЬНАЯ переменная  с записью в window
+		// без ключевого слова var/let
+		aGlobal = 'Global variable';		
+
+		// определяем функцию
+		// функция создает локальную область видимости
+		function aOutVariable() {
+			console.log('Вывод ГЛОБАЛЬНЫХ переменных из ЛОКАЛЬНОЙ области видимости:');
+			console.log(aVarGlobal);  // Var Global variable
+			console.log(aLetGlobal);  // Let Global variable
+			console.log(aConstGlobal);  // This is a constant 
+			console.log(aGlobal);  // Global variable
+		}
+
+		// вызываем функцию
+		aOutVariable();
+
+		console.log('Вывод ГЛОБАЛЬНЫХ переменных из ГЛОБАЛЬНОЙ области видимости:');
+		console.log(aVarGlobal);  // Var Global variable
+		console.log(aLetGlobal);  // Let Global variable
+		console.log(aConstGlobal);  // This is a constant
+		console.log(aGlobal);  // Global variable 
+
+		// ----------
+		console.log(window);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

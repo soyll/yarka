@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// эта функция будет выступать в качестве аргумента
+		function getRole() {
+			// здесь выполняем какие-то действия, например, запрос к серверу
+			// результат отправляем во внешний код
+			let result = "Модератор";
+			return result;
+		}
+		
+		// функция двух параметров:
+		// - user - строковый
+		// - role - исходный код другой функции
+		function showUser(user, role) {
+			// исходный код с круглыми скобками запустит функцию-аргумент
+			if (role){
+				let msg = user + " (" + role() + ")";
+				alert(msg);
+			}
+		}
+
+		// вызов функции, 2 аргумента
+		showUser("Евгений", getRole);
+		
+		// вызов функции, 1 аргумент
+		showUser("NoName");
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

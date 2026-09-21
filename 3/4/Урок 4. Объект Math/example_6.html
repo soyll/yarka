@@ -1,0 +1,38 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		// расчет корней квадратного уравнения
+		// инициализация коэффициентов
+		let a = 1;
+		let b = 6;
+		let c = 4;
+		
+		// расчет дискриминанта
+		let D = Math.pow(b,2) - 4 * a * c; 
+
+		// расчет корней уравнения
+		let x1 = (-b + Math.sqrt(D)) / 2 * a;
+		let x2 = (-b - Math.sqrt(D)) / 2 * a;
+
+		// вывод расчетных значений
+		console.log("Дискриминант: ", D);
+		console.log("x1: ", x1);  
+		console.log("x2: ", x2); 
+	</script>	
+	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Объект Math</h1>
+	</header>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+</body>
+</html>

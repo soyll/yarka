@@ -1,0 +1,35 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+	
+	<script>
+		// ошибка типа Error
+		let error = new Error("Шеф, все пропало, все пропало!!! Гипс снимают, клиент уезжает!");
+		
+		console.log(error.name); // Error
+		console.log(error.message); // Шеф, все пропало ...
+		
+		// ошибка типа SyntaxError
+		let syntaxError = new SyntaxError("Все на выход. Сохраняйте спокойствие. Или паникуйте и кричите, уже не важно.");
+		console.log(syntaxError.name); // SyntaxError
+		console.log(syntaxError.message); //  Все на выход. Сохраняйте спокойствие ...
+
+		// ошибка типа ReferenceError
+		let referenceError = new ReferenceError("Приказ избегать паники отменяется! Пусть все сидят по домам и боятся!");
+		console.log(referenceError.name); // ReferenceError
+		console.log(referenceError.message); // Приказ избегать паники отменяется ...
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

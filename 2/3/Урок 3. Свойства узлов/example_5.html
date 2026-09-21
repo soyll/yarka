@@ -1,0 +1,36 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+	
+	<h2>Антуан де Сент-Экзюпери — цитаты из книг</h2>
+	<!-- блок цитат -->
+	<div id="citate">
+		<p>Дети <span>должны быть очень снисходительными</span> к взрослым.<script>alert("Привет, ну как тебе JavaScript?")</script>
+		<!-- а меня никто не видит ((( --></p>
+	</div>	
+	
+	<hr>
+	
+	<script>
+		// ссылка на элемент div
+		let div = document.body.firstElementChild.nextElementSibling.nextElementSibling; 
+		
+		// вывод свойств в документ
+		// вот здесь все становится ясно
+		document.write ("<h2>Свойство textContent</h2>"); 
+		document.write (div.textContent);
+		
+		document.write ("<h2>Свойство innerText</h2>");	
+		document.write(div.innerText);	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="clothes.js"></script>
+
+	<script>
+		// создание коллекции
+		let map = new Map();
+
+		// перебор элементов массива clothes
+		clothes.forEach ( (item, index) => {
+			// из массива создадим объект коллекции Map
+			map.set(index, item);
+		});
+
+		// перебор значений коллекции
+		for (item of map.values()) {
+			document.write(`
+				<h2>${item[1]} (код: ${item[0]})</h2>
+				<img src='images/${item[8]}' width='150px'> <br>
+				Бренд: <b> ${item[2]} </b><br>
+				Цвет: <b> ${item[3]} </b><br>
+				Страна: <b> ${item[4]} </b><br>
+				Капюшон: <b> ${item[5]} </b><br>
+				Размер: <b> ${item[6]} </b><br>
+				Цена: <b> ${item[7]} </b><br>
+				<hr>
+			`);
+		};
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

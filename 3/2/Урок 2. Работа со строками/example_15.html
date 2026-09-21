@@ -1,0 +1,47 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа со строками</h1>
+	</header>
+	
+	<pre>
+		<h2>
+		Смотрю на футон, созерцаю
+		Пусть немотствуют уста мои,
+		Перелетные птицы собрались в стаи
+		</h2>
+	</pre>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>	
+
+	<script>
+		// забираем содержимое тега h2,
+		// вместе со всеми переводами строк и табуляциями
+		let str = document.querySelector("pre h2").innerText;
+		
+		// разделитель - перенос строки: \n 
+		let arr = str.split("\n");
+		// вывод массива
+		console.log(arr);
+
+		// разделитель - запятая: , 
+		arr = str.split(",");
+		// вывод массива
+		console.log(arr);
+
+		// разделитель - знак табуляции: \t		
+		arr = str.split("\t");
+		// вывод массива
+		console.log(arr);
+	</script>
+
+</body>
+</html>

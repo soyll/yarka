@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Курс JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Введение в JavaScript</h1>
+	</header>
+	
+	<script>
+		// литеральное объявление объекта
+		let book = { 
+			"name": "Мастер и Маргарита",
+			"author": "М.Булгаков"
+		};
+		
+		// добавление свойств объекта
+		book.year = 1940;
+		book.genre = "Мистика";
+		book.bestseller = true;
+		
+		// выводим в браузер	
+		document.write("<h2>", book.name, "</h2>");
+		document.write("<p>Автор: ", book.author, "</p>");
+		document.write("<p>Год: ", book.year, "</p>");
+		document.write("<p>Жанр: ", book.genre, "</p>");
+		document.write("<p>Бестселлер: ", book.bestseller, "</p>");
+	</script>
+	
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PROger</h3>
+		<a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
+	</footer>
+</body>
+</html>

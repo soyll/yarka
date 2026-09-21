@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// создаем коллекцию Map
+		note = new Map();
+
+		// заполняем коллекцию данными
+		note.set("id", 1);
+		note.set("title", "Ноутбук HUAWEI MateBook D16 RLEF-X");
+		note.set("gpu", "Intel Iris Xe Graphics");
+		note.set("cpu", "Intel Core i5-12500H");
+		note.set("cpu_cores", 12);
+		note.set("ram", "16 ГБ");
+		note.set("diagonal", "16'");
+		note.set("price", 76.299);
+		note.set("img", "huawei-matebook-d16-rlef-x.jpg");
+
+		// возвращает итерируемый объект - набор значений коллекции
+		console.log(note.values());
+
+		console.log("---------------");
+
+		// итерация по строковым значениям коллекции
+		// значение может быть сколько угодно сложным объектом
+		for (val of note.values()) {
+			console.log(val);
+		};
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

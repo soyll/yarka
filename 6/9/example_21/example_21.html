@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="courses.js"></script>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Замыкания</h1>
+	</header>	
+		
+	<script>
+		// функция поиска курса
+		function outCourse(id) {
+			
+			let course = courses.find ( (rec) => {
+				return rec.id == id;
+			} )
+
+			// возвращаем функцию вывода курса
+			return function () {
+		    	with (course) {
+			    	document.write(`
+			    		<i>Название:</i> <b>${name} </b><br>
+			    		<i>Продолжительность:</i> ${time} <br>
+			    		<i>Расписание:</i> ${shedule}
+			    	`);
+		    	}
+		  	}
+		}
+
+		// идентификаторы интересующих нас курсов
+		let setId = [4, 7, 2];
+
+		// создание замыканий
+		cur = setId.map( (id) => {
+			return outCourse(id); 
+		} )
+
+		// массив функций
+		console.log(cur);
+
+		// пример вывода
+		cur[2](); 	
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

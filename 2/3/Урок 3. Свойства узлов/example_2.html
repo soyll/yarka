@@ -1,0 +1,42 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+	
+	<h2>Оскар Уайльд – цитаты</h2>
+	<!-- блок цитат -->
+	<div id="citate">
+		<p>У меня очень непритязательный вкус — достаточно самого лучшего.</p>
+		
+		<p>Все сочувствуют несчастьям своих друзей, и лишь немногие — радуются их успехам.</p>
+
+		<p>Я слышал столько клеветы в Ваш адрес, что у меня нет сомнений: Вы — прекрасный человек!</p>
+	</div>	
+
+	<script>
+		// ссылка на узел body
+		let body = document.body; 
+		
+		// получили доступ к элементу header
+		let header = body.firstElementChild;
+		
+		// далее спускаемся вниз по дереву узлов
+		let div = header.nextElementSibling.nextElementSibling;
+		let p = div.firstElementChild;
+		
+		// выводим значение html-узла p
+		console.log(p.innerText); 
+		
+		// изменим значение узла
+		p.innerText = "Очень опасно встретить женщину, которая полностью тебя понимает. Это обычно кончается женитьбой.";
+	</script>
+	
+</body>
+</html>

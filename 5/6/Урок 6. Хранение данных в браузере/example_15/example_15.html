@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="personnel.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>У меня очень простые запросы. Мне нравится динамит, оружейный порох и бензин! (Джокер)</h2>
+
+	<script>	
+		// очистим хранилище
+		localStorage.clear();
+
+		// сохраним объекты массива в localStorage
+		personnel.forEach( (item, key) => {
+			itemJSON = JSON.stringify(item);
+			localStorage.setItem(key, itemJSON);
+		});
+		
+		// получим набор ключей объекта localStorage
+		let keys = Object.keys(localStorage);
+
+		// тестовый вывод
+		// console.log(keys.sort());
+
+		// специальный цикл по массиву ключей
+		for(let key of keys.sort()) {
+			// извлекаем значение ключа
+			itemJSON = localStorage.getItem(key);
+
+			// преобразуем строку JSON в JS объект
+			item = JSON.parse(itemJSON); 
+
+			// выводим в консоль пару ключ -> значение
+			console.log(key, " -> ", item);
+		}
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

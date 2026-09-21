@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>Прежде чем осуждать меня, убедитесь, что вы совершенны (Джокер)</h2>
+
+	<script>	
+		// JS-объект
+		let user = {
+		   name: "Евгений",
+		   surname: "Лукашин",
+		   address: {
+		       street: "3-я улица Строителей, дом 25",
+		       city: "Печора",
+		       post: 101101
+		   },
+		   phone: [
+		       "(912)552-92-25",
+		       "(904)104-17-06"
+		   ],
+		   edu: [
+		   		"Даугавпилсское высшее военное авиационное инженерное училище",
+		   		"Ивановский энергетический университет"
+		   ]
+		}
+
+		// очистим хранилище
+		localStorage.clear();
+
+		localStorage.setItem("name", user.name);
+		localStorage.setItem("surname", user.surname);
+		localStorage.setItem("address", JSON.stringify(user.address));
+		localStorage.setItem("phone", JSON.stringify(user.phone));
+		localStorage.setItem("edu", JSON.stringify(user.edu));
+
+		// специальный цикл for
+		for(key in localStorage) {
+			// значения ключей выводятся в виде строк 
+			console.log(key, " -> ", localStorage.getItem(key));
+		}
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

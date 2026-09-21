@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<div id="data"></div>
+
+	<script>
+		// возвращаемся к проблеме запроса API 
+		// вторая функция должна воспользоваться результатами вызова первой
+
+		// функция получения данных
+		function getData() {
+			// моделируем запрос к API (на внешние ресурсы)
+		  	setTimeout(() => {
+		  		// определение данных
+		  		user = {name:"John", login:"master"}
+			}, 500);
+		 }; 
+		
+		// функция вывода данных
+		function  outData() {
+			// интерполируем переменные в строку
+			html = `
+				<h2>Здравствуйте, вы вошли в приложение как:</h2>
+				Имя: <b>${user.name}</b> <br>
+				Логин: <b>${user.login}</b> <br>
+			`;
+
+			// вывод данных в браузер
+			document.getElementById("data").innerHTML = html;	
+		};
+
+		// получаем проблему работы приложения
+		getData();
+		outData();
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

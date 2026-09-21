@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body> 
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<h1 id="elemH" data-login="DatasetLogin" data-pwd="DatasetPwd" data-email="dataset-email@mail.ru">Привет всем!</h1>
+
+	<form id="frm">
+		<input type="text" name="name" value="Иван"><p>
+		<input type="text" name="surname" value="Бездомный"><p>	
+		<input type="text" name="login" value="FormLogin"><p>
+		<input type="password" name="pwd" value="FormPwd"><p>
+		<input type="text" name="email" value="form-pwd@mail.ru"><p>
+
+		<button>Отправить данные</button>
+	</form>
+
+	<script>
+		// назначаем элементу document пользовательское событие и обработчик
+		document.addEventListener("getdata", function(e) {
+			// вывод в браузер 
+			document.write (
+				`
+					Контекст <b>${this}</b><br>
+					<b>Свойства элемента H1:</b><br>
+					Логин: ${elemH.dataset.login}<br>
+					Пароль: ${elemH.dataset.pwd}<br>
+					e-mail: ${elemH.dataset.email}<br>
+					---------- <p>
+					<b>Свойства пользовательского события:</b><br>
+					Логин: ${e.detail.login}<br>
+					Пароль: ${e.detail.pwd}<br>
+					e-mail: ${e.detail.email}<br>
+				`
+			);
+
+			document.write (e.detail.sayHello())
+		});
+
+		// инициируем пользовательское событие на элементе document
+		document.dispatchEvent(new CustomEvent("getdata", {
+			detail: { 
+				// свойства события берем из элементов формы 
+				name: frm.elements['name'].value,
+				surname: frm.elements['surname'].value,
+				pwd: frm.elements['pwd'].value,  
+				login: frm.elements['login'].value, 
+				email: frm.elements['email'].value,
+				// создаем метод пользовательского события
+				sayHello: function(){
+					name = this.name;
+					surname = this.surname;
+					return `<h2>Уважаемый ${name} ${surname}, здравствуйте! Так что же такое шизофрения?</h2>`;
+				} 
+			}
+		}));
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

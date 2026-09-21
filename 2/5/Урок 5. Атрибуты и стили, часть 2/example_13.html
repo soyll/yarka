@@ -1,0 +1,36 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 2</h1>
+	</header>
+	
+	<div name="Мертвые души" myAttr="1835"> 
+		"... женщины, это такой предмет... просто и говорить нечего! Поди-ка попробуй рассказать или передать все то, что бегает на их лицах, все те излучинки, намеки, – а вот просто ничего не передашь. Одни глаза их такое бесконечное государство, в которое заехал человек – и поминай как звали! ..."			
+	</div>	
+
+	<script>
+		// ссылка на узел div
+		let div = document.body.firstElementChild.nextElementSibling; 
+		
+		// меняем нестандартный атрибут
+		div.setAttribute('name', 'Похождения Чичикова, или Мертвые души');
+		
+		// меняем придуманный (пользовательский атрибут)
+		div.setAttribute('myAttr', 'Дата выхода: 1835')
+
+		console.log (div.name);  // undefined
+
+		console.log (div.myAttr);  // undefined
+
+		// через метод проверяем новое значение
+		console.log(div.getAttribute("name"));
+	</script>
+
+</body>
+</html>

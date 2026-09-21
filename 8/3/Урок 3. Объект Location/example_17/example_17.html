@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="sections.js"></script>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+		
+	<script>
+		// начальное значение переменной
+		let menu = '';
+
+		// формируем пункты меню
+		for(item of sections) {
+			menu += `
+				<li>
+					<a href="#">Раздел: <span class="section">${item.section}</span></a>
+					<ul>	
+						<li><a href="#"">Урок: <span class="lesson">${item.lesson}</span></a></li>
+						<li><a href="#">Тема: <span  class="topic">${item.topic}</span></a></li>
+					</ul>
+				</li>
+			`;			
+		} 
+
+		// вывод меню в браузер
+		document.write('<ol>' + menu + '</ol>');
+
+		// выбор пунктов меню
+		lis = document.querySelectorAll("ol > li");
+
+		// динамическое навешивание событий на ссылки меню
+		for (let li of lis) {
+			li.addEventListener("click", function() {
+				let section = li.querySelector(".section").innerText;
+				let lesson = li.querySelector(".lesson").innerText;
+				let topic = li.querySelector(".topic").innerText;
+				
+				if (event.target.className == "topic"){
+					link = `topic=${topic}`;	
+				}
+
+				if (event.target.className == "lesson"){
+					link = `topic=${topic}&lesson=${lesson}`;
+				}			
+
+				if (event.target.className == "section") {
+					link = `topic=${topic}&lesson=${lesson}&section=${section}`;
+				}
+				
+				// выполняем переход на ресурс target.php
+				location.assign("target.php?" + link);	
+			})
+		}
+	</script>	
+		
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

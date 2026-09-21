@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<h2>Волшебные атрибуты русских сказок</h2>
+
+	<div id="codecs">
+		<ul>
+			<li><label>Ковёр самолёт</label></li>
+			<li><label>Шапка невидимка</label></li>
+			<li><label>Кошелёк самотряс</label></li>
+			<li><label>Кольцо Всевластия</label></li>
+			<li><label>Ступа бабы Яги</label></li>
+			<li><label>Плащ невидимка</label></li>
+			<li><label>Волшебная палочка</label></li>
+			<li><label>Вода живая и мёртвая</label></li>
+			<li><label>Путиводный клубок</label></li>	
+			<li><label>Скатерть самобранка</label></li>	
+			<li><label>Меч кладенец</label></li>	
+			<li><label>Копьё самотык</label></li>	
+			<li><label>Трезубец Посейдона</label></li>	
+			<li><label>Рог минотавра</label></li>	
+			<li><label>Корень мандрагоры</label></li>	
+		</ul>
+	</div>
+		
+	<a href="target.html" id="link">Передать данные</a>
+	
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			lis = document.querySelectorAll("ul li");
+			// вставим элементы checkbox в список
+			lis.forEach( li => {
+				li.insertAdjacentHTML("beforeend", "<input type='checkbox'>");		
+			})
+		})
+	
+		// перед переходом на target.html сохраним пользовательский выбор
+		link.onclick = function savetList() {
+			arr = new Array();
+			// получаем коллекцию input:checked
+			let inputs = document.querySelectorAll("#codecs ul li input:checked");
+			// проходим по коллекции
+			inputs.forEach ( (input) => {
+				// добавляем в массив текст пункта списка
+				arr.push(input.previousElementSibling.innerText)	
+			})
+			// сохраняем в localStorage JSON-данные
+			window.localStorage.setItem("json", JSON.stringify(arr));
+			// alert(JSON.stringify(arr));
+		}
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

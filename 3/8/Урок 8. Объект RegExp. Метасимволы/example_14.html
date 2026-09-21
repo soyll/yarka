@@ -1,0 +1,52 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Метасимволы</h1>
+	</header>
+
+	<h2>Проверка данных, введенных пользователем</h2>
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>	
+
+	<script>
+		// Фамилию, Имя, Логин, Пароль  храним в переменных
+		// зададим шаблоны соответствия для пользовательских данных 
+		// используем символы начала и конца строки
+		let pattern_surname = /^[a-zа-яё\s]{3,20}$/ig; 
+
+		let pattern_name = /^[a-zа-яё]{3,10}$/ig;
+		
+		let pattern_login = /^[a-zA-Z\d]{5,10}$/g;
+		
+		let pattern_pwd = /^[\w\d@%&\[\]]{5,15}$/g;
+
+		// строковые данные пользователя в переменных
+		let surname = "Гарсиа Фернандес";
+
+		let name = "123Denis";
+
+		let login = "master123й";
+
+		let pwd = "Denis123@qw[";
+
+		// сопоставление шаблона со строковыми данными
+		// вывод результата в консоль браузера
+		console.log("Фамилия: ", pattern_surname.test(surname));
+
+		console.log("Имя: ", pattern_name.test(name));
+
+		console.log("Логин: ", pattern_login.test(login));
+
+		console.log("Пароль: ", pattern_pwd.test(pwd));
+	</script>
+
+</body>
+</html>

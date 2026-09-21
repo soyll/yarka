@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Асинхронный JavaScript</h1>
+	</header>
+	
+	<script>
+		let xhr = new XMLHttpRequest();
+		xhr.open ("POST", "server.php");
+
+		// определим объект с данными о товаре
+		let order = {
+			id : 1,
+			title : "Утепленная стеганая куртка",
+			brand : "MARCO DI RADI",
+			colour : "Синий",
+			country : "Китай",
+			hood : "Есть",
+			size : "52",
+			price : 25.590,
+			image : "steganaya-marco.jpg"
+		};
+		
+		// упаковываем объект c данными для отправки
+		JSONalbum = JSON.stringify(order);
+
+		// отправка запроса
+		// к запросу добавляем тело сообщения
+		// отправляем данные формата JSON
+		xhr.send(JSONalbum);
+
+		// сработает после получения ответа сервера
+		xhr.onload = function() {
+			console.log(xhr.response);
+		} 
+	</script>
+		
+    <footer align="center">
+        <h3>Разработка асинхронных приложений на JavaScript</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

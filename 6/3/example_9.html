@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		function fnStrict() {
+			"use strict";
+			
+			// пытаемся переменную сделать глобальным свойством объекта window
+			aStrict = 99;
+
+			/*
+				код далее выполняться не будет
+				для выполнения необходимо:
+				либо:
+					закомментировать - use strict;
+				либо:
+					закомментировать - aStrict = 99;
+				либо:	
+					объявить переменную - var aStrict = 99; || let aStrict = 99;
+			*/
+
+			return this;
+		}
+
+		fnStrict();
+
+		console.log(this);
+	</script>	
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

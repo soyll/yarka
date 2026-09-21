@@ -1,0 +1,35 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		#plus {color: blue}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 1</h1>
+	</header>
+	
+	<div id='citate'>
+		Эх, тройка! Птица тройка, кто тебя выдумал? Знать, у бойкого народа ты могла только родиться, в той земле, что не любит шутить, а ровнем-гладнем разметнулась на полсвета, да и ступай считать версты, пока не зарябит тебе в очи...		
+	</div>	
+
+	<script>
+		// ссылка на узел body
+		let body = document.body; 
+		let header = body.firstElementChild;
+		let div = header.nextElementSibling;
+		
+		// поменяем атрибут id 
+		div.id = "plus";
+		
+		// к узлу применились настройки из <style>
+		// для идентификатора id
+		console.log("Текущий идентификатор элемента: id =", div.id);
+	</script>
+
+</body>
+</html>

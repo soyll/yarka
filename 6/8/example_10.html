@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Лексическое окружение и контекст</h1>
+	</header>	
+	
+	<script>		
+		// определене объекта
+		let obj = {
+			mtdStatement: function () {
+				console.log('Метод-выражение');
+				console.dir(this);
+			},
+			mtdArrow: () => {
+				console.log('Метод-стрелка');
+				console.dir(this); 
+			}
+		};
+
+		// вызов методов объекта
+		obj.mtdStatement();  // Object
+
+		obj.mtdArrow();  // window
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

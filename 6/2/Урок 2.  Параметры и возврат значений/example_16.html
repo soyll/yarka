@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		// тестируем параметр по значению
+		
+		// объявляем функцию - инструкцию
+		// в функцию передаем параметр-число x
+		function fnChangeNum(x) {
+			// изменили переменную x
+			var x = x + 10;
+			console.log("в функции изменили аргумент, x = ", x);
+		}
+		
+		// объявили переменную, присвоили значение
+		var n = 10;
+		
+		console.log("-> переменная n ДО вызова функции: n = ", n); // 10
+		
+		// вызываем функцию
+		fnChangeNum(n);  // 20
+		
+		console.log("-> переменная n ПОСЛЕ вызова функции: n = ", n);  // 10
+	</script>	
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

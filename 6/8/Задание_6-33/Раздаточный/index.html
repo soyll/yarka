@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Лексическое окружение и контекст</h1>
+	</header>	
+	
+	<script>
+		let maxCount = cars.length;
+		let id = Math.floor(Math.random() * (maxCount - 1) + 1);
+
+		// функция вывода
+		let outCar = function() {
+	        
+	        return `
+				ID: ${this.id} <br>
+				Название: <b>${this.name}</b> <br>
+				Бренд: <b>${this.brand}</b> <br>
+				Тип двигателя: <b>${this.dvs_type}</b> <br>
+				Мощность: <b>${this.power_hp}</b> л.с.<br>
+				Кол. цилиндров: <b>${this.cylinders_num}</b> <br>
+				Макс. скорость: <b>${this.max_speed}</b> км/ч <br>
+				<img src='images/${this.image}'> <br>
+	        `;	
+		}
+
+		// функция получения случайного объекта
+		
+		// ...
+
+		// вызов функции в контексте объекта
+		document.write(outCar.call(/* контекст */);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

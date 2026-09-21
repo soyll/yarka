@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Замыкания</h1>
+	</header>	
+		
+	<script>
+		// внешняя функция
+		function outer(num) {
+			// локальный объект
+			user = [
+				{
+					login: "web-master",
+					pwd: "qwerty",
+					email: "web-master@my-site.org",					
+				},
+				{
+					login: "scill-free",
+					pwd: "12345",
+					email: "scill-free@my-site.org",					
+				}				
+
+			]
+			
+			// возвращаем определение безымянной функции
+			return function() {
+			    with (user[num]) {
+				    document.write (`
+				    	<h3>Уважаемый пользователь, вы запросили персональные данные:</h3>
+				    	Логин: ${login} <br>
+				    	Пароль: ${pwd} <br>
+				    	E-mail: ${email} <br>
+				    `);
+			    }
+			}
+		}
+
+		// переменные глобального контекста 
+		var name = "Anonymous";
+		var email = "Unknown";
+		var role = "user";
+
+		// создание замыкания
+		let person_1 = outer(0);
+		let person_2 = outer(1);
+		
+		// вызов замыкания
+		person_1();
+		person_2(); 	
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

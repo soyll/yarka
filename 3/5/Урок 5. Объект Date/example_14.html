@@ -1,0 +1,43 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	
+	<script>
+		// первая метка времени
+		var a = new Date(2023, 0);
+		
+		// вторая метка времени
+		var b = new Date(2022, 0);
+
+		// вычисляем разность в миллисекундах
+		var dif = a.getTime() - b.getTime();
+		console.log("Расчетное время в миллисекундах: ", dif);
+		
+		// разность меток  можно вычислить и так
+		// var dif = a - b;
+		// console.log(dif);		
+		
+		// всего дней
+		console.log("Всего дней: ", dif / (1000 * 60 * 60 * 24));
+		// всего часов
+		console.log("Всего часов: ", dif / (1000 * 60 * 60));
+		// всего минут
+		console.log("Всего минут: ", dif / (1000 * 60));
+		// всего секунд
+		console.log("Всего секунд: ", dif / (1000));
+	</script>
+
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Объект Date</h1>
+	</header>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<!-- подключаем файл данных -->
+	<script src="courses.js"></script>
+	
+	<script>
+		// функция поиска курса по идентификатору
+		function fnGetCourse(id) {
+			for (let course of courses) {
+				if (course.id == id)
+					return course;
+			}
+		}
+
+		// функция форматного вывода данных о курсе
+		function fnOutCourse(obj) {
+			// формируем вывод
+			let out = `
+					Идентификатор курса: <b>${obj.id}</b><br>
+					Название: <b>${obj.name}</b><br>
+					Срок обучения: <b>${obj.time}</b><br>
+					Расписание: <b>${obj.shedule}</b><br>
+					Уровень: <b>${obj.level}</b><br>
+					Преподаватель: <b>${obj.teacher}</b><br>
+					Цена: <b>${obj.price}</b><br>
+				`;
+
+			// вставка форматной строки в дерево DOM
+			document.getElementById("info").innerHTML = out;	
+		}
+	</script>	
+	
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<h2>Вы запросили информацию по курсу:</h2>
+	<div id="info"></div>
+
+	<script>
+		// получение данных курса с идентификатором = 2
+		// данные сохраняем в переменную course
+		let course = fnGetCourse(2);
+		
+		// форматный вывод в браузер
+		// данные переменной course передаем в качестве параметра функции 
+		fnOutCourse(course);
+	</script>	
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

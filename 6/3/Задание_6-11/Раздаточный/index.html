@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="teams-albums.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<div id="console"></div>
+
+	<script>
+		// поиск данных в подключаемом массиве
+		function fnSearchData(name) {
+			// проходим по объектам массива
+			for(let team of teams) {
+				if (team.name == name) {
+					// если текущий объект искомый - 
+					// - сохраняем объект в ппеременную teamData
+					// - прерываем итерации
+					teamData = team;
+					break;
+				}
+			}
+			return this;
+		}
+		
+		// форматируем для вывода объект данных
+		function fnFormatData() {
+			with(teamData) {
+				teamOut = `
+					<h3><a href='?id=${id}'>${name}</a></h3>
+					Страна: <b>${country}</b><br> 
+					О группе: <b>${content}</b><br> 
+					Дата основания: <b>${date}</b><br> 
+					Стиль исполнения: <b>${style}</b><br> 
+					<a href='${link}'>Смотреть в Википедии</a><br>
+				`;
+			}
+
+			teamOut += "<h3>Альбомы:</h3><ol>";
+			// проходим по массиву альбомов
+			for (team of teamData.albums) {
+				teamOut += `<li>${team}</li>`;
+			}
+			teamOut += "</ol>";
+
+			return this;
+		}
+		
+		// вставляем форматную строку в документ
+		function fnOutData(target) {
+			// выбор элемента по его id и вставка контента
+			document.getElementById(target).innerHTML = teamOut;
+		}
+
+		// формируем цепочку вызовов
+		fnSearchData("Pink Floyd").fnFormatData().fnOutData("console");
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

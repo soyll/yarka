@@ -1,0 +1,47 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+
+	<h2>Проверка данных, введенных пользователем</h2>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>		
+
+	<script>
+		// объявим данные для проверки
+		let name = "Denis1";
+		let login = "master";
+		let pwd = "Denis123@qw^";
+
+		// определим шаблоны проверки
+		let name_pattern = /^[a-zа-яё]{3,10}$/ig;
+		let login_pattern = /^[a-zA-Z0-9 ]{5,10}$/g;
+		let pwd_pattern = /^[a-zA-Z0-9@#$%^&*]{5,15}$/g;
+
+		// предположим, что проверяться будет не один пользователь
+		// пригодится в следующих уроках
+		let user = [];
+
+		// первый пользователь
+		user[0] = {};
+
+		// выполняем валидацию данных
+		user[0].name = name.match(name_pattern) ? name : "Поле name не валидно";
+		user[0].login = login.match(login_pattern) ? login : "Поле login не валидно";
+		user[0].pwd = pwd.match(pwd_pattern)? pwd : "Поле pwd не валидно";
+
+		// вывод массива в консоль
+		console.dir(user);
+	</script>
+
+</body>
+</html>

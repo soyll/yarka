@@ -1,0 +1,43 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+	
+	<script>
+		// определим номер дня недели
+		const dayNumber = new Date().getDay();
+
+		// console.dog(dayNumber);
+		
+		// преобразуем номер в название
+		if (dayNumber === 0) {
+			day = "Воскресенье";
+		} else if (dayNumber === 1) {
+			day = "Понедельник";
+		} else if (dayNumber === 2) {
+			day = "Вторник";
+		} else if (dayNumber === 3) {
+			day = "Среда";
+		} else if (dayNumber === 4) {
+			day = "Четверг";
+		} else if (dayNumber === 5) {
+			day = "Пятница";
+		} else {
+			day = "Суббота";
+		}
+
+		alert ("Сегодня " + day + ". Вы рады?");
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

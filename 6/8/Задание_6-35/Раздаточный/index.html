@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="orders.js"></script>
+
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Лексическое окружение и контекст</h1>
+	</header>	
+		
+	<script>
+		// номер счета
+		var bill = "N-1103/12-1";
+
+		// функция поиска заказа по номеру счета
+		function orderSearch () {
+			let obj = orders.find ( obj => {
+				return obj.bill == bill;
+			});
+			//
+			return {
+				vendor: obj.vendor,
+				product: obj.product
+			}
+		};
+		
+		// функция вывода заказа
+		function outProduct ( ...arg ) {
+			document.write (`
+					
+				<h3>${this.title}</h3>
+				Заказчик: <b>${arg[0]}</b> <br>
+				CPU / ${this.cpu} <br>
+				GPU / ${this.gpu} <br>
+				
+				<img src='images/${this.img}'> <br>
+				Счет: от ${arg[1]}. Оплачено: ${arg[2]}
+				<hr>
+			`);
+		} 			
+
+		// поиск счета
+		let order = orderSearch();
+
+		// для каждого товара счета вызываем outProduct для вывода
+		for (product of order.product){
+			// вызываем функцию outProduct в контексте объекта product
+			// информацию о владельце передаем дополнительным аргументом - массивом
+			outProduct.apply(product, [order.vendor.name, order.vendor.date, order.vendor.payment]);
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

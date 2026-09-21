@@ -1,0 +1,45 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+	
+	<h2>Великие цитаты Льва Толстого</h2>
+	<!-- блок цитат -->
+	<div id="citate">
+		<p><i>Если нет сил гореть и разливать свет, то хоть не засти его.</i></p>
+		
+		<p><i>Знание только тогда знание, когда оно приобретено усилиями своей мысли, а не памятью.</i></p>
+		
+		<p><i>Ученый — тот, кто много знает из книг; образованный — тот, кто усвоил себе все самые распространенные в его время знания и приемы; просвещенный — тот, кто понимает смысл своей жизни.</i></p>
+	</div>	
+
+	<script>
+		// ссылка на узел body
+		let body = document.body; 
+		
+		// получили доступ к элементу header
+		let header = body.firstElementChild;
+		
+		// далее спускаемся вниз по дереву узлов
+		let h = header.nextElementSibling;
+		let div = h.nextElementSibling;	
+		let p = div.firstElementChild.nextElementSibling;
+
+		// выводим значение html-узла p
+		console.log(p.innerHTML); 
+
+		// изменим значение узла
+		p.innerHTML = "<b>Думай хорошо и мысли созреют в добрые поступки.<b>";
+
+		// а вот здесь теги в строке уже имеют значение
+	</script>
+	
+</body>
+</html>

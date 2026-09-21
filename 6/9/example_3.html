@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Замыкания</h1>
+	</header>	
+		
+	<script>
+		// глобальная переменная 
+		var login = "GlobalLogin";
+
+		// объект
+		let user = {
+  			login: "DenisDream",
+  			// метод объекта
+  			welcome: function() {
+    			return `Привет, ${this.login}!`;
+ 	 		}
+		};
+
+		// описание функции 
+		function fnTestCallback (callback) {
+			// login = "None";
+
+			console.log(callback); 
+			/*
+				консоль:
+				ƒ () {
+    				return `Привет, ${this.login}!`;
+ 	 			}
+ 	 		*/
+
+			// вызов функции callback
+			// callback = welcome()
+			// callback() = welcome()()
+			
+			console.log(callback()); // Привет, GlobalLogin!
+		}
+
+		// потеря контекста в функции c аргументом callback
+		fnTestCallback(user.welcome);
+
+		// запуск метода в контексте объекта
+		console.log(user.welcome()); // Привет, DenisDream!				
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

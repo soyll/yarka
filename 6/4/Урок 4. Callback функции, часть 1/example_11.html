@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+	
+	<script>
+		// определяем функцию
+		// 1 параметр - массив
+		// 2 параметр - коллбэк (код функции)
+		function fnArgArr(list, callback) {
+			// инициируем результирующий массив
+			let result = [];
+			
+			// выполняем перебор элементов входного массива
+			for (let elem of list) {
+				// для каждого элемента вызываем функцию-коллбэк
+				// результат записываем в массив
+				result.push( callback(elem) ); 
+			}
+			
+			// возвращаем результирующий массив
+			return result;
+		}	
+		
+		// исходный массив
+		arr = ["PHP", "JavaScript", "jQuery", "Bootstrap", "SQL"];
+		
+		// функция коллбэк
+		let callback = elem => {
+			return "#" + elem.toLowerCase();
+		}
+
+		// получаем преобразованный массив
+		let tags = fnArgArr(arr, callback);
+
+		let line = tags.join(" ");
+
+		// вывод преобразованного массива в документ
+		document.write(line);
+
+		// вывод преобразованного массива в консоль
+		console.log(tags);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Курс JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Введение в JavaScript</h1>
+	</header>
+	
+	<script>
+		// переменная name получит значение введенное пользователем
+		// или значение по умолчанию 
+		var name = prompt("Здравствуйте, представьтесь, пожалуйста", "noName");
+		
+		// диалоговое окно принятия решения
+		if (confirm("Вы хотите просмотреть скрытый раздел?")) {
+			// если пользователь выбрал Ok
+			alert("Рады видеть вас, уважаемый(ая) "  + name + "!");	
+			document.write("<h2>Раздел персональных данных пользователя " + name + "</h2>");
+		} else {
+			// если пользователь выбрал Отмена
+			document.write("<h2>Ждем вас еще!</h2>");
+		}
+	</script>	
+	
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PROger</h3>
+		<a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
+	</footer>
+</body>
+</html>

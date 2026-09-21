@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+		
+	<script>
+		// сохраняем JSON-строку cookie
+		let cookies = document.cookie.split('=')[1];
+
+		// преобразуем JSON в JS-массив
+		question = JSON.parse(cookies);
+
+		// console.log(question);
+
+		// выводим данные пользователя в браузер
+		for (key in question) {
+			document.write (key, ' = ', question[key], '<br>');
+		}
+
+		// удаляем cookie
+		document.cookie = 'question=; max-age=0; path=/';
+	</script>
+    
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

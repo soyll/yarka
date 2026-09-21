@@ -1,0 +1,45 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Регулярные выражения</h1>
+	</header>
+
+	<h2>Было</h2>
+	<h3>Изучаем Веб-технологии с pechora-PRO</h3>
+	<p>#Python #OpenServer #Figma #JavaScript #MySQL</p>
+
+	<h2>Стало</h2>
+	<div></div>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+
+	<script>
+		// строка в которой будем искать совпадение с шаблоном
+		let tags = document.querySelector("p").innerText;
+
+		// шаблон поиска всех вхождений символа - "#" 
+		let reg = new RegExp("#", "g");
+
+		// замена всех "#" на "<li>"
+		let list = tags.replace(reg, "<li>");
+
+		// формируем строку представляющую список
+		list = `
+		<h3>Изучаем Веб-технологии с pechora-PRO</h3>
+		<ul>${list}</ul>
+		`;
+
+		// вывод списка в документ
+		document.querySelector("div").innerHTML = list;	
+	</script>
+
+</body>
+</html>

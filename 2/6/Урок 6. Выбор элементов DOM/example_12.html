@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Выбор элементов DOM</h1>
+	</header>
+	
+	<h2 align = "center">Всем позитива!</h2>
+	
+	<div id="img-container">  
+		<img src="img1.jpg">
+		<img src="img2.jpg">
+		<img src="img3.jpg">
+	</div>
+	
+	<footer>
+		<h3 align = "center">Добро пожаловать на pechora_PROger</h3>
+	</footer>
+
+	<script>
+		document.write("Количество изображений на странице: ", document.images.length);
+		
+		// изменим размер изображений
+		document.images.item(0).style.width = "250px";
+		document.images.item(1).style.width = "250px";
+		document.images.item(2).style.width = "250px";
+		
+		// выберем блок-контейнер изображений
+		let div = document.querySelector("#img-container");
+		
+		// применим к блоку flex-позиционирование
+		div.style.cssText = "display:flex; flex-direction:row; justify-content:center;";
+	</script>
+	
+</body>
+</html>

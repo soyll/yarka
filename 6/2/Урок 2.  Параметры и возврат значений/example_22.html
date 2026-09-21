@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>	
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<h2>Дама сдавала в багаж</h2>
+	<ul>
+		<li>Диван,</li>
+		<li>Чемодан,</li>
+		<li>Саквояж,</li>
+		<li>Картину,</li>
+		<li>Корзину,</li>
+		<li>Картонку</li>
+		<li>И маленькую собачонку.</li>
+	</ul>
+
+	<script>
+		// объявляем функцию-инструкцию
+		function fnReturnCollection () {
+			// получаем коллекцию узлов DOM
+			let coll = document.querySelectorAll("ul li");
+
+			// функция возвращает коллекцию
+			return coll;
+		}
+
+		// вызов функции
+		let coll = fnReturnCollection();
+
+		// вывод коллекции в консоль
+		console.log(coll);
+	</script>	
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

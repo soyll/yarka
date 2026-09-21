@@ -1,0 +1,48 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Объект Date</h1>
+	</header>
+
+	<div id="demo"></div>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>
+
+	<script>
+		// получаем текущее время
+		var d = new Date();
+ 		
+		// получаем компоненты времени
+ 		let hour = d.getHours(); 
+ 		let min = d.getMinutes(); 
+		let sec = d.getSeconds(); 
+		let msec = d.getMilliseconds(); 
+
+		// вывод компонентов в консоль
+		console.log(hour);
+		console.log(min);
+		console.log(sec);
+		console.log(msec);
+		
+		// подготовка строки с компонентами времени
+		let strTime = `
+			Часы: ${hour} <p>
+			Минуты: ${min} <p>
+			Секунды: ${sec} <p>
+			Милисекунды: ${msec} 
+		`;
+		
+		// вывод строки в браузер
+		document.getElementById("demo").innerHTML = strTime; 
+	</script>
+	
+</body>
+</html>

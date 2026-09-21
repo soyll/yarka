@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<script>
+		// объявление многострочной стрелочной функции
+		// аргументов нет – скобки нужны
+		var present = () => {
+			
+			let login = prompt("Введите логин");
+			let pwd = prompt("Введите пароль");
+			
+			if (login == "admin" && pwd == "12345"){
+
+				document.write ("<h1>Добро пожаловать на pechora_PRO!</h1>");
+			} else {
+				
+				document.write ("<h1>А вот вам, товарищ, вход запрещен!</h1>");
+			}
+		}
+		
+		// вызов многострочной стрелочной функции 
+		present();
+	</script>		
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

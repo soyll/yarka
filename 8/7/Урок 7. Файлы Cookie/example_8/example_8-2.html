@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<h3>Файлы Cookie установлены, перейдите по ссылкам для проверки document.cookie</h3>
+
+	<!-- просмотр cookie директории admin -->
+	<a href="admin/target.html">Go admin page</a><p>
+	<!-- просмотр cookie директории user -->
+	<a href="user/target.html">Go user page</a><p>
+	
+	<script>	
+		// cookie для директории user
+		document.cookie = `login=Fluffy; path=/user`;
+		document.cookie = `pwd=12345; path=/user`;	
+		document.cookie = `role=user; path=/user`;	
+
+		// cookie для директории admin
+		document.cookie = `login=DenisDream; path=/admin`;
+		document.cookie = `pwd=qwerty@; path=/admin`;	
+		document.cookie = `role=admin; path=/admin`;	
+		
+		// обратите внимание на еще одно определение role
+		document.cookie = `role=moderator; path=/`;
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

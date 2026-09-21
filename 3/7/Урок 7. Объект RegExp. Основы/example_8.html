@@ -1,0 +1,57 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align = "center">Объект RegExp. Регулярные выражения</h1>
+	</header>
+
+	<pre>
+		<h2>Ночь, улица, фонарь, аптека... (А.А. Блок)</h2>
+		<h3>
+		Ночь, улица, фонарь, аптека,
+		Бессмысленный и тусклый свет.
+		Живи еще хоть четверть века -
+		Все будет так. Исхода нет.
+		Умрешь - начнешь опять сначала
+		И повторится все, как встарь:
+		Ночь, ледяная рябь канала,
+		Аптека, улица, фонарь.
+		</h3>
+	</pre>
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>		
+
+	<script>
+		// строка в которой будем искать совпадение с шаблоном
+		let text = document.querySelector("pre").innerText;
+		
+		// глобальный шаблон поиска
+		let reg = new RegExp("аптека", "ig");
+		
+		// возвращает специальный итератор
+		let arr = text.matchAll(reg);
+
+		// с помощью цикла выводим возвращаемый объект
+		for (el of arr) {
+  			// протестируйте вывод, там много интересного
+  			// console.log(el); 
+
+			// в консоль
+  			console.log(el[0]);
+			// в браузер
+			document.write(el[0], "<br/>");
+		}
+
+		// RegExpStringIterator
+		console.dir(arr); 
+	</script>
+
+</body>
+</html>

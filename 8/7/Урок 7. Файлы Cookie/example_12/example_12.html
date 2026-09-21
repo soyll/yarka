@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<a href="set-cookie.html">Установить Cookie</a> | 
+	<a href="del-cookie.html">Удалить Cookie</a>
+
+	<script>
+		// проверяем cookie сайта на пустоту
+		if (document.cookie == '') {
+			// вывод в браузер сообщения
+			document.write('<h3>Cookie citate не существует или успешно удалена! (... а жаль)</h3>');
+		} else {
+			// вывод в браузер cookie
+			// document.write('<h3>', decodeURIComponent(document.cookie), '</h3>');
+			document.write('<h2>', document.cookie, '</h2>');
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

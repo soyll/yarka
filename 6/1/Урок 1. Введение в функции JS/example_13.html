@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// анонимное выражение
+		var cube = function (num) {
+			return num * num * num;
+		};	
+
+		// вывод свойства name
+		console.log(cube.name); // cube		
+
+		// переприсвоим значение новой переменной
+		var varCube = cube;
+
+		// вывод свойства name новой переменной
+		console.log(varCube.name); // сube
+		
+		// именованное выражение
+		var cube = function fnCube (num) {
+			return num * num * num;
+		};
+
+		// вывод свойства name
+		console.log(cube.name); // fnCube
+
+		// переприсвоим значение новой переменной
+		var varCube = cube;
+
+		// вывод свойства name новой переменной
+		console.log(varCube.name); // fnCube
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

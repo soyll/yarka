@@ -1,0 +1,34 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<script>
+		// объект пользователя
+		let user = {
+			login: undefined,
+			email: undefined,
+			pwd: undefined
+		};
+	</script>
+
+	<form onsubmit="console.log(user); return false">
+		Логин: <input type="text" oninput="user.login=this.value"><p>
+		E-mail: <input type="text" oninput="user.email=this.value"><p>
+		Пароль: <input type="text" oninput="user.pwd=this.value"><p>
+
+		<button>Вывести данные в консоль</button>
+	</form>	
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

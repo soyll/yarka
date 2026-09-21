@@ -1,0 +1,4 @@
+// -- пользователь запросил какую-то информацию на сайте одежды
+
+// информация доставлена в виде JSON-строки
+let productJSON = '[ { "id" : 1, "title" : "Утепленная стеганая куртка", "brand" : "MARCO DI RADI", "color" : "Синий", "country" : "Китай", "hood" : "Есть", "size" : 52, "price" : "25 590", "image" : "steganaya-marco.jpg" }, { "id" : 2, "title" : "Пальто", "brand" : "Allsaints", "color" : "Коричневый", "country" : "Китай", "hood" : "Отсутствует", "size" : 50, "price" : "53 990", "image" : "palto-allsaints.jpg" }, { "id" : 3, "title" : "Парка", "brand" : "Cap Horn", "color" : "Зеленый", "country" : "Китай", "hood" : "Есть", "size" : 48, "price" : "14 590", "image" : "parka-cap.jpg" } ]';

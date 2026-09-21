@@ -1,0 +1,50 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		div {
+			background-color: #87CEEB;
+			margin: 0 auto;
+			padding: 20px;
+		}
+	</style>
+
+	<div style="width:150.550px; height:50.550px;">
+	И прожил премудрый пискарь таким родом с лишком сто лет. Все дрожал, все дрожал. Ни друзей у него, ни родных; ни он к кому, ни к нему кто. В карты не играет, вина не пьет, табаку не курит, за красными девушками не гоняется – только дрожит да одну думу думает: «Слава Богу! кажется, жив!»
+	</div>
+
+	<script>
+		// получим ссылку на элемент
+		let div = document.querySelector('div');
+		
+		// прочитаем значения в переменные
+		let width = div.style.width;
+		let height = div.style.height;
+
+		// всегда анализируем, что происходит
+		console.log(Number.parseInt(width));
+		console.log(Number.parseFloat(height));
+
+		// установим новые значения
+		div.style.width = Number.parseInt(width) + 500 + "px";
+		div.style.height = Number.parseFloat(height) + 20 + "px";
+
+		// сравниваем размеры блока до и после приращения
+		console.log(div.style.width);
+		console.log(div.style.height);
+	</script>	
+	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа с числами</h1>
+	</header>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+</body>
+</html>

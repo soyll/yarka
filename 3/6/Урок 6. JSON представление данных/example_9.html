@@ -1,0 +1,37 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">JSON представление данных</h1>
+	</header>
+	
+	<script>
+		// определение JS-объекта
+		let person = {
+			surname : "Бородина", 
+			name : "Ксения", 
+			patronymic : "Алексеевна",
+			category : "Соответствие занимаемой должности", 
+			post : "Преподаватель",			
+			level_edu : "Высшее профессиональное", 
+			experience_total : 21.3, 
+			experience_college : 14.5, 
+			note : "",
+		};	
+		
+		// сериализуем объект 
+		// массив определяет сериализуемые ключи объекта
+		console.log(JSON.stringify(person, ["surname", "name", "category", "experience_college"]));
+	</script>	
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

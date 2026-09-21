@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<h2>Дискография группы Pink Floyd</h2>
+	
+	<table border=1>
+		<tr>
+			<td>1</td>
+			<td>Atom Heart Mother</td>
+			<td>10 октября 1970</td> 
+			<td>EMI, Harvest, Capitol</td>
+			<td>LP, CD</td>
+			<td>Золотой (USA)</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td >Meddle</td>
+			<td>30 октября 1971</td>
+			<td>EMI, Harvest, Capitol</td>
+			<td>Vinyl, кассета, CD</td>
+			<td>Платиновый (USA)</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Obscured by Clouds</td>
+			<td>3 июня 1972</td>
+			<td>EMI, Harvest, Capitol</td>
+			<td>LP, кассета, CD</td>
+			<td>Золотой (USA), Серебряный (GBR)</td>
+		</tr>
+		<tr>	
+			<td>4</td>
+			<td>The Dark Side Of The Moon</td>
+			<td>17 марта 1973</td>
+			<td>Harvest, Capitol, EMI</td>
+			<td>LP, кассета, CD, SACD</td>
+			<td>Платиновый (USA), Платиновый (GBR), Бриллиантовый (CAN)</td>
+		</tr>	
+		<tr>	
+			<td>5</td>
+			<td>Wish You Were Here</td>
+			<td>15 сентября 1975</td>
+			<td>Harvest, EMI, Columbia, Capitol</td>
+			<td>LP, 8-track, кассета, CD, SACD</td>
+			<td>Платиновый (USA), Золотой (GBR), Платиновый (CAN)</td>
+		</tr>
+	</table>	
+
+	<script>
+		// получаем коллекцию строк
+		let trs = document.querySelectorAll('table tr');
+
+		// навесим обработчик на событие click строк
+		trs.forEach( (tr, key) => {
+			tr.addEventListener("click", { 
+				name:tr.children.item(1).innerText, // свойство null-объекта
+				handleEvent() {  // метод объекта
+					// при клике по строке выведем название альбома
+					alert(this.name) }
+				} 
+			)
+		})		
+	</script>
+    
+	<footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

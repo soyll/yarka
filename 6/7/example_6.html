@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Область видимости и лексическое окружение</h1>
+	</header>	
+	
+	<script>		
+		// область видимости блока if
+		
+		if (true) {
+			// локальная переменная var
+			// var-переменная НЕ ЗНАЕТ о существовании блока
+			var aVarLocal = "I'm a Global Var variable?";
+			
+			// локальная переменная let
+			// let-переменная ЗНАЕТ о существовании блока
+			let aLetLocal = "I'm a Local Let variable!"; 
+
+			// локальная переменная без var/let
+			// переменная НЕ ЗНАЕТ о существовании блока	
+			aLocal = "Who am I?";
+		  	
+		  	// блоковая область видимости
+			console.log(aVarLocal); // I'm a Global Var variable
+			console.log(aLetLocal); // I'm a Local Let variable
+			console.log(aLocal); // Who am I?
+		}
+
+		console.log('----------');	
+		
+		// тестируем доступ из глобальной области к переменным созданным в локальной области
+		
+		console.log(aVarLocal); // I'm a Global Var variable
+		
+		// Uncaught ReferenceError: aLetLocal is not defined
+		// console.log(aLetLocal); // Error
+
+		console.log(aLocal); // Who am I?
+
+		// ----------
+		console.log(window);		
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

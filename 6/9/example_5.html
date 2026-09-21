@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Замыкания</h1>
+	</header>	
+		
+	<script>
+		// глобальная переменная 
+		var login = "GlobalLogin";
+		
+		// определение функции
+		function welcome() {
+	  		// локальная переменная
+	  		var login = "DenisDream";
+	  		
+	  		// вложенная функция в качестве возвращаемого значения 
+	  		return function inner () {
+	    		return `Привет, ${this.login}!`;
+	 	 	}
+		};	
+
+		// определение внешней функции welcome
+		console.log(welcome); 
+
+		// определение вложенной функции inner
+		console.log(welcome());
+		
+		// запуск функции welcome
+		console.log(welcome()());
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

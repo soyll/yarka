@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+	
+	<script>
+		// инициируем массив
+		let arr = [3, "php", [2, 9]];
+		
+		// цикл for-in перебирает !-ключи-!
+		for (let i in arr) {
+			console.log(i); // 0, 1, 2 
+		}
+
+		console.log("---------------");
+
+		// цикл for-of перебирает !-значения-!
+		for (let i of arr) {
+			console.log(i); // 3, "php", [2, 9] 
+		}
+	</script>
+	
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

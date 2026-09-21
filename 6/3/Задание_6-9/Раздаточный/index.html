@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<script>
+		let arr = new Array ("php", "sql", "js", "html");
+		/*
+			отличаются ли переменные циклов (aVal) 1-го и 2-го примеров,
+			если отличаются, то чем?
+		*/
+
+		// -> 1
+		// перебор элементов массива
+		for (let aVal of arr) {
+			// вывод текущего элемента массива
+			console.log(aVal);
+		}
+
+		// -> 2
+		// перебор элементов массива
+		for (var aVal of arr) {
+			// вывод текущего элемента массива 
+			console.log(aVal);
+		}
+	</script>
+
+	<footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

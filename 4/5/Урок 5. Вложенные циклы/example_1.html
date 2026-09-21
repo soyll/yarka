@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<h2>Вложенные циклы</h2>
+
+	<script>
+		// внешний цикл for
+		for (var i = 1; i < 4; i++) {
+			// вывод переменной внешнего цикла - i
+			document.write(i + ". Строка ВНЕШНЕГО цикла<p>");
+			
+			// внутренний цикл for
+			for (var k = 1; k < 5; k++) {
+				// вывод переменной внутреннего цикла - k	
+				document.write("&nbsp;&nbsp;&nbsp;&nbsp;" + k + " - Строка ВЛОЖЕННОГО цикла<p>");
+			}
+		}		
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

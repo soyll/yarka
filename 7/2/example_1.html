@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<button id="btn">Что он сказал?</button>
+	
+	<script>
+		// цитата
+		let citate = undefined;
+
+		// ссылка на элемент button
+		const btn = document.getElementById("btn");
+
+		// навешиваем на событие click элемента button несколько обработчиков
+		
+		// первый обработчик определяет глобальную переменную citate
+		btn.addEventListener("click", function() {
+			citate = 'Умные не столько ищут одиночества, сколько избегают создаваемой дураками суеты (Артур Шопенгауэр).';
+		});
+
+		// второй обработчик выводит и переопределяет переменную citate
+		btn.addEventListener("click", () => {
+			alert(citate);
+			citate = 'Ого, ну ты умный...';
+		});
+
+		// третий обработчик выводит новое значение переменной citate
+		btn.addEventListener("click", fnOutCitate);
+
+		function fnOutCitate() {
+			alert(citate)
+		}
+	</script>	
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

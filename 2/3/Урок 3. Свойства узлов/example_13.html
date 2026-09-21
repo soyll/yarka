@@ -1,0 +1,37 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+	
+	<h2>Сэмюэл Джонсон – цитаты</h2>
+	<h3>Вторая цитата не прошла цензуру (18+)</h3>
+	<!-- блок цитат -->
+	<div id="citate">
+		<p>Ничто так не способствует развитию скромности, как сознание собственной значимости.</p>
+		
+		<p>Красное вино — напиток для мальчишек, портвейн — для мужчин; но тот, кто стремится быть героем, должен пить бренди.</p>
+
+		<p>Ничего не делать умеет любой.</p>
+	</div>	
+	
+	<script>
+		// ссылка на элемент div
+		let div = document.body.lastElementChild.previousElementSibling; 
+		// набор элементов p
+		let set = div.children;
+		
+		// скрываем второй абзац (18+)
+ 		console.log(set[1].hidden = true);
+
+ 		// set[1] = set.item(1)
+	</script>
+	
+</body>
+</html>

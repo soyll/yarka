@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+
+	<form id="frm">
+		Логин: <input type="text" name="login" value="DenisDream"><p>
+		E-mail: <input type="email" name="email" value="denis-dream@gmail.com"><p>
+		Пароль: <input type="password" name="pwd" value="qwerty@"><p>
+		<input type="submit">
+	</form>
+	
+	<script>
+		// ссылка на форму
+		var form = document.getElementById("frm");
+		console.log(form.elements); // HTMLFormControlsCollection 
+		console.log(Array.from(form.elements));
+		// console.log(form.elements[2]);
+
+		console.log(form.children); // HTMLCollection 
+		console.log(Array.from(form.children));
+		// console.log(form.children[2]);
+
+		// ссылка на элементы input
+		inps = form.querySelectorAll("form input");
+		console.log(inps); // NodeList
+		console.log(Array.from(inps));
+		// console.log(inps.item(2));			
+	</script>	
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

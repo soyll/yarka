@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<script>
+		// инициируем объект
+		let tel =
+		{
+			firm: "DEXP", 
+			model: "H24F7000E", 
+			diag: "24", 
+			perm: "HD", 
+			matr: "LED", 
+			freq: "60 Гц", 
+			price: 25000, 
+			path: "H24F7000E.jpg", 
+			descr: "Телевизор LED DEXP H24F7000E отличается столь компактными размерами, что место для него найдется даже на самой маленькой кухне. Благодаря VESA-креплению разместить его получится даже на стене, чтобы освободить на горизонтальных поверхностях место для других вещей."
+		}		
+		
+		// объявляем функцию
+		// параметр функции - переменная obj
+		function fnObject(obj) {
+			// теперь obj - локальная переменная-объект внутри функции 
+			
+			// инициализируем строку для вывода
+			let line = `
+				Фирма: <b>${obj.firm}</b><br>
+				Модель: <b>${obj.model}</b><br>
+				Диагональ: <b>${obj.diag}</b><br>
+				Разрешение экрана: <b>${obj.perm}</b><br>
+				Матрица: <b>${obj.matr}</b><br>
+				Количество кадров в секунду: <b>${obj.freq}</b><br>				
+				Цена: <b>${obj.price}</b><br>
+				Изображение: <br><img src='${obj.path}'><br>
+				Описание: <b>${obj.descr}</b><br>
+			`;	
+
+			// возвращаем строку
+			return line;
+		}
+
+		// вызов функции, аргумент - объект tel
+		// вывод на экран результата вызова
+		document.write (fnObject(tel));
+	</script>
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

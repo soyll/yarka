@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		table {
+			margin: 0 auto;
+			margin-top: 15px;
+		}
+		table * {
+			padding: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Выбор элементов DOM</h1>
+	</header>
+	
+	<!-- блок для вставки контента -->
+	<div class="flights"></div>
+
+	<!-- блок для вставки контента -->
+	<div class="passengers"></div>
+
+	<footer>
+		<h3 align = "center">Добро пожаловать на pechora_PROger</h3>
+	</footer>
+
+	<script>
+		// инициализация JS объекта
+		obj = {
+			    "data": {
+			        "items": [
+			            {
+			                "code": "MGERS",
+			                "cost": 40000,
+			                "flights": [
+			                    {
+			                        "flight_id": 1,
+			                        "flight_code": "FP2100",
+			                        "from": {
+			                            "city": "Moscow",
+			                            "airport": "Sheremetyevo",
+			                            "iata": "SVO",
+			                            "date": "2020-10-01",
+			                            "time": "08:35"
+			                        },
+			                        "to": {
+			                            "city": "Kazan",
+			                            "airport": "Kazan",
+			                            "iata": "KZN",
+			                            "date": "2020-10-01",
+			                            "time": "10:05"
+			                        },
+			                        "cost": 10500,
+			                        "availability": 58
+			                    },
+			                    {
+			                        "flight_id": 2,
+			                        "flight_code": "FP1200",
+			                        "from": {
+			                            "city": "Kazan",
+			                            "airport": "Kazan",
+			                            "iata": "KZN",
+			                            "date": "2020-10-12",
+			                            "time": "12:00"
+			                        },
+			                        "to": {
+			                            "city": "Moscow",
+			                            "airport": "Sheremetyevo",
+			                            "iata": "SVO",
+			                            "date": "2020-10-12",
+			                            "time": "13:35"
+			                        },
+			                        "cost": 9500,
+			                        "availability": 58
+			                    }
+			                ],
+			                "passengers": [
+			                    {
+			                        "id": 1,
+			                        "first_name": "Ivan",
+			                        "last_name": "Ivanov",
+			                        "birth_date": "1990-02-20",
+			                        "document_number": "1234567890",
+			                        "place_from": null,
+			                        "place_back": null
+			                    },
+			                    {
+			                        "id": 2,
+			                        "first_name": "Ivan",
+			                        "last_name": "Sergeev",
+			                        "birth_date": "1990-03-20",
+			                        "document_number": "1224567890",
+			                        "place_from": null,
+			                        "place_back": null
+			                    }
+			                ]
+			            }
+			        ]
+			    }
+			}
+
+		// ...
+		// ...	
+		
+	</script>
+	
+</body>
+</html>

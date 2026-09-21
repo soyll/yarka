@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<h1>Функции в JavaScript</h1>
+
+	<script>
+		var x = 3;
+	</script>
+
+	<script type="module">
+		// импортируем функцию по умолчанию
+		// фигурные скобки не используются
+		// импортируемая из модуля функция не имеет имени
+		import cube from "./noname.js";
+
+		console.log(cube(x));		
+	</script>
+
+    <footer align="center">
+        <h3>Образование | Веб-разработка | Frontend-программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

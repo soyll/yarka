@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// определения функций коллбэков
+		// первая функция коллбэк
+		// функция-инструкция
+		function fnFirstCallback() {
+			console.log("Первый коллбэк для setTimeout...");
+		}
+
+		// вторая функция коллбэк
+		// функция-выражение
+		fnSecondCallback = function (message) {
+			console.log(message);
+		}
+
+		// третья функция коллбэк
+		// функция-стрелка
+		fnThirdCallback = () => {
+			console.log("Третий коллбэк для setTimeout...");
+		}
+		
+		// вызов функций
+		// первая функция коллбэк вызывается через 800 мсек.
+		setTimeout(fnFirstCallback, 800);
+		
+		// вторая функция коллбэк вызывается через 200 мсек.
+		setTimeout(fnSecondCallback, 200, "Второй коллбэк для setTimeout...");		
+		
+		// третья функция коллбэк вызывается через 1100 мсек.
+		setTimeout(fnThirdCallback, 1100);		
+		
+		// четвертая функция коллбэк
+		// четвертая функция коллбэк вызывается через 500 мсек.
+		setTimeout(() => {console.log("Четвертый коллбэк для setTimeout...")}, 500);
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

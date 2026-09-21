@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body> 
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<form id="frm">
+		<input id="fileInp" type="file">
+	</form>
+	
+	<script>
+		// --1
+		var clickevent = new MouseEvent("click");
+		document.getElementById('fileInp').dispatchEvent(clickevent);		
+
+		// --2
+		// document.getElementById('fileInp').click();
+	</script>	
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

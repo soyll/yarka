@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<h2>Ввод данных пользователя</h2>
+	
+	<form id="frm">
+		Введите имя ([a-zA-ZА-ЯЁа-яё]): <input type="text" name="name"><p>
+		Введите логин ([a-zA-Z\d]): <input type="text" name="login"><p>
+		Введите пароль ([\w\d@%&]): <input type="text" name="pwd"><p>
+	</form>
+
+	<script>
+		// получаем коллекцию текстовых полей
+		let inputs = document.querySelectorAll("form#frm input");
+		
+		// навесим на каждое текстовое поля событие и его обработчик
+		for (inp of inputs) {
+			inp.addEventListener("keypress", checkInput);			
+		}
+		
+		// функция проверки введенного символа
+		function checkInput() {
+
+			// ...		
+
+		}
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

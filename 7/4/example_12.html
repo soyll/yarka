@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body> 
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<form id="frm">
+		<input id="fileInp" type="file" hidden>		
+	</form>
+	
+	<a href="#" id="choise">Выбрать файл</a>
+
+	<script>
+		// создадим событие клика по ссылке
+		document.getElementById('choise').addEventListener("click", () => {
+			// создадим событие
+			var clickevent = new MouseEvent("click");
+			// вызов события открытия диалогового окна
+			document.getElementById('fileInp').dispatchEvent(clickevent);
+		});
+	</script>	
+    
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

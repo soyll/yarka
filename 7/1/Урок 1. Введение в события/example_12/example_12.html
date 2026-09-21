@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<!-- ! для навешивания события используем метод addEventListener -->
+
+	<h1>Мао Цзэдун цитаты</h1>
+	
+	<div id="codecs">
+		<h3>Ма́о Цзэду́н — китайский революционер, государственный, политический и партийный деятель XX века, главный теоретик маоизма, создатель современного китайского государства.</h3>
+	</div>
+
+	<button id="btn">Цитаты  Великого кормчего</button>
+
+	<script src="citateMao.js"></script>
+
+	<script>
+		// навешиваем обработчик на событие click кнопки
+		btn.addEventListener("click", () => {
+			
+			list = '';
+			// перебираем элементы массив
+			citate.forEach( (elem) => {
+				// формируем из элементов список 
+				list += '<li>' + elem + '</li>';				
+			});
+			// выводим список в документ
+			btn.insertAdjacentHTML('beforebegin', '<ul>' + list + '</ul>');
+		})
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// инициируем массив
+		let tags = new Array("PHP", "JavaScript", "CSS", "MySQL");
+
+		// преобразуем массив к строке
+		// 1.
+		console.log ("-> ", tags.join(", ")); // PHP, JavaScript, CSS, MySQL 
+
+		// 2.
+		console.log ("-> ", tags.join(" ")); // PHP JavaScript CSS MySQL
+
+		// 3.
+		console.log ("-> ", tags.join("\n")); // PHP\nJavaScript\nCSS\nMySQL
+
+		// 4.
+		let line = "#" + tags.join(" #");
+		console.log ("-> ", line) // #PHP #JavaScript #CSS #MySQL
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>Лучше молчать и показаться дураком, чем заговорить и развеять все сомнения</h2>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

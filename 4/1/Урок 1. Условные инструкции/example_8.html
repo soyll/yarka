@@ -1,0 +1,47 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Условные конструкции</h1>
+	</header>
+	
+	<script>
+		let day;
+
+		// тестируем оператор switch
+		switch (new Date().getDay()) {
+		  case 0:
+		    day = 'Воскресенье';
+		    break;
+		  case 1:
+		    day = 'Понедельник';
+		    break;
+		  case 2:
+		    day = 'Вторник';
+		    break;
+		  case 3:
+		    day = 'Среда';
+		    break;
+		  case 4:
+		    day = 'Четверг';
+		    break;
+		  case 5:
+		    day = 'Пятница';
+		    break;
+		  default:
+		    day = 'Суббота';
+		}
+
+		alert ("Сегодня " + day + ". Вооот...");
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+	
+	<script>
+		// двумерный массив для сортировки
+		let note = [
+			[6, "1984"],
+			[4, "A Midsummer Night's Dream"],
+			[1, "The Lady of the Lake"],
+			[3, "Москва - Петушки"],
+			[5, "Чемодан"],
+			[2, "451' по Фаренгейту"]
+		];
+
+		// сортируем массив c указанием правила сортировки
+		// передаем два параметра-массива
+		note.sort( (el1, el2) => {
+			// производим сравнение по вторым элементам массивов
+			if (el1[1] > el2[1]) return 1;
+  			if (el1[1] === el2[1]) return 0;
+  			if (el1[1] < el2[1]) return -1;			
+		});
+
+		// результат сортировки
+		console.log(note);		
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

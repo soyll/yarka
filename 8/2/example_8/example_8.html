@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="guitars.js"></script>
+</head>
+<body> 
+	<header align="center">
+		<h1>Работа с браузером. BOM</h1>
+	</header>
+
+	<div id="main"></div>
+	
+	<script>
+		
+		let out = "";
+
+		// формируем контент для текущего документа
+		guitars.forEach( (item) => {
+			out += `
+				<h4><a id="${item.id}" href="#" onclick="openWin(event)">${item.name}</h4>
+				<img src="images/${item.image}" width=100px>
+			`
+		});
+
+		// вставка контента в текущий документ
+		document.getElementById("main").innerHTML = out;		
+		
+		// контент формируется при клике по ссылке
+		function openWin (e) {
+			
+			guitar = guitars.find( (item) => {
+				return e.target.id == item.id;
+			});
+
+			// формируем контент для вывода
+			let out = `
+				<h2>${guitar.name}</h2>
+				<p><b>
+					${guitar.preview}
+				</b></p>
+				<div>
+					${guitar.description}
+				</div>
+				<img src="images/${guitar.image}" width="300px">
+			`
+			
+			// загружаем в всплывающее окно файл target.html
+			let mywin = window.open("target.html","_blank","width=600,height=700");	
+		
+			// событие load всплывающего окна
+			mywin.onload = function () {
+				// вставка контента в всплывающее окно
+				mywin.document.getElementById("target").innerHTML = out;		
+			} 
+		}
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

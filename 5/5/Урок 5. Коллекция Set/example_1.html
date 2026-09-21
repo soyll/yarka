@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>	
+		// исходный массив
+		let res = ["php", "js", 1];
+
+		// набор новых элементов для тестирования
+		var newel = "js"; // не будет добавлен
+		// var newel = "php "; // будет добавлен
+		// var newel = 0; // будет добавлен
+
+		// добавим в массив только уникальные значения
+		if (!res.find( () => {
+			// проверяем вхождение элемента в массив
+			// обратите внимание на инверсию в условии
+			return res.includes(newel)	
+		// если if вернет truе запишем элемент в массив
+		})) res.push(newel);
+		
+		// проверим массив		
+		console.log(res);
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

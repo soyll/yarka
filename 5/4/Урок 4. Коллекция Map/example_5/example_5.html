@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="laptop.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<script>
+		// создаем объект коллекции
+		let map = new Map();
+		
+		// проходим циклом по элементам массива laptop
+		laptop.forEach((obj, index) => {
+			// записываем массив в коллекцию
+			map.set(index, obj);
+		})
+
+		// просмотр коллекции
+		// console.log(map);
+
+		// тестовый доступ
+		// console.log(map.get(0).title);
+
+		// выводим данные коллекции в браузер 
+		for (i=0; i < map.size; i++) {
+			document.write(`
+				${map.get(i).id} <br>
+				${map.get(i).title} <br>
+				${map.get(i).gpu} <br>
+				${map.get(i).cpu} <br>
+				${map.get(i).cpu_cores} <br>
+				${map.get(i).ram} <br>
+				${map.get(i).diagonal} <br>
+				${map.get(i).price} <br>
+				${map.get(i).img} <br>
+				<hr>
+			`);
+		}
+	</script>
+	
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

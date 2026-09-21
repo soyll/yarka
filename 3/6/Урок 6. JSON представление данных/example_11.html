@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">JSON представление данных</h1>
+	</header>
+	<div class="content">
+	
+		<script>
+			// -- пользователь выбрал два товара на сайте одежды
+
+			// заказ сформирован в виде JS-массива
+			let order = [
+				{
+					id : 1,
+					title : "Утепленная стеганая куртка",
+					brand : "MARCO DI RADI",
+					colour : "Синий",
+					country : "Китай",
+					hood : "Есть",
+					size : 52,
+					price : 25.590,
+					image : "steganaya-marco.jpg"
+				},
+				{
+					id : 2,
+					title : "Пальто",
+					brand : "Allsaints",
+					colour : "Коричневый",
+					country : "Китай",
+					hood : "Отсутствует",
+					size : 50,
+					price : 53.990,
+					image : "palto-allsaints.jpg"
+				}
+			];			
+
+			// преобразуем JS-массив в JSON
+			let orderJSON = JSON.stringify(order);
+
+			// вывод в консоль массива заказа
+			console.log(order);
+
+			// вывод в консоль заказа в виде JSON
+			console.log(orderJSON);
+
+			// заказ упакован в JSON, можно отправлять для обработки на сервер
+			// дальнейшие действия зависят от логики работы приложения
+		</script>	
+		
+	</div>
+
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

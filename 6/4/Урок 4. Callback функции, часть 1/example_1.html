@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<h2>Одностишия Натальи Резник</h2>
+
+	<div id="app"></div>
+
+	<script>
+		// инициализация массива
+		arr = [ 
+			'Твои б мозги да к моему диплому!..',
+			'Чего б еще разумного посеять?',
+			'Тефтеля – это вам не фунт изюма!',
+			'Контрольный выстрел мало что исправил…',
+			'Упал кирпич на голову. К чему бы?',
+			'На минус 2 кило я похудела.',
+			'Два дня не сплю, не ем уже три ночи...',
+			'Вы идиот?! Нет, нет, не отвечайте!..',
+			'Когда умру, прошу – без ликованья...'
+		]	
+		
+		var i = 0; // итератор цикла
+		var line = "";
+
+		// проходим по массиву циклом while
+		while (i < arr.length) {
+			
+			console.log(i);
+
+			line += "<p>" + arr[i] + "</p>";
+
+			i++;
+
+			// i--; // ошибка в коде программы
+		};
+
+		// вставка контента в документ
+		document.getElementById("app").insertAdjacentHTML("beforeend", line);
+
+ 		// вывод об успешном выполнении в диалоговое окно
+  		alert("The task was completed successfully!");
+		
+		// вывод об успешном выполнении в консоль
+  		console.log("The task was completed successfully!");
+
+		/*
+			выйти из зависания браузера:
+			1.
+				-- открыть панель разработчика Chrome DevTools с помощью F12
+				-- запустить код с бесконечным циклом
+				-- на вкладке Источники приостановить выполнение скрипта
+			2.
+				-- закрыть вкладку
+			3.
+				-- ждать, рано или поздно браузер устанет
+		*/
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

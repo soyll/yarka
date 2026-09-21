@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+
+	<script>
+		// инициализируем массив
+		var course = [
+			"Дизайнер интерьеров", 
+			"Веб-дизайнер", 
+			"Notion-дизайнер",
+			"UX/UI-дизайнер",
+			"Ландшафтный дизайнер",
+			"Fashion-дизайнер"
+		];
+		
+		// перебираем элементы массива в функции коллбэк
+		course.forEach(function(el, i, course) {
+			console.log(++i + ". " + el);
+		});
+	</script>
+	    
+</body> 
+</html>

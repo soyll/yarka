@@ -1,0 +1,43 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа со строками</h1>
+	</header>
+	
+	<h2>Японская поэзия</h2>
+
+	<pre>
+	<h3>
+		И той порою,
+		Когда непринуждённо
+		Дождь смывал следы,
+		Убогими казались мысли
+		О проходящем...
+	</h3>
+	</pre>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>	
+
+	<script>
+		// определяем строку
+		str = `И той порою,
+		Когда непринуждённо
+		Дождь смывал следы,
+		Убогими казались мысли
+		О проходящем...`;
+
+		console.log(str.search("дождь")); // -1
+
+		// 'Дождь' <> 'дождь'
+	</script>
+
+</body>
+</html>

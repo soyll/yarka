@@ -1,0 +1,49 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Доступ к элементам DOM</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Манипуляция элементами DOM</h1>
+	</header>
+	
+	<h2>Цитаты Венедикта Ерофеева</h2>
+	<!-- блок цитат Венедикта Ерофеева -->
+	<div id="citate">
+		<p>Надо привыкнуть смело, в глаза людям, говорить о своих достоинствах. Кому же, как не нам самим, знать, до какой степени мы хороши?</p>
+		
+		<p>Потому что с тех пор, как помню себя, я только и делаю, что симулирую душевное здоровье, каждый миг, и на это расходую все (все без остатка) и умственные, и физические, и какие угодно силы.</p>
+
+		<p>Если каждая пятница моя будет и впредь такой, как сегодняшная, – я удавлюсь в один из четвергов!..</p>
+	</div>	
+
+	<script>
+		// ссылка на узел body
+		let body = document.body; 
+		// получили доступ к элементу header
+		let header = body.firstElementChild;
+		
+		// далее спускаемся вниз по дереву узлов
+		let h = header.nextElementSibling;
+		
+		// используя цепочку получаем ссылку на узел комментария
+		let comment = h.nextSibling.nextSibling;
+		
+		let div = comment.nextElementSibling;	
+		let p = div.firstElementChild;
+		
+		// получаем ссылку на текстовый узел первого элемента p
+		let txt = p.firstChild;
+		
+		// выводим значение узла комментария
+		console.log(comment.data); 
+		
+		// выводим значение текстового узла
+		console.log(txt.data); 
+	</script>
+	
+</body>
+</html>

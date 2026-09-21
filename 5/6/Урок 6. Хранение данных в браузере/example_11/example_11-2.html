@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<h2>JSON-объект создан на странице example_11-1.html</h2>
+
+	<script>	
+		// получение значения хранилища sessionStorage
+		let userJSON = sessionStorage.getItem('user'); 
+
+		// объект JSON
+		document.write("<b>Строка JSON:</b> ", userJSON, "<p>");
+
+		// объект JS
+		document.write("<b>Объект JS:</b> ", JSON.parse(userJSON));
+	</script>
+
+	<footer align="center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+  font-family: Verdana;
+  background-color: whitesmoke;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+}
+
+div.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-top: 3%;
+}
+
+img.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 0px;
+}
+
+a.shop {
+  color: black;
+  text-decoration: none;
+}
+
+h1.h1shop {
+  text-shadow: 2px 2px lightgrey;
+}
+
+img.product_photo {
+  width: 200px;
+  height: 250px;
+  border-radius: 25px;
+}
+
+div.product {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin: 5px;
+  border-color: black;
+  background-color: white;
+}
+
+div.product:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+div.product div {
+  width: 350px;
+  padding: 2px 16px;
+  margin: 5px;
+}
+
+div.product div p span {
+  font-weight: bold;
+}
+
+input {
+  margin-top: 10px;
+  transform: scale(2);
+}
+
+button.obutt{
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 32px;
+  margin-bottom: 3%;
+  font-size: 16px;
+  font-family: Verdana;
+}
+
+button.obutt:hover{
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}

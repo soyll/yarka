@@ -1,0 +1,41 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+	
+	<!-- beforebegin -->
+	<ul>
+		<!-- afterbegin -->
+		<li>Xara Designer Pro+</li>
+		<li>Canva</li>
+		<!-- beforeend -->
+	</ul>
+	<!-- afterend -->
+
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>	
+
+	<script>
+		// выберем целевой элемент
+		let ul = document.querySelector("ul"); 
+		
+		ul.insertAdjacentText('beforebegin', "Инструментарий графического дизайнера");
+
+		ul.insertAdjacentText('afterbegin', "Adobe Photoshop");	
+		
+		// обратите внимание теги в текстовом формате
+		ul.insertAdjacentText('beforeend', "<li>CorelDRAW Graphics Suite</li>");
+		
+		ul.insertAdjacentText('afterend', "<h3>На странице группы pechora-PROger в VKонтакте</h3>");	
+	</script>
+
+</body>
+</html>

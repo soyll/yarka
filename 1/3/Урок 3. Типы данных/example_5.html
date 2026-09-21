@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Курс JavaScript</title>
+	
+	<script>
+		// создадим массив
+		// массив - переменная ссылочного типа
+		var arr1 = ["php", "javaScript", "python"]; //исходный массив
+		var arr2 = arr1; // присваиваем массив
+		// при этом значения исходного массива не копируется, 
+		// обе переменные будут ссылаться на одну область памяти
+
+		document.write("<h2>Начальные значения второго элемента массивов</h2>"); 
+
+		document.write("arr1[1] – "  +  arr1[1]); // 
+		document.write("<br>arr2[1] – " + arr2[1]); // 
+
+		document.write("<h2>Изменяем значение второго элемента первого массива</h2>"); 
+		// изменим второй элемент первого массива
+		// второй массив должен измениться соответственно
+		arr1[1] = "JS - the best language!"; 
+
+		document.write("<br>arr1[1] – "  +  arr1[1]); // 
+		document.write("<br>arr2[1] – " + arr2[1]); // 
+	</script>	
+	
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Введение в JavaScript</h1>
+	</header>
+	
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PROger</h3>
+		<a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
+	</footer>
+</body>
+</html>

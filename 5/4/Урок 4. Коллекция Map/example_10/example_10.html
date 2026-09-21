@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="courses_map.js"></script>
+
+	<script>
+		// перебираем коллекцию Map циклом forEach
+		// в теле цикла к коллекции доступ через синоним - map
+		courses_map.forEach( (item, key, map) => {
+			console.log(key);
+			console.log(item);
+			// или так...
+			// console.log(map.get(key));
+			console.log("---------------");
+		});
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

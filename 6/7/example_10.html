@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Область видимости и лексическое окружение</h1>
+	</header>	
+	
+	<script>		
+		// глобальное свойство
+		var aVariable = "I'm global variable";
+
+		// область видимости объекта
+		
+		// определяем глобальный объект со свойством и методом
+		var aObj = {            	
+   			// свойство объекта		
+   			// не стоит путать переменную и свойство объекта
+   			aVariable: "I'm property of object",
+   			
+   			// метод объекта
+   			aMethodObj: function() {
+   				// что выводим, глобальное свойство или свойство объекта?
+   				console.log(aVariable);
+   			}
+   		}
+		
+		// глобальная переменная  
+		console.log(aVariable);  // I'm global variable	
+
+		// свойство переменной aObj  
+		console.log(aObj.aVariable);  // I'm property of object
+
+		// метод переменной aObj
+		aObj.aMethodObj();  // I'm global variable	
+
+		// ----------
+		console.log(window);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

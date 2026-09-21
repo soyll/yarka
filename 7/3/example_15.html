@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		html *{
+			border:1px solid #c0c0c0;
+			padding:15px;
+			margin:20px;
+		}
+	</style>
+</head>
+
+<body>body
+	<section>section
+		<div>div
+			<p>p
+				<button>Погнали</button>			
+			</p>
+		</div>	
+	</section>
+
+	<script>
+		// назначим обработчик события click для body
+		document.body.onclick = function userClick(){
+			// отследим, кто является инициатором события
+			alert("Выполнен клик по элементу: " + event.target.tagName);
+			// всегда body
+			console.log(this.tagName);
+		}		
+	</script>
+	
+</body>
+</html>

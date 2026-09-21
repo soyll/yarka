@@ -1,0 +1,45 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+
+	<h2>Цитаты Антона Павловича Чехова</h2>
+	<!-- блок цитат -->
+	<div id="citate">
+		<p>Не стоит мешать людям сходить с ума.</p>
+		
+		<p>Жизнь, по сути, очень простая штука и человеку нужно приложить много усилий, чтобы её испортить.</p>
+
+		<p>На боль я отвечаю криком и слезами, на подлость — негодованием, на мерзость — отвращением. По-моему, это, собственно, и называется жизнью.</p>
+	</div>	
+
+	<script>
+		// ссылка на узел body
+		let body = document.body; 
+		
+		// элемент header
+		let header = body.firstElementChild;
+		console.log(header.nodeType); // 1
+
+		// элемент h2
+		let h = header.nextElementSibling;
+		console.log(h.nodeType);  // 1
+
+		// пустой текстовый узел
+		let txt = h.nextSibling;
+		console.log(txt.nodeType);  // 3
+
+		// комментарий
+		let comment = txt.nextSibling;	
+		console.log(comment.nodeType);  // 8
+	</script>
+	
+</body>
+</html>

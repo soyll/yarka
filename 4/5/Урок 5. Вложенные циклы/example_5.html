@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<h2>Вложенные циклы</h2>
+	<h3>Top продаж смартфонов по итогам 2021 года</h3>	
+	
+	<div id="top">
+		<ol>
+			<li>Xiaomi 11T Pro</li>
+			<li>OnePlus 9RT</li>
+			<li>Samsung Galaxy S21 FE</li>
+			<li>Asus ZenFone 8</li>
+			<li>Realme GT 2 Pro</li>
+			<li>Apple iPhone 13 </li>
+			<li>Sony Xperia 5 III</li>
+			<li>Samsung Galaxy Z Flip3</li>
+			<li>Asus ROG Phone 5S </li>
+			<li>Samsung Galaxy S22 Ultra </li>
+		</ol>
+	</div>		
+
+	<hr>
+	
+	<script>
+		// получение коллекции элементов
+		var elements = document.getElementById('top').firstElementChild.children;
+		
+		// количество элементов коллекции
+		let len = elements.length;
+		
+		// вывод в цикле for
+		for (var el of elements) {
+			document.write (el.innerText, "<br/>");
+		}
+	</script>
+	
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

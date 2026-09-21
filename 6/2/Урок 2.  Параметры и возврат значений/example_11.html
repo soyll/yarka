@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title> 
+
+	<script>
+		// объявляем функцию c двумя параметрами:
+		/*
+			1) arr - явный параметр (массив)
+			2) ...params - неопределенным количеством параметров
+		*/
+		function display(arr, ...params){
+			// первый параметр
+			console.log("-> первый параметр:");
+			console.dir(arr);
+			
+			// второй параметр
+			console.log("-> второй параметр:");
+			console.dir(params);
+		}
+		
+		// вызов функции
+		// первый параметр явный, массив - ["html", "javascript", "css"]
+		// второй параметр неопределенный, массив из элементов - true, [1,2,3]
+		display(["html", "javascript", "css"], true, [1,2,3] );	
+	</script>	
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

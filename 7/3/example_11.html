@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		.elem{
+			border:1px solid #c0c0c0;
+			padding:15px;
+			margin:20px;
+		}
+	</style>
+</head>
+
+<body class="elem">body
+	<section class="elem">section
+		<div class="elem">div
+			<p class="elem">p
+				<!-- старт событиям onclick -->
+				<button class="elem">Погнали</button>			
+			</p>
+		</div>	
+	</section>
+
+	<script>
+		// переберем коллекцию элементов .elem
+		for(let elem of document.querySelectorAll('.elem')){
+			// название тега текущего элемента
+			console.log(elem.tagName);
+			
+			// клик реагирующий на погружение
+			elem.addEventListener ("click", () => alert('Погружение (Capture): ' + elem.tagName), {capture: true});
+			
+			// клик реагирующий на всплытие
+			elem.addEventListener ("click", () => alert('Всплытие (Bubbling): ' + elem.tagName), {capture: false});
+		}
+	</script>
+	
+</body>
+</html>

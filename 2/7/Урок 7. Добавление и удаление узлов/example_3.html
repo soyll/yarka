@@ -1,0 +1,34 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Добавление и удаление узлов</h1>
+	</header>
+	
+	<footer>
+		<h3 align = "center">pechora_PROger</h3>
+	</footer>
+
+	<script>
+		var div = document.createElement('div');
+		div.className = 'myclass';
+		div.id = 'myid';
+		div.innerHTML = '<h1>Даёшь стране угля!</h1>';
+
+		// выбираем целевой элемент
+		let target = document.getElementsByTagName("header")[0];
+		
+		// вставляем узел-элемент в документ	
+		target.after(div);
+
+		// ищем div в документе
+		console.log (document.body); // находим ;)
+	</script>
+
+</body>
+</html>

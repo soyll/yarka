@@ -1,0 +1,38 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">JSON представление данных</h1>
+	</header>
+	
+	<script>
+		// определение JS-объекта
+		let personJS = {
+			surname : "Бородина", 
+			name : "Ксения", 
+			patronymic : "Алексеевна", 
+			post : "Преподаватель"
+		};
+		
+		// определение JSON-объекта		
+		// для записи в несколько строк используем обратные кавычки
+		let personJSON = `
+		{
+			"surname": "Бородина", 
+			"name": "Ксения", 
+			"patronymic": "Алексеевна", 
+			"post": "Преподаватель"
+		}`;
+	</script>	
+		
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PRO</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>		
+</body>
+</html>

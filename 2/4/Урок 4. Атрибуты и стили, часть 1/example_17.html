@@ -1,0 +1,32 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 1</h1>
+	</header>
+	
+	<div id='citate' title="Мертвые души" onclick="alert('Мертвые души (Н.В. Гоголь)')" style="margin:20px; border:1px solid #c0c0c0; padding:10px; background: #f5f5f5;">
+		Эх, тройка! Птица тройка, кто тебя выдумал? Знать, у бойкого народа ты могла только родиться, в той земле, что не любит шутить, а ровнем-гладнем разметнулась на полсвета, да и ступай считать версты, пока не зарябит тебе в очи...		
+	</div>	
+
+	<script>
+		// ссылка на узел div
+		let div = document.body.firstElementChild.nextElementSibling; 
+
+		// удалим узел-атрибут
+		var attr = div.attributes.removeNamedItem("id");
+		
+		// удаленный узел-атрибут
+		console.log(attr); // id='citate'
+		
+		// получим атрибут id 
+		console.log(div.attributes.getNamedItem("id")); // null
+	</script>
+
+</body>
+</html>

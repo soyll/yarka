@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body> 
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+	
+	<p id="elem">Не говори своему другу того, что не должен знать твой враг.</P>
+
+	<!--
+		для теста можно испоьзовать элемент div
+		<div id="elem">Если хочешь подчинить себе все, подчини себя разуму.</div>
+	-->
+
+	<script>
+		// elem = document.getElementById("elem");
+
+		// дополнительная информация приходит в обработчик вместе с событием
+		elem.addEventListener("sayhello", function(e) {
+			// имя тега, на котором произошло событие
+			alert(this.tagName);
+			// свойства пользовательского события
+			console.log (e.detail.msg);
+			console.log (e.detail.text);
+		});
+
+		// объект события инициализируем в методе dispatchEvent
+		elem.dispatchEvent(new CustomEvent("sayhello", {
+			detail: { 
+				msg: "Инициируем событие на HTML-элементе",
+				text: elem.innerText
+			}
+		}));
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+let orderJSON = `{
+	"student": {
+		"id_student":1256,
+		"name":"Евгений",
+		"login":"master",
+		"phone":"8(912)552-92-25",
+		"email":"нет данных",
+		"status":"gold"
+	},
+	"courses":[
+		{
+			"id":41,
+			"name":"Frontend- и backend- программирование: PHP и JavaScript",
+			"hours":120,
+			"certificate":"Да",
+			"price":7500
+		},
+		{
+			"id":12,
+			"name":"Веб анимация средствами JavaScript и CSS",
+			"hours":40,
+			"certificate":"Да",
+			"price":5000
+		}		
+	],
+	"shop": {
+		"date":"21.02.2023",
+		"discaunt":0.15,
+		"price":12500,
+		"newprice":10625
+	}
+}`;

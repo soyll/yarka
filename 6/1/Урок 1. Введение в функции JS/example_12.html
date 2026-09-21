@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// общий вид вычисления факториала
+		// n! = 1 * 2 * 3 * 4 * ... * n
+		
+		// факториал числа 5
+		// 5! = 1 * 2 * 3 * 4 * 5 (=120)
+		
+		// именованная функция expression 
+		var fact = function fnFact (num) {
+			
+			if (num >= 1) {
+				
+				console.log(num);
+				// рекурсивный вызов именованной функции,
+				// где fnFact - имя функции
+				return num * fnFact(num - 1);	
+			};
+
+			// выход из рекурсии
+			return 1;	
+		};
+		
+		res = fact(5);
+		
+		console.log("==========");
+		console.log("5! = ", res);
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<footer align="center">
+		<h3>Веб-программирование и дизайн на vk.com/pechora_pro</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>	
+</html>

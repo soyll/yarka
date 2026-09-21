@@ -1,0 +1,11 @@
+table {
+    margin: 0 auto;
+    margin-top: 15px;
+    border-spacing: 0;
+}
+table td, table th {
+    border: 1px solid #595959;
+    padding: 10px;
+    text-align: center;
+}
+th { background-color: lightblue; }

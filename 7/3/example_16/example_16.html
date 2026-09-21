@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body> 
+	<header align="center">
+		<h1>События и обработка событий</h1>
+	</header>
+
+	<h2>Музыку в массы</h2>
+
+	<table border="1px">
+		<tr>	
+			<th>Название</th>
+			<th>Алиас</th>
+			<th>Страна</th>
+			<th>Год основания</th>
+			<th>Стиль</th>
+			<td></td>
+		</tr>		
+		<tbody id="tbody" onclick="delRow()">
+			<tr>
+				<td>Aerosmith</td>
+				<td>aerosmith</td>
+				<td>США</td>
+				<td>1970</td>
+				<td>хард-рок</td>
+				<td><img src='icon.jpg' width="24"></td>
+			</tr>
+
+			<tr>
+				<td>Pink Floyd</td>
+				<td>pink-floyd</td>
+				<td>Великобритани</td>
+				<td>1965</td>
+				<td>психоделический-рок</td>			
+				<td><img src='icon.jpg' width="24"></td>
+			</tr>
+
+			<tr>
+				<td>AC/DC</td>
+				<td>ac-dc</td>
+				<td>Австралия</td>			
+				<td>1973</td>
+				<td>хард-блюз-рок</td>
+				<td><img src='icon.jpg' width="24"></td>
+			</tr>	
+
+			<tr>
+				<td>Ленинград</td>
+				<td>ленинград</td>
+				<td>Россия</td>			
+				<td>1997</td>
+				<td>ска, фолк, панк</td>
+				<td><img src='icon.jpg' width="24"></td>
+			</tr>
+		</tbody>		
+	</table>
+
+	<h2>Добавь свой вариант</h2>
+
+	<form id="frm" onsubmit="addRow()">
+		Название: <input type="text" name="name" value="Пикник"><br>
+		Алиас: <input type="text" name="alias" value="picnic"><br>
+		Страна: <input type="text" name="country" value="Россия"><br>
+		Год основания: <input type="text" name="date" value="1983"><br>
+		Стиль: <input type="text" name="style" value="арт-рок, готик-рок"><br>
+		<button>Submit</button>
+	</form>	
+
+	<script>
+		// функция добавления строки
+		function addRow() {
+			// отменим действие по умолчанию (отправка формы)
+			event.preventDefault();
+
+			// формирование новой строки
+			let row = `
+				<tr>
+					<td>${frm.elements['name'].value}</td>
+					<td>${frm.elements['alias'].value}</td>
+					<td>${frm.elements['country'].value}</td>			
+					<td>${frm.elements['date'].value}</td>
+					<td>${frm.elements['style'].value}</td>
+					<td><img src='icon.jpg' width="24"></td>
+				</tr>	
+			`;
+
+			// вставка строки в таблицу
+			tbody.insertAdjacentHTML("beforeend", row);
+		}
+		
+		// функция удаления строки
+		function delRow() {
+			if (event.target.tagName == "IMG") {
+				event.target.closest('tr').style.display = "none";
+			};
+		}
+	</script>
+	
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Бесплатные курсы</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>	
+</body>
+</html>

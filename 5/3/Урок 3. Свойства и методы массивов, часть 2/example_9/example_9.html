@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="televisions_array.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+	
+	<script>
+		// условие отбора
+		var price = 25000;
+
+		// находит одно вхождение
+		// или возвращает - undefined
+		let result = televisions.filter ( item => { 
+
+			// проверка вернет либо true либо false	
+			// если true, текущий item попадет в результирующий массив
+			return item[6] <= price;
+		});
+		
+		// вывод результирующего массива	
+		console.log(result);
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

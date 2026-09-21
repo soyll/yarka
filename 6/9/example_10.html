@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Замыкания</h1>
+	</header>	
+		
+	<script>
+		// массив для хранения функций, созданных методом bind
+		let welcome = new Array();
+
+		// объект user
+		var user = {
+  			login: "DenisDream",
+  			pwd: "12345",
+  			role: "admin",
+  			welcome: function() {
+    			alert(`Привет, ${this.login}!`);
+ 	 		}
+		};
+		
+		// сохраним вызов метода с привязкой к объекту
+		welcome.push(user.welcome.bind(user));
+	
+		// переопределили объект user
+		var user = {
+  			login: "ZyZyOnly",
+  			pwd: "qwerty",
+  			role: "moderator",
+  			welcome: function() {
+    			alert(`Привет, ${this.login}!`);
+ 	 		}
+		};
+	
+		// сохраним вызов метода с привязкой к объекту
+		welcome.push(user.welcome.bind(user));
+
+		// через 3 сек. выполним вызов сохраненных функций
+		setTimeout( () => {
+			
+			for (var i=0; i<welcome.length; i++) {
+				welcome[i]();
+			}
+
+		}, 3000);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

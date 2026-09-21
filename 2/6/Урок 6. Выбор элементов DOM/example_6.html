@@ -1,0 +1,84 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Выбор элементов DOM</h1>
+	</header>
+	
+	<h2>Лучшие цитаты от гения сарказма Станислава Ежи Леца</h2>
+	<pre>Мастерство подать свою мысль в лаконичной и хлесткой форме — это настоящий талант. Самые яркие цитаты, высказывания и 
+	советы Леца, которые, как ободряющий душ, действуют на наш мозг.</pre>
+	
+	<div id="citate">
+		<p>После общения с некоторыми людьми у меня появляется ярко выраженный комплекс полноценности.</p>
+
+		<p>Граница между светом и тенью — ты.</p>
+
+		<p>Многим нулям кажется, что они — орбита, по которой вращается мир.</p>
+
+		<p>Тот, кто не разбирается ни в чем, может взяться за что угодно.</p>
+
+		<p>Раздвоение личности — тяжелое психическое заболевание, так как сводит бесчисленное множество существ, на которые обычно раздроблен человек, к жалким двум.</p>
+
+		<p>Безвыходным мы называем положение, выход из которого нам не нравится.</p>
+
+		<p>Я думал, что опустился на самое дно, как вдруг снизу постучали…</p>
+
+		<p>Мгновение осознания своей бесталантности есть вспышка гениальности.</p>
+
+		<p>Пословицы противоречат одна другой. В этом, собственно, и заключается народная мудрость.</p>
+
+		<p>Иногда надо замолчать, чтобы тебя выслушали.</p>
+	</div>	
+	
+	<h2>Ваш отзыв о статье</h2>
+
+	<form id="auth">
+		Имя <input name="name" type="text" value="Фауст" /><br /><br/>
+		Логин <input name="login" type="text" value="master" /><br /><br/>
+		Пароль <input name="pwd" type="password" value="12345" /><br /><br/>
+	</form>
+
+	<form id="message">
+		E-mail <input name="email" type="email" value="master@mail.ru" /><br /><br/>
+		Тема <input name="theme" type="numeric" value="Счастливые люди" /><br /><br/>
+		Сообщение <textarea name="message"></textarea>
+	</form>
+
+	<footer>
+		<h3 align = "center">Добро пожаловать на pechora_PROger</h3>
+	</footer>
+
+	<script>
+		// поиск по имени тега, тег - p
+		let el1 = document.querySelector('p');
+		console.log(el1); // найден первый элемент p
+	
+		// поиск по идентификатору, id='auth'
+		let el2 = document.querySelector('#auth'); 
+		console.log(el2);
+		
+		// поиск по классу, class='sel'
+		let el3 = document.querySelector(".sel");
+		console.log(el3); // null - не найдено элементов
+
+		// поиск по типу элемента, type='email'
+		let el4 = document.querySelector("[type='email']");
+		console.log(el4); 
+
+		// поиск по имени элемента, name='theme'
+		let el5 = document.querySelector("[name='theme']");
+		console.log(el5); 
+
+		// поиск по свойству value, value='master@mail.ru' 
+		let el6 = document.querySelector("[value='master@mail.ru']");
+		console.log(el6); 
+	</script>
+
+</body>
+</html>

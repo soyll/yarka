@@ -1,0 +1,1 @@
+let personJSON = '{"name":"Максим","login":"superMаx","pwd":"123$%Max"}';

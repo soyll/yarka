@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>	
+		// инициируем коллекцию значениями-объектами
+		let set = new Set(
+		[
+			{id: 1, name: "JavaScript разработчик с нуля", leader: 1},
+			{id: 2, name: "Python-рузработчик", leader: 2}, 
+			{id: 3, name: "Data Scientist", leader: 2}, 
+			{id: 4, name: "Фронтенд-разработчик на JavaScript", leader: 3}, 
+			{id: 5, name: "Тестирование веб-приложений на Python", leader: 1}, 
+			{id: 6, name: "Разработчик C++", leader: 2},
+			{id: 7, name: "Android-разработчик", leader: 1},
+			{id: 8, name: "HTML, CSS, JavaScript для чайников", leader: 3},
+			{id: 9, name: "Программирование на Java", leader: 4}
+		]);
+
+		// итерируем коллекцию специальным циклом for
+		for (let course of set) {
+  			console.log(course);
+		}
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+
+	<script>
+		// инициируем массив
+		// каждый вложенный массив представляет пару параметр-значение
+		let arr =
+		[
+			['Идентификатор','1'], 
+			['Бренд', 'Toyota'], 
+			['Модель', 'Toyota Land Cruiser'], 
+			['Тип двигателя', 'Дизельный'], 
+			['Мощность', '249'], 
+			['Тип цилиндра', 'V-образный'], 
+			['Объем двигателя', '4461'], 
+			['Количество цилиндров', '8']
+		];	
+		let html = "";
+
+		// цикл for-of перебирает !-значения-!
+		for (let item of arr) {
+			// на каждой итерации значением является массив
+			console.log("-> ",item);
+			
+			// формируем строку для вывода
+			html += `
+				<p>
+					${item[0]} - <strong>${item[1]}</strong>
+				</p>`;
+		}
+
+		// выводим сформированную строку в браузер
+		document.write(html);
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

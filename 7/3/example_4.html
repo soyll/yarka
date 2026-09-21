@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru" onclick="alert(num)"> <!-- 5 -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+		<style>
+		.elem{
+			border:1px solid #c0c0c0;
+			padding:15px;
+			margin:20px;
+		}
+	</style>
+</head>
+
+<body class="elem" onclick="num++">body	
+	<section class="elem" onclick="num++">section
+		<div class="elem" onclick="num++">div
+			<p class="elem" onclick="num++">p
+				<!-- старт событиям onclick -->
+				<button class="elem" onclick="num=1">Погнали?</button>			
+			</p>
+		</div>	
+	</section>
+
+</body>
+</html>
+

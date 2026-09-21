@@ -1,0 +1,56 @@
+ <!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Объект Date</h1>
+	</header>
+
+	<div id="demo"></div>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>
+
+	<script>
+		// текстовое название месяцев
+		var months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+		// текстовое название дней недели
+		var days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+
+		// получение строки текущего времени
+		let d = new Date();
+		
+		// получение отдельных компонентов текущего времени
+		let time = d.getTime();
+		let fullYear = d.getFullYear(); 
+		let month = months[d.getMonth()];
+		let date = d.getDate(); 
+		let day = days[d.getDay()];
+		
+		// вывод в консоль компонентов
+		console.log(time);
+		console.log(fullYear);
+		console.log(month);
+		console.log(date);
+		console.log(day);
+		
+		// подготовка форматированной строки для вывода в браузер
+		let strDate = `
+			Микросекунд: ${time} <p>
+			Год: ${fullYear} <p>
+			Месяц: ${month} <p>
+			Число: ${date} <p>
+			День недели: ${day}
+		`;
+		
+		// вставка в браузер строки с компонентами времениё
+		document.getElementById("demo").innerHTML = strDate; 
+	</script>
+	
+</body>
+</html>

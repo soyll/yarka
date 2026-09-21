@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+	<script>
+		// функция инициализации объекта данных
+		function setData(login, pwd, email) {
+			// в глобальный window запишем объект данных data
+			data = {
+				login : login,
+				pwd : pwd,
+				email: email
+			};
+		}
+
+		// функция получения данных
+		// получаемые данные зависят от входного параметра val
+		function getData (val) {
+			
+			// данные data берутся из глобального window 
+			if (val == "login") return data.login;
+
+			if (val == "pwd") return data.pwd;
+
+			if (val == "email") return data.email;
+		}
+		
+		// вызов функции инициализации данных
+		setData("Админ", "12345", "master@mail.ru");
+		
+		// получение данных email
+		let email = getData("email");
+		
+		// вывод полученных данных в консоль браузера 
+		console.log(email);
+	</script>
+
+	<footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

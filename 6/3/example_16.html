@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>
+
+	<h2>Краткость – сестра таланта</h2>
+	
+	<div>
+		<h3>Всего, что нам наобещали,<br>никто у нас не отберёт.</h3>
+
+		<h3>Сначала сделайте дороги,<br>потом искореняйте мат.</h3>
+
+		<h3>Своим умом я жить желаю,<br>правда, пока за папин счёт.</h3>
+
+		<h3>И у меня есть точка зренья,<br>но только пятая она.</h3>
+
+		<h3>Фигня — на месте разберёмся<br>такой у нас обычно план.</h3>
+
+		<h3>Детсадик, школа, вуз, работа<br>потом на пенсию — а жить???</h3>
+
+		<h3>А в холодильнике, ночами,<br>еда полезней и вкусней.</h3>
+
+		<h3>Насчёт спиртного — норму знаю,<br>но выпить столько не могу.</h3>
+
+		<h3>Есть сотни субъективных мнений<br>и объективное моё.</h3>
+
+		<h3>Я мыслю значит существую<br>а вот обратное — не факт.</h3>
+	</div>
+
+	<script>
+		// сохраняем коллекцию узлов h3
+		let node = document.querySelectorAll("div h3"); 
+		
+		// определение/вызов функции по месту
+		( function getNode() {
+			
+			let couplets = new Array();
+
+			// сохраняем текстовое содержимое узлов в массив
+			for(let elem of node) {
+				couplets.push(elem.innerText);
+			}
+
+			// вывод массива в консоль браузера
+			console.log("вызов функции по месту:"); 
+			console.log(couplets);
+		} (node) ); 	
+	</script>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

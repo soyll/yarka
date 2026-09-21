@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>	
+<body>	
+	<header>
+		<h1 align="center">Область видимости и лексическое окружение</h1>
+	</header>	
+	
+	<h2>Цепочки объектов лексического окружения</h2>
+
+	<script>		
+		// глобальное лексическое окружение 
+		var a = 0;
+		let b = 5;
+		const c = 7;
+		
+		// функция глобального лексического окружения 
+		myFun = () => {
+			// область видимости функции
+			// локальное (вложенное) лексическое окружение 
+			
+			// переменная 'a' перезапишет глобальное значение
+			a = 10; 	
+			let b = 7;
+			// переменная 'b' перезапишет локальное значение
+			b = 10;
+
+			console.log(a + b + c); // 10 + 10 + 7 = 27 
+		    
+		    // console.log('a = ', a);
+		    // console.log('b = ', b);
+		    // console.log('c = ', c); 			
+		}
+		
+		// вызов функции сформирует локальное лексическое окружение
+		myFun();
+
+		// ----------
+		console.log(window);
+	</script>
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

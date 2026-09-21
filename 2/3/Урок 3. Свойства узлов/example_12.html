@@ -1,0 +1,49 @@
+ <!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Свойства узлов</h1>
+	</header>
+	
+	<h2>Цитаты из книг Эфраима Севелы</h2>
+	<!-- блок цитат -->
+	<div id="citate">
+		<p>Он был готов не есть, не пить, не спать, если это только нужно для того, чтоб коммунизм был здоров и не кашлял.</p>
+		
+		<p>И как с цепи сорвалась девка. За все годы, что держала себя в узде. У мужа рога пробились гроздьями, целым букетом. Не человек, а стадо маралов.</p>
+
+		<p>Равенство бывает только на кладбище. Но и там пытаются выделиться памятниками.</p>
+	</div>	
+
+	<script>
+		// ссылка на узел body
+		let body = document.body; 
+		
+		// элемент header
+		let header = body.firstElementChild;
+		console.log(header.tagName);  //  HEADER
+		
+		// элемент h2
+		let h = header.nextElementSibling;  // H2
+		console.log(h.tagName); 
+		
+		// текстовый узел
+		let txt = h.firstChild;
+		console.log(txt.tagName);  // undefined
+		
+		// комментарий
+		let comment = h.nextSibling.nextSibling;	
+		console.log(comment.tagName);   // undefined 
+		
+		// элемент div
+		let div = comment.nextElementSibling;
+		console.log(div.tagName);  // DIV
+	</script>
+	
+</body>
+</html>

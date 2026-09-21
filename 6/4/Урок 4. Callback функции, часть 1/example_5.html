@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// в этом скрипте начинаются проблемы
+		
+		// определяем первую функцию
+		function first() {
+			// моделируем запрос к API (на внешние ресурсы)
+			// откладываем выполнение на 500 мсек.
+			setTimeout(() => {console.log("The first function is completed")}, 500);
+		 }; 
+
+		// определяем вторую функцию
+		function second() {
+			console.log("The second function is completed");
+		};
+
+		// вызываем функции
+		first();
+		second();
+		
+		// порядок вызова функций не изменился, но
+		// изменился порядок выполнения функций
+		
+		// такая ситуация может стать проблемой,
+		// если вторая функция должна воспользоваться результатами вызова первой
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Функции JavaScript</h1>
+	</header>	
+
+    <footer align="center">
+        <h3>Верстка | Дизайн | Программирование</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body> 
+</html>

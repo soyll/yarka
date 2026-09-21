@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+
+	<script>
+		// создаем объект коллекции
+		let tel = new Map();
+
+		tel
+			.set("diag", "24")
+			.set("matr", "LED")
+			.set("freq", "60 Гц")
+			.set("firm", "DEXP")
+			.set("model", "H24F7000E")
+			.set("perm", "HD")
+			.set("price", "25000")
+			.set("path", "img/H24F7000E.jpg")
+			.set("descr", "Телевизор LED DEXP H24F7000E отличается столь компактными размерами, что место для него найдется даже на самой маленькой кухне. Благодаря VESA-креплению разместить его получится даже на стене, чтобы освободить на горизонтальных поверхностях место для других вещей.")
+
+		// возвращает итерируемый объект - набор ключей коллекции
+		console.log(tel.keys());
+
+		console.log("---------------");
+
+		// выполняем итерацию по ключам коллекции
+		for (key of tel.keys()) {
+			console.log(key);
+		};
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Массивы и коллекции</h1>
+	</header>
+
+	<footer align="center">
+		<h3>Веб-разработка с профессиональными педагогами</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>
+</body>
+</html>

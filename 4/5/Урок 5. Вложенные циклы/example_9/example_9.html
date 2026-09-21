@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<script src="array.js"></script>
+</head>
+<body>
+	<header>
+		<h1 align="center">Управляющие конструкции</h1>
+	</header>
+	
+	<h2>Вложенные циклы</h2>
+	<h3>Дискография группы Pink Floyd</h3>
+
+	<div id="data"></div>
+
+	<script>
+		let data = document.getElementById("data");
+		let list = "";
+
+		for (let i = 0; i < arr.length; i++) {
+
+			// в список первого уровня забрали
+			// arr[i][0] - идентификатор альбома 
+			// arr[i][1] - название альбома
+			list += `<li>${arr[i][1]} (id = ${arr[i][0]})</li>`;
+			
+			// инициируем переменные для вложенного цикла
+			// так как индексы 0 и 1 ушли в список первого уровня
+			// начинаем счет с индекса - 2
+			let j = 2;
+			let subList = "";
+
+			// в этот раз используем цикл do (совсем не обязательно)
+			do {
+				subList += `<li>${arr[i][j]}</li>`;
+				j++;
+			} 
+			while (j < arr[i].length);
+
+			list += `<ul>${subList}</ul>`;
+		}
+		
+		data.insertAdjacentHTML('afterbegin', `<ol>${list}</ol>`);
+	</script>
+
+	<footer align="center">
+		<h3>Веб-разработка | Профессионалы | Образование</h3>
+		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>

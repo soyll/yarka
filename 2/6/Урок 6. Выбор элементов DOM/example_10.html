@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Выбор элементов DOM</h1>
+	</header>
+		
+	<h2>Ваш отзыв о статье</h2>
+
+	<div id="citate" name="test">
+		<p>Граница между светом и тенью — ты.</p>
+	</div>
+
+	<form id="message">
+		Логин <input name="login" type="text" value="master" /><br /><br/>
+		E-mail <input name="email" type="email" value="master@mail.ru" /><br /><br/>
+		Тема <input name="theme" type="numeric" value="Программирование" /><br /><br/>
+		<input type="checkbox" name="prog" value="php" />PHP
+		<input type="checkbox" name="prog" value="javascript" />JavaScript
+		<input type="checkbox" name="prog" value="css" />CSS
+		<input type="checkbox" name="prog" value="bootstrap" />Bootstrap <br /><br/>
+		Сообщение <textarea name="message"></textarea>
+	</form>
+
+	<footer>
+		<h3 align = "center">Добро пожаловать на pechora_PROger</h3>
+	</footer>
+
+	<script>
+		// выбрать элементы с name="prog"
+		var elems = document.getElementsByName('prog');
+		
+		// коллекция элементов
+		// к коллекции обращаться необходимо по индексу
+		console.log(elems);
+		
+		// вывод значения второго чекбокса
+		console.log(elems[1].value);
+
+		// выбор элемента с нестандартным атрибутом  
+		var elems = document.getElementsByName('test');	
+
+		console.log(elems[0].id);  // citate
+		console.log(elems[0].name);  // undefined
+	</script>
+	
+</body>
+</html>

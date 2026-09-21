@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+<body>
+	<header align="center">
+		<h1>Работа с браузером. Browser Object Model (BOM)</h1>
+	</header>
+	
+	<script>
+		// пользовательский объект 
+		let user = {
+		  login: 'DenisDream',
+		  email: 'denis-dream@gmail.com',
+		  pwd: 'qwerty@'
+		}
+		// объект Map
+		user_map = new Map();
+		// добавляем пользовательский объект в объект Map
+		user_map.set('user', user);
+		user_arr = Array.from(user_map); // Array
+		console.log(user_arr);
+
+		// объект Set
+		user_set = new Set();
+		// добавляем пользовательский объект в объект Set
+		user_set.add(user);
+		user_arr = Array.from(user_set); // Array
+		console.log(user_arr);		
+	</script>
+
+    <footer align="center">
+        <h3>Веб-разработка от профессионалов. Программирование и дизайн</h3>
+        <a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+    </footer>
+</body>
+</html>

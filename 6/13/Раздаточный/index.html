@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекурсивный поиск узлов DOM</title>
+    <style>
+        div.container {
+            width: 80%;
+            margin: 0 auto;
+            font-size: 1.1em;
+        }
+
+        .table {
+            width: 100%;
+            margin: 50px 0;
+            border: 1px solid #4b4b4b;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid #cbcbcb;
+        }
+
+        .table thead th {
+            background-color: #4b4b4b;
+            color: white;
+        }
+
+        .table tbody tr:nth-child(odd) {
+            background-color: #8f8f8f;
+            color: white;
+        }
+
+        .list{
+            list-style-position: inside;
+            list-style-type: circle;
+            font-style: italic;
+        }
+        .list li{
+            margin-top: 1%;
+        }
+
+        footer{
+            width:60%;
+            margin: 5% auto;
+            text-align: center;
+            color: #4b4b4b;
+            border-top: 1px solid #4b4b4b;
+        }
+        footer a{
+            text-decoration: none;
+            color: #4b4b4b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+	
+		<h1>Рекурсивный поиск узлов DOM</h1>
+	
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Экран</th>
+                    <th>Цвет</th>
+					<th>Разрешение</th>
+                    <th>CPU</th>
+                    <th>GPU</th>
+                    <th>RAM</th>
+					<th>Объем накопителя</th>
+                    <th>ОС</th>
+                    <th>Выбор</th>
+                </tr>
+            </thead>
+            <tbody>
+				<tr>
+					<td>Ноутбук DEXP Aquilon</td>
+					<td>14</td>
+					<td>Cеребристый</td>
+					<td>Full HD (1920x1080)</td>
+					<td>Intel Celeron N4020</td>
+					<td>Intel UHD Graphics 600</td>
+					<td>RAM 4 ГБ</td>
+					<td>SSD 128 ГБ</td>
+					<td>Windows 11 Pr</td>
+					<td><input type="checkbox"></td>
+				</tr>   
+				<tr>
+					<td>Ноутбук Irbis NB257</td>
+					<td>14</td>
+					<td>Cерый</td>
+					<td>HD (1366x768)</td>
+					<td>Intel Celeron 3350</td>
+					<td>Intel UHD Graphics</td>
+					<td>RAM 4 ГБ</td>
+					<td>eMMC 64 ГБ</td>
+					<td>Windows 10 Home Single Language</td>
+					<td><input type="checkbox" checked></td>
+				</tr>
+				<tr>
+					<td>Ноутбук Digma EVE 14 C414</td>
+					<td>14</td>
+					<td>Cерый</td>
+					<td>Full HD (1920x1080)</td>
+					<td>Intel Celeron N4020</td>
+					<td>Intel UHD Graphics 600</td>
+					<td>RAM 4 ГБ</td>
+					<td>eMMC 64 ГБ</td>
+					<td>Windows 10 Home Single Language	</td>
+					<td><input type="checkbox" checked></td>
+				</tr>
+				<tr>
+					<td>Ноутбук Irbis NB262</td>
+					<td>15.6</td>
+					<td>Cеребристый</td>
+					<td>Full HD (1920x1080)</td>
+					<td>Intel Celeron 3350</td>
+					<td>Intel HD Graphics 500</td>
+					<td>RAM 4 ГБ</td>
+					<td>eMMC 128 ГБ</td>
+					<td>Windows 10 Home Single Language</td>
+					<td><input type="checkbox"></td>
+				</tr>	
+				<tr>
+					<td>Ноутбук DEXP Aquilon</td>
+					<td>15.6</td>
+					<td>Cеребристый</td>
+					<td>Full HD (1920x1080)</td>
+					<td>Intel Celeron N4020</td>
+					<td>Intel UHD Graphics 600</td>
+					<td>RAM 4 ГБ</td>
+					<td>SSD 128 ГБ</td>
+					<td>Windows 11 Pro</td>
+					<td><input type="checkbox" checked></td>
+				</tr>	
+            </tbody>
+        </table>
+    </div>
+	
+    <div class="container" id="console"></div>
+	
+	<script>
+
+		// ...
+
+	</script>	
+
+	<footer>
+		<h3>Веб-разработка | Профессионалы | Демоэкзамен</h3>
+		<a href="https://vk.com/pechora_pro" target="_blank">pechora_PRO</a>
+	</footer>	
+</body>
+</html>
