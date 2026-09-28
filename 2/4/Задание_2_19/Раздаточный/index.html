@@ -36,8 +36,15 @@
 	        title : "Цитата из наставления отца Чичикова"
     	};
 
-    	// ...
+    	let div = document.body.firstElementChild.nextElementSibling;
+    	div.id = obj.id;
+    	div.className = obj.class;
+    	div.title = obj.title;
+    	div.innerText = obj.content;
 
+    	for (let key in obj.style) {
+    		div.style[key] = obj.style[key];
+    	}
 	</script>
 
 </body>

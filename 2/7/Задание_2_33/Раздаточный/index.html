@@ -15,9 +15,48 @@
     <!-- место для вставки списка -->
     
     <script>
+        let painters = [
+            {
+                name: "РЕПИН Илья – Бурлаки на Волге",
+                url: "https://gallerix.ru/album/200-Russian/pic/glrx-671453857"
+            },
+            {
+                name: "АЙВАЗОВСКИЙ Иван – Девятый вал",
+                url: "https://gallerix.ru/album/200-Russian/pic/glrx-668405151"
+            },
+            {
+                name: "ШИШКИН Иван – Утро в сосновом лесу",
+                url: "https://gallerix.ru/album/200-Russian/pic/glrx-608117675"
+            },
+            {
+                name: "АВИЛОВ Михаил – Поединок Пересвета с Челубеем на Куликовом поле",
+                url: "https://gallerix.ru/album/200-Russian/pic/glrx-359249877"
+            },
+            {
+                name: "ПЕРОВ Василий – Охотники на привале",
+                url: "https://gallerix.ru/album/200-Russian/pic/glrx-147680664"
+            }
+        ];
 
-        // ...
+        let ul = document.createElement("ul");
 
+        let firstLi = document.createElement("li");
+        let firstA = document.createElement("a");
+        firstA.setAttribute("href", painters[0].url);
+        firstA.setAttribute("target", "_blank");
+        firstA.append(painters[0].name);
+        firstLi.append(firstA);
+        ul.append(firstLi);
+
+        for (let i = 1; i < painters.length; i++) {
+            let li = firstLi.cloneNode(true);
+            let a = li.firstChild;
+            a.setAttribute("href", painters[i].url);
+            a.firstChild.nodeValue = painters[i].name;
+            ul.append(li);
+        }
+
+        document.body.insertBefore(ul, document.querySelector("script"));
     </script>
 
 </body>

@@ -30,8 +30,10 @@
 		let div1 = document.body.firstElementChild.nextElementSibling; 
 		let div2 = div1.nextElementSibling; 
 
-		// ...
-		
+		let onclickAttr = div1.attributes.getNamedItem("onclick");
+		let newAttr = document.createAttribute("onclick");
+		newAttr.value = onclickAttr.value;
+		div2.attributes.setNamedItem(newAttr);
 	</script>
 
 </body>

@@ -1,0 +1,1 @@
+В тринадцатом задании собрал объект из скрытого блока #content: text, author (name/surname/patronymic из span), title, date и массив characters. Имена свойств совпадают с id блоков. Вывел через console.dir. Всё в index.html.

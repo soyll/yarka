@@ -30,8 +30,9 @@
 		let div1 = document.body.firstElementChild.nextElementSibling; 
 		let div2 = div1.nextElementSibling; 
 
-		// ...
-
+		// onclick у two — item(1), class — item(2); у one наоборот
+		div2.attributes.item(1).value = div1.attributes.item(2).value;
+		div2.attributes.item(2).value = div1.attributes.item(1).value;
 	</script>
 
 </body>

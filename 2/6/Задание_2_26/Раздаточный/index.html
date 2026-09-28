@@ -48,7 +48,6 @@
 		-->
 
 	<script>
-		// инициализация объекта
 		let obj = {
 			author: {
 				name: "",
@@ -60,6 +59,32 @@
 			text: ""
 		};
 
+		let authorBlock = document.getElementById("author");
+		obj.author.name = authorBlock.children[0].innerText;
+		obj.author.patronymic = authorBlock.children[1].innerText;
+		obj.author.surname = authorBlock.children[2].innerText;
+
+		let comment;
+		for (let i = 0; i < document.body.childNodes.length; i++) {
+			if (document.body.childNodes[i].nodeType === 8) {
+				comment = document.body.childNodes[i];
+				break;
+			}
+		}
+
+		let tmp = document.createElement("div");
+		tmp.innerHTML = comment.data;
+
+		obj.date = tmp.querySelector("#date").innerText;
+
+		let chars = tmp.querySelector("#characters").children;
+		for (let i = 0; i < chars.length; i++) {
+			obj.characters.push(chars[i].innerText);
+		}
+
+		obj.text = tmp.querySelector("#text pre").innerText;
+
+		console.log(obj);
 	</script>
 
 </body>

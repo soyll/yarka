@@ -30,8 +30,17 @@
 	        data: ["Мертвые души", "Отец Чичикова", "Н.В. Гоголь"]
 	    };
 
-	    // ...
-	    
+	    let div = document.body.firstElementChild.nextElementSibling;
+
+	    div.innerHTML = obj.content;
+	    div.id = obj.id;
+	    div.style.cssText = obj.style;
+	    div.className = obj.class;
+	    div.title = obj.title;
+
+	    div.dataset.book = obj.data[0];
+	    div.dataset.characterBook = obj.data[1];
+	    div.dataset.authorBook = obj.data[2];
 	</script>
 	
 </body>

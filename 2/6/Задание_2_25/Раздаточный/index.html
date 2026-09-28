@@ -63,14 +63,14 @@
 	</footer>
 
 	<script>
-		// получим доступ к элементу li с классом selected
+		let byNodes = document.body.firstElementChild
+			.nextElementSibling
+			.nextElementSibling
+			.children[2];
+		console.log(byNodes);
 
-		// используем свойства узлов
-
-
-		
-		// используем быстрый метод querySelector
-
+		let byQuery = document.querySelector("li.selected");
+		console.log(byQuery);
 	</script>
 	
 </body>

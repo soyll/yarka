@@ -23,10 +23,11 @@
 	<p>* - В.И.Ленин - вождь мирового пролетариата 
 	
 	<script>
-		// запросим индекс для поиска цитаты
-		let index = prompt("Укажите индекс и получите случайную цитату В.И. Ленина", "Введите индекс в диапазоне 0-6")
+		let index = prompt("Укажите индекс и получите случайную цитату В.И. Ленина", "Введите индекс в диапазоне 0-6");
 
-		// ...
+		let citates = document.getElementById("citate").children;
+		let txt = citates[index].firstChild;
+		console.log(txt);
 	</script>	
 	
 </body>

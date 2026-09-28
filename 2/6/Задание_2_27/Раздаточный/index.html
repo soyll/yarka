@@ -118,9 +118,29 @@
 	</div>
 
 	<script>
-		// ...
-		// ...
+		let checked = document.querySelector("input[name=select]:checked");
+		let cells = checked.parentElement.parentElement.cells;
 
+		let obj = {
+			id: cells[0].innerText,
+			from: cells[1].innerText,
+			dateFrom: cells[2].innerText,
+			to: cells[3].innerText,
+			dateTo: cells[4].innerText,
+			price: cells[5].innerText
+		};
+
+		let box = document.createElement("div");
+		box.innerHTML = "<h3>Выбранный элемент</h3>"
+			+ "Код: " + obj.id + "<br/>"
+			+ "Откуда: " + obj.from + "<br/>"
+			+ "Дата и время вылета: " + obj.dateFrom + "<br/>"
+			+ "Куда: " + obj.to + "<br/>"
+			+ "Дата и время прилета: " + obj.dateTo + "<br/>"
+			+ "Цена: " + obj.price + "<br/>";
+		document.body.append(box);
+
+		console.log(obj);
 	</script>		
 
 </body>

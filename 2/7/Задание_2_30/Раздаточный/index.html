@@ -31,13 +31,21 @@
 	</footer>
 
 	<script>	
-		// определяем цитаты для вставки
 		let citate1 = 'Ум — это не сосуд, который нужно заполнить, но факел, который нужно зажечь (Плутарх)';
 		
 		let citate2 = 'Преподавание должно быть наполнено идеями, а не напичкано фактами (Автор неизвестен)';
 		
-		// ...
-		
+		let box = document.getElementById("citate");
+
+		let p1 = document.createElement("p");
+		p1.append(document.createTextNode(citate1));
+		p1.style.color = "green";
+		box.prepend(p1);
+
+		let p2 = document.createElement("p");
+		p2.append(document.createTextNode(citate2));
+		p2.style.color = "blue";
+		box.append(p2);
 	</script>
 	
 </body>

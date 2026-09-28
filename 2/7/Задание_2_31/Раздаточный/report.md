@@ -1,0 +1,1 @@
+В тридцать первом задании создал img через createElement, атрибуты повесил setAttribute, вставил в .image-box через append. Заголовок и описание добавил insertAdjacentHTML — они уже были строками с HTML. Код в index.html.

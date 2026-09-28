@@ -1,0 +1,1 @@
+В шестом задании добрался до таблицы с дискографией Pink Floyd через цепочку firstElementChild / nextElementSibling от body (пропустил header, h3, ol, h3, div, h3). Саму таблицу вывел в console.log. Правки только в index.html.

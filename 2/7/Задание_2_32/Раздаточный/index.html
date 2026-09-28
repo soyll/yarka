@@ -13,9 +13,45 @@
     <h2>Дискография группы Pink Floyd</h2>
     
     <script>
+        let albums = [
+            "Atom Heart Mother",
+            "Meddle",
+            "Obscured by Clouds"
+        ];
 
-        // ...
+        let table = document.createElement("table");
+        table.setAttribute("border", "1");
 
+        let head = document.createElement("tr");
+        let th1 = document.createElement("th");
+        th1.append("№");
+        let th2 = document.createElement("th");
+        th2.append("Альбом");
+        head.append(th1, th2);
+        table.append(head);
+
+        for (let i = 0; i < albums.length; i++) {
+            let tr = document.createElement("tr");
+            let tdNum = document.createElement("td");
+            tdNum.append(String(i + 1));
+            let tdName = document.createElement("td");
+            tdName.append(albums[i]);
+            tr.append(tdNum, tdName);
+            table.append(tr);
+        }
+
+        let linkRow = document.createElement("tr");
+        let linkCell = document.createElement("td");
+        linkCell.setAttribute("colspan", "2");
+        let a = document.createElement("a");
+        a.setAttribute("href", "https://www.pinkfloyd.com/home.php");
+        a.setAttribute("target", "_blank");
+        a.append("Подробнее на официальном сайте...");
+        linkCell.append(a);
+        linkRow.append(linkCell);
+        table.append(linkRow);
+
+        document.body.append(table);
     </script>
     
 </body>

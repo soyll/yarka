@@ -104,9 +104,38 @@
 			    }
 			}
 
-		// ...
-		// ...	
-		
+		let item = obj.data.items[0];
+		let flights = item.flights;
+		let passengers = item.passengers;
+
+		let flightsHtml = "<h2>Рейсы</h2><table border='1'><tr><th>ID</th><th>Код</th><th>Откуда</th><th>Куда</th><th>Цена</th><th>Мест</th></tr>";
+		for (let i = 0; i < flights.length; i++) {
+			let f = flights[i];
+			flightsHtml += "<tr>"
+				+ "<td>" + f.flight_id + "</td>"
+				+ "<td>" + f.flight_code + "</td>"
+				+ "<td>" + f.from.city + " (" + f.from.iata + ") " + f.from.date + " " + f.from.time + "</td>"
+				+ "<td>" + f.to.city + " (" + f.to.iata + ") " + f.to.date + " " + f.to.time + "</td>"
+				+ "<td>" + f.cost + "</td>"
+				+ "<td>" + f.availability + "</td>"
+				+ "</tr>";
+		}
+		flightsHtml += "</table>";
+		document.querySelector(".flights").innerHTML = flightsHtml;
+
+		let passHtml = "<h2>Пассажиры</h2><table border='1'><tr><th>ID</th><th>Имя</th><th>Фамилия</th><th>Дата рождения</th><th>Документ</th></tr>";
+		for (let i = 0; i < passengers.length; i++) {
+			let p = passengers[i];
+			passHtml += "<tr>"
+				+ "<td>" + p.id + "</td>"
+				+ "<td>" + p.first_name + "</td>"
+				+ "<td>" + p.last_name + "</td>"
+				+ "<td>" + p.birth_date + "</td>"
+				+ "<td>" + p.document_number + "</td>"
+				+ "</tr>";
+		}
+		passHtml += "</table>";
+		document.querySelector(".passengers").innerHTML = passHtml;
 	</script>
 	
 </body>

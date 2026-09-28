@@ -51,9 +51,25 @@
 	</footer>
 
 	<script>
+		let content = document.getElementById("content");
 
-		//
+		let obj = {
+			text: content.children[0].innerText,
+			author: {
+				name: content.children[1].children[0].innerText,
+				surname: content.children[1].children[2].innerText,
+				patronymic: content.children[1].children[1].innerText
+			},
+			title: content.children[2].innerText,
+			date: content.children[3].innerText,
+			characters: []
+		};
 
+		for (let i = 0; i < content.children[4].children.length; i++) {
+			obj.characters.push(content.children[4].children[i].innerText);
+		}
+
+		console.dir(obj);
 	</script>
 
 </body>

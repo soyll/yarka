@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+	<style>
+		.go {
+			font-family: Arial;
+			font-size: 12pt;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Атрибуты и стили, часть 2</h1>
+	</header>
+	
+	<!-- блок div для вставки контента -->
+	<div></div>
+
+	<script>
+		let obj = {
+	        content: "... больше всего береги и копи <b>копейку</b>: эта вещь надежнее всего на свете. Товарищ или приятель тебя надует и в беде первый тебя выдаст, а <b>копейка</b> не выдаст, в какой бы беде ты ни был. Все сделаешь и все прошибешь на свете <b>копейкой</b>...",
+	        id: "citate",
+	        style: "width: 60%; margin: 0 auto; padding: 20px; margin-top: 50px; background: #eee; border-radius:15px; box-shadow: 0px 0px 15px #595959;",
+	        class: "go",
+	        title: "Цитата из наставления отца Чичикова",
+	        data: ["Мертвые души", "Отец Чичикова", "Н.В. Гоголь"]
+	    };
+
+	    let div = document.body.firstElementChild.nextElementSibling;
+
+	    div.innerHTML = obj.content;
+	    div.setAttribute("id", obj.id);
+	    div.setAttribute("style", obj.style);
+	    div.setAttribute("class", obj.class);
+	    div.setAttribute("title", obj.title);
+	    div.setAttribute("data-book", obj.data[0]);
+	    div.setAttribute("data-character-book", obj.data[1]);
+	    div.setAttribute("data-author-book", obj.data[2]);
+	</script>
+	
+</body>
+</html>

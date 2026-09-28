@@ -52,10 +52,14 @@
 		<a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
 	</footer>	
 
+	<script src="script.js"></script>
 	<script>
-
-		// написать код для вывода данных
-
+		let out = document.body.firstElementChild.nextElementSibling.nextElementSibling;
+		out.innerHTML = "<h2>" + obj.title + "</h2>"
+			+ "<p><b>Автор:</b> " + obj.author.surname + " " + obj.author.name + " " + obj.author.patronymic + "</p>"
+			+ "<p><b>Год:</b> " + obj.date + "</p>"
+			+ "<p><b>Персонажи:</b> " + obj.characters.join(", ") + "</p>"
+			+ "<p>" + obj.text + "</p>";
 	</script>
 
 </body>

@@ -1,9 +1,9 @@
- <!doctype html>
+<!doctype html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
-	<!-- не забудьте подключить файл стилей -->
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -20,19 +20,6 @@
 	</footer>	
 
 	<script>
-		/*
-		<!-- Основной блок -->
-		<div class="col">
-			<!-- Изображение города -->
-			<img>
-			<!-- Название города -->
-			<div></div>
-			<!-- Описание -->
-			<p></p>
-		</div>
-		*/
-
-		// объект, содержащий свойства - характеристики города
 		let city = {
 			title : "<h3>Барселона</h3>",
 			
@@ -41,8 +28,21 @@
 			description : "Барселона — прекрасная, чарующая, эффектная и очень необычная столица Каталонии, главной автономной области Испанского королевства. Второй по величине город Пиренейского полуострова, один из крупнейших портов Средиземноморья и мира, любимая точка притяжения для путешественников всех мастей. Барселона настолько многоликая и яркая, что ее по праву можно назвать одним из самых красивых городов земли!"			
 		};
 
-		// ...
-		
+		let col = document.createElement("div");
+		col.setAttribute("class", "col");
+
+		let img = document.createElement("img");
+		img.setAttribute("src", city.pict);
+		img.setAttribute("alt", "Барселона");
+
+		let titleBox = document.createElement("div");
+		titleBox.innerHTML = city.title;
+
+		let p = document.createElement("p");
+		p.append(city.description);
+
+		col.append(img, titleBox, p);
+		document.querySelector(".row").append(col);
 	</script>
 
 </body>

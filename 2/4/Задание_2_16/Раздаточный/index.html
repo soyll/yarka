@@ -28,9 +28,14 @@
 	
 	<script>
 		let body = document.body; 
+		let one = body.firstElementChild.nextElementSibling;
+		let two = one.nextElementSibling;
 
-		// ...
-		
+		two.className = "more";
+		two.style.backgroundColor = getComputedStyle(one).backgroundColor;
+		two.style.border = "2px dotted red";
+		two.style.fontStyle = "italic";
+		two.style.fontWeight = "bold";
 	</script>
 	
 </body>

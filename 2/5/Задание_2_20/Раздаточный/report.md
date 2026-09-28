@@ -1,0 +1,1 @@
+В двадцатом задании через цепочку lastElementChild.firstElementChild добрался до h3 в footer, setAttribute поменял align на right и вывел текущее значение в браузер через document.write. Код в index.html.

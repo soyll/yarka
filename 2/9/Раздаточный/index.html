@@ -9,9 +9,108 @@
 
 <body>
 	<script>
+		let orderJSON = `{
+			"user": {
+				"name": "Павел",
+				"surname": "Волков",
+				"email": "p-volkoff@mail.ru",
+				"phone": "8(912)552-92-25"
+			},
+			"order_info": {
+				"order_date": "07.01.2023",
+				"delivery_type": "По адресу",
+				"discount": "10%",
+				"total_price": "",
+				"address": {
+					"city": "Москва",
+					"street": "Белореченская улица",
+					"house": "31"
+				}
+			},
+			"products": [
+				{
+					"articul": "RTLACB138001",
+					"name": "Носки из хлопка SUPIMA",
+					"brand": "UNIQLO",
+					"color": "Синий",
+					"season": "Мульти",
+					"price": 399,
+					"quantity": 3,
+					"cost": ""
+				},
+				{
+					"articul": "MP002XM0984Y",
+					"name": "Брюки",
+					"brand": "O'stin",
+					"color": "Черный",
+					"season": "Демисезон",
+					"price": 3799,
+					"quantity": 1,
+					"cost": ""
+				},
+				{
+					"articul": "MP002XM0984Y",
+					"name": "Дубленка CLAUDE",
+					"brand": "Mango Man",
+					"color": "Коричневый",
+					"season": "Мульти",
+					"price": 11190,
+					"quantity": 1,
+					"cost": ""
+				}
+			]
+		}`;
 
-		// ...
+		console.log(orderJSON);
 
+		let order = JSON.parse(orderJSON);
+
+		let sum = 0;
+		for (let i = 0; i < order.products.length; i++) {
+			order.products[i].cost = order.products[i].price * order.products[i].quantity;
+			sum += order.products[i].cost;
+		}
+
+		let discount = parseInt(order.order_info.discount);
+		order.order_info.total_price = Math.round(sum * (100 - discount) / 100);
+
+		let html = '<div class="wrapper">';
+		html += '<div class="user_order_header"><h2>Заказ пользователя</h2></div>';
+		html += '<div class="user_data">';
+		html += '<div class="user_personal_data">';
+		html += '<div class="order_item"><span class="order_item_title">Имя:</span><span class="order_item_border">' + order.user.name + '</span></div>';
+		html += '<div class="order_item"><span class="order_item_title">Фамилия:</span><span class="order_item_border">' + order.user.surname + '</span></div>';
+		html += '<div class="order_item"><span class="order_item_title">Email:</span><span class="order_item_border">' + order.user.email + '</span></div>';
+		html += '<div class="order_item"><span class="order_item_title">Телефон:</span><span class="order_item_border">' + order.user.phone + '</span></div>';
+		html += '</div>';
+		html += '<div class="user_order_data">';
+		html += '<div class="order_item"><span class="order_item_title">Дата заказа:</span><span class="order_item_border">' + order.order_info.order_date + '</span></div>';
+		html += '<div class="order_item"><span class="order_item_title">Доставка:</span><span class="order_item_border">' + order.order_info.delivery_type + '</span></div>';
+		html += '<div class="order_item"><span class="order_item_title">Адрес:</span><span class="order_item_border">' + order.order_info.address.city + ', ' + order.order_info.address.street + ', д. ' + order.order_info.address.house + '</span></div>';
+		html += '<div class="order_item"><span class="order_item_title">Скидка:</span><span class="order_item_border">' + order.order_info.discount + '</span></div>';
+		html += '</div></div>';
+
+		html += '<div class="products"><h3>Товары</h3>';
+		for (let i = 0; i < order.products.length; i++) {
+			let p = order.products[i];
+			html += '<div class="product_card">';
+			html += '<div class="product_card_info">';
+			html += '<b>' + p.brand + ' — ' + p.name + '</b><br>';
+			html += 'Артикул: ' + p.articul + '<br>';
+			html += 'Цвет: ' + p.color + ', сезон: ' + p.season + '<br>';
+			html += 'Цена: ' + p.price + ' ₽';
+			html += '</div>';
+			html += '<div class="product_card_quantity">× ' + p.quantity + '</div>';
+			html += '<div class="product_card_cost">' + p.cost + ' ₽</div>';
+			html += '</div>';
+		}
+		html += '</div>';
+
+		html += '<div class="total_price">Итого со скидкой: <span class="total_price_number">' + order.order_info.total_price + ' ₽</span></div>';
+		html += '</div>';
+
+		document.write(html);
+		console.log(order);
 	</script>
 
 	<footer align="center">

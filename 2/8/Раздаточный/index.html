@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<title>Красивые города мира</title>
-	<!-- не забудьте подключить файл стилей -->
-	<!-- не забудьте подключить файл с данными -->
+	<link rel="stylesheet" href="style.css">
+	<script src="data.js"></script>
 </head>
 <body>
 
@@ -24,43 +24,31 @@
 	</main>
 
 	<script>
-		/*
-		Структура создаваемых блоков,
-		контент для вставки находится в файле data.js 
-		
-		<!-- Основной блок -->
-		<div class="col">
-			<!-- Изображение города -->
-			<img>
-			<!-- Название города -->
-			<p></p>
-			<!-- Текстовое описание города -->
-			<p></p>
-		</div>
-		*/
+		let first = document.createElement("div");
+		first.setAttribute("class", "col");
 
-		// Далее указан алгоритм в котором я выполнял задание
-		// ... ваше решение может быть иным
-		
+		let img = document.createElement("img");
+		let nameP = document.createElement("p");
+		let textP = document.createElement("p");
 
-		// создаем первый блок
-		// ...
-		
-		// вставим узлы в первый блок
-		// ...
+		first.append(img, nameP, textP);
 
-		// создаем следующие блоки клонированием
-		// ...
+		let blocks = [first];
+		for (let i = 1; i < obj.length; i++) {
+			blocks.push(first.cloneNode(true));
+		}
 
-		// вставляем контент в созданные блоки
-		// ...
+		for (let i = 0; i < obj.length; i++) {
+			blocks[i].children[0].setAttribute("src", obj[i].img);
+			blocks[i].children[0].setAttribute("alt", obj[i].name);
+			blocks[i].children[1].innerText = obj[i].name;
+			blocks[i].children[2].innerText = obj[i].text;
+		}
 
-		// получаем ссылку на целевой элемент 
-		// ...
-		
-		// вставляем в целевой элемент созданный контент
-		// ...
-
+		let row = document.querySelector(".row");
+		for (let i = 0; i < blocks.length; i++) {
+			row.append(blocks[i]);
+		}
 	</script>
 	
 </body>

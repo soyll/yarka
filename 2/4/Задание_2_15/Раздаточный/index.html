@@ -21,9 +21,12 @@
 	
 	<script>
 		let body = document.body; 
+		let one = body.firstElementChild.nextElementSibling;
+		let two = one.nextElementSibling;
 
-		// ...
-		
+		for (let i = 0; i < one.attributes.length; i++) {
+			two.setAttribute(one.attributes[i].name, one.attributes[i].value);
+		}
 	</script>
 	
 </body>

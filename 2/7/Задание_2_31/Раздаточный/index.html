@@ -23,8 +23,17 @@
             Место рождения - <b>Фигерас, Испания</b></p>
         `;
 
-        // ...
-        
+        let box = document.querySelector(".image-box");
+
+        let img = document.createElement("img");
+        img.setAttribute("src", "image/dali.jpg");
+        img.setAttribute("alt", "Фото:Сальвадор Дали");
+        img.setAttribute("title", "Сальвадор Дали");
+        img.setAttribute("width", "350px");
+
+        box.append(img);
+        box.insertAdjacentHTML("beforeend", title);
+        box.insertAdjacentHTML("beforeend", description);
     </script>
 
 </body>
