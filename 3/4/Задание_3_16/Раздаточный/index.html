@@ -1,8 +1,9 @@
- <!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
+	<script src="data.js"></script>
 	<style>
 		* {
 			text-align: center;
@@ -38,23 +39,27 @@
 	</footer>
 	
 	<script>
+		let min = prompt("Нижняя граница", "0");
+		let max = prompt("Верхняя граница", "9");
+		min = +min;
+		max = +max;
 
-		// ...
+		let num = Math.floor(Math.random() * (max - min + 1)) + min;
+		let film = data[num];
 
-		/*
-		// шаблон для вывода контента
-		<h1>Название: __</h1>
-		<img src="">
-		<p>Год выпуска: __</p>
-		<p>Страна: __</p>
-		<p>Актеры: __</p>
-		<ul>
-			<li>...</li>
-			<li>...</li>
-			<li>...</li>
-		</ul>
-		*/	
+		let heroes = "";
+		for (let i = 0; i < film.heroes.length; i++) {
+			heroes = heroes + "<li>" + film.heroes[i] + "</li>";
+		}
 
+		let div = document.createElement("div");
+		div.innerHTML = "<h1>Название: " + film.title + "</h1>" +
+			"<img src=\"images/" + film.img + "\">" +
+			"<p>Год выпуска: " + film.year + "</p>" +
+			"<p>Страна: " + film.country + "</p>" +
+			"<p>Актеры:</p>" +
+			"<ul>" + heroes + "</ul>";
+		document.body.insertAdjacentElement("afterbegin", div);
 	</script>	
 
 </body>

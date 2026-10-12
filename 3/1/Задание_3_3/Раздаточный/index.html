@@ -15,9 +15,15 @@
 	</footer>
 
 	<script>
+		let x = 6;
+		let y = 21;
+		let result1 = --x % 2 + 5 - -(--y) / x++ || 1;
+		console.log("result1 =", result1, "x =", x, "y =", y);
 
-		// ...
-
+		x = 6;
+		y = 21;
+		let result2 = 1 || --x % 2 + 5 - -(--y) / x++;
+		console.log("result2 =", result2, "x =", x, "y =", y);
 	</script>
 
 </body>

@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -70,9 +70,34 @@
 				count: undefined
 			}
 		}
-		
-		// ...
-		
+
+		game.gamer1.name = prompt("Имя первого игрока", "Игрок 1");
+		game.gamer2.name = prompt("Имя второго игрока", "Игрок 2");
+
+		let players = document.querySelectorAll(".player");
+
+		let imgs1 = players[0].querySelectorAll("img");
+		let sum1 = 0;
+		for (let i = 0; i < 3; i++) {
+			let n = Math.ceil(Math.random() * 6);
+			imgs1[i].src = n + ".png";
+			sum1 = sum1 + n;
+		}
+		game.gamer1.count = sum1;
+
+		let imgs2 = players[1].querySelectorAll("img");
+		let sum2 = 0;
+		for (let i = 0; i < 3; i++) {
+			let n = Math.ceil(Math.random() * 6);
+			imgs2[i].src = n + ".png";
+			sum2 = sum2 + n;
+		}
+		game.gamer2.count = sum2;
+
+		players[0].querySelector("[name=gamerName]").value = game.gamer1.name;
+		players[0].querySelector("[name=gamerCount]").value = game.gamer1.count;
+		players[1].querySelector("[name=gamerName]").value = game.gamer2.name;
+		players[1].querySelector("[name=gamerCount]").value = game.gamer2.count;
 	</script>
 
 	<footer>

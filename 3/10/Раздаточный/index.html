@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
 	
@@ -27,12 +28,28 @@
 		-->
 		<ol id="wonders-list"></ol>
 		<!-- /// -->
+
+		<div id="wonder-content"></div>
 	</div>
 
+	<script src="seven-wonders.js"></script>
 	<script>
+		let wonder = sevenWonders[Math.floor(Math.random() * sevenWonders.length)];
 
-		// ...
+		let listHTML = sevenWonders.map(function (item) {
+			return '<li><a href="' + item.href + '" target="_blank">' + item.title + '</a></li>';
+		}).join('');
 
+		document.getElementById('wonders-list').innerHTML = listHTML;
+
+		let imagesHTML = wonder.images.map(function (img) {
+			return '<img src="' + img.src + '" alt="' + img.title + '" title="' + img.title + '">';
+		}).join('');
+
+		document.getElementById('wonder-content').innerHTML =
+			'<h2>' + wonder.name + '</h2>' +
+			wonder.description +
+			imagesHTML;
 	</script>
 
 </body>

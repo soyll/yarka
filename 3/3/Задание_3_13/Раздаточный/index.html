@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -12,18 +12,27 @@
 		font-family: Arial;
 	}
 	</style>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа с числами</h1>
+	</header>
 
 	<div style="width:100px;">
 	Был человек – и нет его! Так-то вот и все на сем свете! сегодня ты и сыт и пьян, живешь в свое удовольствие, трубочку покуриваешь… А завтра – где ты, человек?
 	</div>
 
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>
+
 	<script>
 		// задаю ширину блока в двоичном виде
 		let bin = 0b111110100; // 500
 
-		// преобразую двоичное число в десятичное
-		// хочу получить - 500
-		num = bin.parseInt();
+		// bin уже число 500, parseInt тут не нужен
+		num = bin;
 
 		// выполняю конкатенацию строк
 		// хочу получить - 500px
@@ -34,19 +43,6 @@
 		
 		// устанавливаю ширину блока
 		div.style.width = width;
-
-		// найдите, что я делаю не так...
-	</script>	
-	
-</head>
-
-<body>
-	<header>
-		<h1 align = "center">Работа с числами</h1>
-	</header>
-
-	<footer>
-		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
-	</footer>		
+	</script>
 </body>
 </html>

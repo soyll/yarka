@@ -16,9 +16,36 @@
 	</footer>
 
 	<script>
+		let cartJSON = `{
+			"user": "Татьяна",
+			"cart": [
+				{
+					"title": "Телевизор Samsung",
+					"type": "LED",
+					"diagonal": "55'",
+					"resolution": "4K UHD",
+					"price": 56940
+				},
+				{
+					"title": "Блуза Хэйзи",
+					"article": "24028BL",
+					"color": "белый",
+					"fabric": "виск",
+					"size": "M",
+					"price": 3200
+				},
+				{
+					"title": "Martini Rosso",
+					"volume": 0.5,
+					"alcohol": "13%",
+					"taste": "Prosecco Rose",
+					"price": 1620
+				}
+			]
+		}`;
 
-		// ...
-
+		let cart = JSON.parse(cartJSON);
+		console.log(cart);
 	</script>
 
 </body>

@@ -16,9 +16,28 @@
 	</footer>		
 
 	<script>
+		let user = JSON.parse(personJSON);
 
-		// ...
+		let reName = /^[а-яё]{3,10}$/i;
+		let reLogin = /^[a-z0-9]{3,15}$/;
+		let rePwd = /^[a-z_@#$%^&*0-9-]{5,20}$/;
 
+		console.log("Имя:", user.name, reName.test(user.name) ? "OK" : "не OK");
+		if (!reName.test(user.name)) {
+			console.log("  → имя должно быть из а-яё, длина 3–10");
+		}
+
+		console.log("Логин:", user.login, reLogin.test(user.login) ? "OK" : "не OK");
+		if (!reLogin.test(user.login)) {
+			console.log("  → логин только a-z0-9, длина 3–15");
+			console.log("  → проблема: заглавная M и кириллическая «а» вместо латинской");
+		}
+
+		console.log("Пароль:", user.pwd, rePwd.test(user.pwd) ? "OK" : "не OK");
+		if (!rePwd.test(user.pwd)) {
+			console.log("  → пароль: a-z _ @ # $ % ^ & * 0-9 -, длина 5–20");
+			console.log("  → проблема: заглавные буквы (M) не разрешены");
+		}
 	</script>
 
 </body>

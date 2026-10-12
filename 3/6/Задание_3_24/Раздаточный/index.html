@@ -47,8 +47,71 @@
 		// определение JSON-строки
 		let personJSON = '{ "surname" : "Бородина", "name" : "Ксения", "patronymic" : "Алексеевна", "post" : "Преподаватель", "category" : "Соответствие занимаемой должности", "experience" : {"total" : 21.3, "college" : 14.5}, "courses" : ["Профессия веб-разработчик", "Fullstack разработчик на Python"], "education" : [ { "institution" : "Санкт-Петербургский государственный университет (СПбГУ)", "qualification" : "Информационные системы и технологии", "specialty" : "Безопасность киберфизических систем", "year_receipts" : 1993, "year_release" : 1998 }, { "institution" : "Московский государственный университет имени М.В.Ломоносова", "qualification" : "Факультет вычислительной математики и кибернетики", "specialty" : "Прикладная математика и информатика", "year_receipts" : 1990, "year_release" : 2001 } ] }';
 
-		// ...
+		// вручную собрал объект (без JSON.parse)
+		let person = {
+			surname: "Бородина",
+			name: "Ксения",
+			patronymic: "Алексеевна",
+			post: "Преподаватель",
+			category: "Соответствие занимаемой должности",
+			experience: {
+				total: 21.3,
+				college: 14.5
+			},
+			courses: [
+				"Профессия веб-разработчик",
+				"Fullstack разработчик на Python"
+			],
+			education: [
+				{
+					institution: "Санкт-Петербургский государственный университет (СПбГУ)",
+					qualification: "Информационные системы и технологии",
+					specialty: "Безопасность киберфизических систем",
+					year_receipts: 1993,
+					year_release: 1998
+				},
+				{
+					institution: "Московский государственный университет имени М.В.Ломоносова",
+					qualification: "Факультет вычислительной математики и кибернетики",
+					specialty: "Прикладная математика и информатика",
+					year_receipts: 1990,
+					year_release: 2001
+				}
+			]
+		};
 
+		let edu = "";
+		for (let i = 0; i < person.education.length; i++) {
+			let e = person.education[i];
+			edu += `
+				<li>
+					${e.institution}<br>
+					Квалификация: ${e.qualification}<br>
+					Специальность: ${e.specialty}<br>
+					Годы: ${e.year_receipts} – ${e.year_release}
+				</li>
+			`;
+		}
+
+		let html = `
+			<div class="wrapper">
+				<div class="img">
+					<img src="no-image.jpg" width="100%">
+				</div>
+				<div class="info">
+					<h1>${person.surname} ${person.name} ${person.patronymic}</h1>
+					<p><b>Должность:</b> ${person.post}</p>
+					<p><b>Категория:</b> ${person.category}</p>
+					<p><b>Стаж общий:</b> ${person.experience.total} лет</p>
+					<p><b>Стаж в колледже:</b> ${person.experience.college} лет</p>
+					<p><b>Курсы:</b> ${person.courses.join(", ")}</p>
+					<p><b>Образование:</b></p>
+					<ul>${edu}</ul>
+				</div>
+			</div>
+		`;
+
+		document.getElementById("content").innerHTML = html;
 	</script>		
 </body>
 </html>

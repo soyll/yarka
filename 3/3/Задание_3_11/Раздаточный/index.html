@@ -1,9 +1,9 @@
- <!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
-	<!-- место для подключения скрипта -->
+	<script src="data.js"></script>
 	<style>
 		* {
 			text-align: center;
@@ -31,9 +31,22 @@
 <body>
 
 	<script>
+		let bin = prompt("Введите номер тизера в двоичном виде (000-011)", "000");
+		let num = parseInt(bin, 2);
 
-		// ...
+		let heroes = "";
+		for (let i = 0; i < data[num].heroes.length; i++) {
+			heroes = heroes + "<li>" + data[num].heroes[i] + "</li>";
+		}
 
+		let div = document.createElement("div");
+		div.innerHTML = "<h1>Название: " + data[num].title + "</h1>" +
+			"<img src=\"images/img" + data[num].img + ".jpg\">" +
+			"<p>Год выпуска: " + data[num].year + "</p>" +
+			"<p>Страна: " + data[num].country + "</p>" +
+			"<p>Актеры:</p>" +
+			"<ul>" + heroes + "</ul>";
+		document.body.insertAdjacentElement("afterbegin", div);
 	</script>
 
 </body>

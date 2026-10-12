@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
+	<script src="product.js"></script>
 	<style>
 		.wrapper {
 			display: flex;
@@ -50,9 +51,29 @@
 	</footer>
 
 	<script>
-		
-		// ...
+		let products = JSON.parse(productJSON);
 
+		let html = '<div class="wrapper">';
+
+		for (let i = 0; i < products.length; i++) {
+			let p = products[i];
+			html += `
+				<div class="card">
+					<img src="images/${p.image}">
+					<hr>
+					<span><b>Название:</b> ${p.title}</span>
+					<span><b>Бренд:</b> ${p.brand}</span>
+					<span><b>Цвет:</b> ${p.color}</span>
+					<span><b>Страна:</b> ${p.country}</span>
+					<span><b>Капюшон:</b> ${p.hood}</span>
+					<span><b>Размер:</b> ${p.size}</span>
+					<span><b>Цена:</b> ${p.price} руб.</span>
+				</div>
+			`;
+		}
+
+		html += '</div>';
+		document.getElementById("content").innerHTML = html;
 	</script>
 
 </body>

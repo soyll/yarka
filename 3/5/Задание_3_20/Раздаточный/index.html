@@ -3,19 +3,28 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
-	
-	<script>
-
-		// ...
-
-	</script>	
-	
 </head>
 
 <body>
 	<header>
 		<h1 align = "center">Объект Date</h1>
 	</header>
+
+	<script>
+		let days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+		let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+		let birth = prompt("Введите дату рождения (ГГГГ-ММ-ДД)", "2000-01-01");
+		let d = new Date(birth);
+
+		let block = document.createElement("div");
+		block.align = "center";
+		block.innerHTML = "<p>День недели: " + days[d.getDay()] + "</p>" +
+			"<p>Число: " + d.getDate() + "</p>" +
+			"<p>Месяц: " + months[d.getMonth()] + "</p>" +
+			"<p>Год: " + d.getFullYear() + "</p>";
+		document.querySelector("header").insertAdjacentElement("afterend", block);
+	</script>
 
 	<footer>
 		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>

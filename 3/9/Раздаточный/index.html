@@ -9,9 +9,113 @@
 
 <body>
 	<script>
+		let orderJSON = `{
+			"user": {
+				"name": "Павел",
+				"surname": "Волков",
+				"email": "p-volkoff@mail.ru",
+				"phone": "8(912)552-92-25"
+			},
+			"order_info": {
+				"order_date": "07.01.2023",
+				"delivery_type": "По адресу",
+				"discount": "10%",
+				"total_price": "",
+				"address": {
+					"city": "Москва",
+					"street": "Белореченская улица",
+					"house": "31"
+				}
+			},
+			"products": [
+				{
+					"articul": "RTLACB138001",
+					"name": "Носки из хлопка SUPIMA",
+					"brand": "UNIQLO",
+					"color": "Синий",
+					"season": "Мульти",
+					"price": 399,
+					"quantity": 3,
+					"cost": ""
+				},
+				{
+					"articul": "MP002XM0984Y",
+					"name": "Брюки",
+					"brand": "O'stin",
+					"color": "Черный",
+					"season": "Демисезон",
+					"price": 3799,
+					"quantity": 1,
+					"cost": ""
+				},
+				{
+					"articul": "MP002XM0984Y",
+					"name": "Дубленка CLAUDE",
+					"brand": "Mango Man",
+					"color": "Коричневый",
+					"season": "Мульти",
+					"price": 11190,
+					"quantity": 1,
+					"cost": ""
+				}
+			]
+		}`;
 
-		// ...
+		console.log(orderJSON);
 
+		let order = JSON.parse(orderJSON);
+		let total = 0;
+
+		order.products.forEach(function (item) {
+			item.cost = item.price * item.quantity;
+			total += item.cost;
+		});
+
+		let discount = parseInt(order.order_info.discount);
+		order.order_info.total_price = Math.round(total * (100 - discount) / 100);
+
+		function row(label, value) {
+			return '<div class="order_item"><span class="order_item_title">' + label +
+				'</span><span class="order_item_border">' + value + '</span></div>';
+		}
+
+		let addr = order.order_info.address;
+		let productsHTML = order.products.map(function (p) {
+			return '<div class="product_card">' +
+				'<div class="product_card_info">' +
+					'<b>' + p.brand + ' — ' + p.name + '</b><br>' +
+					'Артикул: ' + p.articul + '<br>' +
+					'Цвет: ' + p.color + ', сезон: ' + p.season + '<br>' +
+					'Цена: ' + p.price + ' ₽' +
+				'</div>' +
+				'<div class="product_card_quantity">× ' + p.quantity + '</div>' +
+				'<div class="product_card_cost">' + p.cost + ' ₽</div>' +
+			'</div>';
+		}).join('');
+
+		let html = '<div class="wrapper">' +
+			'<div class="user_order_header"><h2>Заказ пользователя</h2></div>' +
+			'<div class="user_data">' +
+				'<div class="user_personal_data">' +
+					row('Имя:', order.user.name) +
+					row('Фамилия:', order.user.surname) +
+					row('Email:', order.user.email) +
+					row('Телефон:', order.user.phone) +
+				'</div>' +
+				'<div class="user_order_data">' +
+					row('Дата заказа:', order.order_info.order_date) +
+					row('Доставка:', order.order_info.delivery_type) +
+					row('Адрес:', addr.city + ', ' + addr.street + ', д. ' + addr.house) +
+					row('Скидка:', order.order_info.discount) +
+				'</div>' +
+			'</div>' +
+			'<div class="products"><h3>Товары</h3>' + productsHTML + '</div>' +
+			'<div class="total_price">Итого со скидкой: <span class="total_price_number">' +
+				order.order_info.total_price + ' ₽</span></div>' +
+		'</div>';
+
+		document.write(html);
+		console.log(order);
 	</script>
 
 	<footer align="center">
