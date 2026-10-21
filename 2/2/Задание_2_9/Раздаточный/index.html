@@ -26,7 +26,7 @@
 		let index = prompt("Укажите индекс и получите случайную цитату В.И. Ленина", "Введите индекс в диапазоне 0-6");
 
 		let citates = document.getElementById("citate").children;
-		let txt = citates[index].firstChild;
+		let txt = citates[index].firstChild.textContent;
 		console.log(txt);
 	</script>	
 	
