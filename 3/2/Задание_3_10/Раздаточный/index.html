@@ -1,8 +1,9 @@
- <!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
+	<script src="teams.js"></script>
 </head>
 
 <body>
@@ -15,9 +16,22 @@
 	</footer>	
 
 	<script>
+		let lines = teams.trim().split("\n");
+		let scorpions = null;
 
-		// ...
+		for (let i = 0; i < lines.length; i++) {
+			if (lines[i].indexOf("Scorpions") !== -1) {
+				scorpions = lines[i].split(";");
+				break;
+			}
+		}
 
+		console.log("name:", scorpions[1]);
+		console.log("alias:", scorpions[2]);
+		console.log("country:", scorpions[3]);
+		console.log("year:", scorpions[4]);
+		console.log("style:", scorpions[5]);
+		console.log("img:", scorpions[6]);
 	</script>
 
 </body>

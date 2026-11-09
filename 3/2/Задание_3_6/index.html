@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Программирование в среде JavaScript</title>
+</head>
+
+<body>
+	<header>
+		<h1 align = "center">Работа со строками</h1>
+	</header>
+	
+	<pre>
+		<h3>
+		Чтоб бранью сухой не встречали,
+		Жилье огибаю, как трус, –
+		И дале – и дале – и дале –
+		Вдоль пыльной дороги влекусь.
+		</h3>
+	</pre>
+
+	<footer>
+		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
+	</footer>		
+
+	<script>
+        let text = "У лукоморья дуб зелёный; златая цепь на дубе том: и днём и ночью кот учёный всё ходит по цепи кругом";
+
+        console.log("Длина строки:", text.length);
+
+        // indexOf
+        console.log(text.indexOf("дуб"));
+        console.log(text.indexOf("дуб", 12));
+        console.log(text.indexOf("кот"));
+
+        // lastindexOf
+        console.log(text.lastIndexOf("дуб"));
+        console.log(text.lastIndexOf("и"));
+        console.log(text.lastIndexOf("и", 30));
+
+        // -1
+        console.log(text.indexOf("слон"));
+        console.log(text.lastIndexOf("слон"));
+    </script>
+
+</body>
+</html>

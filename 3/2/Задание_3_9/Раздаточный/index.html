@@ -23,17 +23,15 @@
 
 		// формируем строку для вывода 
 		// в строку подставляем значения массива
-		let str = `
-			<span>Идентификатор товара:</span> <b>${order[0]}</b><br/>
-			<span>Название:</span> <b>${order[1]}</b><br/>
-			<span>Бренд:</span> <b>${order[2]}</b><br/>
-			<span>Цвет:</span> <b>${order[3]}</b><br/>
-			<span>Страна:</span> <b>${order[4]}</b><br/>
-			<span>Капюшон:</span> <b>${order[5]}</b><br/>
-			<span>Размер:</span> <b>${order[6]}</b><br/>
-			<span>Цена:</span> <b>${order[7]}</b><p>
-			<img src="${order[8]}" width="250">
-		`;
+		let str = "<span>Идентификатор товара:</span> <b>" + order[0] + "</b><br/>" +
+			"<span>Название:</span> <b>" + order[1] + "</b><br/>" +
+			"<span>Бренд:</span> <b>" + order[2] + "</b><br/>" +
+			"<span>Цвет:</span> <b>" + order[3] + "</b><br/>" +
+			"<span>Страна:</span> <b>" + order[4] + "</b><br/>" +
+			"<span>Капюшон:</span> <b>" + order[5] + "</b><br/>" +
+			"<span>Размер:</span> <b>" + order[6] + "</b><br/>" +
+			"<span>Цена:</span> <b>" + order[7] + "</b><p>" +
+			"<img src=\"" + order[8] + "\" width=\"250\">";
 
 		// выводим данные о заказе
 		document.write(str);	
