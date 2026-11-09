@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
-	<!-- место для подключения скрипта -->
+	<script src="data.js"></script>
 	<style>
 		* {
 			text-align: center;
@@ -29,12 +29,24 @@
 	</style>
 </head>
 <body>
-
 	<script>
+    let input = prompt("Введите номер тизера в двоичной системе (00, 01, 10, 11):");
+    let index = parseInt(input, 2);
 
-		// ...
+    let film = data[index];
+
+	let imgPath = "images/img" + film.img + ".jpg";
+
+    document.write("<h3>Название: " + film.title + "</h3>");
+    document.write("<div align='center'><img src='" + imgPath + "' width='500'><br><br>");
+    document.write("<b>Год выпуска:</b> " + film.year + "<br><br>");
+    document.write("<b>Страна:</b> " + film.country + "<br><br>");
+    document.write("<b>Актеры:</b><br>");
+        
+    for (let i = 0; i < film.heroes.length; i++) {
+    	document.write(film.heroes[i] + "<br>");
+    }
 
 	</script>
-
 </body>
 </html>
