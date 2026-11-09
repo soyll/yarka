@@ -71,7 +71,32 @@
 			}
 		}
 		
-		// ...
+		game.gamer1.name = prompt("Введите имя первого игрока:", "Alex");
+		game.gamer2.name = prompt("Введите имя второго игрока:", "Max");
+
+		game.gamer1.count = 0;
+		game.gamer2.count = 0;
+
+		let cubes1 = document.querySelectorAll(".player")[0].querySelectorAll("img");
+		let cubes2 = document.querySelectorAll(".player")[1].querySelectorAll("img");
+
+		for (let i = 0; i < 3; i++) {
+			let r1 = Math.floor(Math.random() * 6) + 1;
+			let r2 = Math.floor(Math.random() * 6) + 1;
+
+			cubes1[i].src = r1 + ".png";
+			cubes2[i].src = r2 + ".png";
+
+			game.gamer1.count += r1;
+			game.gamer2.count += r2;
+		}
+
+		let inputs = document.querySelectorAll("input");
+		
+		inputs[0].value = game.gamer1.name;
+		inputs[1].value = game.gamer1.count;
+		inputs[2].value = game.gamer2.name;
+		inputs[3].value = game.gamer2.count;
 		
 	</script>
 

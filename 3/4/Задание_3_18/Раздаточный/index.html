@@ -11,11 +11,26 @@
 	</header>
 
 	<script>
+		let a = Number(prompt("Введите коэффициент a:", "2"));
+		let b = Number(prompt("Введите коэффициент b:", "9"));
+		let c = Number(prompt("Введите коэффициент c:", "5"));
 
-		// ... 
+		let d = Math.pow(b, 2) - 4 * a * c;
 
+		console.log("Дискриминант d =", d);
+
+		if (d > 0) {
+			let x1 = Math.round((-b + Math.sqrt(d)) / (2 * a));
+			let x2 = Math.round((-b - Math.sqrt(d)) / (2 * a));
+			console.log("Корень x1 =", x1);
+			console.log("Корень x2 =", x2);
+		} else if (d === 0) {
+			let x = Math.round(-b / (2 * a));
+			console.log("Корень x =", x);
+		} else {
+			console.log("Корней нет");
+		}
 	</script>
-
 	<footer>
 		<h3 align = "center"><a href="https://vk.com/pechora_proger" target="blank">pechora_PROger</a></h3>
 	</footer>		
