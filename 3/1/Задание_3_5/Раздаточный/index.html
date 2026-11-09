@@ -41,9 +41,25 @@
 	</footer>	
 
 		<script>
+			// var num = (4 * 7 % 5 + 1)**1/2;
+			// var num = (5 * 6 - 5)**(1/2) % 6 + -(8/2);
+			// var num = ( (2 / 5) * (1 / 2) * 10 + 1) % 4;
+			//var num = (8**2 - 54) / 2 % 5;
 
-			// ...
-
+			let div = document.createElement("div");
+			div.innerHTML = `
+				<h1>Название: ${data[num].title}</h1>
+				<img src="images/${data[num].img}">
+				<p>Год выпуска: ${data[num].year}</p>
+				<p>Страна: ${data[num].country}</p>
+				<p>Актеры:</p>
+				<ul>
+					<li>${data[num].heroes[0]}</li>
+					<li>${data[num].heroes[1]}</li>
+					<li>${data[num].heroes[2]}</li>
+				</ul>
+			`;
+			document.body.insertAdjacentElement("afterbegin", div);
 		</script>
 
 	</body>
