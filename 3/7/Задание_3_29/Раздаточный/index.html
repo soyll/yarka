@@ -6,6 +6,7 @@
 	<script src="data.js"></script>
 	<style>
 		h3 {margin: 5px 0px}
+		img { width: 250px; }
 	</style>
 </head>
 <body>
@@ -21,9 +22,17 @@
 	</footer>			
 
 	<script>
+		let re = /.*AC\/DC.*/;
+		let line = data.match(re)[0];
+		let fields = line.split(";");
 
-		// ...
-
+		document.getElementById("console").innerHTML = `
+			<h2>${fields[1]}</h2>
+			<img src="${fields[6]}">
+			<h3>Страна: ${fields[3]}</h3>
+			<h3>Год основания: ${fields[4]}</h3>
+			<h3>Жанр: ${fields[5]}</h3>
+		`;
 	</script>
 
 </body>

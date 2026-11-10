@@ -23,11 +23,11 @@
 	</footer>		
 
 	<script>
-		// идентификатор заменяемого изображения
 		let id = "ID23121";
-		
-		// ...
 
+		let app = document.getElementById("app");
+		let re = new RegExp("img/" + id + "\\.jpg");
+		app.innerHTML = app.innerHTML.replace(re, "img/no-photo.jpg");
 	</script>
 
 </body>

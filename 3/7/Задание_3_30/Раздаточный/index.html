@@ -39,9 +39,13 @@
 	</footer>		
 
 	<script>
+		let ul = document.querySelector("ul");
+		let tags = ul.innerHTML
+			.replace(/<li>/g, "#")
+			.replace(/<\/li>\s*/g, " ")
+			.trim();
 
-		// ..
-
+		ul.outerHTML = `<p style="color: #1e90ff; font-size: 20px;">${tags}</p>`;
 	</script>
 
 </body>
