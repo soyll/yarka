@@ -18,9 +18,11 @@
 	</footer>	
 	
 	<script>
-
-		// ...
-
+		let now = new Date();
+		let nextNY = new Date(now.getFullYear() + 1, 0, 1);
+		let ms = nextNY - now;
+		let daysLeft = Math.ceil(ms / (1000 * 60 * 60 * 24));
+		document.getElementById("days").innerHTML = daysLeft;
 	</script>
 
 </body>
