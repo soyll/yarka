@@ -48,9 +48,23 @@
 	</ol>	
 
 	<script>
-		
-		// ...
-	
+		let items = document.querySelectorAll('ol > li');
+		let keys = ['title', 'gpu', 'cpu', 'cpu_cores', 'ram', 'diagonal', 'price', 'img'];
+		let arr = [];
+
+		for (let i = 0; i < items.length; i++) {
+			let obj = {};
+			obj.title = items[i].firstChild.textContent.trim();
+
+			let nested = items[i].querySelectorAll('ul > li');
+			for (let j = 0; j < nested.length; j++) {
+				obj[keys[j + 1]] = nested[j].innerText;
+			}
+
+			arr[i] = obj;
+		}
+
+		console.log(arr);
 	</script>
 
 	<footer align="center">

@@ -4,7 +4,7 @@ let teams = `[
 		"alias":"aerosmith",
 		"country":"США",
 		"content":"Группа Aerosmith ...",
-		"date:"1970,
+		"date":1970,
 		"albums":[
 			{"name":"Aerosmith","track":8,"date":1973},
 			{"name":"Rocks","track":9,"date":1976},
@@ -49,6 +49,7 @@ let teams = `[
 			{"name":"Back in Black","track":10,"date":1980},
 			{"name":"Highway to Hell","track":10,"date":1979},
 			{"name":"The Razors Edge","track":12,"date":1990}
+		]
 	},
 	{
 		"id":5,

@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -60,7 +60,6 @@
 	</div>
 
 	<script>
-		// объект для записи данных игроков
 		let game = {
 			gamer1: {
 				name: "No name",
@@ -71,9 +70,52 @@
 				count: undefined
 			}
 		}
-		
-		// ...
-		
+
+		function askName(who) {
+			let n;
+			do {
+				n = prompt('Имя игрока ' + who);
+			} while (n === null || n.trim() === '');
+			return n.trim();
+		}
+
+		function roll() {
+			return Math.floor(Math.random() * 6) + 1;
+		}
+
+		game.gamer1.name = askName(1);
+		game.gamer2.name = askName(2);
+
+		let names = document.getElementsByName('gamerName');
+		let counts = document.getElementsByName('gamerCount');
+		let cubes1 = document.querySelectorAll('.player')[0].querySelectorAll('img');
+		let cubes2 = document.querySelectorAll('.player')[1].querySelectorAll('img');
+
+		let sum1 = 0, sum2 = 0;
+		for (let i = 0; i < 3; i++) {
+			let d1 = roll();
+			let d2 = roll();
+			sum1 += d1;
+			sum2 += d2;
+			cubes1[i].src = d1 + '.png';
+			cubes2[i].src = d2 + '.png';
+		}
+
+		game.gamer1.count = sum1;
+		game.gamer2.count = sum2;
+
+		names[0].value = game.gamer1.name;
+		names[1].value = game.gamer2.name;
+		counts[0].value = game.gamer1.count;
+		counts[1].value = game.gamer2.count;
+
+		if (sum1 > sum2) {
+			alert('Победил игрок ' + game.gamer1.name + '!');
+		} else if (sum2 > sum1) {
+			alert('Победил игрок ' + game.gamer2.name + '!');
+		} else {
+			alert('Ничья!');
+		}
 	</script>
 
 	<footer align="center">

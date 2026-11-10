@@ -8,10 +8,12 @@
 	<header>
 		<h1 align="center">Управляющие конструкции</h1>
 	</header>
+
+	<p id="explain"></p>
 	
 	<script>	
-		// представленный код вывел то, что отображено на рисунке задания,
-		// почему такое могло случиться? 
+		// name в глобале — это window.name (строка вкладки браузера),
+		// а var name внутри функции — локальная, снаружи её не видно
 
 		myFunction = () => {
 			var name = 'John';
@@ -22,8 +24,11 @@
 		myFunction();
 
 		console.log("Вызов переменной из глобальной области видимости:"); 
-		// глобальная переменная в программе не объявлялась
 		console.log(name);
+		console.log('typeof name =', typeof name);
+
+		document.getElementById('explain').textContent =
+			'Снаружи name — это window.name (строка), локальный var name из функции сюда не протекает. Сейчас window.name = "' + name + '"';
 	</script>
 
 	<footer align="center">

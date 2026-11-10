@@ -4,6 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
 	<link rel="stylesheet" href="style.css">
+	<script src="data.js"></script>
 </head>
 <body>
 	<header>
@@ -16,9 +17,37 @@
 	<div id="flights"></div>
 
 	<script>
+		let flights = obj.data.items[0].flights;
+		let html = `
+			<table>
+				<tr>
+					<th>Номер рейса</th>
+					<th>Откуда</th>
+					<th>Дата и время вылета</th>
+					<th>Куда</th>
+					<th>Дата и время прилета</th>
+					<th>Цена рейса</th>
+					<th>Количество доступных мест</th>
+				</tr>
+		`;
 
-		// ...
+		for (let i = 0; i < flights.length; i++) {
+			let f = flights[i];
+			html += `
+				<tr>
+					<td>${f.flight_code}</td>
+					<td>${f.from.city}, ${f.from.airport} (${f.from.iata})</td>
+					<td>${f.from.date} ${f.from.time}</td>
+					<td>${f.to.city}, ${f.to.airport} (${f.to.iata})</td>
+					<td>${f.to.date} ${f.to.time}</td>
+					<td>${f.cost}</td>
+					<td>${f.availability}</td>
+				</tr>
+			`;
+		}
 
+		html += `</table>`;
+		document.querySelector("#flights").innerHTML = html;
 	</script>
 
 	<footer align="center">

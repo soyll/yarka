@@ -27,8 +27,27 @@
             ]
         };
 
-        // ...
-        
+        let html = '';
+
+        for (let key in teams) {
+            if (key === 'albums') {
+                html += '<h3>Альбомы</h3><ol>';
+                for (let i = 0; i < teams.albums.length; i++) {
+                    let a = teams.albums[i];
+                    html += `<li><b>${a[0]}</b>
+                        <ul>
+                            <li>Количество композиций - ${a[1]}</li>
+                            <li>Дата выпуска - ${a[2]}</li>
+                        </ul>
+                    </li>`;
+                }
+                html += '</ol>';
+            } else {
+                html += `<p>${teams[key]}</p>`;
+            }
+        }
+
+        document.write(html);
     </script>
 
     <footer align="center">

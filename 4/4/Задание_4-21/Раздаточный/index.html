@@ -30,9 +30,18 @@
 	</div>		
 
 	<script>
+		let hs = document.querySelectorAll('#citate h3');
+		let arr = [];
 
-		// ...
+		for (let i = 0; i < hs.length; i++) {
+			let span = hs[i].querySelector('span');
+			arr[i] = {
+				citate: hs[i].firstChild.textContent.trim(),
+				author: span.innerText.replace(/[()]/g, '')
+			};
+		}
 
+		console.log(arr);
 	</script>
 
     <footer align="center">

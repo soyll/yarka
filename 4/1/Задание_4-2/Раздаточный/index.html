@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,10 +13,6 @@
 	<header>
 		<h1 align="center">Условные конструкции</h1>
 	</header>
-	<!-- 
-		форма с данными пользователя 
-		перед отправкой данных на сервер - подлежит валидации 
-	-->
 	<form>
 		<span class="label">Имя:</span> <input type="text" value="Денис" name="name"><span class="valid" id="name"></span><br>
 
@@ -34,10 +30,32 @@
 	</footer>		
 
 	<script>
+		let f = document.forms[0];
 
-		// ...
- 	
-	</script>
+		let reName = /^[а-яё]{3,10}$/;
+		let reLogin = /^[a-z0-9]{3,10}$/;
+		let reEmail = /^[a-z0-9]{3,10}@[a-z]{2,5}\.[a-z]{2,5}$/;
+		let rePwd = /^[a-z_@#$%^&*0-9-]{5,15}$/;
+
+		if (!reName.test(f.name.value)) {
+			document.getElementById('name').textContent = 'только строчные кириллица, 3–10 символов';
+		}
+		if (!reLogin.test(f.login.value)) {
+			document.getElementById('login').textContent = 'только a-z и цифры, 3–10 символов';
+		}
+		if (!reEmail.test(f.email.value)) {
+			document.getElementById('email').textContent = 'формат login@domain.zone';
+		}
+		if (!rePwd.test(f.pwd.value)) {
+			document.getElementById('pwd').textContent = 'не подходит под шаблон пароля';
+		}
+
+		// поправили значения, чтобы дальше проходили проверку
+		f.name.value = 'денис';
+		f.login.value = 'denis123';
+		f.email.value = 'denis@mail.com';
+		f.pwd.value = 'master@@@';
+ 	</script>
 
 </body>
 </html>

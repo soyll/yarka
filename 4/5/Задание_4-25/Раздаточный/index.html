@@ -12,10 +12,36 @@
 
 	<div id="con"></div>
 
-	<script>	
+	<script>
+		let box = document.getElementById("con");
+		let html = "";
 
-		// ...
+		for (let i = 0; i < clothes.length; i++) {
+			let item = clothes[i];
+			let name = "", brand = "", src = "";
+			let list = "<ul>";
 
+			for (let j = 0; j < item.length; j++) {
+				let key = item[j][0];
+				let val = item[j][1];
+
+				if (key == "img") {
+					src = val;
+					continue;
+				}
+				if (key == "Название") name = val;
+				if (key == "Бренд") brand = val;
+
+				list += `<li>${key}: ${val}</li>`;
+			}
+			list += "</ul>";
+
+			// title как на скрине: «Название: Бренд»
+			html += list;
+			html += `<img src="${src}" title="${name}: ${brand}" width="220"><hr>`;
+		}
+
+		box.innerHTML = html;
 	</script>
 
 	<footer align="center">

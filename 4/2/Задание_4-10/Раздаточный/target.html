@@ -10,9 +10,13 @@
 	</header>	
 
 	<script>	
+		let album = JSON.parse(window.name);
 
-		// ...
-
+		document.write('<h2>' + album.team + ' — ' + album.name + '</h2>');
+		document.write('<p><img src="' + album.path + '" alt="' + album.alias + '" width="300"></p>');
+		document.write('<p><b>' + album.country + ', ' + album.date + '</b></p>');
+		document.write('<p>' + album.content + '</p>');
+		document.write('<p><i>' + album.note + '</i></p>');
 	</script>
 
 	<footer align="center">

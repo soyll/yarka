@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Программирование в среде JavaScript</title>
+    <script src="clothes.js"></script>
 </head>
 <body>
     <header>
@@ -10,10 +11,17 @@
     </header>
 
 	<script>
+		let labels = ['Идентификатор', 'Название', 'Бренд', 'Цвет', 'Страна', 'Капюшон', 'Размер', 'Цена'];
 
-		// ...
-
-	</script>	
+		for (let item of clothes) {
+			let html = '';
+			for (let i = 0; i < labels.length; i++) {
+				html += `<p><b>${labels[i]}:</b> ${item[i]}</p>`;
+			}
+			html += `<img src="images/${item[8]}" width="220"><hr>`;
+			document.write(html);
+		}
+	</script>
 
     <footer align="center">
         <h3>Добро пожаловать на pechora_PRO</h3>

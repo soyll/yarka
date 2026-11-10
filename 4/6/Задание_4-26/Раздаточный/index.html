@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -11,9 +11,31 @@
 	</header>
 
 	<script>
+		try {
+			let data = JSON.parse(teams);
+			let html = "";
 
-		// ...
+			for (let i = 0; i < data.length; i++) {
+				html += `<h3>${data[i].name} (id = ${data[i].id})</h3>`;
+				html += `<ul>`;
+				html += `<li>Страна: ${data[i].country}</li>`;
+				html += `<li>Дата основания: ${data[i].date}</li>`;
+				html += `<li>Альбомы:`;
+				html += `<ol>`;
 
+				for (let j = 0; j < data[i].albums.length; j++) {
+					let alb = data[i].albums[j];
+					html += `<li>${alb.name} (Дата: ${alb.date}; Количество треков: ${alb.track})</li>`;
+				}
+
+				html += `</ol></li></ul>`;
+			}
+
+			document.write(html);
+		} catch (err) {
+			console.log("При обработке данных произошла ошибка.");
+			console.log(err.name + ": " + err.message);
+		}
 	</script>
 
 	<footer align="center">

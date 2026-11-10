@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -12,43 +12,35 @@
 	<h2>Нахождение корней квадратного уравнения</h2>
 
 	<script>
-		// запрашиваем у пользователя значения коэффициентов
 		let a = prompt("a = ?", 1);
 		let b = prompt("b = ?", 2);
 		let c = prompt("c = ?", 3);
 
-		// находим дискриминант квадратного уравнения
-		let d = b ** 2 - 4 * a * c;			
+		let d = b ** 2 - 4 * a * c;
 
 		try {
-		
-			// если дискриминант меньше нуля прерываем работу программы
 			if (d < 0) {
-				throw Error("Уравнение не имеет корней");
-			}
-			else if (d > 0) {
-				// расчитываем корни: х1, х2
-				let x1 = (-b - Math.sqrt(d)) / 2 * a;
-				let x2 = (-b + Math.sqrt(d)) / 2 * a;
-				
-				// выводим сообщение в консоль / браузер
+				document.write("<h3>Уравнение не имеет корней</h3>");
+
+				if (confirm("Уравнение не имеет корней, это в принципе нормальная ситуация. Но если вас это бесит, вы можете сгенерировать ошибку и мы что-нибудь придумаем... Генерируем?")) {
+					throw Error("Уравнение не имеет корней");
+				}
+			} else if (d > 0) {
+				let x1 = (-b - Math.sqrt(d)) / (2 * a);
+				let x2 = (-b + Math.sqrt(d)) / (2 * a);
+
 				console.log(x1, x2);
 				document.write(`<h3>x1 = ${x1}<br>x2 = ${x2}</h3>`);
 			} else {
-				// расчитыаем корень: х
-				let x = (-b / 2 * a);
-				
-				// выводим сообщение в консоль / браузер 
-				console.log(x);
-				document.write(`<h3>x = ${x}</h3>`);			
-			}
+				let x = -b / (2 * a);
 
+				console.log(x);
+				document.write(`<h3>x = ${x}</h3>`);
+			}
 		} catch (err) {
-			// дискриминант меньше нуля, выводим предупреждение
-			// в консоль
 			console.log(err.name + ". " + err.message);
-			// в браузер
-			document.write("<h3>Уравнение не имеет корней</h3>");		
+		} finally {
+			document.write("<h3>Спасибо за участие!<br>Вместе мы сделаем этот мир лучше ;)</h3>");
 		}
 	</script>
 

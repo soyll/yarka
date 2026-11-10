@@ -4,6 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
 	<link rel="stylesheet" href="style.css">
+	<script src="data.js"></script>
 </head>
 <body>
 	<header>
@@ -21,10 +22,11 @@
 
 	<script>
 		let table = document.querySelector(".booking");
+		let booking = obj.data.items[0];
 
 		let msg = `
-			<td> ... </td>
-			<td> ... </td>
+			<td>${booking.code}</td>
+			<td>${booking.cost}</td>
 			<td><a href="flights.html">Подробнее...</a></td>
 			<td><a href="passengers.html">Подробнее...</a></td>
 		`;

@@ -1,0 +1,1 @@
+В седьмом задании вставил код с with(person/main/media). ФИО, email и site берутся из цепочки with. post — из main («Преподаватель»), а не «Мастер» с person. category — из person («Высшая»), потому что в main/media её нет. phone и edu в объекте нет (есть phones), поэтому вылезают глобальные «Нет данных».

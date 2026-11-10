@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -12,13 +12,29 @@
 	<h2>Нахождение корней квадратного уравнения</h2>
 
 	<script>
-		// запрашиваем у пользователя значения коэффициентов
 		let a = prompt("a = ?", 1);
 		let b = prompt("b = ?", 2);
 		let c = prompt("c = ?", 3);
 
-		// ...
+		let d = b ** 2 - 4 * a * c;
 
+		try {
+			if (d < 0) {
+				throw Error("Уравнение не имеет корней");
+			} else if (d > 0) {
+				let x1 = (-b - Math.sqrt(d)) / (2 * a);
+				let x2 = (-b + Math.sqrt(d)) / (2 * a);
+				console.log(x1, x2);
+				document.write(`<h3>x1 = ${x1}<br>x2 = ${x2}</h3>`);
+			} else {
+				let x = -b / (2 * a);
+				console.log(x);
+				document.write(`<h3>x = ${x}</h3>`);
+			}
+		} catch (err) {
+			console.log(err.name + ". " + err.message);
+			document.write("<h3>Уравнение не имеет корней</h3>");
+		}
 	</script>
 
 	<footer align="center">

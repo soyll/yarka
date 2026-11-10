@@ -22,8 +22,14 @@
             link: "https://ru.wikipedia.org/wiki/Aerosmith",
         }
 
-        // ...
-        
+        let html = '<form>';
+
+        for (let key in teams) {
+            html += `<p><input type="text" name="${key}" value="${teams[key]}"></p>`;
+        }
+
+        html += '<p><button type="button">Редактировать</button></p></form>';
+        document.write(html);
     </script>
 
     <footer align="center">

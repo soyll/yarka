@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -15,7 +15,6 @@
 	</footer>	
 
 	<script>
-		// объект JavaScript
 		let order = {
 			user: {
 				login : undefined,
@@ -56,8 +55,52 @@
 			]
 		};
 
-		// ...
+		let login = prompt('login');
+		let email = prompt('email');
 
+		order.user.login = login;
+		order.user.email = email;
+
+		if (login === 'max' && email === 'max@mail.ru') {
+			order.user.status = 'premium';
+		} else if (login === 'jon' && email === 'jon@mail.ru') {
+			order.user.status = 'gold';
+		} else if (login === 'den' && email === 'den@mail.ru') {
+			order.user.status = 'silver';
+		} else {
+			order.user.status = 'none';
+		}
+
+		let discaunt = 0;
+		switch (order.user.status) {
+			case 'premium':
+				discaunt = 0.2;
+				break;
+			case 'gold':
+				discaunt = 0.15;
+				break;
+			case 'silver':
+				discaunt = 0.1;
+				break;
+			default:
+				discaunt = 0;
+		}
+
+		let totalPrice = 0;
+		for (let i = 0; i < order.product.length; i++) {
+			totalPrice += order.product[i].price;
+		}
+
+		order.info.totalPrice = totalPrice;
+		order.info.discount = discaunt;
+		order.info.finalPrice = totalPrice - totalPrice * discaunt;
+
+		console.log('login:', order.user.login);
+		console.log('email:', order.user.email);
+		console.log('status:', order.user.status);
+		console.log('цена без скидки:', order.info.totalPrice);
+		console.log('скидка:', order.info.discount * 100 + '%');
+		console.log('цена со скидкой:', order.info.finalPrice);
 	</script>
 
 </body>

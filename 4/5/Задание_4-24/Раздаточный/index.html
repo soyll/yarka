@@ -12,10 +12,44 @@
 
 	<div id="con"></div>
 
-	<script>	
+	<script>
+		let box = document.getElementById("con");
+		let out = "";
 
-		// ...
+		for (let i = 0; i < teams.length; i++) {
+			let t = teams[i];
 
+			let styles = "";
+			for (let s = 0; s < t.style.length; s++) {
+				styles += "#" + t.style[s] + " ";
+			}
+
+			let labels = "";
+			for (let l = 0; l < t.label.length; l++) {
+				labels += t.label[l];
+				if (l < t.label.length - 1) labels += ", ";
+			}
+
+			let albums = "";
+			for (let a = 0; a < t.albums.length; a++) {
+				albums += `<li>${t.albums[a][0]} (${t.albums[a][1]})</li>`;
+			}
+
+			out += `
+				<h3><a href="${t.link}" target="_blank">${t.name}</a> (id = ${t.id})</h3>
+				Алиас: <b>${t.alias}</b><br>
+				Страна: <b>${t.country}</b><br>
+				Дата создания: <b>${t.date}</b><br>
+				Описание: ${t.content}<br>
+				Стили: ${styles}<br>
+				Лейблы: ${labels}<br>
+				<b>Альбомы:</b>
+				<ul>${albums}</ul>
+				<hr>
+			`;
+		}
+
+		box.innerHTML = out;
 	</script>
 
 	<footer align="center">

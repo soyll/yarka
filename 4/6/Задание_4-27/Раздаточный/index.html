@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,9 +10,29 @@
 	</header>
 
 	<script>
+		// правильные данные для входа (в раздатке не было — взял admin/admin)
+		let validLogin = "admin";
+		let validPassword = "admin";
 
-		// ...
+		let authErr = {
+			name: "AuthenticationError",
+			message: "Ошибка входа в систему",
+			description: "Неверный логин и/или пароль"
+		};
 
+		try {
+			let login = prompt("Логин:", "");
+			let password = prompt("Пароль:", "");
+
+			if (login != validLogin || password != validPassword) {
+				throw authErr;
+			}
+
+			document.write("<h3>Добро пожаловать, " + login + "!</h3>");
+		} catch (err) {
+			console.log("При аутентификации в системе произошла ошибка.");
+			console.log(err.name + ": " + err.message + ". " + err.description);
+		}
 	</script>
 
 	<footer align="center">

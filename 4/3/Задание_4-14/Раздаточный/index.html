@@ -21,9 +21,16 @@
 	</ul>
 
 	<script>
+		let lis = document.querySelectorAll('#browsers li');
+		let html = '<select>';
 
-		// ...
+		for (let i = 0; i < lis.length; i++) {
+			let sel = (i === 3) ? ' selected' : '';
+			html += `<option${sel}>${lis[i].innerText}</option>`;
+		}
 
+		html += '</select>';
+		document.write(html);
 	</script>
 
 	<footer align="center">

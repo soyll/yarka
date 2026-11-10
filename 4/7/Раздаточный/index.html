@@ -3,7 +3,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="news.js"></script>
 </head>
+<body>
 	<header>
 		<div class="top">
 			<h1>Новостная сводка</h1>
@@ -19,18 +22,37 @@
 	</main>
 
 	<script>
-		
-		// ...
+		let box = document.querySelector("#content");
 
-		// разметка контента новости
-		/*
-			<div>
-				<img src = [image]>
-				<span>[date]</span>
-				<h3>[name]</h3>
-				<p>$[text]</p>
-			</div>
-		*/
+		try {
+			let n = +prompt("Сколько новостей показать? (1–12)", 3);
+
+			if (!(n >= 1 && n <= 12)) {
+				throw {
+					name: "RangeError",
+					message: "Значение вне допустимого диапазона 1–12",
+					description: "Пользователь указал некорректное количество новостей",
+					userMessage: "Упс! Можно вывести только от 1 до 12 новостей."
+				};
+			}
+
+			for (let i = 0; i < n; i++) {
+				let item = newsArr[i];
+				box.insertAdjacentHTML("beforeend", `
+					<div>
+						<img src="${item.image}">
+						<span>${item.date}</span>
+						<h3>${item.name}</h3>
+						<p>${item.text}</p>
+					</div>
+				`);
+			}
+		} catch (err) {
+			console.log(err.name + ". " + err.message);
+			console.log(err.description);
+			box.className = "";
+			box.innerHTML = `<div class="message">${err.userMessage}</div>`;
+		}
 	</script>
 
 	<footer align="center">

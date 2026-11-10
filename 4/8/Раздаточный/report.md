@@ -1,0 +1,1 @@
+В шестой практике на index.html через prompt спросил логин и пароль и сложил их в window.name как JSON. На profile.html подключил personnel.js (в PDF было personnels.js, а файл реально personnel.js), распарсил window.name, циклом нашёл юзера по паре логин/пароль и вывел кабинет; если нет — ошибка в консоль и в браузер.

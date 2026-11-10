@@ -26,9 +26,14 @@
 	</div>
 	
 	<script>
-		
-		// ... 
-	
+		let lis = document.querySelectorAll('ol li');
+		let arr = [];
+
+		for (let i = 0; i < lis.length; i++) {
+			arr[i] = lis[i].innerText;
+		}
+
+		console.log(arr);
 	</script>
 
 	<footer align="center">

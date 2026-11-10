@@ -3,6 +3,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="personnel.js"></script>
 </head>
 <body>
 	<header>
@@ -10,9 +12,38 @@
 	</header>
 
 	<script>
+		let auth = JSON.parse(window.name || "{}");
+		let user = null;
 
-		// ...
+		for (let i = 0; i < personnel.length; i++) {
+			let a = personnel[i].authorization;
+			if (a.login === auth.login && a.password === auth.password) {
+				user = personnel[i];
+				break;
+			}
+		}
 
+		if (!user) {
+			console.log("Ошибка аутентификации пользователя");
+			console.log("Error. Неверный логин и/или пароль");
+			document.querySelector("header").insertAdjacentHTML("afterend", `
+				<h2 align="center">Ошибка аутентификации пользователя</h2>
+				<p align="center">Служебное сообщение: Error. Неверный логин и/или пароль</p>
+			`);
+		} else {
+			let info = user.info;
+			document.querySelector("header").insertAdjacentHTML("afterend", `
+				<div align="center">
+					<h2>Добро пожаловать в личный кабинет</h2>
+					<h3>${info.surname} ${info.name} ${info.patronymic} (id = ${info.id_personnel})</h3>
+					<img src="${info.img}" alt="avatar" width="200">
+					<p><b>Должность:</b> ${info.post}</p>
+					<p><b>Категория:</b> ${info.category}</p>
+					<p><b>Уровень образования:</b> ${info.level_edu}</p>
+					<p><b>Опыт работы в колледже:</b> ${info.experience_college}</p>
+				</div>
+			`);
+		}
 	</script>
 
 	<footer align="center">

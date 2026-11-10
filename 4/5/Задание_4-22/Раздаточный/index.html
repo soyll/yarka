@@ -13,7 +13,8 @@
 	<h3>Лучшие книги — рейтинг Топ 100</h3>
 
 	<ol>
-		<li>Гарри Поттер и узник Азкабана
+		<li>
+			<span>Гарри Поттер и узник Азкабана</span>
 			<ul>
 				<li>Джоан Роулинг</li>
 				<li>978-389-17021-6</li>
@@ -21,7 +22,8 @@
 				<li>Махаон</li>
 			</ul>
 		</li>
-		<li>Зелёная миля
+		<li>
+			<span>Зелёная миля</span>
 			<ul>
 				<li>Стивен Кинг</li>
 				<li>978-5-17-085348-9</li>
@@ -29,7 +31,8 @@
 				<li>АСТ</li>
 			</ul>
 		</li>
-		<li>Унесенные ветром
+		<li>
+			<span>Унесенные ветром</span>
 			<ul>
 				<li>Маргарет Митчел</li>
 				<li>978-5-17-122888-0</li>
@@ -37,7 +40,8 @@
 				<li>АСТ</li>
 			</ul>
 		</li>
-		<li>Свита короля
+		<li>
+			<span>Свита короля</span>
 			<ul>
 				<li>Нора Сакавич</li>
 				<li>978-5-6045889-7-0</li>
@@ -45,36 +49,32 @@
 				<li>Popcorn Books</li>
 			</ul>
 		</li>
-		<li>Прислуга
+		<li>
+			<span>Прислуга</span>
 			<ul>
 				<li>Кэтрин Стокет</li>
 				<li>978-5-86471-732-5</li>
 				<li>2016</li>
 				<li>Фантом Пресс</li>
 			</ul>
-		</li>				
-	</ol>	
+		</li>
+	</ol>
 
 	<script>
-		// массив хранения списка
 		var arr = [];
-
-		// получение HTML-коллекции элементов li
 		let elements = document.querySelectorAll('ol > li');
-									
-		// цикл for по элементам коллекции
-		for (var i = 0; i < elements.length; i++) {
 
-			// собираем названия книг в массив
-			arr[i] = elements[i].firstChild.data;
-		};
-		
-		console.log(arr);		
+		for (var i = 0; i < elements.length; i++) {
+			// название теперь в span — без \n\t мусора
+			arr[i] = elements[i].firstElementChild.textContent;
+		}
+
+		console.log(arr);
 	</script>
 
 	<footer align="center">
 		<h3>Веб-разработка | Профессионалы | Образование</h3>
 		<a href="https://vk.com/pechora_pro" target="__blank">pechora_PRO</a>
-	</footer>	
+	</footer>
 </body>
 </html>

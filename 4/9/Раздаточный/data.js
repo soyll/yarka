@@ -66,7 +66,7 @@ let obj = {
 	                        "place_from": null,
 	                        "place_back": null
 	                    },
-						/*{
+						{
 							"id": 3,
 	                        "first_name": "Roman",
 	                        "last_name": "Arteev",
@@ -74,7 +74,7 @@ let obj = {
 	                        "document_number": "1234567890",
 	                        "place_from": null,
 	                        "place_back": null
-						}*/
+						}
 	                ]
 	            }
 	        ]

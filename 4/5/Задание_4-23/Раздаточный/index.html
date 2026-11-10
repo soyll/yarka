@@ -14,10 +14,36 @@
 
 	<div id="con"></div>
 
-	<script>	
+	<script>
+		let headers = [
+			"ID", "Название", "Цена", "GPU", "CPU",
+			"Количество ядер", "RAM", "OC", "Диагональ",
+			"Тип экрана", "Цвет", "Описание"
+		];
 
-		// ...
+		let rows = data.split("\n");
+		let table = [];
 
+		for (let i = 0; i < rows.length; i++) {
+			table[i] = rows[i].split(";");
+		}
+
+		let html = "<table border=1><tr>";
+		for (let h = 0; h < headers.length; h++) {
+			html += `<th>${headers[h]}</th>`;
+		}
+		html += "</tr>";
+
+		for (let i = 0; i < table.length; i++) {
+			html += "<tr>";
+			for (let j = 0; j < table[i].length; j++) {
+				html += `<td>${table[i][j]}</td>`;
+			}
+			html += "</tr>";
+		}
+		html += "</table>";
+
+		document.getElementById("con").innerHTML = html;
 	</script>
 
 	<footer align="center">

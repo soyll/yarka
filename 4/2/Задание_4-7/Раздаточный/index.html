@@ -10,9 +10,42 @@
 	</header>
 
 	<script>
-
-		// ...
-
+		phone = "Нет данных";
+		category = "Не данных";
+		edu = "Нет данных";
+		person = {
+			id:1,
+			post: "Мастер",
+			category: "Высшая",
+			phones: "8(912)552-92-25",
+			main: {
+				surname:"Бородина",
+				name:"Ксения",
+				patronymic:"Алексеевна",
+				post:"Преподаватель",
+				media:{
+					email: "borodina.x@mail.ru",
+					site: "http://borodina.pedsovet.org",
+					network: [ "vk.com/borodina_29225",
+					"t.me/borodina_29225"]
+				}
+			}
+		}
+		with (person) {
+			with (main) {
+				with (media) {
+					document.write(`
+					<h2> ${surname} ${name} ${patronymic} </h2>
+					Должность:<b> ${post} </b></p>
+					Категория:<b> ${category} </b></p>
+					Образование:<b> ${edu} </b></p>
+					Телефон: <b> ${phone} </b></p>
+					Сайт:<b> ${site} </b></p>
+					E-mail:<b> ${email} </b>
+					`);
+				}
+			}
+		}
 	</script>
 
 	<footer align="center">

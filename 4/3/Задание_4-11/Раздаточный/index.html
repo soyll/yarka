@@ -73,9 +73,16 @@
 	<h2>Новая таблица</h2>
 
 	<script>
+		let rows = document.querySelectorAll('tbody tr');
+		let html = '<table border="1"><tr><th>Альбом</th><th>Статус</th></tr>';
 
-		// ...
+		for (let i = 0; i < rows.length; i++) {
+			let td = rows[i].children;
+			html += `<tr><td>${td[1].innerText}</td><td>${td[5].innerText}</td></tr>`;
+		}
 
+		html += '</table>';
+		document.write(html);
 	</script>
 
 	<footer align="center">
