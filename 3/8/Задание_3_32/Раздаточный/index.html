@@ -3,13 +3,16 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
+	<style>
+		img { width: 220px; display: block; margin: 10px 0; }
+	</style>
 </head>
 <body>
 	<header>
 		<h1 align = "center">Объект RegExp. Метасимволы</h1>
 	</header>
 	
-	<div>
+	<div id="story">
 		<pre>
 		Стоит в поле теремок. Бежит мимо мышка-норушка. Увидела теремок, остановилась и спрашивает:
 		— Терем-теремок! Кто в тереме живет? Никто не отзывается. Вошла мышка в теремок и стала там жить.
@@ -91,9 +94,11 @@
 	</footer>
 
 	<script>
-
-		// ...
-
+		let story = document.getElementById("story");
+		story.innerHTML = story.innerHTML.replace(
+			/\{\{([\w-]+)\}\}/g,
+			'<img src="$1.jpg">'
+		);
 	</script>
 </body>
 </html>

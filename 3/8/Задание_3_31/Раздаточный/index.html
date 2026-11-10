@@ -3,13 +3,16 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
+	<style>
+		img { width: 200px; vertical-align: middle; }
+	</style>
 </head>
 <body>
 	<header>
 		<h1 align = "center">Объект RegExp. Метасимволы</h1>
 	</header>
 	
-	<div>
+	<div id="block">
 		<h2>Это мой дом, он уютный:</h2> {{img-0}}
 		<h2>Это моя машина, она красная:</h2> {{pict-1}} <p>
 		<h2>Это моя работа, она высокооплачиваемая:</h2> {{screen-2}} <p>
@@ -18,9 +21,11 @@
 	</div>	
 
 	<script>
-
-		// ...
-
+		let block = document.getElementById("block");
+		block.innerHTML = block.innerHTML.replace(
+			/\{\{[a-z]+-(\d+)\}\}/g,
+			'<img src="img-$1.jpg">'
+		);
 	</script>
 
 	<footer align = "center">

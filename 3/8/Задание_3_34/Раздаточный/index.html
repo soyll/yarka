@@ -31,9 +31,13 @@
 	</footer>		
 
 	<script>
-
-		// ...
-
+		let paragraphs = document.querySelectorAll("#con p");
+		for (let i = 0; i < paragraphs.length; i++) {
+			paragraphs[i].innerHTML = paragraphs[i].innerHTML.replace(
+				/[a-zA-Z]+/g,
+				"<b>$&</b>"
+			);
+		}
 	</script>
 
 </body>
