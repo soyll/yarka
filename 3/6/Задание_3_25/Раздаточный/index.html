@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Программирование в среде JavaScript</title>
+	<script src="car.js"></script>
 	<style>
 		* {
 			font-family: sans-serif;
@@ -44,9 +45,100 @@
 	</footer>
 
 	<script>
+		let carsJSON = `{
+			"toyota": [
+				{
+					"id": "1",
+					"model": "Toyota Land Cruiser",
+					"engine": "Дизельный",
+					"power": "249",
+					"cylinders_layout": "V-образный",
+					"volume": "4461",
+					"cylinders": "8",
+					"image": "images/LandCruiser.jpg"
+				},
+				{
+					"id": "2",
+					"model": "Toyota Land Cruiser Prado",
+					"engine": "Бензиновый",
+					"power": "163",
+					"cylinders_layout": "Рядный",
+					"volume": "2694",
+					"cylinders": "4",
+					"image": "images/LandCruiserPrado.jpg"
+				},
+				{
+					"id": "3",
+					"model": "Toyota Camry",
+					"engine": "Бензиновый",
+					"power": "150",
+					"cylinders_layout": "Рядный",
+					"volume": "1998",
+					"cylinders": "4",
+					"image": "images/ToyotaCamry.jpg"
+				}
+			],
+			"mitsubishi": [
+				{
+					"id": "4",
+					"model": "Mitsubishi Pajero Sport",
+					"engine": "Дизельный",
+					"power": "181",
+					"cylinders_layout": "Рядный",
+					"volume": "2442",
+					"cylinders": "4",
+					"image": "images/MitsubishiPajeroSport.jpg"
+				}
+			],
+			"bmw": [
+				{
+					"id": "5",
+					"model": "BMW 8 Gran Coupe",
+					"engine": "Дизельный",
+					"power": "320",
+					"cylinders_layout": "Рядный",
+					"volume": "2998",
+					"cylinders": "6",
+					"image": "images/BMW8GranCoupe.jpg"
+				},
+				{
+					"id": "6",
+					"model": "BMW 4",
+					"engine": "Бензиновый",
+					"power": "184",
+					"cylinders_layout": "Рядный",
+					"volume": "1998",
+					"cylinders": "4",
+					"image": "images/BMW4.jpg"
+				}
+			]
+		}`;
 
-		// ...
+		let cars = JSON.parse(carsJSON);
 
+		let html = "";
+		for (let i = 0; i < cars.toyota.length; i++) {
+			let c = cars.toyota[i];
+			html += `
+				<div class="wrapper">
+					<h2>${c.model}</h2>
+					<div class="flexible">
+						<div class="col-6">
+							<img src="${c.image}">
+						</div>
+						<div class="col-6 specifications">
+							<p><b>Тип ДВС:</b> ${c.engine}</p>
+							<p><b>Мощность:</b> ${c.power} л.с.</p>
+							<p><b>Расположение цилиндров:</b> ${c.cylinders_layout}</p>
+							<p><b>Рабочий объем:</b> ${c.volume} см³</p>
+							<p><b>Число цилиндров:</b> ${c.cylinders}</p>
+						</div>
+					</div>
+				</div>
+			`;
+		}
+
+		document.getElementById("content").innerHTML = html;
 	</script>
 
 </body>
